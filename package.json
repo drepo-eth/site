@@ -1,0 +1,23 @@
+{
+  "name": "drepo-website",
+  "version": "1.0.0",
+  "description": "Decentralized Repository Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "hugo",
+    "create": "hugo new",
+    "server": "hugo server --buildDrafts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dRepo Team",
+  "license": "MIT",
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "devDependencies": {
+    "hugo-bin": "^0.89.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

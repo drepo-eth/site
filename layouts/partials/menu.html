@@ -1,0 +1,19 @@
+<nav class="menu">
+    <ul class="menu__inner">
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+          {{ if .HasChildren }}
+            <li>{{ .Name }}
+              <ul>
+                {{ range .Children -}}
+                <li>
+                  <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                </li>
+                {{- end }}
+              </ul>
+            </li>
+          {{ else }}
+            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        {{- end }}
+    </ul>

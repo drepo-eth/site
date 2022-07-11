@@ -1,0 +1,6 @@
+baseURL = 'http://drepo.eth/'
+languageCode = 'en-us'
+title = 'dRepo - decentralized Software Repository'
+
+disableKinds = ['taxonomy', 'term', 'RSS']
+uglyurls = false
