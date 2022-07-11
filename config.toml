@@ -3,4 +3,4 @@ languageCode = 'en-us'
 title = 'dRepo - decentralized Software Repository'
 
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
-uglyurls = true
+uglyurls = false
