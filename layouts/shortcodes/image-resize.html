@@ -1,0 +1,15 @@
+{{ $src := (.Get "src") }}
+{{ $alt := (.Get "alt") }}
+{{ $caption := (.Get "caption") }}
+{{ $size := (.Get "size") }}
+{{ $image := $.Page.Resources.GetMatch $src }}
+{{ $resized := $image.Resize $size }}
+
+<figure>
+  <a href="{{ $src }}" target="_blank">
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" />
+  </a>
+  <figcaption>
+    <h4>{{ $caption }}</h4>
+  </figcaption>
+</figure>
