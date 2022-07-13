@@ -1,19 +1,23 @@
 <nav class="menu">
-    <ul class="menu__inner">
-        {{- $currentPage := . -}}
-        {{ range .Site.Menus.main -}}
-          {{ if .HasChildren }}
-            <li>{{ .Name }}
-              <ul>
-                {{ range .Children -}}
-                <li>
-                  <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-                </li>
-                {{- end }}
-              </ul>
-            </li>
-          {{ else }}
-            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
-          {{ end }}
+  <ul class="menu__inner">
+    {{- $currentPage := . -}}
+    {{ range .Site.Menus.main -}}
+    {{ if .HasChildren }}
+    <li class="directory{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">
+      <span>{{ .Name }}</span>
+      <ul>
+        {{ range .Children -}}
+        <li class="item {{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+          <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        </li>
         {{- end }}
-    </ul>
+      </ul>
+    </li>
+    {{ else }}
+    <li class="item {{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+      <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+    {{- end }}
+  </ul>
+</nav>

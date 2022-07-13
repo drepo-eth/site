@@ -6,7 +6,9 @@
 
     <body>
         <div class="container">
-            {{ partial "header.html" . }}
+            {{ block "header" . }}
+                {{ partial "header.html" . }}
+            {{ end }}
 
             <div class="content">
                 {{ block "main" . }}{{ end }}
