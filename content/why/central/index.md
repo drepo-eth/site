@@ -23,6 +23,8 @@ turpis nunc eget lorem dolor. Tincidunt id aliquet risus feugiat in ante metus.
 Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt. Vel
 turpis nunc eget lorem.
 
+## Section 2
+
 Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.
 Consequat nisl vel pretium lectus. Varius morbi enim nunc faucibus a
 pellentesque sit. Quam adipiscing vitae proin sagittis nisl rhoncus. Interdum
@@ -34,6 +36,8 @@ vitae. Quam pellentesque nec nam aliquam sem et tortor consequat id. Libero
 enim sed faucibus turpis. Nibh praesent tristique magna sit amet purus gravida.
 Vivamus arcu felis bibendum ut tristique et.
 
+### Section 3
+
 Aliquet lectus proin nibh nisl condimentum id. Nisi porta lorem mollis aliquam
 ut porttitor leo a. Ultricies tristique nulla aliquet enim tortor at auctor.
 Diam vulputate ut pharetra sit amet. Vitae semper quis lectus nulla at.
@@ -43,6 +47,8 @@ praesent tristique. Interdum velit laoreet id donec ultrices tincidunt arcu non
 sodales. Fermentum posuere urna nec tincidunt praesent semper feugiat. Purus
 viverra accumsan in nisl nisi scelerisque eu ultrices. Lectus vestibulum mattis
 ullamcorper velit sed ullamcorper morbi. Ipsum dolor sit amet consectetur.
+
+#### Section 4
 
 Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat
 vivamus. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget.
@@ -67,12 +73,12 @@ malesuada fames ac turpis egestas sed tempus. Non odio euismod lacinia at quis.
 Est ullamcorper eget nulla facilisi etiam dignissim diam.
 
 
-* some buttet
+* _some bullet_
 * more bullet
 * what?
 * more more more
 
-1. numbered
+1. __numbered__
 1. more numbered
 1. what numbered?
 1. hehehehe ([link1](https://google.com)|[link2](http://example.com "example"))
@@ -101,3 +107,11 @@ contract Caller {
 
 {{< image-resize src="cookies.jpg" alt="cookie ALT" caption="Cookies!" size="300x">}}
 
+
+## A Table
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
