@@ -15,9 +15,14 @@
     "buildTags": "extended"
   },
   "devDependencies": {
-    "hugo-bin": "^0.89.0"
+    "autoprefixer": "^10.4.7",
+    "hugo-bin": "^0.89.0",
+    "postcss-cli": "^10.0.0"
   },
   "dependencies": {
+    "@fontsource/fira-sans": "^4.5.8",
+    "@fontsource/press-start-2p": "^4.5.9",
+    "@material-icons/font": "^1.0.31",
     "normalize.css": "^8.0.1"
   }
 }
