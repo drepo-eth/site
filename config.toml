@@ -5,6 +5,9 @@ title = 'dRepo - decentralized Software Repository'
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
 
+[params]
+  mainContent = 'drepo'
+
 [module]
   [[module.mounts]]
     source = "assets"

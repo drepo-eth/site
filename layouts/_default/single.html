@@ -4,4 +4,20 @@
   <div class="main-content">
     {{.Content}}
   </div>
+
+  {{ $mainContent := $.Site.Params.mainContent }}
+  {{ if eq .Section $mainContent }}
+  <div class="quicknav">
+    {{with .Next }}
+    {{ if eq .Section $mainContent }}
+    <a href="{{.Permalink}}">prev</a>
+    {{ end }}
+    {{end}}
+    {{with .Prev }}
+    {{ if eq .Section $mainContent }}
+    <a href="{{.Permalink}}">next</a>
+    {{ end }}
+    {{end}}
+  </div>
+  {{ end }}
 {{ end }}
