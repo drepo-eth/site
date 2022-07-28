@@ -5,6 +5,20 @@ title = 'dRepo - decentralized Software Repository'
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
 
+[menu]
+[[menu.main]]
+  identifier = 'problem'
+  name = 'Introduction'
+  weight = 100
+[[menu.main]]
+  identifier = 'repositories'
+  name = 'Existing Repos'
+  weight = 200
+[[menu.main]]
+  identifier = 'decentralization'
+  name = 'Decentralization'
+  weight = 300
+
 [params]
   mainContent = 'drepo'
 
