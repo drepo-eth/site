@@ -1,10 +1,11 @@
 ---
 Title: Hello World
 
+titleImage:
+titleText: |
+  Decentralization is the strong foundation for Software Repositories to grow
+  with the challenges of an ever changing world.
 ---
-
-
-
 
 Software repositories are essential elements of the global software supply
 chain. They are often the central software distribution points within their
