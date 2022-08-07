@@ -1,0 +1,15 @@
+// Breakpoints
+$break-start: 0;
+$break-tablet: 670px;
+$break-desktop: 1024px;
+$break-desktop-lg: 1444px;
+
+$breakpoints: (
+  'sm-min': $break-start,
+  'sm-max': $break-tablet - 1px,
+  'md-min': $break-tablet,
+  'md-max': $break-desktop - 1px,
+  'lg-min': $break-desktop,
+  'lg-max': $break-desktop-lg - 1px,
+  'xl-min': $break-desktop-lg
+);

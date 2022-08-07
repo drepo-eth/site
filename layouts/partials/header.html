@@ -1,6 +1,7 @@
-<header class="header" >
-  <a href="{{ .Site.BaseURL }}">Home</a>
-
-        {{ partial "menu.html" . }}
-<i class="material-icons md-email"></i>
+<header class="header">
+    <a class="header__home" href="{{ .Site.BaseURL }}">Home</a>
+    {{ partial "menu.html" . }}
+    <div class="header__actions">
+        <i class="material-icons md-email"></i>
+    </div>
 </header>

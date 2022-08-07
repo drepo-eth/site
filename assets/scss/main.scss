@@ -1,15 +1,10 @@
 @import "normalize.css/normalize";
-@import "@fontsource/press-start-2p";
-@import "@fontsource/fira-sans";
-$font-path: '../files/';
-@import "@material-icons/font/scss/all";
 
-p {
-  font-family: "Fira Sans";
-}
-a {
-  font-family: "Press Start 2P";
-}
-::placeholder {
-  color: gray;
-}
+@import '0.settings.colors';
+@import '0.settings.fonts';
+@import '0.settings.variables';
+@import '1.tools.mixins';
+@import '2.layout.page';
+@import '3.components.header';
+@import '3.components.footer';
+

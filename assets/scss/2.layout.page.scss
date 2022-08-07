@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  
+  @include breakpoint(xl) {
+	max-width: map-get($breakpoints, lg-max);
+  }
+}
+
+.main {
+  margin: 0 auto;
+
+  @include breakpoint(sm) {
+	width: 90%;
+  }
+  @include breakpoint(md) {
+	width: 85%;
+  }
+  @include breakpoint(lg) {
+	width: 80%;
+  }
+}

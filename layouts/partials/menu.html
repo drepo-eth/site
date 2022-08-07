@@ -1,5 +1,5 @@
 <nav class="menu">
-  <ul class="menu__inner">
+  <ul class="menu__list">
     {{- $currentPage := . -}}
     {{ range .Site.Menus.main -}}
     {{ if .HasChildren }}
@@ -7,7 +7,7 @@
       <span>{{ .Name }}</span>
       <ul>
         {{ range .Children -}}
-        <li class="item {{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+        <li class="menu__list-item {{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
           <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
         </li>
         {{- end }}

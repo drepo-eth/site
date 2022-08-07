@@ -1,0 +1,88 @@
+/**
+ *  Breakpoints for exclusive media queries
+ *  @params $media: sm | md | lg | xl | xs-md | md-xl
+ */
+@mixin breakpoint($media) {
+  @if $media == sm {
+    @media only screen and (max-width: map-get($breakpoints, sm-max)) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: map-get($breakpoints, md-min)) and (max-width: (map-get($breakpoints, md-max))) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media print, screen and (min-width: map-get($breakpoints, lg-min)) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media print, screen and (min-width: map-get($breakpoints, xl-min)) {
+      @content;
+    }
+  } @else if $media == sm-md {
+    @media only screen and (max-width: map-get($breakpoints, md-max)) {
+      @content;
+    }
+  } @else if $media == md-xl {
+    @media print, screen and (min-width: map-get($breakpoints, md-min)) {
+      @content;
+    }
+  }
+}
+
+/**
+ *  Vertical-Alignment center/middle
+ */
+@mixin align-middle() {
+  position: absolute;
+  top: 50%;
+  transform: translate( 0, -50% );
+}
+
+/**
+ *  Vertical/Horizontal-Alignment center/middle
+ */
+@mixin align-center-middle() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+
+
+/**
+ *  Clear floats
+ */
+@mixin clearfix() {
+  *zoom: 1;
+  
+  &::before,
+  &::after {
+	content: ' ';
+	display: table;
+  }
+  
+  &::after {
+	clear: both;
+  }
+}
+
+
+/**
+ * Resetting stuff
+ * @description: sets the element to an neutral appearance
+ */
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-indent: 0;
+}
+
+@mixin reset-button() {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
