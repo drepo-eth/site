@@ -38,3 +38,6 @@ uglyurls = false
   [[module.mounts]]
     source = "node_modules/@material-icons/font/font"
     target = "static/files"
+  [[module.mounts]]
+    source = "node_modules/bootstrap-icons/font/fonts"
+    target = "static/files"

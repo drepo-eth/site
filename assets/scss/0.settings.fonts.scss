@@ -2,6 +2,8 @@
 @import "@fontsource/fira-sans";
 $font-path: '../files/';
 @import "@material-icons/font/scss/all";
+$bootstrap-icons-font-file: '/files/bootstrap-icons';
+@import "bootstrap-icons/font/bootstrap-icons.scss";
 
 // Font-weight
 $fw-light: 200;
