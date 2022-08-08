@@ -1,21 +1,7 @@
 .header {
   display: grid;
-  grid-template-areas: 'home nav actions';
   grid-template-columns: 1fr 10fr 1fr;
-  width: 100%;
-  background: black;
-  color: white;
+  padding: 24px;
+  background: #f8dede;
+  color: #4a4a4a;
 }
-
-.header__home {
-  grid-area: home;
-}
-
-.nav {
-  grid-area: nav;
-}
-
-.header__actions {
-  grid-area: actions;
-}
-

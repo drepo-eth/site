@@ -68,17 +68,6 @@
 }
 
 
-/**
- * Resetting stuff
- * @description: sets the element to an neutral appearance
- */
-@mixin reset-list() {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-indent: 0;
-}
-
 @mixin reset-button() {
   appearance: none;
   border: none;

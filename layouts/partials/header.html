@@ -1,7 +1,9 @@
 <header class="header">
     <a class="header__home" href="{{ .Site.BaseURL }}">Home</a>
-    {{ partial "menu.html" . }}
+<!--    {{ partial "menu.html" . }}-->
     <div class="header__actions">
-        <i class="material-icons md-email"></i>
+        <a href="#">
+            <i class="material-icons md-email" aria-hidden="true"></i>
+        </a>
     </div>
 </header>
