@@ -26,6 +26,10 @@
 <!-- Icons -->
 {{- partial "favicons.html" . }}
 
+<!-- JS -->
+{{ $js := resources.Get "js/main.ts" | js.Build }}
+<script src="{{ $js.RelPermalink }}" ></script>
+
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
