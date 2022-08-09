@@ -23,6 +23,9 @@ big win for everyone.
 <!-- incident -->
 <!-- youtube-dl https://github.com/github/dmca/blob/master/2020/10/2020-10-23-RIAA.md -->
 <!-- faker.js https://www.theverge.com/2022/1/9/22874949/developer-corrupts-open-source-libraries-projects-affected -->
+<!-- https://cryptobriefing.com/circle-github-comply-with-tornado-cash-sanctions/ -->
+<!-- https://www.theverge.com/2022/8/8/23296778/us-treasury-tornado-cash-crypto-mixer-sanctions-ethereum-north-korea -->
+<!-- https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/ -->
 However, there have been multiple incidents in the past involving software
 repositories which are cause for concern.
 Most notably:
@@ -32,7 +35,7 @@ Most notably:
    The RIAA issued a DMCA takedown notice due to copyright claims to GitHub
    forcing them to block youtube-dl and its forks on the platform. GitHub and
    its owner Microsoft later reinstated the Git repositories
-   [Article](https://www.theverge.com/2020/11/17/21571473/github-youtube-dl-downloader-riaa-copyright-1201-takedown-reinstated)
+   ([Article](https://www.theverge.com/2020/11/17/21571473/github-youtube-dl-downloader-riaa-copyright-1201-takedown-reinstated))
    and promised to defend open source software in the future.
  * __faker.js and color.js rollback__ ([The Verge
    Article](https://www.theverge.com/2022/1/9/22874949/developer-corrupts-open-source-libraries-projects-affected)):
@@ -41,6 +44,24 @@ Most notably:
    and blind automation. This caused a lot of chaos and confusion. Consequently
    the NPM registry reverted the malicious versions while GitHub apparently
    also blocked the author's account.
+ * __Tornado Cash sanctioned by U.S. Treasury__ ([Article
+   1](https://cryptobriefing.com/circle-github-comply-with-tornado-cash-sanctions/),
+   [Article
+   2](https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/)):
+   Popular on-chain privacy-preserving mixer-protocol Tornado Cash was
+   santioned by the U.S. Treasury due to money laundering concerns.
+   This santion prohibits U.S. citizens and companies to interact with the
+   Tornado Cash entity as well as with the on-chain smart contracts, for the
+   first time.
+   This triggered GitHub to suspend the public open source repositories
+   of Tornado Cash as well as the user accounts of any user who contributed to
+   the repositories.
+   Furthermore, the centralized domain of the protocol was suspended while the
+   decentralized ENS domain continued to function by serving the frontend via
+   IPFS.
+   Centralized stable coin provider Circle (USDC) froze all user funds within
+   the protocol and node access provider Infura and Alchemy blocked access to
+   the smart contracts through their services.
 
 Such incidents at this magnitude are very rare but they show the importance of
 repositories in software development as well as the power that lies with those
@@ -87,9 +108,8 @@ repository and this is actually a problem.
 If the repository acts malicious, it could change the artifact and checksum to
 introduce arbitrary code into dependent projects without many people noticing.
 
-[^sig]: Yes, signatures could avoid this but they have other risks we address
-  later.
-
+[^sig]: Yes, signatures could avoid this but there are other risks we will
+  address later.
 
 
 <!-- broken supply chain -> chaos -->
