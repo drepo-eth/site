@@ -1,7 +1,14 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  padding: 24px;
-  background: #f8dede;
-  color: #4a4a4a;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 24px 40px;
+  background: white;
+  color: darkblue;
+  box-shadow: 0 0 10px rgba(black, 0.3);
+}
+
+.header__contact {
+  text-decoration: none;
+  color: black;
 }

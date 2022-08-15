@@ -17,9 +17,17 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 
-/* remember to define focus styles! */
-:focus {
-  outline: 0;
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 body {
