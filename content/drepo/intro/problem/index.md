@@ -26,6 +26,8 @@ big win for everyone.
 <!-- https://cryptobriefing.com/circle-github-comply-with-tornado-cash-sanctions/ -->
 <!-- https://www.theverge.com/2022/8/8/23296778/us-treasury-tornado-cash-crypto-mixer-sanctions-ethereum-north-korea -->
 <!-- https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/ -->
+<!-- https://techcrunch.com/2022/08/12/suspected-tornado-cash-developer-arrested-in-amsterdam/ -->
+<!-- https://www.theverge.com/2022/8/12/23298217/tornado-cash-crypto-mixer-crackdown-authorities-arrest-suspected-developer-amsterdam -->
 However, there have been multiple incidents in the past involving software
 repositories which are cause for concern.
 Most notably:
@@ -47,25 +49,32 @@ Most notably:
  * __Tornado Cash sanctioned by U.S. Treasury__ ([Article
    1](https://cryptobriefing.com/circle-github-comply-with-tornado-cash-sanctions/),
    [Article
-   2](https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/)):
+   2](https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/)
+   [Article 3](https://www.theverge.com/2022/8/12/23298217/tornado-cash-crypto-mixer-crackdown-authorities-arrest-suspected-developer-amsterdam)):
    Popular on-chain privacy-preserving mixer-protocol Tornado Cash was
    santioned by the U.S. Treasury due to money laundering concerns.
-   This santion prohibits U.S. citizens and companies to interact with the
-   Tornado Cash entity as well as with the on-chain smart contracts, for the
-   first time.
+   These santions prohibit U.S. citizens and companies to interact with the
+   Tornado Cash entity as well as with the on-chain smart contracts, which is
+   the first time that blockchain addresses are sanctioned.
    This triggered GitHub to suspend the public open source repositories
    of Tornado Cash as well as the user accounts of any user who contributed to
    the repositories.
    Furthermore, the centralized domain of the protocol was suspended while the
    decentralized ENS domain continued to function by serving the frontend via
    IPFS.
-   Centralized stable coin provider Circle (USDC) froze all user funds within
-   the protocol and node access provider Infura and Alchemy blocked access to
-   the smart contracts through their services.
+   Centralized stable coin provider [Circle](https://www.circle.com/) (USDC)
+   froze all user funds within the protocol and node access provider
+   [Infura](https://infura.io/) and [Alchemy](https://www.alchemy.com/) blocked
+   access to the smart contracts through their services.
+   Other decentralized applications like [Aave](https://aave.com/) started to
+   abide to the santions freely, preventing wallet addresses which used Tornado
+   Cash in the past from accessing their services.
+   In the following days one of the developers was arrested in the Netherlands
+   on charges of money laundering.
 
 Such incidents at this magnitude are very rare but they show the importance of
-repositories in software development as well as the power that lies with those
-who manage them.
+repositories and other centralized infrastructure in software development as
+well as the power that lies with those who manage them.
 
 ## Threats
 
