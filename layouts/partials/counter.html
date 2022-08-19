@@ -1,0 +1,14 @@
+{{- $current := .current -}}
+{{ $list := .list }}
+{{ $pos := 0 }}
+{{ range $i, $v := $list }}
+  {{ if eq $v $current }}
+    {{ $pos = $i }}
+  {{ end }}
+{{ end }}
+
+{{ $total := len $list }}
+
+<div class="item-counter">
+  {{ add $pos 1 }} / {{ $total }}
+<div>
