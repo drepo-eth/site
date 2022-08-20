@@ -1,4 +1,9 @@
 {{ define "main" }}
+  <div class="title-banner">
+    <img src=""/>
+    {{ .Params.titleBanner.text }}
+  </div>
+
   <h1>{{.Title}}</h1>
 
   <p class="teaser-text">
@@ -7,5 +12,14 @@
 
   <div class="homepage-content">
     {{.Content}}
+  </div>
+
+  <div class="cta">
+    <p>
+      {{ .Params.cta.text }}
+      <a href="{{.Params.cta.link.target | relURL }}">
+        {{ .Params.cta.link.text }}
+      </a>
+    </p>
   </div>
 {{ end }}
