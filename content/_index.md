@@ -2,7 +2,10 @@
 Title: Hello World
 
 titleBanner:
-  image:
+  image: 
+    src: placeholder-image.png
+    alt: Some text
+    size: 300x
   text: |
     Decentralization is the strong foundation for Software Repositories to grow
     with the challenges of an ever changing world.

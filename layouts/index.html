@@ -1,6 +1,9 @@
 {{ define "main" }}
   <div class="title-banner">
-    <img src=""/>
+    {{ $image := $.Page.Resources.GetMatch .Params.titleBanner.image.src }}
+    {{ $resized := $image.Resize .Params.titleBanner.image.size }}
+    <img src="{{ $resized.RelPermalink }}"
+      alt="{{ .Params.titleBanner.image.alt }}"/>
     {{ .Params.titleBanner.text }}
   </div>
 
