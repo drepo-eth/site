@@ -7,6 +7,20 @@
     {{ .Params.titleBanner.text }}
   </div>
 
+  <div class="content-teasers" >
+    <h2>{{ .Params.contentTeasers.heading }}</h2>
+
+    {{ range .Params.contentTeasers.teasers }}
+      <div>
+        <h3>{{ .heading }}</h3>
+        <p>
+          {{ .text }}
+          <a href="{{ .target | relURL }}">/read more</a>
+        </p>
+      </div>
+    {{ end }}
+  </div>
+
   <h1>{{.Title}}</h1>
 
   <p class="teaser-text">

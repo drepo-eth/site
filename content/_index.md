@@ -10,6 +10,25 @@ titleBanner:
     Decentralization is the strong foundation for Software Repositories to grow
     with the challenges of an ever changing world.
 
+contentTeasers:
+  heading: Benefits and reasons why
+  teasers:
+    - heading: benefit 1
+      target: "/drepo/intro/problem"
+      text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - heading: benefit 2
+      target: "/drepo/intro/problem"
+      text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - heading: benefit 3
+      target: "/drepo/intro/problem"
+      text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 cta:
   text: Do you want to know #more
   link:
