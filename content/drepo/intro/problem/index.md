@@ -5,7 +5,7 @@ draft: true
 weight: 1010
 menu:
   main:
-    parent: problem
+    parent: intro
     weight: 10
 ---
 

@@ -7,7 +7,7 @@ uglyurls = false
 
 [menu]
 [[menu.main]]
-  identifier = 'problem'
+  identifier = 'intro'
   name = 'Introduction'
   weight = 100
 [[menu.main]]
