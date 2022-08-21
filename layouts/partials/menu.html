@@ -7,7 +7,11 @@
       {{- $currentPage := . -}}
       {{ range .Site.Menus.main -}}
       <li class="menu__nav-item">
-        <a class="menu__link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        {{ $target := "#" }}
+        {{ if ne .Page nil }}
+          {{ $target = .URL | relLangURL }}
+        {{ end }}
+        <a class="menu__link" href="{{ $target }}">{{ .Name }}</a>
         {{ if .HasChildren }}
         <ol class="menu__sub-nav-list">
           {{ range .Children -}}
