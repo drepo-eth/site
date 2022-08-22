@@ -97,10 +97,10 @@ as possible from such topics.
 
 ### Censorship
 
-Imagine you are an awesome software developers who created an app, that is used
+Imagine you are an awesome software developer who created an app, that is used
 and loved by millions.
-At the same time, your software is also by people for activities which are
-illegal in some countries.
+At the same time, your software might be utilized by people for activities
+which are illegal in some countries.
 The administrators of some software repositories could be compelled by law
 enforcement to block access to your software either in those countries or even
 globally.
@@ -114,13 +114,19 @@ Few developers actually verify downloaded artifacts by for example comparing
 the checksum with the value provided directly by the developer.[^sig]
 Some dependency tools perform these checks based on data provided by the
 repository and this is actually a problem.
-If the repository acts malicious, it could change the artifact and checksum to
-introduce arbitrary code into dependent projects without many people noticing.
+If the repository acts maliciously, it could change the artifact and checksum
+to introduce arbitrary code into dependent projects without many people
+noticing.
 
 [^sig]: Yes, signatures could avoid this but there are other risks we will
   address later.
 
+## Centralized Power
 
-<!-- broken supply chain -> chaos -->
+As we all know: _With great power comes great responsibility_.
+A centralized system millions of people depend on which controlled by a single
+centralized entity is fine as long as everybody is happy and we love and
+respect one another.
 
-<!-- SLSA -->
+This essentially means that we are in for a disaster sooner or later.
+
