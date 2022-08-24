@@ -18,6 +18,14 @@ uglyurls = false
   identifier = 'decentralization'
   name = 'Decentralization'
   weight = 300
+[[menu.main]]
+  identifier = 'drepo'
+  name = 'Decentralized Repository'
+  weight = 400
+[[menu.main]]
+  identifier = 'extension'
+  name = 'Repository Extensions'
+  weight = 500
 
 [params]
   mainContent = 'drepo'

@@ -124,8 +124,8 @@ noticing.
 ## Centralized Power
 
 As we all know: _With great power comes great responsibility_.
-A centralized system millions of people depend on which controlled by a single
-centralized entity is fine as long as everybody is happy and we love and
+A centralized system millions of people depend on which is controlled by a
+single centralized entity is fine as long as everybody is happy and we love and
 respect one another.
 
 This essentially means that we are in for a disaster sooner or later.
