@@ -15,14 +15,14 @@
     "buildTags": "extended"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.8",
     "hugo-bin": "^0.89.0",
     "postcss-cli": "^10.0.0"
   },
   "dependencies": {
     "@fontsource/lora": "^4.5.11",
     "@fontsource/overpass-mono": "^4.5.9",
-    "@fontsource/press-start-2p": "^4.5.9",
+    "@fontsource/press-start-2p": "^4.5.10",
     "bootstrap-icons": "^1.9.1",
     "normalize.css": "^8.0.1"
   }
