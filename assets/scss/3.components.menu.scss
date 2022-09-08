@@ -5,10 +5,14 @@
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 12px 25px;
+  padding: 0 $spacer-xs 0 $spacer-sm;
   height: 100%;
-  background: darkblue;
-  color: white;
+  background: var(--color-menu-bg);
+  
+  * {
+    color: var(--color-text);
+    @include f-index;
+  }
   
   &.is-open {
     width: 230px;
@@ -25,7 +29,6 @@
 
 .menu__btn {
   align-self: end;
-  color: white;
   
   .bi-list {
     font-size: 28px;
@@ -33,12 +36,30 @@
   }
 }
 
+.menu__headline-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: $spacer-sm;
+  
+  .bi-triangle-fill {
+    rotate: 180deg;
+    margin-right: 12px;
+    font-size: 8px;
+    line-height: 1;
+    
+    &::before {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
 .menu__nav-list {
-  margin-left: 24px;
+  margin-left: $spacer-sm;
 }
 
 .menu__nav-item {
-  margin-bottom: 8px;
+  margin: $spacer-xs 0;
+  font-weight: $fw-bold;
 }
 
 ol {
@@ -60,19 +81,14 @@ ol ol > li:before {
 }
 
 .menu__sub-nav-list {
-  margin-left: 24px;
+  margin-left: -6px;
+  margin-top: $spacer-xs;
 }
 
 .menu__link {
-  margin-bottom: 12px;
-  color: white;
-  font-size: 24px;
-  line-height: 1.5;
+  margin-left: $spacer-xs;
 }
 
 .menu__sub-link {
   margin-bottom: 12px;
-  color: white;
-  font-size: 18px;
-  line-height: 1.5;
 }

@@ -1,4 +1,6 @@
-// Breakpoints
+/**
+ * Breakpoints
+ */
 $break-start: 0;
 $break-tablet: 670px;
 $break-desktop: 1024px;
@@ -13,3 +15,15 @@ $breakpoints: (
   'lg-max': $break-desktop-lg - 1px,
   'xl-min': $break-desktop-lg
 );
+
+/**
+ * Spacer
+ */
+$spacer-base: 16px;
+
+$spacer-xs: $spacer-base * 1;
+$spacer-sm: $spacer-base * 2;
+$spacer-md: $spacer-base * 3;
+$spacer-lg: $spacer-base * 4;
+$spacer-xl: $spacer-base * 6;
+$spacer-xxl: $spacer-base * 8;

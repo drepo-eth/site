@@ -2,5 +2,5 @@
   margin-top: 60px;
   border-top: 2px dotted black;
   padding: 24px 40px;
-  color: black;
+  @include f-copy-small;
 }

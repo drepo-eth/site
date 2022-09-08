@@ -1,24 +1,97 @@
 @import "@fontsource/press-start-2p";
 @import "@fontsource/lora";
 @import "@fontsource/overpass-mono";
+
 $bootstrap-icons-font-file: '/files/bootstrap-icons';
 @import "bootstrap-icons/font/bootstrap-icons.scss";
 
-// Font-weight
+/**
+ * Font-weight
+ */
 $fw-light: 200;
 $fw-regular: 400;
 $fw-semibold: 600;
 $fw-bold: 800;
 
-// font-face
+/**
+ * Font Mixins
+ */
+@mixin f-headline-h1 {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-bold;
+  
+  @include breakpoint(lg) {
+	font-size: 36px;
+	line-height: 42px;
+  }
+}
+
+@mixin f-headline-h2 {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-regular;
+  
+  @include breakpoint(lg) {
+	font-size: 36px;
+	line-height: 42px;
+  }
+}
+
+@mixin f-headline-h3 {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-bold;
+  
+  @include breakpoint(lg) {
+	font-size: 24px;
+	line-height: 27px;
+  }
+}
+
+@mixin f-headline-h4 {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-regular;
+  
+  @include breakpoint(lg) {
+	font-size: 24px;
+	line-height: 27px;
+  }
+}
+
+@mixin f-index {
+  font-family: 'Overpass Mono', monospace;
+  
+  @include breakpoint(lg) {
+	font-size: 14px;
+	line-height: 21px;
+  }
+}
+
+@mixin f-copy {
+  font-family: 'Lora', serif;
+  font-weight: $fw-regular;
+  
+  @include breakpoint(lg) {
+	font-size: 18px;
+	line-height: 27px;
+  }
+}
+
+@mixin f-copy-large {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-bold;
+  
+  @include breakpoint(lg) {
+	font-size: 30px;
+	line-height: 36;
+  }
+}
 
 
-//p {
-//  font-family: "Fira Sans";
-//}
-//a {
-//  font-family: "Press Start 2P";
-//}
-//::placeholder {
-//  color: gray;
-//}
+@mixin f-copy-small {
+  font-family: 'Lora', serif;
+  font-weight: $fw-regular;
+  
+  @include breakpoint(lg) {
+	font-size: 12px;
+	line-height: 18px;
+  }
+}

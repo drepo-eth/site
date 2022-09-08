@@ -1,3 +1,25 @@
+:root {
+  --color-logo: #{$c-primary-blue};
+  --color-text: #{$c-darkblue};
+  --color-highlight-text: #{$c-primary-blue};
+  --color-bg: #{$c-white};
+  --color-menu-bg: #{$c-lightgrey};
+  --color-hint: #{$c-lightgrey};
+}
+
+:root.dark {
+  --color-logo: #{$c-primary-darkblue};
+  --color-text: #{$c-grey};
+  --color-highlight-text: #{$c-lightblue};
+  --color-bg: #{$c-primary-darkblue};
+  --color-menu-bg: #{$c-darkgrey};
+  --color-hint: #{$c-lightgrey};
+}
+
+body {
+  color: var(--color-text);
+}
+
 .container {
   aside.is-open + & {
 	margin-left: 280px;
