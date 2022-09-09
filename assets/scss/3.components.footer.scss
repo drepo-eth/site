@@ -1,6 +1,27 @@
 .footer {
-  margin-top: 60px;
-  border-top: 2px dotted black;
-  padding: 24px 40px;
-  @include f-copy-small;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $spacer-sm;
+  margin: $spacer-xxl auto;
+  border-top: 2px solid var(--color-hint);
+  padding-top: $spacer-md;
+  width: 80%;
+  @include f-footer-small;
+  
+  a {
+    color: var(--color-highlight-text);
+    text-decoration: underline;
+  }
+  
+  ul {
+    li {
+      display: block;
+      margin-bottom: $spacer-xs;
+    }
+  }
+}
+
+.footer__heading {
+  font-weight: $fw-bold;
+  padding-bottom: $spacer-xs;
 }

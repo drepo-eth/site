@@ -1,0 +1,18 @@
+.pager {
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  align-items: center;
+  margin-top: $spacer-md;
+  color: var(--color-highlight-text);
+  
+  i {
+    color: var(--color-highlight-text);
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    font-weight: $fw-bold;
+  }
+}
+
+.pager__counter {
+  @include f-copy-large;
+}

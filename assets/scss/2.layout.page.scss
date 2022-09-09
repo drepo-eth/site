@@ -35,7 +35,7 @@ body {
 }
 
 .main {
-  margin: 0 auto;
+  margin: $spacer-xl auto 0;
 
   @include breakpoint(sm) {
 	width: 90%;
@@ -46,4 +46,8 @@ body {
   @include breakpoint(lg) {
 	width: 80%;
   }
+}
+
+.headline--h1 {
+  @include f-headline-h1;
 }

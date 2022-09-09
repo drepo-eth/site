@@ -1,0 +1,83 @@
+.content {
+  @include f-copy;
+  
+  h2 {
+    margin-top: $spacer-xl;
+    @include f-headline-h2;
+  }
+  
+  h3 {
+    margin-top: $spacer-lg;
+    @include f-headline-h3;
+  }
+  
+  h4 {
+    margin-top: $spacer-lg;
+    @include f-headline-h4;
+  }
+  
+  a {
+    color: var(--color-highlight-text);
+    text-decoration: underline;
+  }
+  
+  strong {
+    font-weight: $fw-bold;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  > p,
+  > ul,
+  > ol,
+  > code,
+  > .footnotes {
+    margin-top: $spacer-md;
+  }
+  
+  ul {
+    list-style: circle;
+  }
+  
+  ol {
+    list-style: decimal;
+  }
+  
+  ul,
+  ol {
+    margin-left: $spacer-sm;
+    
+    li {
+      margin-top: $spacer-xs;
+    }
+  }
+  
+  figure {
+    margin: $spacer-md 0 0;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    figcaption {
+      margin: $spacer-sm $spacer-sm 0;
+      @include f-copy-small;
+    }
+  }
+  
+  .footnotes {
+    @include f-copy-small;
+    
+    hr {
+      border-top: 1px solid var(--color-hint);
+    }
+    
+    ol {
+      columns: 2;
+      margin-top: 0;
+    }
+  }
+}

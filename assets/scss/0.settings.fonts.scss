@@ -81,13 +81,23 @@ $fw-bold: 800;
   
   @include breakpoint(lg) {
 	font-size: 30px;
-	line-height: 36;
+	line-height: 36px;
   }
 }
 
 
 @mixin f-copy-small {
   font-family: 'Lora', serif;
+  font-weight: $fw-regular;
+  
+  @include breakpoint(lg) {
+	font-size: 12px;
+	line-height: 18px;
+  }
+}
+
+@mixin f-footer-small {
+  font-family: 'Overpass Mono', monospace;
   font-weight: $fw-regular;
   
   @include breakpoint(lg) {
