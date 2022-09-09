@@ -26,11 +26,11 @@ body {
 
 .container {
   aside.is-open + & {
-	margin-left: 240px;
+	margin-left: 300px;
   }
   
   aside.is-closed + & {
-	margin-left: 64px;
+	margin-left: 70px;
   }
 }
 

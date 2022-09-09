@@ -7,7 +7,10 @@
   bottom: 0;
   padding: $spacer-sm $spacer-xs 0 $spacer-sm;
   height: 100%;
+  width: 70px;
   background: var(--color-menu-bg);
+  transition: width ease .3s;
+  overflow: hidden;
   
   * {
     color: var(--color-text);
@@ -15,12 +18,14 @@
   }
   
   &.is-open {
-    width: 230px;
+    width: 300px;
+    z-index: 100;
   }
   
   &.is-closed {
-    padding: 12px;
+    padding: $spacer-sm $spacer-xs;
     
+    .menu__headline-wrapper,
     .menu__nav {
       display: none;
     }
@@ -41,6 +46,7 @@
   width: 24px;
   height: 4px;
   opacity: 1;
+  transition: all .3s ease-in-out;
   
   &::before,
   &::after {
@@ -50,6 +56,7 @@
     background: $c-primary-blue;
     width: 24px;
     height: 4px;
+    transition: all .3s ease-in-out;
   }
   
   &::before {
@@ -58,6 +65,20 @@
   
   &::after {
     bottom: 12px;
+  }
+  
+  .is-open & {
+    background: var(--color-menu-bg);;
+    
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 4px;
+    }
   }
 }
 
