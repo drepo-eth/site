@@ -28,6 +28,10 @@ big win for everyone.
 <!-- https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/ -->
 <!-- https://techcrunch.com/2022/08/12/suspected-tornado-cash-developer-arrested-in-amsterdam/ -->
 <!-- https://www.theverge.com/2022/8/12/23298217/tornado-cash-crypto-mixer-crackdown-authorities-arrest-suspected-developer-amsterdam -->
+
+<!-- generally centralization -->
+<!-- https://edition.cnn.com/2020/12/14/business/mastercard-visa-discover-pornhub/index.html -->
+
 However, there have been multiple incidents in the past involving software
 repositories which are cause for concern.
 Most notably:
@@ -129,4 +133,6 @@ single centralized entity is fine as long as everybody is happy and we love and
 respect one another.
 
 This essentially means that we are in for a disaster sooner or later.
+
+<!-- TODO other centralized systems -->
 
