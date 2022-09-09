@@ -1,13 +1,16 @@
 <header class="header">
+    <button>
+        <i class="bi bi-sun-fill" aria-hidden="true"></i>
+    </button>
     <a class="header__home" href="{{ .Site.BaseURL }}">
         <img class="header__logo" src="/images/logo.svg" alt="">
     </a>
     <div class="header__actions">
-        <a class="header__contact" href="mailto:drepo.eth@protonmail.com">
-            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-        </a>
-        <a class="header__contact" href="https://github.com/drepo-eth" target="_blank">
+        <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank">
             <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+        <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
         </a>
     </div>
 </header>

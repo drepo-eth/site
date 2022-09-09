@@ -16,13 +16,17 @@
   --color-hint: #{$c-lightgrey};
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-text);
 }
 
 .container {
   aside.is-open + & {
-	margin-left: 280px;
+	margin-left: 240px;
   }
   
   aside.is-closed + & {

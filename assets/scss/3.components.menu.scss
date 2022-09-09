@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 0 $spacer-xs 0 $spacer-sm;
+  padding: $spacer-sm $spacer-xs 0 $spacer-sm;
   height: 100%;
   background: var(--color-menu-bg);
   
@@ -28,11 +28,36 @@
 }
 
 .menu__btn {
+  display: grid;
+  place-items: center;
   align-self: end;
+  width: 40px;
+  height: 40px;
+}
+
+.menu__burger {
+  position: relative;
+  background: $c-primary-blue;
+  width: 24px;
+  height: 4px;
+  opacity: 1;
   
-  .bi-list {
-    font-size: 28px;
-    font-weight: bold;
+  &::before,
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    background: $c-primary-blue;
+    width: 24px;
+    height: 4px;
+  }
+  
+  &::before {
+    top: 8px;
+  }
+  
+  &::after {
+    bottom: 12px;
   }
 }
 
