@@ -1,18 +1,62 @@
 .pager {
   display: grid;
-  grid-template-columns: 40px auto 40px;
-  align-items: center;
-  margin-top: $spacer-md;
-  color: var(--color-highlight-text);
+  grid-template-areas: 'prev counter next';
   
-  i {
-    color: var(--color-highlight-text);
-    font-family: 'Lora', serif;
-    font-size: 32px;
-    font-weight: $fw-bold;
+  @include breakpoint(sm-md) {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-top: $spacer-xl;
+    width: 100% / 12 * 8;
+  }
+  
+  @include breakpoint(lg) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    grid-template-columns: 1fr (100% / 12 * 8) 1fr;
+    width: calc(100vw - 300px);
   }
 }
 
 .pager__counter {
+  grid-area: counter;
+  justify-self: center;
+  color: var(--color-highlight-text);
   @include f-copy-large;
+  
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.pager__prev {
+  grid-area: prev;
+  justify-self: start;
+}
+
+.pager__next {
+  grid-area: next;
+  justify-self: end;
+}
+
+.pager__prev,
+.pager__next {
+  @include breakpoint(lg) {
+    display: grid;
+    place-items: center;
+    padding: 0 $spacer-md;
+    
+    &:hover {
+      z-index: 1;
+      background: var(--color-hint);
+    }
+  }
+  
+  i {
+    color: var(--color-highlight-text);
+    font-family: 'Lora', serif;
+    font-size: 44px;
+    font-weight: $fw-bold;
+    font-style: normal;
+  }
 }

@@ -18,6 +18,7 @@
   }
   
   &.is-open {
+    border-right: 4px solid $c-grey;
     width: 300px;
     z-index: 100;
   }

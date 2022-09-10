@@ -5,7 +5,7 @@
   margin: $spacer-xxl auto;
   border-top: 2px solid var(--color-hint);
   padding-top: $spacer-md;
-  width: 80%;
+  width: 100% / 12 * 8;
   @include f-footer-small;
   
   a {

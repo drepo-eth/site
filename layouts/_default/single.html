@@ -12,7 +12,7 @@
   <div class="pager">
     {{with .Next }}
     {{ if eq .Section $mainContent }}
-    <a href="{{.Permalink}}">
+    <a href="{{.Permalink}}" class="pager__prev">
       <i aria-hidden="true"> < </i>
     </a>
     {{ end }}
@@ -22,7 +22,7 @@
 
     {{with .Prev }}
     {{ if eq .Section $mainContent }}
-    <a href="{{.Permalink}}">
+    <a href="{{.Permalink}}" class="pager__next">
       <i aria-hidden="true"> > </i>
     </a>
     {{ end }}

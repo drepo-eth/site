@@ -1,4 +1,6 @@
 .content {
+  margin: 0 auto;
+  width: 100% / 12 * 8;
   @include f-copy;
   
   h2 {
@@ -76,8 +78,19 @@
     }
     
     ol {
+      margin-top: $spacer-sm;
+      margin-left: 14px;
       columns: 2;
-      margin-top: 0;
+      column-gap: $spacer-sm;
+      
+      li {
+        margin-top: 0;
+        margin-bottom: $spacer-xs;
+      }
+    }
+    
+    .footnote-backref {
+      text-decoration: none;
     }
   }
 }
