@@ -3,7 +3,8 @@
         <i class="bi bi-sun-fill" aria-hidden="true"></i>
     </button>
     <a class="header__home" href="{{ .Site.BaseURL }}">
-        <img class="header__logo" src="/images/logo.svg" alt="">
+      {{ $logoUrl :=  "/images/logo.svg" | relURL }}
+      <img class="header__logo" src="{{ $logoUrl }}" alt="">
     </a>
     <div class="header__actions">
         <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank">
