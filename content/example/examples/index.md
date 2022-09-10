@@ -1,11 +1,11 @@
 ---
-title: "Central"
+title: "Examples"
 date: 2022-07-08T15:54:40Z
 draft: true
 weight: 999010
 menu:
   main:
-    parent: why
+    parent: example
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
