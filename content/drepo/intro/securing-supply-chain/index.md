@@ -76,9 +76,22 @@ proposal.
 
 ## No Trust is Better Trust
 
-It is the author's opinion that open source software development and the
+It is the authors' opinion that open source software development and the
 software supply chain have reached a level of global, vital significance.
-Hence, entrusting the management and ownership of essential elements to few entities
+Hence, entrusting the management and ownership of essential elements to few
+entities is inherently risky.
+Individuals, companies, and governments will eventually pursue their own
+interests and take advantage of their positions leaving the community with a
+broken or compromised system.
+
+The proper, uninterrupted operation of all software supply chain elements
+superceeds all other interests[^interests] and must be guaranteed under all
+circumstances.
+
+[^interests]: This does not necessarily include human rights violations or the
+  direct endangerment of individuals. However, corporate greed, political
+  suppression, the limitation of the freedom of speech and the likes cannot be
+  allowed.
 
 But having a driver's license does not stop anyone from driving too fast or
 drunk.
