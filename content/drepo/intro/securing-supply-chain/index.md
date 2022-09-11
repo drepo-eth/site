@@ -76,22 +76,58 @@ proposal.
 
 ## No Trust is Better Trust
 
+### Trust in Few
+
 It is the authors' opinion that open source software development and the
-software supply chain have reached a level of global, vital significance.
+software supply chain have reached a level of _global, vital significance_.
 Hence, entrusting the management and ownership of essential elements to few
 entities is inherently risky.
 Individuals, companies, and governments will eventually pursue their own
 interests and take advantage of their positions leaving the community with a
 broken or compromised system.
 
-The proper, uninterrupted operation of all software supply chain elements
-superceeds all other interests[^interests] and must be guaranteed under all
-circumstances.
+> The proper, uninterrupted operation of all software supply chain elements
+> supersedes all other interests[^interests] and must be guaranteed under all
+> circumstances.
 
 [^interests]: This does not necessarily include human rights violations or the
   direct endangerment of individuals. However, corporate greed, political
   suppression, the limitation of the freedom of speech and the likes cannot be
   allowed.
 
-But having a driver's license does not stop anyone from driving too fast or
-drunk.
+Removing the component of trusting in people and institutions to prevent the
+misuse of power is a necessary action.
+It provides the bases of a system that cannot be compromised by some party to
+enforce an agenda on everyone.
+
+### Trust Reduction
+
+_Democratic systems_ try to remove the power from the hands of the few and give
+every participant a voice in the decision making process.
+Real world adaptations, however, still centralize power and are, as we all
+know, not flawless.
+Corruption and manipulation of politics are not just the stuff that makes great
+books and movies but are very real and even partially legalized through for
+example lobbying.
+
+The trust models we commonly use were created when there was no internet.
+Instant global communication and modern cryptography allow the creation of new
+models that are suitable for the current state of the world.
+
+We envision a _trustless_ system built upon basic rules we all can agree on.
+It just fulfills its functionality, nothing more and nothing less.
+By being _axiomatic_, simple, and versatile it is a building block for larger
+systems.
+
+A modern software repository must be just that, a software repository.
+It holds and serves software artifacts to anyone in the world, no exceptions.
+Likewise, anyone can add new software without approval of an administrator.
+It is a system that is reliable in terms of the service it provides.
+
+Decentralized systems can provides these properties.
+We propose a software repository that is built upon modern decentralized
+technologies and mindsets.
+It is driven and secured by its user community and cannot be compromised.
+A dezentralized repository (__dRepo__) provides security along the whole supply
+chain, from software development over software distribution to software
+execution.
