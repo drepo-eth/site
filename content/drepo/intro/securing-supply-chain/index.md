@@ -115,7 +115,7 @@ Instant global communication and modern cryptography allow the creation of new
 models that are suitable for the current state of the world.
 
 We envision a _trustless_ system built upon basic rules we all can agree on.
-It just fulfills its functionality, nothing more and nothing less.
+It fulfills its functionality, nothing more and nothing less.
 By being _axiomatic_, simple, and versatile it is a building block for larger
 systems.
 
@@ -123,11 +123,14 @@ A modern software repository must be just that, a software repository.
 It holds and serves software artifacts to anyone in the world, no exceptions.
 Likewise, anyone can add new software without approval of an administrator.
 It is a system that is reliable in terms of the service it provides.
+It cannot be censored or modified by individuals, companies, or governments.
 
 Decentralized systems can provides these properties.
 We propose a software repository that is built upon modern decentralized
 technologies and mindsets.
 It is driven and secured by its user community and cannot be compromised.
+_Cryptographic truth_ and _immutable code_ replace the need for trusted parties
+who have to uphold the rules of the system.
 A dezentralized repository (__dRepo__) provides security along the whole supply
 chain, from software development over software distribution to software
 execution.
