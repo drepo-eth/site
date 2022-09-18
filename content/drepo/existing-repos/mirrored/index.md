@@ -1,7 +1,7 @@
 ---
 title: "Type: Mirrored"
 date: 2022-09-12T00:32:21+02:00
-draft: true
+draft: false
 weight: 2030
 menu:
   main:

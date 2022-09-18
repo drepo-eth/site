@@ -1,7 +1,7 @@
 ---
 title: "Securing The Supply Chain"
 date: 2022-08-22T19:38:57+02:00
-draft: true
+draft: false
 weight: 1020
 menu:
   main:

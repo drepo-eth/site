@@ -1,7 +1,7 @@
 ---
 title: "Properties"
 date: 2022-09-12T00:31:26+02:00
-draft: true
+draft: false
 weight: 2010
 menu:
   main:

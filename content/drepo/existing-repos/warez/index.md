@@ -1,7 +1,7 @@
 ---
 title: "Warez"
 date: 2022-09-12T00:32:28+02:00
-draft: true
+draft: false
 weight: 2050
 menu:
   main:
