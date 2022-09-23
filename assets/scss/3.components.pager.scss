@@ -5,16 +5,8 @@
   @include breakpoint(sm-md) {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    margin-top: $spacer-xl;
+    margin: $spacer-xl auto 0;
     width: 100% / 12 * 8;
-  }
-  
-  @include breakpoint(lg) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    grid-template-columns: 1fr (100% / 12 * 8) 1fr;
-    width: calc(100vw - 300px);
   }
 }
 
@@ -42,12 +34,20 @@
 .pager__prev,
 .pager__next {
   @include breakpoint(lg) {
-    display: grid;
-    place-items: center;
-    padding: 0 $spacer-md;
-    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0;
+    max-width: 150px;
+    min-width: 90px;
+    text-align: center;
+
     &:hover {
-      z-index: 1;
+      transition: background 0.15s, color 0.15s;
       background: var(--color-hint);
     }
   }

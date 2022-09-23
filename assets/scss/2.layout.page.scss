@@ -39,9 +39,15 @@ body {
 .main {
   padding-top: 120px;
   
-  > .headline--h1 {
-    @include f-headline-h1;
-    margin: $spacer-xl auto 0;
-    width: 100% / 12 * 8;
-  }
+  //> .headline--h1 {
+  //  @include f-headline-h1;
+  //  margin: $spacer-xl auto 0;
+  //  width: 100% / 12 * 8;
+  //}
+}
+
+.headline--h1 {
+  @include f-headline-h1;
+  margin: $spacer-xl auto 0;
+  width: 100% / 12 * 8;
 }

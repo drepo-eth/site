@@ -1,0 +1,37 @@
+.teaser-list {
+  margin: $spacer-lg auto;
+  //padding-top: $spacer-md;
+  width: 100% / 12 * 8;
+}
+
+.teaser-list__headline {
+  @include f-headline-h1;
+}
+
+.teaser-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: $spacer-md;
+  margin-top: $spacer-md;
+}
+
+.teaser__title {
+  @include f-headline-h3;
+  margin-bottom: $spacer-xs;
+  padding-bottom: $spacer-xs;
+  border-bottom: 4px solid var(--color-highlight-text);
+}
+
+.teaser__text {
+  @include f-copy;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.teaser__link {
+  @include f-copy;
+  display: inline-block;
+  font-weight: $fw-bold;
+}

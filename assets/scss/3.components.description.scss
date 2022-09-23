@@ -1,0 +1,27 @@
+.description {
+  margin: $spacer-lg auto;
+  width: 100% / 12 * 8;
+}
+
+.description__headline {
+  @include f-headline-h1;
+  margin-bottom: $spacer-md;
+}
+
+.homepage-content,
+.description__detail {
+  @include f-copy;
+}
+
+.cta-container {
+  display: grid;
+  place-items: center;
+  margin-top: $spacer-xxl;
+}
+.cta {
+  padding: $spacer-xs $spacer-sm;
+  border: 1px solid var(--color-highlight-text);
+  background: var(--color-highlight-text);
+  color: var(--color-bg);
+  @include f-headline-h1;
+}

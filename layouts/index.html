@@ -7,23 +7,26 @@
     {{ .Params.titleBanner.text }}
   </div>
 
-  <div class="content-teasers" >
-    <h2>{{ .Params.contentTeasers.heading }}</h2>
+  <div class="teaser-list" >
+    <h1 class="teaser-list__headline">{{ .Params.contentTeasers.heading }}</h1>
 
-    {{ range .Params.contentTeasers.teasers }}
-      <div>
-        <h3>{{ .heading }}</h3>
-        <p>
+    <div class="teaser-list__wrapper">
+      {{ range .Params.contentTeasers.teasers }}
+      <div class="teaser">
+        <h3 class="teaser__title">{{ .heading }}</h3>
+        <p class="teaser__text">
           {{ .text }}
-          <a href="{{ .target | relURL }}">/read more</a>
         </p>
+        <a class="teaser__link" href="{{ .target | relURL }}">/read more</a>
       </div>
-    {{ end }}
+      {{ end }}
+    </div>
   </div>
 
-  <h1>{{.Title}}</h1>
+<div class="description">
+  <h1 class="description__headline">{{.Title}}</h1>
 
-  <p class="teaser-text">
+  <p class="description__detail">
     {{ .Params.titleText }}
   </p>
 
@@ -31,12 +34,14 @@
     {{.Content}}
   </div>
 
-  <div class="cta">
-    <p>
-      {{ .Params.cta.text }}
-      <a href="{{.Params.cta.link.target | relURL }}">
-        {{ .Params.cta.link.text }}
+  <div class="cta-container">
+<!--    <p>-->
+<!--      {{ .Params.cta.text }}-->
+      <a class="cta" href="{{.Params.cta.link.target | relURL }}">
+        {{ .Params.cta.text }} {{ .Params.cta.link.text }}
       </a>
-    </p>
+<!--    </p>-->
   </div>
+</div>
+
 {{ end }}

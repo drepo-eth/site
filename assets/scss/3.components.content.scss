@@ -88,9 +88,10 @@
         margin-bottom: $spacer-xs;
       }
     }
-    
-    .footnote-backref {
-      text-decoration: none;
-    }
+  }
+  
+  .footnote-backref,
+  .footnote-ref {
+    text-decoration: none;
   }
 }

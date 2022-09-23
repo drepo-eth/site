@@ -1,6 +1,7 @@
 window.onload = () => {
     const $menu = document.querySelector('.menu');
     const $menuBtn = document.querySelector('.menu__btn');
+    // $menu.classList.add('is-open');
 
     $menuBtn.addEventListener('click', function () {
         if ($menu.classList.contains('is-open')) {
