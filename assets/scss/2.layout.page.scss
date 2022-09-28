@@ -3,17 +3,57 @@
   --color-text: #{$c-darkblue};
   --color-highlight-text: #{$c-primary-blue};
   --color-bg: #{$c-white};
+  --color-header-bg: #{$c-white};
   --color-menu-bg: #{$c-lightgrey};
+  --color-menu-burger: #{$c-primary-blue};
   --color-hint: #{$c-lightgrey};
+  --color-pager: #{$c-primary-blue};
+  --color-pager-bg: #{$c-lightgrey};
+  --color-footer-border: #{$c-lightgrey};
 }
 
 :root.dark {
-  --color-logo: #{$c-primary-darkblue};
+  --color-logo: #{$c-grey};
   --color-text: #{$c-grey};
   --color-highlight-text: #{$c-lightblue};
   --color-bg: #{$c-primary-darkblue};
+  --color-header-bg: #{$c-primary-darkblue};
   --color-menu-bg: #{$c-darkgrey};
+  --color-menu-burger: #{$c-grey};
   --color-hint: #{$c-lightgrey};
+  --color-pager: #{$c-grey};
+  --color-pager-bg: #{$c-darkgrey};
+  --color-footer-border: #{$c-grey};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.light {
+    --color-logo: #{$c-primary-blue};
+    --color-text: #{$c-darkblue};
+    --color-highlight-text: #{$c-primary-blue};
+    --color-bg: #{$c-white};
+    --color-header-bg: #{$c-white};
+    --color-menu-bg: #{$c-lightgrey};
+    --color-menu-burger: #{$c-primary-blue};
+    --color-hint: #{$c-lightgrey};
+    --color-pager: #{$c-primary-blue};
+    --color-pager-bg: #{$c-lightgrey};
+    --color-footer-border: #{$c-lightgrey};
+  }
+  
+  :root.dark {
+    --color-logo: #{$c-grey};
+    --color-text: #{$c-grey};
+    --color-highlight-text: #{$c-lightblue};
+    --color-bg: #{$c-primary-darkblue};
+    --color-header-bg: #{$c-primary-darkblue};
+    --color-menu-bg: #{$c-darkgrey};
+    --color-menu-burger: #{$c-grey};
+    --color-hint: #{$c-lightgrey};
+    --color-pager: #{$c-grey};
+    --color-pager-bg: #{$c-darkgrey};
+    --color-footer-border: #{$c-grey};
+  }
 }
 
 * {
@@ -22,6 +62,7 @@
 
 body {
   color: var(--color-text);
+  background: var(--color-bg);
 }
 
 .container {
@@ -29,21 +70,17 @@ body {
   
   aside.is-open + & {
 	margin-left: 300px;
+    //transition: all $d-anim ease-in-out;
   }
   
   aside.is-closed + & {
 	margin-left: 70px;
+    //transition: all $d-anim ease-in-out;
   }
 }
 
 .main {
   padding-top: 120px;
-  
-  //> .headline--h1 {
-  //  @include f-headline-h1;
-  //  margin: $spacer-xl auto 0;
-  //  width: 100% / 12 * 8;
-  //}
 }
 
 .headline--h1 {

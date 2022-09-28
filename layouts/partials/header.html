@@ -1,17 +1,20 @@
 <header class="header">
-    <button>
-        <i class="bi bi-sun-fill" aria-hidden="true"></i>
-    </button>
-    <a class="header__home" href="{{ .Site.BaseURL }}">
-      {{ $logoUrl :=  "/images/logo.svg" | relURL }}
-      <img class="header__logo" src="{{ $logoUrl }}" alt="">
-    </a>
-    <div class="header__actions">
-        <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank">
-            <i class="bi bi-github" aria-hidden="true"></i>
+    <div class="header__wrapper">
+        <a class="header__home" href="{{ .Site.BaseURL }}">
+            {{ $logoUrl :=  "/images/logo-without-space.svg" | relURL }}
+            <img class="header__logo" src="{{ $logoUrl }}" alt="">
         </a>
-        <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com">
-            <i class="bi bi-envelope" aria-hidden="true"></i>
-        </a>
+        <div class="header__actions">
+            <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank" title="Visit our github">
+                <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com" title="Wirte us an email">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
+
+    <button class="header__theme-btn" title="Click here to change theme" aria-label="Click here to change theme">
+        <i class="bi bi-moon" aria-hidden="true"></i>
+    </button>
 </header>

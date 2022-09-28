@@ -1,4 +1,4 @@
-<aside class="menu is-open">
+<aside class="menu">
   <button class="menu__btn">
     <span class="menu__burger"></span>
   </button>
@@ -10,20 +10,22 @@
     <ol class="menu__nav-list">
       {{- $currentPage := . -}}
       {{ range .Site.Menus.main -}}
-      <li class="menu__nav-item">
-        {{ $target := "#" }}
-        {{ if ne .Page nil }}
-          {{ $target = .URL | relLangURL }}
-        {{ end }}
-        <a class="menu__link" href="{{ $target }}">{{ .Name }}</a>
+      <li class="menu__nav-item {{ if $currentPage.HasMenuCurrent "main" . }} is-active{{ end }}">
         {{ if .HasChildren }}
+        <span class="menu__link">{{ .Name }}</span>
         <ol class="menu__sub-nav-list">
           {{ range .Children -}}
-          <li class="menu__sub-nav-item">
+          <li class="menu__sub-nav-item {{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}">
             <a class="menu__sub-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{- end }}
         </ol>
+        {{ else }}
+          {{ $target := "#" }}
+          {{ if ne .Page nil }}
+            {{ $target = .URL | relLangURL }}
+          {{ end }}
+          <a class="menu__link" href="{{ $target }}">{{ .Name }}</a>
         {{ end }}
       </li>
       {{- end }}

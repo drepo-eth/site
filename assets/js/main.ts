@@ -1,15 +1,7 @@
-window.onload = () => {
-    const $menu = document.querySelector('.menu');
-    const $menuBtn = document.querySelector('.menu__btn');
-    // $menu.classList.add('is-open');
+import {MENU} from './menu';
+import {THEME_SWITCHER} from './theme-switcher';
 
-    $menuBtn.addEventListener('click', function () {
-        if ($menu.classList.contains('is-open')) {
-            $menu.classList.remove('is-open');
-            $menu.classList.add('is-closed');
-        } else if ($menu.classList.contains('is-closed')) {
-            $menu.classList.add('is-open');
-            $menu.classList.remove('is-closed');
-        }
-    })
-};
+window.addEventListener('load', function () {
+    MENU.init();
+    THEME_SWITCHER.init();
+});

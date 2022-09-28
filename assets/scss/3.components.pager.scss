@@ -13,7 +13,7 @@
 .pager__counter {
   grid-area: counter;
   justify-self: center;
-  color: var(--color-highlight-text);
+  color: var(--color-pager);
   @include f-copy-large;
   
   @include breakpoint(lg) {
@@ -47,13 +47,25 @@
     text-align: center;
 
     &:hover {
-      transition: background 0.15s, color 0.15s;
-      background: var(--color-hint);
+      transition: background $d-anim, color $d-anim;
+      background: var(--color-pager-bg);
+      
+      // Alternative
+      //&::before {
+      //  content: '';
+      //  position: absolute;
+      //  left: 15px;
+      //  border-radius: 50%;
+      //  height: 60px;
+      //  width: 60px;
+      //  background: var(--color-hint);
+      //  z-index: -1;
+      //}
     }
   }
   
   i {
-    color: var(--color-highlight-text);
+    color: var(--color-pager);
     font-family: 'Lora', serif;
     font-size: 44px;
     font-weight: $fw-bold;

@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: $spacer-sm;
   margin: $spacer-xxl auto;
-  border-top: 2px solid var(--color-hint);
+  border-top: 2px solid var(--color-footer-border);
   padding-top: $spacer-md;
   width: 100% / 12 * 8;
   @include f-footer-small;
