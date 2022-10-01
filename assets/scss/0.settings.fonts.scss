@@ -21,8 +21,8 @@ $fw-bold: 700;
   font-weight: $fw-bold;
   
   //@include breakpoint(lg) {
-	font-size: 36px;
-	line-height: 42px;
+	font-size: pxToRem(36px);
+	line-height: pxToRem(42px);
   //}
 }
 
@@ -31,8 +31,8 @@ $fw-bold: 700;
   font-weight: $fw-regular;
   
   //@include breakpoint(lg) {
-	font-size: 36px;
-	line-height: 42px;
+  font-size: pxToRem(36px);
+  line-height: pxToRem(42px);
   //}
 }
 
@@ -41,8 +41,8 @@ $fw-bold: 700;
   font-weight: $fw-bold;
   
   //@include breakpoint(lg) {
-	font-size: 24px;
-	line-height: 27px;
+	font-size: pxToRem(24px);
+	line-height: pxToRem(27px);
   //}
 }
 
@@ -51,8 +51,8 @@ $fw-bold: 700;
   font-weight: $fw-regular;
   
   //@include breakpoint(lg) {
-	font-size: 24px;
-	line-height: 27px;
+	font-size: pxToRem(24px);
+	line-height: pxToRem(27px);
   //}
 }
 
@@ -60,8 +60,8 @@ $fw-bold: 700;
   font-family: 'Overpass Mono', monospace;
   
   //@include breakpoint(lg) {
-	font-size: 14px;
-	line-height: 21px;
+	font-size: pxToRem(14px);
+	line-height: pxToRem(21px);
   //}
 }
 
@@ -70,8 +70,8 @@ $fw-bold: 700;
   font-weight: $fw-regular;
   
   //@include breakpoint(lg) {
-	font-size: 18px;
-	line-height: 27px;
+	font-size: pxToRem(18px);
+	line-height: pxToRem(27px);
   //}
 }
 
@@ -80,8 +80,8 @@ $fw-bold: 700;
   font-weight: $fw-bold;
   
   //@include breakpoint(lg) {
-	font-size: 30px;
-	line-height: 36px;
+	font-size: pxToRem(30px);
+	line-height: pxToRem(36px);
   //}
 }
 
@@ -91,8 +91,8 @@ $fw-bold: 700;
   font-weight: $fw-regular;
   
   //@include breakpoint(lg) {
-	font-size: 12px;
-	line-height: 18px;
+	font-size: pxToRem(12px);
+	line-height: pxToRem(18px);
   //}
 }
 
@@ -101,7 +101,7 @@ $fw-bold: 700;
   font-weight: $fw-regular;
   
   //@include breakpoint(lg) {
-	font-size: 12px;
-	line-height: 18px;
+	font-size: pxToRem(12px);
+	line-height: pxToRem(18px);
   //}
 }

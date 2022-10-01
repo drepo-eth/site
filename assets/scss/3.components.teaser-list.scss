@@ -1,7 +1,6 @@
 .teaser-list {
   margin: $spacer-lg auto;
-  //padding-top: $spacer-md;
-  width: 100% / 12 * 8;
+  width: column(8, 12);
 }
 
 .teaser-list__headline {

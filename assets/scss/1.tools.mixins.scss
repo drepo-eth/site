@@ -31,22 +31,55 @@
 }
 
 /**
- *  Vertical-Alignment center/middle
+ * Convert px to rem
  */
-@mixin align-middle() {
-  position: absolute;
-  top: 50%;
-  transform: translate( 0, -50% );
+@function pxToRem($px: 12px, $base: 16px) {
+  @return ($px / $base * 1rem);
+}
+
+/*
+ * Get column in %
+ */
+@function column($col, $base) {
+  $value: (100% / $base * $col);
+  @return $value;
 }
 
 /**
- *  Vertical/Horizontal-Alignment center/middle
+ * No transition for sure
  */
-@mixin align-center-middle() {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate( -50%, -50% );
+.no-transition * {
+  transition: none !important;
+}
+
+/**
+ * MIXIN: Scrollbar
+ */
+@mixin scrollbar ($margin: 0) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-thumb-bg) var(--color-scrollbar-bg);
+  
+  &::-webkit-scrollbar {
+    width: pxToRem(12px);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: pxToRem(6px);
+    background-color: var(--color-scrollbar-bg);
+    border: 1px solid var(--color-thumb-bg);
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--color-thumb-bg);
+  }
+  
+  &::-webkit-scrollbar-track-piece:start {
+    margin-top: $margin;
+  }
+  
+  &::-webkit-scrollbar-track-piece:end {
+    margin-bottom: $margin;
+  }
 }
 
 

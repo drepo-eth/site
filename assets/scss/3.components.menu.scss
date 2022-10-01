@@ -5,13 +5,14 @@
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 34px $spacer-xs 0 $spacer-sm;
+  padding: pxToRem(55px) $spacer-xs 0 $spacer-sm;
   height: 100%;
-  width: 70px;
+  width: pxToRem(70px);
   background: var(--color-menu-bg);
-  transition: width $d-anim ease-in-out;
-  overflow: hidden;
-  z-index: 300;
+  transition: all $d-anim ease-in-out;
+  overflow-y: auto;
+  z-index: 200;
+  @include scrollbar;
   
   * {
     color: var(--color-text);
@@ -19,37 +20,32 @@
   }
   
   &.is-open {
-    border-right: 4px solid $c-grey;
-    width: 300px;
+    width: pxToRem(300px);
   }
   
   &.is-closed {
-    padding: $spacer-sm $spacer-xs;
+    padding: pxToRem(55px) $spacer-xs $spacer-sm;
     
     .menu__headline-wrapper,
     .menu__nav {
       display: none;
     }
   }
-  
-  .no-transition &{
-    transition: none !important;
-  }
 }
 
 .menu__btn {
   display: grid;
+  position: absolute;
   place-items: center;
   align-self: end;
-  width: 40px;
-  height: 40px;
+  height: pxToRem(40px);
 }
 
 .menu__burger {
   position: relative;
   background: var(--color-menu-burger);
-  width: 24px;
-  height: 4px;
+  width: pxToRem(24px);
+  height: pxToRem(4px);
   opacity: 1;
   transition: all $d-anim ease-in-out;
   
@@ -59,14 +55,12 @@
     position: relative;
     display: block;
     background: var(--color-menu-burger);
-    width: 24px;
-    height: 4px;
+    width: pxToRem(24px);
+    height: pxToRem(4px);
     transition: all $d-anim ease-in-out;
   }
   
   .no-transition & {
-    transition: none !important;
-  
     &::before,
     &::after {
       transition: none !important;
@@ -74,11 +68,11 @@
   }
   
   &::before {
-    top: 8px;
+    top: pxToRem(8px);
   }
   
   &::after {
-    bottom: 12px;
+    bottom: pxToRem(12px);
   }
   
   .is-open & {
@@ -91,7 +85,7 @@
     
     &::after {
       transform: rotate(-45deg);
-      bottom: 4px;
+      bottom: pxToRem(4px);
     }
   }
 }
@@ -104,12 +98,12 @@
   
   .bi-triangle-fill {
     rotate: 180deg;
-    margin-right: 12px;
-    font-size: 8px;
+    margin-right: pxToRem(12px);
+    font-size: pxToRem(8px);
     line-height: 1;
     
     &::before {
-      vertical-align: -4px;
+      vertical-align: pxToRem(-4px);
     }
   }
 }
@@ -124,7 +118,7 @@
   &::before {
     counter-increment: section;
     content: counters(section, '.') ' ';
-    margin-left: -43px;
+    margin-left: pxToRem(-43px);
   }
   
   &:hover {
@@ -135,16 +129,16 @@
 }
 
 .menu__nav-list {
-  margin-left: 44px;
+  margin-left: pxToRem(44px);
 }
 
 .menu__nav-item {
-  margin: 10px 0;
+  margin: pxToRem(10px) 0;
   font-weight: $fw-bold;
 }
 
 .menu__sub-nav-list {
-  margin-top: 10px;
+  margin-top: pxToRem(10px);
 }
 
 .menu__sub-nav-item.is-active {
@@ -155,10 +149,10 @@
 }
 
 .menu__link {
-  margin-left: 24px;
+  margin-left: pxToRem(24px);
 }
 
 .menu__sub-link {
-  margin-left: 7px;
-  margin-bottom: 12px;
+  margin-left: pxToRem(7px);
+  margin-bottom: pxToRem(12px);
 }

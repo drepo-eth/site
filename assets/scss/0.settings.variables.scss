@@ -28,6 +28,8 @@ $spacer-lg: $spacer-base * 4;
 $spacer-xl: $spacer-base * 6;
 $spacer-xxl: $spacer-base * 8;
 
+$s-content-width: #{column(8, 12)};
+
 /**
  * Animation & Transition
  */

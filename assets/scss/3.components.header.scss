@@ -7,8 +7,8 @@
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-areas: 'theme main .';
   align-items: end;
-  margin-bottom: 40px;
-  padding: $spacer-xs 0;
+  margin-bottom: pxToRem(40px);
+  padding: pxToRem(33px) 0 pxToRem(27px);
   width: 100%;
   background: var(--color-header-bg);
   box-shadow: 0 4px 12px -2px rgba(black, 0.3);
@@ -23,7 +23,7 @@
 .header__actions {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 6px;
+  margin-bottom: pxToRem(9px);
 }
 
 .header__contact {
@@ -31,15 +31,15 @@
   place-items: center;
   border-radius: 50%;
   text-decoration: none;
+  width: pxToRem(45px);
+  height: pxToRem(45px);
 }
 
 .header__contact--github {
-  margin-right: 24px;
-  width: 45px;
-  height: 45px;
+  margin-right: pxToRem(24px);
   
   .bi-github {
-    font-size: 45px;
+    font-size: pxToRem(45px);
     color: var(--color-text);
   }
 }
@@ -47,11 +47,9 @@
 .header__contact--mail {
   color: var(--color-bg);
   background: var(--color-text);
-  width: 45px;
-  height: 45px;
   
   .bi-envelope {
-    font-size: 25px;
+    font-size: pxToRem(25px);
   }
 }
 
@@ -68,12 +66,12 @@
 
 .header__theme-btn {
   grid-area: theme;
-  margin-bottom: 4px;
+  margin-bottom: pxToRem(1px);
   padding-left: $spacer-sm;
   color: var(--color-highlight-text);
   text-align: left;
-  width: 32px;
-  height: 32px;
+  width: pxToRem(32px);
+  height: pxToRem(32px);
   
   .dark & {
     .bi::before {

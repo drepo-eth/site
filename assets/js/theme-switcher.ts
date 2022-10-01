@@ -9,7 +9,7 @@ THEME_SWITCHER.init = function () {
     let systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)');
     let themeState = sessionStorage.getItem('theme');
 
-    let changeMode = function (isDarkModeActivate) {
+    const changeMode = function (isDarkModeActivate) {
         STATE.toggleTransition(true);
 
         if (isDarkModeActivate) {

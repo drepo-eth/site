@@ -1,6 +1,12 @@
+.headline--h1 {
+  @include f-headline-h1;
+  margin: $spacer-xl auto 0;
+  width: column(8, 12);
+}
+
 .content {
   margin: 0 auto;
-  width: 100% / 12 * 8;
+  width: column(8, 12);
   @include f-copy;
   
   h2 {
@@ -70,6 +76,10 @@
     }
   }
   
+  .highlight {
+    margin-top: $spacer-md;
+  }
+  
   .footnotes {
     @include f-copy-small;
     
@@ -79,7 +89,7 @@
     
     ol {
       margin-top: $spacer-sm;
-      margin-left: 14px;
+      margin-left: pxToRem(14px);
       columns: 2;
       column-gap: $spacer-sm;
       

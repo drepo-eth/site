@@ -6,7 +6,7 @@
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin: $spacer-xl auto 0;
-    width: 100% / 12 * 8;
+    width: column(8, 12);
   }
 }
 
@@ -41,33 +41,21 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    margin: 0;
-    max-width: 150px;
-    min-width: 90px;
+    margin: 0 8px;
+    max-width: pxToRem(150px);
+    min-width: pxToRem(90px);
     text-align: center;
 
     &:hover {
       transition: background $d-anim, color $d-anim;
       background: var(--color-pager-bg);
-      
-      // Alternative
-      //&::before {
-      //  content: '';
-      //  position: absolute;
-      //  left: 15px;
-      //  border-radius: 50%;
-      //  height: 60px;
-      //  width: 60px;
-      //  background: var(--color-hint);
-      //  z-index: -1;
-      //}
     }
   }
   
   i {
     color: var(--color-pager);
     font-family: 'Lora', serif;
-    font-size: 44px;
+    font-size: pxToRem(44px);
     font-weight: $fw-bold;
     font-style: normal;
   }
