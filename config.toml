@@ -4,6 +4,7 @@ title = 'dRepo - decentralized Software Repository'
 
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
+relativeURLs = false
 
 [menu]
 [[menu.main]]
