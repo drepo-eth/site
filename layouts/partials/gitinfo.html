@@ -1,0 +1,10 @@
+{{ if .GitInfo }}
+<div class="gitinfo">
+  <div class="git-version">
+    Version: <span class="git-version-hash">{{ .GitInfo.Hash }}</span>
+  </div>
+  <div class="git-lastmod">
+    Last Change: <span class="git-lastmod-date">{{ .Page.Lastmod.UTC }}</span>
+  </div>
+</div>
+{{ end }}
