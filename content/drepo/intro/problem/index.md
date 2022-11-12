@@ -28,6 +28,7 @@ big win for everyone.
 <!-- https://techcrunch.com/2022/08/08/treasury-tornado-cash-laundering-stolen-crypto/ -->
 <!-- https://techcrunch.com/2022/08/12/suspected-tornado-cash-developer-arrested-in-amsterdam/ -->
 <!-- https://www.theverge.com/2022/8/12/23298217/tornado-cash-crypto-mixer-crackdown-authorities-arrest-suspected-developer-amsterdam -->
+<!-- https://news.ycombinator.com/item?id=33576369 -->
 
 <!-- generally centralization -->
 <!-- https://edition.cnn.com/2020/12/14/business/mastercard-visa-discover-pornhub/index.html -->
@@ -76,9 +77,13 @@ Most notably:
    In the following days one of the developers was arrested in the Netherlands
    on charges of money laundering.
 
-Such incidents at this magnitude are very rare but they show the importance of
+Such incidents[^more_incidents] at this magnitude are very rare but they show the importance of
 repositories and other centralized infrastructure in software development as
 well as the power that lies with those who manage them.
+
+[^more_incidents]: More incidents:
+[GitHub Account banned](https://news.ycombinator.com/item?id=33576369)
+
 
 ## Threats
 
