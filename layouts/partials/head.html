@@ -15,6 +15,9 @@
         {{ else }}
             {{ .Title }} :: {{ $.Site.Title }} {{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}
         {{ end }}
+        {{ if .Site.BuildDrafts }}
+            !! DRAFT BUILD !!
+        {{ end }}
     </title>
 {{ end }}
 
