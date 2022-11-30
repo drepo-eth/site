@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="drepo team">
+<meta name="description" content="Clear and Present Danger to the Software Supply Chain In general, any manipulation to any element of the software supply chain puts the whole software ecosystem in danger and can cause serious damage. This is not just limited to other software projects but also affects the real world as basically everything and everyone is somewhat dependent of software in our modern world. This can range from the inconvenience of not being able to pay with your phone to the catastrophic failure of essential infrastructure causing countless deaths." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
+<link rel="canonical" href="http://drepo.eth/drepo/intro/securing-supply-chain/" />
+
+
+    <title>
+        
+            Securing The Supply Chain :: dRepo - decentralized Software Repository 
+        
+        
+            !! DRAFT BUILD !!
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.30c87a1ac8078ea7cf7b336f9d3dd978877e6842bdc874e2b48ab950087f0bc2.css">
+
+
+
+
+
+<script src="/js/main.js" ></script>
+
+<meta itemprop="name" content="Securing The Supply Chain">
+<meta itemprop="description" content="Clear and Present Danger to the Software Supply Chain In general, any manipulation to any element of the software supply chain puts the whole software ecosystem in danger and can cause serious damage. This is not just limited to other software projects but also affects the real world as basically everything and everyone is somewhat dependent of software in our modern world. This can range from the inconvenience of not being able to pay with your phone to the catastrophic failure of essential infrastructure causing countless deaths."><meta itemprop="datePublished" content="2022-08-22T19:38:57+02:00" />
+<meta itemprop="dateModified" content="2022-11-30T10:20:14+01:00" />
+<meta itemprop="wordCount" content="894">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Securing The Supply Chain"/>
+<meta name="twitter:description" content="Clear and Present Danger to the Software Supply Chain In general, any manipulation to any element of the software supply chain puts the whole software ecosystem in danger and can cause serious damage. This is not just limited to other software projects but also affects the real world as basically everything and everyone is somewhat dependent of software in our modern world. This can range from the inconvenience of not being able to pay with your phone to the catastrophic failure of essential infrastructure causing countless deaths."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-08-22 19:38:57 &#43;0200 &#43;0200" />
+
+
+
+
+    </head>
+
+    <body>
+        <aside class="menu">
+  <button class="menu__btn">
+    <span class="menu__burger"></span>
+  </button>
+  <div class="menu__headline-wrapper">
+    <i class="bi bi-triangle-fill" aria-hidden="true"></i>
+    <h2 class="menu__headline">Index</h2>
+  </div>
+  <nav class="menu__nav">
+    <ol class="menu__nav-list"><li class="menu__nav-item  is-active">
+        
+        <span class="menu__link">Introduction</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/intro/problem/">The Problem</a>
+          </li><li class="menu__sub-nav-item  is-active">
+            <a class="menu__sub-link" href="/drepo/intro/securing-supply-chain/">Securing The Supply Chain</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">Existing Repos</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Type: Centralized</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/mirrored/">Type: Mirrored</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/warez/">Warez</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/cryptography/">Cryptography</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+          
+          
+          <a class="menu__link" href="#">Decentralization</a>
+        
+      </li><li class="menu__nav-item ">
+        
+          
+          
+          <a class="menu__link" href="#">Decentralized Repository</a>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">Repository Extensions</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/extensions/incentives/">Incentives</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">example</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/example/examples/">Examples</a>
+          </li>
+        </ol>
+        
+      </li>
+    </ol>
+  </nav>
+
+</aside>
+
+
+        <div class="container">
+            
+                <header class="header">
+    <div class="header__wrapper">
+        <a class="header__home" href="http://drepo.eth/">
+            
+            <img class="header__logo" src="/images/logo-without-space.svg" alt="">
+        </a>
+        <div class="header__actions">
+            <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank" title="Visit our github">
+                <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com" title="Wirte us an email">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <button class="header__theme-btn" title="Click here to change theme" aria-label="Click here to change theme">
+        <i class="bi bi-moon" aria-hidden="true"></i>
+    </button>
+</header>
+
+            
+
+            <main class="main">
+                
+  <h1 class="headline--h1">Securing The Supply Chain</h1>
+
+  <div class="content">
+    <!-- raw HTML omitted -->
+<h2 id="clear-and-present-danger-to-the-software-supply-chain">Clear and Present Danger to the Software Supply Chain</h2>
+<p>In general, any manipulation to any element of the software supply chain puts
+the whole software ecosystem in danger and can cause serious damage.
+This is not just limited to other software projects but also affects the real
+world as basically everything and everyone is somewhat dependent of software in
+our modern world.
+This can range from the inconvenience of not being able to pay with your phone
+to the catastrophic failure of essential infrastructure causing countless
+deaths.</p>
+<p>Besides you and me, big tech and governments around the world also realized
+that software is important and that the software supply chain is fragile.
+Thus, initiatives and programs, such as the <a href="https://www.cve.org/">CVE</a> and the
+<a href="https://github.com/advisories">GitHub Advisory Database</a>, were introduced to
+coordinate and communicate security issues in libraries and applications.
+To counter recent hacks and ransomware attacks the U.S. President also issued
+an <a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/">executive
+order</a>
+to improve cybersecurity.
+In combination with the trend to <em>DevSecOps</em> this shows the growing importance
+of this topic as well as the attention it is receiving.</p>
+<!-- raw HTML omitted -->
+<h2 id="legacy-security">Legacy Security</h2>
+<p>Coming back to the topic of software repositories, <a href="https://slsa.dev/">SLSA</a> is
+another initiative that focuses on tracking software artifacts along the
+software supply chain.
+Generally it provides significant improvements to the various steps in the
+processes of creating, distributing and receiving artifacts that are used in
+software projects.</p>
+<p>But like other security solutions<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> it is built upon trust models that
+do not scale to the global level and the evolving world we live in.
+SLSA Level 3 addresses <em>source and build platforms</em> and defines that they have
+to <em>meet specific standards</em> so the <em>integrity</em> of <em>provenance</em> and other
+artifacts is guaranteed.
+This is basically a great idea.
+However, the question is how <em>compliance</em> with these standards is achieved.</p>
+<p>This is where the authors of SLSA point to the ususal <strong><a href="https://slsa.dev/spec/v0.1/levels#detailed-explanation">Compliance
+Buzzwords</a></strong>,
+<em>auditing</em>, <em>certifications</em>, and <em>ISO something</em>, to verify that repositories
+and other infrastructure are safe to use.
+Again, in a perfect world this would work fine.
+But does a centralized trust model suffice?</p>
+<p>Does an audit of a public software repository like the NPM Registry which is
+operated by a privately held company guarantee that neither the repository nor
+the people involved act maliciously?
+What does such an audit actually mean as it is just a snapshot in time?
+Who is this auditor and why should we trust them?
+Why should you believe the word of <em>whoever</em> on something that is happening
+behind closed doors?</p>
+<p>These are just some of the questions you should ask when you read such a
+proposal.</p>
+<h2 id="no-trust-is-better-trust">No Trust is Better Trust</h2>
+<h3 id="trust-in-few">Trust in Few</h3>
+<p>It is the authors&rsquo; opinion that open source software development and the
+software supply chain have reached a level of <em>global, vital significance</em>.
+Hence, entrusting the management and ownership of essential elements to few
+entities is inherently risky.
+Individuals, companies, and governments will eventually pursue their own
+interests and take advantage of their positions leaving the community with a
+broken or compromised system.</p>
+<blockquote>
+<p>The proper, uninterrupted operation of all software supply chain elements
+supersedes all other interests<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> and must be guaranteed under all
+circumstances.</p>
+</blockquote>
+<p>Removing the component of trusting in people and institutions to prevent the
+misuse of power is a necessary action.
+It provides the bases of a system that cannot be compromised by some party to
+enforce an agenda on everyone.</p>
+<h3 id="trust-reduction">Trust Reduction</h3>
+<p><em>Democratic systems</em> try to remove the power from the hands of the few and give
+every participant a voice in the decision making process.
+Real world adaptations, however, still centralize power and are, as we all
+know, not flawless.
+Corruption and manipulation of politics are not just the stuff that makes great
+books and movies but are very real and even partially legalized through for
+example lobbying.</p>
+<p>The trust models we commonly use were created when there was no internet.
+Instant global communication and modern cryptography allow the creation of new
+models that are suitable for the current state of the world.</p>
+<p>We envision a <em>trustless</em> system built upon basic rules we all can agree on.
+It fulfills its functionality, nothing more and nothing less.
+By being <em>axiomatic</em>, simple, and versatile it is a building block for larger
+systems.</p>
+<p>A modern software repository must be just that, a software repository.
+It holds and serves software artifacts to anyone in the world, no exceptions.
+Likewise, anyone can add new software without approval of an administrator.
+It is a system that is reliable in terms of the service it provides.
+It cannot be censored or modified by individuals, companies, or governments.</p>
+<p>Decentralized systems can provides these properties.
+We propose a software repository that is built upon modern decentralized
+technologies and mindsets.
+It is driven and secured by its user community and cannot be compromised.
+<em>Cryptographic truth</em> and <em>immutable code</em> replace the need for trusted parties
+who have to uphold the rules of the system.
+A dezentralized repository (<strong>dRepo</strong>) provides security along the whole supply
+chain, from software development over software distribution to software
+execution.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>For example signing container images using Docker Content Trust and
+the certificate chains we use to secure the web are all good ideas that are
+fundamentally flawed.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>This does not necessarily include human rights violations or the
+direct endangerment of individuals. However, corporate greed, political
+suppression, the limitation of the freedom of speech and the likes cannot be
+allowed.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+  
+  
+  <div class="pager">
+    
+    
+    <a href="http://drepo.eth/drepo/intro/problem/" class="pager__prev">
+      <i aria-hidden="true"> &lt; </i>
+    </a>
+    
+    
+
+    
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<span class="pager__counter">
+  2 / 8
+</span>
+
+
+    
+    
+    <a href="http://drepo.eth/drepo/existing-repos/properties/" class="pager__next">
+      <i aria-hidden="true"> > </i>
+    </a>
+    
+    
+  </div>
+  
+
+            </main>
+
+            
+                <footer class="footer">
+  <div class="footer__credit">
+    <h4 class="footer__heading">This site is based on </h4>
+    <ul>
+      <li>
+        the masterthesis
+        <a href="https://github.com/FanXuX/masterthesis">
+          "Konzept eines universellen,
+          dezentralen Software Repository's und dessen Adaption im
+          NPM-Frontend-Oekosystem"</a>
+        (Concept of a univseral, decentralized software
+        Repository and its application in the NPM-frontend-ecosystem) by
+        Fan Xu
+        (<a href="https://fanxu.de/">website</a>
+        |
+        <a href="https://github.com/FanXuX">github</a>)
+      </li>
+      <li>
+        and the paper
+        <span>An Architecture of a Dezentralized Software Repository</span>
+        by Fan Xu and Jan Himmelspach
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer__resources">
+    <h4 class="footer__heading">Further resources:</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
+      </li>
+    </ul>
+  </div>
+
+  
+<div class="gitinfo">
+  <div class="git-version">
+    Version: <span class="git-version-hash">2076be32cd99fc8b3795c5c0938c886e613fad13</span>
+  </div>
+  <div class="git-lastmod">
+    Last Change: <span class="git-lastmod-date">2022-11-30 09:20:14 &#43;0000 UTC</span>
+  </div>
+</div>
+
+
+</footer>
+
+            
+        </div>
+
+        
+    </body>
+</html>
