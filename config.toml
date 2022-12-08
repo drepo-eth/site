@@ -1,6 +1,6 @@
 baseURL = 'http://drepo.eth/'
 languageCode = 'en-us'
-title = 'dRepo - decentralized Software Repository'
+title = 'dRepo.eth - decentralized Software Repository'
 
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
