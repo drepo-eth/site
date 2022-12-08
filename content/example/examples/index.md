@@ -2,6 +2,7 @@
 title: "Examples"
 date: 2022-07-08T15:54:40Z
 draft: true
+expiryDate: 2020-01-01T01:00:00Z
 weight: 999010
 menu:
   main:

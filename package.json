@@ -7,7 +7,7 @@
     "build": "hugo",
     "build-draft": "hugo --buildDrafts",
     "create": "hugo new",
-    "server": "hugo server --buildDrafts",
+    "server": "hugo server --buildDrafts --buildExpired",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dRepo Team",
