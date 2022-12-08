@@ -122,6 +122,9 @@ contract Caller {
 
 {{< image-resize src="cookies.jpg" alt="cookie ALT" caption="Cookies!" size="300x">}}
 
+## this is an SVG
+
+{{< image-svg src="diagram.excalidraw.svg" alt="yay a svg" caption="SVG!" >}}
 
 ## A Table
 
