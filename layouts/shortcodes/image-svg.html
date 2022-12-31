@@ -4,7 +4,7 @@
 {{ $caption := (.Get "caption") }}
 {{ $image := $.Page.Resources.GetMatch $src }}
 
-<figure>
+<figure class="figure--svg">
   <a href="{{ $src }}" target="_blank">
     <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" />
   </a>

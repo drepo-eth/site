@@ -12,6 +12,7 @@
   --color-footer-border: #{$c-lightgrey};
   --color-scrollbar-bg: #{$c-primary-blue};
   --color-thumb-bg: #{$c-middlegrey};
+  --image-filter: none;
 }
 
 :root.dark {
@@ -28,6 +29,7 @@
   --color-footer-border: #{$c-grey};
   --color-scrollbar-bg: #{$c-lightgrey};
   --color-thumb-bg: #{$c-grey};
+  --image-filter: invert(1);
 }
 
 

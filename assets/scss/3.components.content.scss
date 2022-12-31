@@ -76,6 +76,12 @@
     }
   }
   
+  .figure--svg {
+    img {
+      filter: var(--image-filter);
+    }
+  }
+  
   .highlight {
     margin-top: $spacer-md;
   }
