@@ -86,6 +86,31 @@
     margin-top: $spacer-md;
   }
   
+  pre {
+    padding: $spacer-base;
+    overflow-x: auto;
+    @include scrollbar();
+    @include f-code;
+  }
+  
+  table {
+    margin-top: $spacer-md;
+    padding: $spacer-base;
+    width: 100%;
+    border-spacing: $spacer-sm;
+    
+    th,
+    td {
+      padding: $spacer-base / 2;
+      border-bottom: 1px solid;
+    }
+    
+    th {
+      border-bottom: 3px double;
+      font-weight: $fw-semibold;
+    }
+  }
+  
   .footnotes {
     @include f-copy-small;
     

@@ -1,12 +1,22 @@
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: $spacer-sm;
-  margin: $spacer-xxl auto;
   border-top: 2px solid var(--color-footer-border);
   padding-top: $spacer-md;
   width: column(8, 12);
   @include f-footer-small;
+  
+  @include breakpoint(sm) {
+    hyphens: auto;
+  }
+  @include breakpoint(sm-md) {
+    grid-template-columns: 1fr;
+    margin: $spacer-xl auto;
+  }
+  @include breakpoint(lg) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $spacer-sm;
+    margin: $spacer-xxl auto;
+  }
   
   a {
     color: var(--color-highlight-text);

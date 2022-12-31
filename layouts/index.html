@@ -1,10 +1,17 @@
 {{ define "main" }}
-  <div class="title-banner">
+  <div class="banner">
     {{ $image := $.Page.Resources.GetMatch .Params.titleBanner.image.src }}
     {{ $resized := $image.Resize .Params.titleBanner.image.size }}
-    <img src="{{ $resized.RelPermalink }}"
+    <img src="{{ $resized.RelPermalink }}" class="banner__image"
       alt="{{ .Params.titleBanner.image.alt }}"/>
-    {{ .Params.titleBanner.text }}
+    <div class="banner__content">
+      <div class="banner__headline">
+        Decentralization
+      </div>
+      <div class="banner__text">
+        {{ .Params.titleBanner.text }}
+      </div>
+    </div>
   </div>
 
   <div class="teaser-list" >

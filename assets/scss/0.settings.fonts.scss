@@ -20,40 +20,72 @@ $fw-bold: 700;
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-bold;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm) {
+	font-size: pxToRem(28px);
+	line-height: pxToRem(32px);
+  }
+  @include breakpoint(md) {
+	font-size: pxToRem(32px);
+	line-height: pxToRem(48px);
+  }
+  @include breakpoint(lg) {
 	font-size: pxToRem(36px);
 	line-height: pxToRem(42px);
-  //}
+  }
 }
 
 @mixin f-headline-h2 {
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-regular;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm) {
+	font-size: pxToRem(28px);
+	line-height: pxToRem(32px);
+  }
+  @include breakpoint(md) {
+	font-size: pxToRem(32px);
+	line-height: pxToRem(48px);
+  }
+  @include breakpoint(lg) {
   font-size: pxToRem(36px);
   line-height: pxToRem(42px);
-  //}
+  }
 }
 
 @mixin f-headline-h3 {
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-bold;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm) {
+	font-size: pxToRem(20px);
+	line-height: pxToRem(24px);
+  }
+  @include breakpoint(md) {
+	font-size: pxToRem(22px);
+	line-height: pxToRem(26px);
+  }
+  @include breakpoint(lg) {
 	font-size: pxToRem(24px);
 	line-height: pxToRem(27px);
-  //}
+  }
 }
 
 @mixin f-headline-h4 {
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-regular;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm) {
+	font-size: pxToRem(20px);
+	line-height: pxToRem(24px);
+  }
+  @include breakpoint(md) {
+	font-size: pxToRem(22px);
+	line-height: pxToRem(26px);
+  }
+  @include breakpoint(lg) {
 	font-size: pxToRem(24px);
 	line-height: pxToRem(27px);
-  //}
+  }
 }
 
 @mixin f-index {
@@ -69,39 +101,48 @@ $fw-bold: 700;
   font-family: 'Lora', serif;
   font-weight: $fw-regular;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm-md) {
+	font-size: pxToRem(16px);
+	line-height: pxToRem(24px);
+  }
+  @include breakpoint(lg) {
 	font-size: pxToRem(18px);
 	line-height: pxToRem(27px);
-  //}
+  }
 }
 
 @mixin f-copy-large {
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-bold;
   
-  //@include breakpoint(lg) {
+  @include breakpoint(sm-md) {
+	font-size: pxToRem(28px);
+	line-height: pxToRem(32px);
+  }
+  @include breakpoint(lg) {
 	font-size: pxToRem(30px);
 	line-height: pxToRem(36px);
-  //}
+  }
 }
 
 
 @mixin f-copy-small {
   font-family: 'Lora', serif;
   font-weight: $fw-regular;
-  
-  //@include breakpoint(lg) {
-	font-size: pxToRem(12px);
-	line-height: pxToRem(18px);
-  //}
+  font-size: pxToRem(12px);
+  line-height: pxToRem(18px);
 }
 
 @mixin f-footer-small {
   font-family: 'Overpass Mono', monospace;
   font-weight: $fw-regular;
-  
-  //@include breakpoint(lg) {
-	font-size: pxToRem(12px);
-	line-height: pxToRem(18px);
-  //}
+  font-size: pxToRem(12px);
+  line-height: pxToRem(18px);
+}
+
+@mixin f-code {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: $fw-regular;
+  font-size: pxToRem(14px);
+  line-height: pxToRem(21px);
 }
