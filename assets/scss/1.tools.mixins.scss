@@ -30,6 +30,39 @@
   }
 }
 
+
+/**
+ *  Breakpoints for exclusive container queries based on div.main
+ *  @params $media: sm | md | lg | xl | xs-md | md-xl
+ */
+@mixin break-main($media) {
+  @if $media == sm {
+    @container main (max-width: #{map-get($breakpoints, sm-max)}) {
+      @content;
+    }
+  } @else if $media == md {
+    @container main (min-width: #{map-get($breakpoints, md-min)}) and (max-width: #{map-get($breakpoints, md-max)}) {
+      @content;
+    }
+  }@else if $media == lg {
+    @container main (min-width: #{map-get($breakpoints, lg-min)}) {
+      @content;
+    }
+  } @else if $media == xl {
+    @container main (min-width: #{map-get($breakpoints, xl-min)}) {
+      @content;
+    }
+  } @else if $media == sm-md {
+    @container main (max-width: #{map-get($breakpoints, md-max)}) {
+      @content;
+    }
+  } @else if $media == md-xl {
+    @container main (min-width: #{map-get($breakpoints, md-min)}) {
+      @content;
+    }
+  }
+}
+
 /**
  * Convert px to rem
  */

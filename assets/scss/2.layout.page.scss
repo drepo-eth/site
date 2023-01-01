@@ -45,17 +45,21 @@ body {
 .container {
   position: relative;
   
-  aside.is-open + & {
-	margin-left: pxToRem(300px);
+  aside + & {
+    margin-left: pxToRem(66px);
     transition: all $d-anim ease-in-out;
   }
   
-  aside.is-closed + & {
-	margin-left: pxToRem(70px);
-    transition: all $d-anim ease-in-out;
+  @include breakpoint(md-xl) {
+    aside.is-open + & {
+      margin-left: pxToRem(300px);
+      transition: all $d-anim ease-in-out;
+    }
   }
 }
 
 .main {
+  container-type: inline-size;
+  container-name: main;
   padding-top: pxToRem(120px);
 }

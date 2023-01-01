@@ -13,13 +13,13 @@
   grid-row-gap: $spacer-sm;
   margin-top: $spacer-md;
   
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     grid-template-columns: 1fr;
   }
-  @include breakpoint(md) {
+  @include break-main(md) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include breakpoint(lg) {
+  @include break-main(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

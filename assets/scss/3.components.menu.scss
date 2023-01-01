@@ -7,7 +7,7 @@
   bottom: 0;
   padding: pxToRem(55px) $spacer-xs 0 $spacer-sm;
   height: 100%;
-  width: pxToRem(70px);
+  width: pxToRem(300px);
   background: var(--color-menu-bg);
   transition: all $d-anim ease-in-out;
   overflow-y: auto;
@@ -20,11 +20,14 @@
   }
   
   &.is-open {
-    width: pxToRem(300px);
+    .menu__headline-wrapper,
+    .menu__nav {
+      margin-right: $spacer-base;
+    }
   }
   
   &.is-closed {
-    padding: pxToRem(55px) $spacer-xs $spacer-sm;
+    transform: translateX(-234px);
     
     .menu__headline-wrapper,
     .menu__nav {
