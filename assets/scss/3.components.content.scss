@@ -11,6 +11,8 @@
 }
 
 .headline--h1 {
+  border-left: 6px solid var(--color-highlight-text);
+  padding: 4px 0 0 $spacer-base;
   @include f-headline-h1;
 }
 
@@ -18,18 +20,29 @@
   @include f-copy;
   
   h2 {
-    margin-top: $spacer-xl;
     @include f-headline-h2;
   }
   
   h3 {
-    margin-top: $spacer-lg;
     @include f-headline-h3;
   }
   
   h4 {
-    margin-top: $spacer-lg;
     @include f-headline-h4;
+  }
+  
+  h2,
+  h3,
+  h4 {
+    @include break-main(sm) {
+      margin-top: $spacer-md;
+    }
+    @include break-main(md) {
+      margin-top: $spacer-lg;
+    }
+    @include break-main(lg) {
+      margin-top: $spacer-xl;
+    }
   }
   
   a {
@@ -50,7 +63,15 @@
   > ol,
   > code,
   > .footnotes {
-    margin-top: $spacer-md;
+    @include break-main(sm) {
+      margin-top: $spacer-sm;
+    }
+    @include break-main(md) {
+      margin-top: $spacer-md;
+    }
+    @include break-main(lg) {
+      margin-top: $spacer-lg;
+    }
   }
   
   ul {
