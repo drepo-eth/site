@@ -1,5 +1,3 @@
-import {STATE} from './state';
-
 export const THEME_SWITCHER = {};
 
 THEME_SWITCHER.init = function () {
@@ -10,8 +8,6 @@ THEME_SWITCHER.init = function () {
     let themeState = sessionStorage.getItem('theme');
 
     const changeMode = function (isDarkModeActivate) {
-        STATE.toggleTransition(true);
-
         if (isDarkModeActivate) {
             $root.classList.add('dark');
             $root.classList.remove('light');
@@ -21,8 +17,6 @@ THEME_SWITCHER.init = function () {
             $root.classList.remove('dark');
             sessionStorage.setItem('theme', 'light');
         }
-
-        STATE.toggleTransition(false);
     }
 
     if (themeState !== 'undefined' && themeState !== null) {

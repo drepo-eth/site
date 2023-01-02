@@ -40,6 +40,10 @@
 body {
   color: var(--color-text);
   background: var(--color-bg);
+  
+  &.is-loading {
+    display: none;
+  }
 }
 
 .container {

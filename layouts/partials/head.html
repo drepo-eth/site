@@ -29,9 +29,29 @@
 <!-- Icons -->
 {{- partial "favicons.html" . }}
 
-<!-- JS -->
-{{ $js := resources.Get "js/main.ts" | js.Build }}
-<script src="{{ $js.RelPermalink }}" ></script>
+<script>
+    const $root = document.querySelector('html');
+    const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const themeState = sessionStorage.getItem('theme');
+
+    const changeMode = function (isDarkModeActivate) {
+        if (isDarkModeActivate) {
+            $root.classList.add('dark');
+            $root.classList.remove('light');
+            sessionStorage.setItem('theme', 'dark');
+        } else {
+            $root.classList.add('light');
+            $root.classList.remove('dark');
+            sessionStorage.setItem('theme', 'light');
+        }
+    }
+
+    if (themeState !== 'undefined' && themeState !== null) {
+        changeMode(themeState === 'dark');
+    } else {
+        changeMode(systemInitiatedDark.matches);
+    }
+</script>
 
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}

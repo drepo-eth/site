@@ -1,13 +1,10 @@
 .pager {
   display: grid;
   grid-template-areas: 'prev counter next';
-  
-  @include breakpoint(sm-md) {
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    margin: $spacer-xl auto 0;
-    width: column(8, 12);
-  }
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: $spacer-xl auto 0;
+  width: column(8, 12);
 }
 
 .pager__counter {
@@ -15,10 +12,6 @@
   justify-self: center;
   color: var(--color-pager);
   @include f-copy-large;
-  
-  @include breakpoint(lg) {
-    display: none;
-  }
 }
 
 .pager__prev {
@@ -33,25 +26,6 @@
 
 .pager__prev,
 .pager__next {
-  @include breakpoint(lg) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    margin: 0 8px;
-    max-width: pxToRem(150px);
-    min-width: pxToRem(90px);
-    text-align: center;
-
-    &:hover {
-      transition: background $d-anim, color $d-anim;
-      background: var(--color-pager-bg);
-    }
-  }
-  
   i {
     color: var(--color-pager);
     font-family: 'Lora', serif;
