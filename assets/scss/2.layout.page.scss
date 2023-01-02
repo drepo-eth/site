@@ -61,5 +61,7 @@ body {
 .main {
   container-type: inline-size;
   container-name: main;
+  margin-inline: auto;
   padding-top: pxToRem(120px);
+  max-width: pxToRem(1200px);
 }
