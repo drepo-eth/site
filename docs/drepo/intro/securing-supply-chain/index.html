@@ -25,17 +25,37 @@
 
 
 
-<link rel="stylesheet" href="/main.fcfdca64c3eab4adb552e593193dd1bc1ec905eb3b231075b3eebc68475321a9.css">
+<link rel="stylesheet" href="/main.9225376c856c72f41d258e290ac18b288e0389e044d7004dfee88d5cf0c1b9ed.css">
 
 
 
+<script>
+    const $root = document.querySelector('html');
+    const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const themeState = sessionStorage.getItem('theme');
 
+    const changeMode = function (isDarkModeActivate) {
+        if (isDarkModeActivate) {
+            $root.classList.add('dark');
+            $root.classList.remove('light');
+            sessionStorage.setItem('theme', 'dark');
+        } else {
+            $root.classList.add('light');
+            $root.classList.remove('dark');
+            sessionStorage.setItem('theme', 'light');
+        }
+    }
 
-<script src="/js/main.js" ></script>
+    if (themeState !== 'undefined' && themeState !== null) {
+        changeMode(themeState === 'dark');
+    } else {
+        changeMode(systemInitiatedDark.matches);
+    }
+</script>
 
 <meta itemprop="name" content="Securing The Supply Chain">
 <meta itemprop="description" content="Clear and Present Danger to the Software Supply Chain In general, any manipulation to any element of the software supply chain puts the whole software ecosystem in danger and can cause serious damage. This is not just limited to other software projects but also affects the real world as basically everything and everyone is somewhat dependent of software in our modern world. This can range from the inconvenience of not being able to pay with your phone to the catastrophic failure of essential infrastructure causing countless deaths."><meta itemprop="datePublished" content="2022-08-22T19:38:57+02:00" />
-<meta itemprop="dateModified" content="2023-01-02T08:52:04+01:00" />
+<meta itemprop="dateModified" content="2023-01-02T22:39:04+01:00" />
 <meta itemprop="wordCount" content="894">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
@@ -55,7 +75,7 @@
 
     </head>
 
-    <body>
+    <body class="is-loading">
         <aside class="menu">
   <button class="menu__btn">
     <span class="menu__burger"></span>
@@ -357,10 +377,10 @@ allowed.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">246ec59603be1c65fa50d1571158b435920fb15d</span>
+    Version: <span class="git-version-hash">df3640ee9546c861138851369b36bbdfc6c59619</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-01-02 07:52:04 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-01-02 21:39:04 &#43;0000 UTC</span>
   </div>
 </div>
 
@@ -371,5 +391,9 @@ allowed.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#
         </div>
 
         
+
+<script src="/js/main.js" ></script>
     </body>
+
+
 </html>

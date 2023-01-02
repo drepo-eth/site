@@ -1,25 +1,12 @@
 (() => {
-  // ns-hugo:/home/runner/work/site/site/assets/js/state.ts
-  var STATE = {};
-  STATE.toggleTransition = function(motionReduced) {
-    const $body = document.querySelector("body");
-    if (motionReduced) {
-      $body.classList.add("no-transition");
-    } else {
-      setTimeout(function() {
-        $body.classList.remove("no-transition");
-      }, 300);
-    }
-  };
-
   // ns-hugo:/home/runner/work/site/site/assets/js/menu.ts
   var MENU = {};
   MENU.init = function() {
+    const $body = document.querySelector("body");
     const $menu = document.querySelector(".menu");
     const $menuBtn = document.querySelector(".menu__btn");
     let MenuState = sessionStorage.getItem("menu-state");
     if ($menu && $menuBtn) {
-      STATE.toggleTransition(true);
       if (MenuState === null || MenuState === "open") {
         $menu.classList.add("is-open");
         $menu.classList.remove("is-closed");
@@ -27,7 +14,7 @@
         $menu.classList.add("is-closed");
         $menu.classList.remove("is-open");
       }
-      STATE.toggleTransition(false);
+      $body.classList.remove("is-loading");
       $menuBtn.addEventListener("click", function() {
         if ($menu.classList.contains("is-open")) {
           $menu.classList.remove("is-open");
@@ -50,7 +37,6 @@
     let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
     let themeState = sessionStorage.getItem("theme");
     const changeMode = function(isDarkModeActivate) {
-      STATE.toggleTransition(true);
       if (isDarkModeActivate) {
         $root.classList.add("dark");
         $root.classList.remove("light");
@@ -60,7 +46,6 @@
         $root.classList.remove("dark");
         sessionStorage.setItem("theme", "light");
       }
-      STATE.toggleTransition(false);
     };
     if (themeState !== "undefined" && themeState !== null) {
       changeMode(themeState === "dark");
