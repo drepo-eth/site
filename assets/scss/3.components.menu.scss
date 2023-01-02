@@ -27,7 +27,13 @@
   }
   
   &.is-closed {
-    transform: translateX(-234px);
+    @include breakpoint(sm) {
+      transform: translateX(-254px);
+      padding-right: 5px;
+    }
+    @include breakpoint(md-xl) {
+      transform: translateX(-234px);
+    }
     
     .menu__headline-wrapper,
     .menu__nav {
@@ -61,13 +67,6 @@
     width: pxToRem(24px);
     height: pxToRem(4px);
     transition: all $d-anim ease-in-out;
-  }
-  
-  .no-transition & {
-    &::before,
-    &::after {
-      transition: none !important;
-    }
   }
   
   &::before {

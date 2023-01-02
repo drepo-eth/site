@@ -4,17 +4,20 @@
   top: 0;
   right: 0;
   display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
-  grid-template-areas: 'theme main .';
   align-items: end;
-  margin-bottom: pxToRem(40px);
-  padding: pxToRem(33px) 0 pxToRem(27px);
   width: 100%;
   background: var(--color-header-bg);
   box-shadow: 0 4px 12px -2px rgba(black, 0.3);
   
   @include breakpoint(sm) {
-    padding-left: 66px;
+    grid-template-areas: '. main theme';
+    grid-template-columns: 1fr 10fr 3fr;
+    padding: pxToRem(10px) 0 pxToRem(10px);
+  }
+  @include breakpoint(md-xl) {
+    grid-template-areas: 'theme main .';
+    grid-template-columns: 2fr 8fr 2fr;
+    padding: pxToRem(33px) 0 pxToRem(27px);
   }
 }
 
@@ -27,7 +30,13 @@
 .header__actions {
   display: flex;
   align-items: flex-end;
-  margin-bottom: pxToRem(9px);
+  
+  @include breakpoint(sm) {
+    margin-bottom: pxToRem(3px);
+  }
+  @include breakpoint(md-xl) {
+    margin-bottom: pxToRem(9px);
+  }
 }
 
 .header__contact {
@@ -35,16 +44,34 @@
   place-items: center;
   border-radius: 50%;
   text-decoration: none;
-  width: pxToRem(45px);
-  height: pxToRem(45px);
+  
+  @include breakpoint(sm) {
+    width: pxToRem(25px);
+    height: pxToRem(25px);
+  }
+  @include breakpoint(md-xl) {
+    width: pxToRem(45px);
+    height: pxToRem(45px);
+  }
 }
 
 .header__contact--github {
-  margin-right: pxToRem(24px);
+  @include breakpoint(sm) {
+    margin-right: pxToRem(16px);
+  }
+  @include breakpoint(md-xl) {
+    margin-right: pxToRem(24px);
+  }
   
   .bi-github {
-    font-size: pxToRem(45px);
     color: var(--color-text);
+  
+    @include breakpoint(sm) {
+      font-size: pxToRem(25px);
+    }
+    @include breakpoint(md-xl) {
+      font-size: pxToRem(45px);
+    }
   }
 }
 
@@ -53,7 +80,12 @@
   background: var(--color-text);
   
   .bi-envelope {
-    font-size: pxToRem(25px);
+    @include breakpoint(sm) {
+      font-size: pxToRem(16px);
+    }
+    @include breakpoint(md-xl) {
+      font-size: pxToRem(25px);
+    }
   }
 }
 
@@ -63,9 +95,15 @@
 }
 
 .header__logo {
-  width: $spacer-base * 10;
   height: auto;
   opacity: 0;
+  
+  @include breakpoint(sm) {
+    width: $spacer-base * 6;
+  }
+  @include breakpoint(md-xl) {
+    width: $spacer-base * 10;
+  }
 }
 
 .header__theme-btn {

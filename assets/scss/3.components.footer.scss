@@ -7,6 +7,7 @@
   
   @include breakpoint(sm) {
     hyphens: auto;
+    width: column(10, 12);
   }
   @include breakpoint(sm-md) {
     grid-template-columns: 1fr;
