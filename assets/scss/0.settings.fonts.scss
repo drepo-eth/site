@@ -116,8 +116,8 @@ $fw-bold: 700;
   font-weight: $fw-bold;
   
   @include breakpoint(sm-md) {
-	font-size: pxToRem(28px);
-	line-height: pxToRem(32px);
+	font-size: pxToRem(26px);
+	line-height: pxToRem(30px);
   }
   @include breakpoint(lg) {
 	font-size: pxToRem(30px);

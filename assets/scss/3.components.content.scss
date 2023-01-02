@@ -66,11 +66,8 @@
     @include break-main(sm) {
       margin-top: $spacer-sm;
     }
-    @include break-main(md) {
+    @include break-main(md-xl) {
       margin-top: $spacer-md;
-    }
-    @include break-main(lg) {
-      margin-top: $spacer-lg;
     }
   }
   
