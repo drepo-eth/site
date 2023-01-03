@@ -5,7 +5,7 @@
 <div class="pager">
   {{with .Next }}
   {{ if eq .Section $mainContent }}
-  <a href="{{.Permalink}}" class="pager__prev">
+  <a href="{{.RelPermalink}}" class="pager__prev">
     <i aria-hidden="true"> < </i>
   </a>
   {{ end }}
@@ -15,7 +15,7 @@
 
   {{with .Prev }}
   {{ if eq .Section $mainContent }}
-  <a href="{{.Permalink}}" class="pager__next">
+  <a href="{{.RelPermalink}}" class="pager__next">
     <i aria-hidden="true"> > </i>
   </a>
   {{ end }}
