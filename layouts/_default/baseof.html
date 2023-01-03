@@ -16,6 +16,10 @@
                 {{ block "main" . }}{{ end }}
             </main>
 
+            {{ block "pager" . }}
+                {{ partial "pager.html" . }}
+            {{ end }}
+
             {{ block "footer" . }}
                 {{ partial "footer.html" . }}
             {{ end }}

@@ -1,0 +1,24 @@
+{{- $currentPage := . -}}
+{{ $mainContent := $.Site.Params.mainContent }}
+{{ $sectionPages := where $.Site.RegularPages "Section" $mainContent }}
+{{ if eq .Section $mainContent }}
+<div class="pager">
+  {{with .Next }}
+  {{ if eq .Section $mainContent }}
+  <a href="{{.Permalink}}" class="pager__prev">
+    <i aria-hidden="true"> < </i>
+  </a>
+  {{ end }}
+  {{end}}
+
+  {{ partial "counter" (dict "current" . "list" $sectionPages) }}
+
+  {{with .Prev }}
+  {{ if eq .Section $mainContent }}
+  <a href="{{.Permalink}}" class="pager__next">
+    <i aria-hidden="true"> > </i>
+  </a>
+  {{ end }}
+  {{end}}
+</div>
+{{ end }}
