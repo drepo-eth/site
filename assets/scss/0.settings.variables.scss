@@ -29,6 +29,8 @@ $spacer-xl: $spacer-base * 6;
 $spacer-xxl: $spacer-base * 8;
 
 $s-content-width: #{column(8, 12)};
+$s-pager-shadow: 16vw;
+$s-pager-shadow-hover: 18vw;
 
 /**
  * Animation & Transition
