@@ -13,10 +13,12 @@ MENU.init = function () {
         if (MenuState === null || MenuState === 'open') {
             $menu.classList.add('is-open');
             $menu.classList.remove('is-closed');
+            $body.classList.add('has-menu-opened');
 
         } else if (MenuState === 'closed') {
             $menu.classList.add('is-closed');
             $menu.classList.remove('is-open');
+            $body.classList.remove('has-menu-opened');
         }
         $body.classList.remove('is-loading');
 
@@ -27,10 +29,12 @@ MENU.init = function () {
             if ($menu.classList.contains('is-open')) {
                 $menu.classList.remove('is-open');
                 $menu.classList.add('is-closed');
+                $body.classList.remove('has-menu-opened');
                 sessionStorage.setItem('menu-state', 'closed');
             } else if ($menu.classList.contains('is-closed')) {
                 $menu.classList.add('is-open');
                 $menu.classList.remove('is-closed');
+                $body.classList.add('has-menu-opened');
                 sessionStorage.setItem('menu-state', 'open');
             }
         })

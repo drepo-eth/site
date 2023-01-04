@@ -3,11 +3,17 @@
 {{ $caption := (.Get "caption") }}
 {{ $size := (.Get "size") }}
 {{ $image := $.Page.Resources.GetMatch $src }}
-{{ $resized := $image.Resize $size }}
+{{ $height := $image.Height }}
+{{ $width := $image.Width }}
+{{ $orientation := cond (gt $height $width) "portrait" "landscape" }}
+{{ $resized := $image.Resize (printf "%s %s" $size "webp") }}
 
-<figure>
+<figure class="figure" data-orientation="{{ $orientation }}">
   <a href="{{ $src }}" target="_blank">
-    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" />
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}"
+         data-width="{{ $width }}"
+         data-height="{{ $height }}"
+    />
   </a>
   <figcaption>
     <p>{{ $caption }}</p>

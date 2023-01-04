@@ -89,7 +89,7 @@
   }
   
   figure {
-    margin: $spacer-md 0 0;
+    margin: $spacer-md $spacer-sm 0;
     
     img {
       width: 100%;
@@ -97,7 +97,9 @@
     }
   
     figcaption {
-      margin: $spacer-sm $spacer-sm 0;
+      margin: $spacer-sm 0 0;
+      color: var(--color-text);
+      text-align: center;
       @include f-copy-small;
     }
   }

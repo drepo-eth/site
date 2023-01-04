@@ -25,6 +25,10 @@
             {{ end }}
         </div>
 
+        {{ block "modal" . }}
+            {{ partial "modal.html" . }}
+        {{ end }}
+
         {{ partial "javascript.html" . }}
     </body>
 

@@ -7,7 +7,7 @@
   bottom: 0;
   padding: pxToRem(55px) $spacer-xs 0 $spacer-sm;
   height: 100%;
-  width: pxToRem(300px);
+  width: pxToRem($s-menu-width-opened);
   background: var(--color-menu-bg);
   transition: all $d-anim ease-in-out;
   overflow-y: auto;
@@ -28,11 +28,11 @@
   
   &.is-closed {
     @include breakpoint(sm) {
-      transform: translateX(-254px);
+      transform: translateX($s-menu-width-closed-sm - $s-menu-width-opened);
       padding-right: 5px;
     }
     @include breakpoint(md-xl) {
-      transform: translateX(-234px);
+      transform: translateX($s-menu-width-closed-md-lg - $s-menu-width-opened);
     }
     
     .menu__headline-wrapper,
