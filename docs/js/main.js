@@ -10,22 +10,63 @@
       if (MenuState === null || MenuState === "open") {
         $menu.classList.add("is-open");
         $menu.classList.remove("is-closed");
+        $body.classList.add("has-menu-opened");
       } else if (MenuState === "closed") {
         $menu.classList.add("is-closed");
         $menu.classList.remove("is-open");
+        $body.classList.remove("has-menu-opened");
       }
       $body.classList.remove("is-loading");
       $menuBtn.addEventListener("click", function() {
         if ($menu.classList.contains("is-open")) {
           $menu.classList.remove("is-open");
           $menu.classList.add("is-closed");
+          $body.classList.remove("has-menu-opened");
           sessionStorage.setItem("menu-state", "closed");
         } else if ($menu.classList.contains("is-closed")) {
           $menu.classList.add("is-open");
           $menu.classList.remove("is-closed");
+          $body.classList.add("has-menu-opened");
           sessionStorage.setItem("menu-state", "open");
         }
       });
+    }
+  };
+
+  // ns-hugo:/home/runner/work/site/site/assets/js/modal.ts
+  var MODAL = {};
+  MODAL.init = function() {
+    const $modal = document.querySelector(".modal");
+    const $figures = document.querySelectorAll(".figure");
+    if ($modal && $figures) {
+      $figures.forEach(($figure) => {
+        $figure.addEventListener("click", function(event) {
+          event.preventDefault();
+          const $figcaptionClone = $figure.querySelector("figcaption").cloneNode(true);
+          const imageSrc = $figure.querySelector("a").href;
+          const imageOrientation = $figure.dataset.orientation;
+          const $image = document.createElement("img");
+          const style = $figure.classList.contains("figure--svg") ? "svg" : "original";
+          $image.classList.add(style);
+          $image.src = imageSrc;
+          if (imageOrientation) {
+            $image.classList.add(imageOrientation);
+          }
+          $modal.querySelector(".modal__figure").replaceChildren($image, $figcaptionClone);
+          $modal.classList.remove("is-hidden");
+        });
+      });
+      const $closeBtn = $modal.querySelector(".modal__close-btn");
+      if ($closeBtn) {
+        $closeBtn.addEventListener("click", function() {
+          $modal.classList.add("is-hidden");
+        });
+      }
+      window.onclick = function(event) {
+        if (event.target == $modal) {
+          $modal.classList.add("is-hidden");
+        }
+      };
     }
   };
 
@@ -62,6 +103,7 @@
   // <stdin>
   window.addEventListener("load", function() {
     MENU.init();
+    MODAL.init();
     THEME_SWITCHER.init();
   });
 })();
