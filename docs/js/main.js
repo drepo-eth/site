@@ -1,109 +1,176 @@
 (() => {
-  // ns-hugo:/home/runner/work/site/site/assets/js/menu.ts
-  var MENU = {};
-  MENU.init = function() {
-    const $body = document.querySelector("body");
-    const $menu = document.querySelector(".menu");
-    const $menuBtn = document.querySelector(".menu__btn");
-    let MenuState = sessionStorage.getItem("menu-state");
-    if ($menu && $menuBtn) {
-      if (MenuState === null || MenuState === "open") {
-        $menu.classList.add("is-open");
-        $menu.classList.remove("is-closed");
-        $body.classList.add("has-menu-opened");
-      } else if (MenuState === "closed") {
-        $menu.classList.add("is-closed");
-        $menu.classList.remove("is-open");
-        $body.classList.remove("has-menu-opened");
+  // ns-hugo:/home/runner/work/site/site/assets/js/helper.ts
+  var getViewportWidth = function() {
+    return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  };
+  var debounce = function(callback) {
+    let timer;
+    return function(event) {
+      if (timer) {
+        clearTimeout(timer);
       }
-      $body.classList.remove("is-loading");
-      $menuBtn.addEventListener("click", function() {
-        if ($menu.classList.contains("is-open")) {
-          $menu.classList.remove("is-open");
-          $menu.classList.add("is-closed");
-          $body.classList.remove("has-menu-opened");
-          sessionStorage.setItem("menu-state", "closed");
-        } else if ($menu.classList.contains("is-closed")) {
-          $menu.classList.add("is-open");
-          $menu.classList.remove("is-closed");
-          $body.classList.add("has-menu-opened");
-          sessionStorage.setItem("menu-state", "open");
-        }
-      });
-    }
+      timer = setTimeout(callback, 100, event);
+    };
   };
 
-  // ns-hugo:/home/runner/work/site/site/assets/js/modal.ts
-  var MODAL = {};
-  MODAL.init = function() {
-    const $modal = document.querySelector(".modal");
-    const $figures = document.querySelectorAll(".figure");
-    if ($modal && $figures) {
-      $figures.forEach(($figure) => {
-        $figure.addEventListener("click", function(event) {
-          event.preventDefault();
-          const $figcaptionClone = $figure.querySelector("figcaption").cloneNode(true);
-          const imageSrc = $figure.querySelector("a").href;
-          const imageOrientation = $figure.dataset.orientation;
-          const $image = document.createElement("img");
-          const style = $figure.classList.contains("figure--svg") ? "svg" : "original";
-          $image.classList.add(style);
-          $image.src = imageSrc;
-          if (imageOrientation) {
-            $image.classList.add(imageOrientation);
-          }
-          $modal.querySelector(".modal__figure").replaceChildren($image, $figcaptionClone);
-          $modal.classList.remove("is-hidden");
-        });
-      });
-      const $closeBtn = $modal.querySelector(".modal__close-btn");
-      if ($closeBtn) {
-        $closeBtn.addEventListener("click", function() {
-          $modal.classList.add("is-hidden");
-        });
+  // ns-hugo:/home/runner/work/site/site/assets/js/components/menu.ts
+  var menu = function() {
+    const QUERY = {
+      body: "body",
+      menu: ".menu",
+      menuBtn: ".menu__btn",
+      open: "open",
+      closed: "closed",
+      isOpen: "is-open",
+      isClosed: "is-closed",
+      isLoading: "is-loading",
+      hasMenuOpen: "has-menu-open",
+      menuCookie: "menu-state"
+    };
+    const menuState = sessionStorage.getItem(QUERY.menuCookie);
+    const $body = document.querySelector(QUERY.body);
+    const $menu = document.querySelector(QUERY.menu);
+    const $menuBtn = document.querySelector(QUERY.menuBtn);
+    const open = function() {
+      $menu.classList.add(QUERY.isOpen);
+      $menu.classList.remove(QUERY.isClosed);
+      $body.classList.add(QUERY.hasMenuOpen);
+    };
+    const close = function() {
+      $menu.classList.add(QUERY.isClosed);
+      $menu.classList.remove(QUERY.isOpen);
+      $body.classList.remove(QUERY.hasMenuOpen);
+    };
+    const init = function() {
+      if (menuState === null || menuState === QUERY.open) {
+        open();
+      } else if (menuState === QUERY.closed) {
+        close();
       }
-      window.onclick = function(event) {
-        if (event.target == $modal) {
-          $modal.classList.add("is-hidden");
-        }
-      };
-    }
-  };
-
-  // ns-hugo:/home/runner/work/site/site/assets/js/theme-switcher.ts
-  var THEME_SWITCHER = {};
-  THEME_SWITCHER.init = function() {
-    const $root = document.querySelector("html");
-    const $themeSwitcher = document.querySelector(".header__theme-btn");
-    let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
-    let themeState = sessionStorage.getItem("theme");
-    const changeMode = function(isDarkModeActivate) {
-      if (isDarkModeActivate) {
-        $root.classList.add("dark");
-        $root.classList.remove("light");
-        sessionStorage.setItem("theme", "dark");
-      } else {
-        $root.classList.add("light");
-        $root.classList.remove("dark");
-        sessionStorage.setItem("theme", "light");
+      $body.classList.remove(QUERY.isLoading);
+    };
+    const onMenuBtnClick = function() {
+      if ($menu.classList.contains(QUERY.isOpen)) {
+        close();
+        sessionStorage.setItem(QUERY.menuCookie, QUERY.closed);
+      } else if ($menu.classList.contains(QUERY.isClosed)) {
+        open();
+        sessionStorage.setItem(QUERY.menuCookie, QUERY.open);
       }
     };
-    if (themeState !== "undefined" && themeState !== null) {
-      changeMode(themeState === "dark");
-    } else {
-      changeMode(systemInitiatedDark.matches);
+    if ($menu && $menuBtn) {
+      $menuBtn.addEventListener("click", onMenuBtnClick.bind(this));
+      window.addEventListener("resize", debounce(function(event) {
+        if (getViewportWidth() < 670) {
+          close();
+        }
+      }));
+      init();
     }
-    if ($themeSwitcher) {
-      $themeSwitcher.addEventListener("click", function() {
-        changeMode(!$root.classList.contains("dark"));
+  };
+
+  // ns-hugo:/home/runner/work/site/site/assets/js/components/modal.ts
+  var modal = function() {
+    const QUERY = {
+      modal: ".modal",
+      closeBtn: ".modal__close-btn",
+      figure: ".figure",
+      svgFigure: "figure--svg",
+      svg: "svg",
+      original: "original",
+      figcaption: "figcaption",
+      isHidden: "is-hidden",
+      link: "a"
+    };
+    const $modal = document.querySelector(QUERY.modal);
+    const $figures = document.querySelectorAll(QUERY.figure);
+    const $closeBtn = $modal.querySelector(QUERY.closeBtn);
+    const createFigure = function($fig) {
+      const imageSrc = $fig.querySelector(QUERY.link).href;
+      const imageOrientation = $fig.dataset.orientation;
+      const style = $fig.classList.contains(QUERY.svgFigure) ? QUERY.svg : QUERY.original;
+      const $image = document.createElement("img");
+      $image.classList.add(style);
+      $image.src = imageSrc;
+      if (imageOrientation) {
+        $image.classList.add(imageOrientation);
+      }
+      return $image;
+    };
+    const onFigureClicked = function($figure, event) {
+      event.preventDefault();
+      const $figcaptionClone = $figure.querySelector(QUERY.figcaption).cloneNode(true);
+      $modal.querySelector(".modal__figure").replaceChildren(createFigure($figure), $figcaptionClone);
+      $modal.classList.remove(QUERY.isHidden);
+    };
+    const init = function() {
+      $figures.forEach(($figure) => {
+        $figure.addEventListener("click", onFigureClicked.bind(this, $figure));
       });
+      $closeBtn.addEventListener("click", function() {
+        $modal.classList.add(QUERY.isHidden);
+      });
+      $modal.addEventListener("click", function(event) {
+        if (event.target === $modal) {
+          $modal.classList.add(QUERY.isHidden);
+        }
+      });
+    };
+    if ($modal && $figures && $closeBtn) {
+      init();
     }
+  };
+
+  // ns-hugo:/home/runner/work/site/site/assets/js/components/theme-switcher.ts
+  var themeSwitcher = function() {
+    const QUERY = {
+      html: "html",
+      themeBtn: ".header__theme-btn",
+      darkTheme: "dark",
+      lightTheme: "light",
+      themeCookie: "theme-state",
+      prefersDark: "(prefers-color-scheme: dark)"
+    };
+    const $root = document.querySelector(QUERY.html);
+    const $themeSwitcher = document.querySelector(QUERY.themeBtn);
+    const systemInitiatedDark = window.matchMedia(QUERY.prefersDark);
+    const themeState = sessionStorage.getItem(QUERY.themeCookie);
+    const activateDarkTheme = function() {
+      $root.classList.add(QUERY.darkTheme);
+      $root.classList.remove(QUERY.lightTheme);
+      sessionStorage.setItem(QUERY.themeCookie, QUERY.darkTheme);
+    };
+    const activateLightTheme = function() {
+      $root.classList.add(QUERY.lightTheme);
+      $root.classList.remove(QUERY.darkTheme);
+      sessionStorage.setItem(QUERY.themeCookie, QUERY.lightTheme);
+    };
+    const changeMode = function(isDarkModeActivated) {
+      if (isDarkModeActivated) {
+        activateDarkTheme();
+      } else {
+        activateLightTheme();
+      }
+    };
+    const init = function() {
+      if ($themeSwitcher) {
+        $themeSwitcher.addEventListener("click", function() {
+          changeMode(!$root.classList.contains(QUERY.darkTheme));
+        });
+      }
+      if (!themeState) {
+        changeMode(themeState === QUERY.darkTheme);
+      } else {
+        changeMode(systemInitiatedDark.matches);
+      }
+    };
+    init();
   };
 
   // <stdin>
   window.addEventListener("load", function() {
-    MENU.init();
-    MODAL.init();
-    THEME_SWITCHER.init();
+    menu();
+    modal();
+    themeSwitcher();
   });
 })();
