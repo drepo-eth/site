@@ -63,6 +63,8 @@
       window.addEventListener("resize", debounce(function(event) {
         if (getViewportWidth() < 670) {
           close();
+        } else {
+          open();
         }
       }));
       init();
