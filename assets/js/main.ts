@@ -1,9 +1,9 @@
-import {MENU} from './menu';
-import {MODAL} from './modal'
-import {THEME_SWITCHER} from './theme-switcher';
+import { menu } from './components/menu';
+import { modal } from './components/modal'
+import { themeSwitcher } from './components/theme-switcher';
 
 window.addEventListener('load', function () {
-    MENU.init();
-    MODAL.init();
-    THEME_SWITCHER.init();
+    menu();
+    modal();
+    themeSwitcher();
 });
