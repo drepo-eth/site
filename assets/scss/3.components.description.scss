@@ -8,9 +8,17 @@
   margin-bottom: $spacer-md;
 }
 
-.homepage-content,
 .description__detail {
   @include f-copy;
+  
+  p {
+    @include breakpoint(sm-md) {
+      margin-top: $spacer-xs;
+    }
+    @include breakpoint(lg) {
+      margin-top: $spacer-sm;
+    }
+  }
 }
 
 .cta-container {

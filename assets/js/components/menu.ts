@@ -56,6 +56,8 @@ export const menu = function () {
         window.addEventListener('resize', debounce(function(event){
             if (getViewportWidth() < 670) {
                 close();
+            } else {
+                open();
             }
         }));
 
