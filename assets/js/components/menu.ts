@@ -33,11 +33,12 @@ export const menu = function () {
     }
 
     const init = function () {
-        if (menuState === null || menuState === QUERY.open) {
-            open();
-        } else if (menuState === QUERY.closed) {
+        if (getViewportWidth() < 670) {
             close();
+        } else {
+            if (menuState === null || menuState === QUERY.open) open();
         }
+
         $body.classList.remove(QUERY.isLoading);
     }
 

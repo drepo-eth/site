@@ -34,13 +34,15 @@ export const themeSwitcher = function () {
         }
     }
 
-    const init = function () {
+    const bindEvents = function () {
         if ($themeSwitcher) {
             $themeSwitcher.addEventListener('click', function () {
                 changeMode(!$root.classList.contains(QUERY.darkTheme));
             })
         }
+    }
 
+    const init = function () {
         if (!themeState) {
             changeMode(themeState === QUERY.darkTheme);
         } else {
@@ -49,5 +51,5 @@ export const themeSwitcher = function () {
     }
 
     init();
-
+    bindEvents();
 };
