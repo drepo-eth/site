@@ -42,10 +42,11 @@
       $body.classList.remove(QUERY.hasMenuOpen);
     };
     const init = function() {
-      if (menuState === null || menuState === QUERY.open) {
-        open();
-      } else if (menuState === QUERY.closed) {
+      if (getViewportWidth() < 670) {
         close();
+      } else {
+        if (menuState === null || menuState === QUERY.open)
+          open();
       }
       $body.classList.remove(QUERY.isLoading);
     };
@@ -154,12 +155,14 @@
         activateLightTheme();
       }
     };
-    const init = function() {
+    const bindEvents = function() {
       if ($themeSwitcher) {
         $themeSwitcher.addEventListener("click", function() {
           changeMode(!$root.classList.contains(QUERY.darkTheme));
         });
       }
+    };
+    const init = function() {
       if (!themeState) {
         changeMode(themeState === QUERY.darkTheme);
       } else {
@@ -167,6 +170,7 @@
       }
     };
     init();
+    bindEvents();
   };
 
   // <stdin>

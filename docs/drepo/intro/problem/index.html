@@ -30,34 +30,14 @@ Incidents However, there have been multiple incidents in the past involving soft
 
 
 
-<script>
-    const $root = document.querySelector('html');
-    const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)');
-    const themeState = sessionStorage.getItem('theme');
 
-    const changeMode = function (isDarkModeActivate) {
-        if (isDarkModeActivate) {
-            $root.classList.add('dark');
-            $root.classList.remove('light');
-            sessionStorage.setItem('theme', 'dark');
-        } else {
-            $root.classList.add('light');
-            $root.classList.remove('dark');
-            sessionStorage.setItem('theme', 'light');
-        }
-    }
 
-    if (themeState !== 'undefined' && themeState !== null) {
-        changeMode(themeState === 'dark');
-    } else {
-        changeMode(systemInitiatedDark.matches);
-    }
-</script>
+<script src="/js/before.js" ></script>
 
 <meta itemprop="name" content="The Problem">
 <meta itemprop="description" content="Repositories are great Public software repositories like the NPM Registry, Maven Central, GitHub and Docker Hub are great. They offer developers a place to find awesome libraries and applications ready to use and most of the time free of charge. Generally, this makes developing software a lot safer, faster, and easier, a big win for everyone.
 Incidents However, there have been multiple incidents in the past involving software repositories which are cause for concern."><meta itemprop="datePublished" content="2022-07-26T16:18:02+02:00" />
-<meta itemprop="dateModified" content="2023-01-07T00:14:21+01:00" />
+<meta itemprop="dateModified" content="2023-01-09T19:40:35+01:00" />
 <meta itemprop="wordCount" content="783">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
@@ -388,10 +368,10 @@ address later.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backli
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">597cc009032d386cda01717c0dc1b27927897519</span>
+    Version: <span class="git-version-hash">df6148982b1a6ca295309f1339bb55913cc8a8b2</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-01-06 23:14:21 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-01-09 18:40:35 &#43;0000 UTC</span>
   </div>
 </div>
 
