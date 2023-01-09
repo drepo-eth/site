@@ -51,3 +51,7 @@ enableGitInfo = true
   [[module.mounts]]
     source = "node_modules/bootstrap-icons/font/fonts"
     target = "static/files"
+
+[markup]
+  [markup.highlight]
+    noclasses = false
