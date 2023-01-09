@@ -9,6 +9,6 @@
 
 {{ $total := len $list }}
 
-<span class="pager__counter">
+<span class="pager__counter" aria-label="Page {{ add $pos 1 }} of {{ $total }}">
   {{ add $pos 1 }} / {{ $total }}
 </span>

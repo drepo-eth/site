@@ -23,7 +23,7 @@
     @include f-copy-large;
   }
   @include breakpoint(lg) {
-   display: none;
+   visibility: hidden;
   }
 }
 
@@ -70,8 +70,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 150px;
-    min-width: 90px;
+    max-width: pxToRem(150px);
+    min-width: pxToRem(90px);
     
     &::after {
       content: '';

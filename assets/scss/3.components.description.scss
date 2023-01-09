@@ -39,7 +39,7 @@
   border: 1px solid transparent;
   background: var(--color-highlight-text);
   color: var(--color-bg);
-  transition: all 500ms ease-out;
+  transition: all $d-anim ease-out;
   
   @include breakpoint(sm-md) {
     @include f-headline-h3;
@@ -57,7 +57,7 @@
     width: 0;
     height: pxToRem(3px);
     background: var(--color-highlight-text);
-    transition: all 500ms ease-out;
+    transition: all $d-anim ease-out;
   }
   
   &::after {
@@ -74,7 +74,7 @@
     &::before,
     &::after {
       width: 100%;
-      transition: all 500ms ease-out;
+      transition: all $d-anim ease-out;
     }
   }
 }

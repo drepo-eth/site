@@ -55,10 +55,10 @@ body {
     transition: all $d-anim ease-in-out;
     
     @include breakpoint(sm) {
-      margin-left: pxToRem(46px);
+      margin-left: $s-menu-width-closed-sm;
     }
     @include breakpoint(md-xl) {
-      margin-left: pxToRem(66px);
+      margin-left: $s-menu-width-closed-md-lg;
     }
   }
   
@@ -74,7 +74,7 @@ body {
   container-type: inline-size;
   container-name: main;
   margin-inline: auto;
-  max-width: pxToRem(1200px);
+  max-width: $s-max-content-width;
   
   @include breakpoint(sm) {
     padding-top: $spacer-xxl;

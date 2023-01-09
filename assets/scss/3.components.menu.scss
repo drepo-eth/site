@@ -1,7 +1,7 @@
 .menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -11,7 +11,7 @@
   background: var(--color-menu-bg);
   transition: all $d-anim ease-in-out;
   overflow-y: auto;
-  z-index: 200;
+  z-index: $z-menu;
   @include scrollbar;
   
   * {

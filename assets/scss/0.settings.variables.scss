@@ -28,6 +28,7 @@ $spacer-lg: $spacer-base * 4;
 $spacer-xl: $spacer-base * 6;
 $spacer-xxl: $spacer-base * 8;
 
+$s-max-content-width: 1200px;
 $s-menu-width-opened: 300px;
 $s-menu-width-closed-sm: 46px;
 $s-menu-width-closed-md-lg: 64px;
@@ -36,6 +37,13 @@ $s-pager-shadow: 16vw;
 $s-pager-shadow-hover: 18vw;
 
 /**
+ * Z-index
+ */
+$z-modal: 1;
+$z-header: 10;
+$z-menu: 100;
+
+/**
  * Animation & Transition
  */
-$d-anim: 250ms;
+$d-anim: 300ms;

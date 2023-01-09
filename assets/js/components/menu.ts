@@ -24,44 +24,51 @@ export const menu = function () {
         $menu.classList.add(QUERY.isOpen);
         $menu.classList.remove(QUERY.isClosed);
         $body.classList.add(QUERY.hasMenuOpen);
+        sessionStorage.setItem(QUERY.menuCookie, QUERY.open);
     }
 
     const close = function () {
         $menu.classList.add(QUERY.isClosed);
         $menu.classList.remove(QUERY.isOpen);
         $body.classList.remove(QUERY.hasMenuOpen);
-    }
-
-    const init = function () {
-        if (getViewportWidth() < 670) {
-            close();
-        } else {
-            if (menuState === null || menuState === QUERY.open) open();
-        }
-
-        $body.classList.remove(QUERY.isLoading);
+        sessionStorage.setItem(QUERY.menuCookie, QUERY.closed);
     }
 
     const onMenuBtnClick = function () {
         if ($menu.classList.contains(QUERY.isOpen)) {
             close();
-            sessionStorage.setItem(QUERY.menuCookie, QUERY.closed);
         } else if ($menu.classList.contains(QUERY.isClosed)) {
             open();
-            sessionStorage.setItem(QUERY.menuCookie, QUERY.open);
         }
     }
 
-    if ($menu && $menuBtn) {
+    const bindEvents = function () {
         $menuBtn.addEventListener('click', onMenuBtnClick.bind(this));
-        window.addEventListener('resize', debounce(function(event){
+        window.addEventListener('resize', debounce(function(){
             if (getViewportWidth() < 670) {
                 close();
             } else {
                 open();
             }
         }));
+    }
 
+    const init = function () {
+        if (getViewportWidth() < 670) {
+            close();
+        } else {
+            if (menuState === null || menuState === QUERY.open) {
+                open();
+            } else {
+                close();
+            }
+        }
+
+        $body.classList.remove(QUERY.isLoading);
+    }
+
+    if ($menu && $menuBtn) {
+        bindEvents();
         init();
     }
 };

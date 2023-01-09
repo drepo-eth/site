@@ -12,7 +12,7 @@
 
 .headline--h1 {
   border-left: 6px solid var(--color-highlight-text);
-  padding: 4px 0 0 $spacer-base;
+  padding: 4px 0 0 $spacer-xs;
   @include f-headline-h1;
 }
 
@@ -115,7 +115,7 @@
   }
   
   pre {
-    padding: $spacer-base;
+    padding: $spacer-xs;
     overflow-x: auto;
     @include scrollbar();
     @include f-code;
@@ -123,13 +123,13 @@
   
   table {
     margin-top: $spacer-md;
-    padding: $spacer-base;
+    padding: $spacer-xs;
     width: 100%;
     border-spacing: $spacer-sm;
     
     th,
     td {
-      padding: $spacer-base / 2;
+      padding: $spacer-xs / 2;
       border-bottom: 1px solid;
     }
     

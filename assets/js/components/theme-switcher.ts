@@ -43,7 +43,7 @@ export const themeSwitcher = function () {
     }
 
     const init = function () {
-        if (!themeState) {
+        if (!!themeState) {
             changeMode(themeState === QUERY.darkTheme);
         } else {
             changeMode(systemInitiatedDark.matches);

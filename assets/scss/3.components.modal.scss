@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: $z-modal;
   left: $s-menu-width-closed-md-lg;
   top: 0;
   right: 0;
@@ -10,10 +10,6 @@
   
   &.is-hidden {
     display: none;
-    
-    .modal__content {
-      visibility: hidden;
-    }
   }
   
   .has-menu-open & {
@@ -28,7 +24,7 @@
   transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 80%;
-  max-width: calc(1200px + 200px);
+  max-width: calc(#{$s-max-content-width} + 200px);
   max-height: 90vh;
   background-color: var(--color-bg);
   box-shadow: 0 0 $spacer-base rgba($c-black, 0.2);
@@ -38,7 +34,7 @@
   position: absolute;
   top: $spacer-xs;
   right: $spacer-xs;
-  font-size: 24px;
+  font-size: pxToRem(24px);
   font-weight: $fw-bold;
   color: var(--color-text);
 }
@@ -52,7 +48,7 @@
     position: relative;
     object-fit: cover;
     width: 100%;
-    max-width: 1200px;
+    max-width: $s-max-content-width;
     height: auto;
     
     &.portrait {

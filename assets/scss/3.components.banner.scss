@@ -3,7 +3,6 @@
   display: grid;
   place-items: center;
   width: 100%;
-  container-type: inline-size;
 }
 
 .banner__image {
@@ -19,7 +18,7 @@
 
 .banner__content {
   display: grid;
-  grid-row-gap: $spacer-base;
+  grid-row-gap: $spacer-xs;
   background-color: var(--color-highlight-text);
   color: var(--color-bg);
   word-break: break-word;
