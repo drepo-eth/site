@@ -30,8 +30,10 @@
 {{- partial "favicons.html" . }}
 
 <!-- JS Before -->
-{{ $js := resources.Get "js/before.ts" | js.Build }}
-<script src="{{ $js.RelPermalink }}" ></script>
+{{ $opts := (dict "minify" true "sourceMap" "external") }}
+{{ $js := resources.Get "js/before.ts" | js.Build $opts }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
