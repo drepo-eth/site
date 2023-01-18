@@ -21,7 +21,7 @@
     "postcss-cli": "^10.1.0"
   },
   "dependencies": {
-    "@fontsource/lora": "^4.5.12",
+    "@fontsource/lora": "^4.5.13",
     "@fontsource/overpass-mono": "^4.5.10",
     "@fontsource/press-start-2p": "^4.5.11",
     "bootstrap-icons": "^1.10.3",
