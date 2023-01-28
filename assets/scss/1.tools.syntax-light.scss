@@ -1,3 +1,6 @@
+/**
+ * Ecmas Syntax-Highlighting (export form Chroma)
+ */
 .light {
   /* Background */ .bg { background-color: #f8f8f8; }
   /* PreWrapper */ .chroma { background-color: #f8f8f8; }
@@ -84,5 +87,4 @@
   /* GenericTraceback */ .chroma .gt { color: #0044dd }
   /* GenericUnderline */ .chroma .gl { text-decoration: underline }
   /* TextWhitespace */ .chroma .w { color: #bbbbbb }
-  
 }

@@ -35,13 +35,13 @@
   h3,
   h4 {
     @include break-main(sm) {
-      margin-top: $spacer-md;
+      margin-top: $spacer-sm;
     }
     @include break-main(md) {
-      margin-top: $spacer-lg;
+      margin-top: $spacer-md;
     }
     @include break-main(lg) {
-      margin-top: $spacer-xl;
+      margin-top: $spacer-lg;
     }
   }
   
@@ -63,11 +63,13 @@
   > ol,
   > code,
   > .footnotes {
+    hyphens: auto;
+    
     @include break-main(sm) {
-      margin-top: $spacer-sm;
+      margin-top: pxToRem(16px);
     }
     @include break-main(md-xl) {
-      margin-top: $spacer-md;
+      margin-top: pxToRem(24px);
     }
   }
   
@@ -149,8 +151,11 @@
     ol {
       margin-top: $spacer-sm;
       margin-left: pxToRem(14px);
-      columns: 2;
       column-gap: $spacer-sm;
+      
+      @include break-main(md-xl) {
+        columns: 2;
+      }
       
       li {
         margin-top: 0;
