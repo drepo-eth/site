@@ -35,13 +35,13 @@
   h3,
   h4 {
     @include break-main(sm) {
-      margin-top: $spacer-sm;
+      margin: $spacer-sm 0 pxToRem(16px);
     }
     @include break-main(md) {
-      margin-top: $spacer-md;
+      margin: $spacer-md 0 pxToRem(16px);
     }
     @include break-main(lg) {
-      margin-top: $spacer-lg;
+      margin: $spacer-lg 0 pxToRem(24px);
     }
   }
   
@@ -62,14 +62,16 @@
   > ul,
   > ol,
   > code,
-  > .footnotes {
+  > .footnotes,
+  .highlight,
+  figure {
     hyphens: auto;
     
     @include break-main(sm) {
-      margin-top: pxToRem(16px);
+      margin: pxToRem(16px) 0;
     }
     @include break-main(md-xl) {
-      margin-top: pxToRem(24px);
+      margin: pxToRem(24px) 0;
     }
   }
   
@@ -91,7 +93,7 @@
   }
   
   figure {
-    margin: $spacer-md $spacer-sm 0;
+    margin-inline: $spacer-sm;
     
     img {
       width: 100%;
@@ -99,7 +101,7 @@
     }
   
     figcaption {
-      margin: $spacer-sm 0 0;
+      margin: pxToRem(16px) 0 0;
       color: var(--color-text);
       text-align: center;
       @include f-copy-small;
@@ -112,15 +114,19 @@
     }
   }
   
-  .highlight {
-    margin-top: $spacer-md;
-  }
-  
   pre {
-    padding: $spacer-xs;
-    overflow-x: auto;
     @include scrollbar();
     @include f-code;
+    padding: $spacer-xs;
+    overflow-x: auto;
+  }
+  
+  p code {
+    @include f-code;
+    padding: pxToRem(6px);
+    border-radius: 4px;
+    color: var(--color-text);
+    background-color: var(--color-menu-bg);
   }
   
   table {

@@ -32,6 +32,10 @@ $fw-bold: 700;
   @include breakpoint(lg) {
 	font-size: pxToRem(36px);
   }
+  
+  @media print {
+    font-size: pxToRem(26px);
+  }
 }
 
 @mixin f-headline-h2 {
@@ -47,6 +51,10 @@ $fw-bold: 700;
   }
   @include breakpoint(lg) {
   	font-size: pxToRem(30px);
+  }
+  
+  @media print {
+    font-size: pxToRem(22px);
   }
 }
 
@@ -64,6 +72,10 @@ $fw-bold: 700;
   @include breakpoint(lg) {
 	font-size: pxToRem(24px);
   }
+  
+  @media print {
+    font-size: pxToRem(18px);
+  }
 }
 
 @mixin f-headline-h4 {
@@ -80,6 +92,10 @@ $fw-bold: 700;
   @include breakpoint(lg) {
 	font-size: pxToRem(22px);
   }
+  
+  @media print {
+    font-size: pxToRem(16px);
+  }
 }
 
 @mixin f-index {
@@ -92,13 +108,17 @@ $fw-bold: 700;
   font-family: 'IBM Plex Serif', serif;
   //font-family: 'Inconsolata', monospace;
   font-weight: $fw-regular;
-  line-height: 1.75;
+  line-height: 1.8;
   
   @include breakpoint(sm-md) {
 	font-size: pxToRem(16px);
   }
   @include breakpoint(lg) {
 	font-size: pxToRem(18px);
+  }
+  
+  @media print {
+    font-size: pxToRem(14px);
   }
 }
 
@@ -113,8 +133,11 @@ $fw-bold: 700;
   @include breakpoint(lg) {
 	font-size: pxToRem(30px);
   }
+  
+  @media print {
+    font-size: pxToRem(24px);
+  }
 }
-
 
 @mixin f-copy-small {
   font-family: 'IBM Plex Serif', serif;
@@ -132,7 +155,7 @@ $fw-bold: 700;
 }
 
 @mixin f-code {
-  font-family: 'Overpass Mono', monospace;
+  font-family: Menlo, Consolas, Monaco ,Liberation Mono, Lucida Console, monospace;
   font-weight: $fw-regular;
   font-size: pxToRem(14px);
   line-height: 1.5;
