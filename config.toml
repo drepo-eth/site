@@ -40,13 +40,10 @@ enableGitInfo = true
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "node_modules/@fontsource/press-start-2p/files"
-    target = "static/files"
-  [[module.mounts]]
-    source = "node_modules/@fontsource/lora/files"
-    target = "static/files"
-  [[module.mounts]]
     source = "node_modules/@fontsource/overpass-mono/files"
+    target = "static/files"
+  [[module.mounts]]
+    source = "node_modules/@fontsource/ibm-plex-serif/files"
     target = "static/files"
   [[module.mounts]]
     source = "node_modules/bootstrap-icons/font/fonts"
