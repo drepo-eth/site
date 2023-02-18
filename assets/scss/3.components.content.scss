@@ -1,177 +1,178 @@
 .content,
 .headline--h1 {
-  margin-inline: auto;
-  
-  @include breakpoint(sm) {
-    width: column(10, 12);
-  }
-  @include breakpoint(md-xl) {
-    width: column(8, 12);
-  }
+	margin-inline: auto;
+
+	@include breakpoint(sm) {
+		width: column(10, 12);
+	}
+	@include breakpoint(md-xl) {
+		width: column(8, 12);
+	}
 }
 
 .headline--h1 {
-  border-left: 6px solid var(--color-highlight-text);
-  padding: 4px 0 0 $spacer-xs;
-  @include f-headline-h1;
+	border-left: 6px solid var(--color-highlight-text);
+	padding: 4px 0 0 $spacer-xs;
+	@include f-headline-h1;
 }
 
 .content {
-  @include f-copy;
-  
-  h2 {
-    @include f-headline-h2;
-  }
-  
-  h3 {
-    @include f-headline-h3;
-  }
-  
-  h4 {
-    @include f-headline-h4;
-  }
-  
-  h2,
-  h3,
-  h4 {
-    @include break-main(sm) {
-      margin: $spacer-sm 0 pxToRem(16px);
-    }
-    @include break-main(md) {
-      margin: $spacer-md 0 pxToRem(16px);
-    }
-    @include break-main(lg) {
-      margin: $spacer-lg 0 pxToRem(24px);
-    }
-  }
-  
-  a {
-    color: var(--color-highlight-text);
-    text-decoration: underline;
-  }
-  
-  strong {
-    font-weight: $fw-bold;
-  }
-  
-  em {
-    font-style: italic;
-  }
-  
-  > p,
-  > ul,
-  > ol,
-  > code,
-  > .footnotes,
-  .highlight,
-  figure {
-    hyphens: auto;
-    
-    @include break-main(sm) {
-      margin: pxToRem(16px) 0;
-    }
-    @include break-main(md-xl) {
-      margin: pxToRem(24px) 0;
-    }
-  }
-  
-  ul {
-    list-style: circle;
-  }
-  
-  ol {
-    list-style: decimal;
-  }
-  
-  ul,
-  ol {
-    margin-left: $spacer-sm;
-    
-    li {
-      margin-top: $spacer-xs;
-    }
-  }
-  
-  figure {
-    margin-inline: $spacer-sm;
-    
-    img {
-      width: 100%;
-      height: auto;
-    }
-  
-    figcaption {
-      margin: pxToRem(16px) 0 0;
-      color: var(--color-text);
-      text-align: center;
-      @include f-copy-small;
-    }
-  }
-  
-  .figure--svg {
-    img {
-      filter: var(--image-filter);
-    }
-  }
-  
-  pre {
-    @include scrollbar();
-    @include f-code;
-    padding: $spacer-xs;
-    overflow-x: auto;
-  }
-  
-  p code {
-    @include f-code;
-    padding: pxToRem(6px);
-    border-radius: 4px;
-    color: var(--color-text);
-    background-color: var(--color-menu-bg);
-  }
-  
-  table {
-    margin-top: $spacer-md;
-    padding: $spacer-xs;
-    width: 100%;
-    border-spacing: $spacer-sm;
-    
-    th,
-    td {
-      padding: $spacer-xs / 2;
-      border-bottom: 1px solid;
-    }
-    
-    th {
-      border-bottom: 3px double;
-      font-weight: $fw-semibold;
-    }
-  }
-  
-  .footnotes {
-    @include f-copy-small;
-    
-    hr {
-      border: 1px solid var(--color-footer-border);
-    }
-    
-    ol {
-      margin-top: $spacer-sm;
-      margin-left: pxToRem(14px);
-      column-gap: $spacer-sm;
-      
-      @include break-main(md-xl) {
-        columns: 2;
-      }
-      
-      li {
-        margin-top: 0;
-        margin-bottom: $spacer-xs;
-      }
-    }
-  }
-  
-  .footnote-backref,
-  .footnote-ref {
-    text-decoration: none;
-  }
+	@include f-copy;
+
+	h2 {
+		@include f-headline-h2;
+	}
+
+	h3 {
+		@include f-headline-h3;
+	}
+
+	h4 {
+		@include f-headline-h4;
+	}
+
+	h2,
+	h3,
+	h4 {
+		@include break-main(sm) {
+			margin: $spacer-sm 0 pxToRem(16px);
+		}
+		@include break-main(md) {
+			margin: $spacer-md 0 pxToRem(16px);
+		}
+		@include break-main(lg) {
+			margin: $spacer-lg 0 pxToRem(24px);
+		}
+	}
+
+	a {
+		color: var(--color-highlight-text);
+		text-decoration: underline;
+	}
+
+	strong {
+		font-weight: $fw-bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	> p,
+	> ul,
+	> ol,
+	> code,
+	> .footnotes,
+	.highlight,
+	figure {
+		hyphens: auto;
+
+		@include break-main(sm) {
+			margin: pxToRem(16px) 0;
+		}
+		@include break-main(md-xl) {
+			margin: pxToRem(24px) 0;
+		}
+	}
+
+	ul {
+		list-style: circle;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
+	ul,
+	ol {
+		margin-left: $spacer-sm;
+
+		li {
+			margin-top: $spacer-xs;
+		}
+	}
+
+	figure {
+		margin-inline: $spacer-sm;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			margin: pxToRem(16px) 0 0;
+			color: var(--color-text);
+			text-align: center;
+			@include f-copy-small;
+		}
+	}
+
+	.figure--svg {
+		img {
+			filter: var(--image-filter);
+		}
+	}
+
+	pre {
+		@include scrollbar();
+		@include f-code;
+		padding: $spacer-xs;
+		overflow-x: auto;
+	}
+
+	p code {
+		@include f-code;
+		padding: pxToRem(6px);
+		border-radius: 4px;
+		color: var(--color-text);
+		background-color: var(--color-menu-bg);
+	}
+
+	table {
+		margin-top: $spacer-md;
+		padding: $spacer-xs;
+		width: 100%;
+		border-spacing: $spacer-sm;
+
+		th,
+		td {
+			padding: $spacer-xs / 2;
+			border-bottom: 1px solid;
+		}
+
+		th {
+			border-bottom: 3px double;
+			font-weight: $fw-semibold;
+		}
+	}
+
+	.footnotes {
+		@include f-copy-small;
+
+		hr {
+			border: 1px solid var(--color-footer-border);
+		}
+
+		ol {
+			margin-top: $spacer-sm;
+			margin-left: pxToRem(14px);
+			column-gap: $spacer-sm;
+
+			@include break-main(md-xl) {
+				columns: 2;
+			}
+
+			li {
+				margin-top: 0;
+				margin-bottom: $spacer-xs;
+				break-inside: avoid-column;
+			}
+		}
+	}
+
+	.footnote-backref,
+	.footnote-ref {
+		text-decoration: none;
+	}
 }
