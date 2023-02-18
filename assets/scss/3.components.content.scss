@@ -1,190 +1,205 @@
 .content,
 .headline--h1 {
-	margin-inline: auto;
+  margin-inline: auto;
 
-	@include breakpoint(sm) {
-		width: column(10, 12);
-	}
-	@include breakpoint(md-xl) {
-		width: column(8, 12);
-	}
+  @include breakpoint(sm) {
+    width: column(10, 12);
+  }
+  @include breakpoint(md-xl) {
+    width: column(8, 12);
+  }
 }
 
 .headline--h1 {
-	border-left: 6px solid var(--color-highlight-text);
-	padding: 4px 0 0 $spacer-xs;
-	@include f-headline-h1;
+  border-left: 6px solid var(--color-highlight-text);
+  padding: 4px 0 0 $spacer-xs;
+  @include f-headline-h1;
 }
 
 .content {
-	@include f-copy;
+  @include f-copy;
 
-	h2 {
-		@include f-headline-h2;
-	}
+  h2 {
+    @include f-headline-h2;
+  }
 
-	h3 {
-		@include f-headline-h3;
-	}
+  h3 {
+    @include f-headline-h3;
+  }
 
-	h4 {
-		@include f-headline-h4;
-	}
+  h4 {
+    @include f-headline-h4;
+  }
 
-	h2,
-	h3,
-	h4 {
-		@include break-main(sm) {
-			margin: $spacer-sm 0 pxToRem(16px);
-		}
-		@include break-main(md) {
-			margin: $spacer-md 0 pxToRem(16px);
-		}
-		@include break-main(lg) {
-			margin: $spacer-lg 0 pxToRem(24px);
-		}
+  h2,
+  h3,
+  h4 {
+    @include break-main(sm) {
+      margin: $spacer-sm 0 pxToRem(16px);
+    }
+    @include break-main(md) {
+      margin: $spacer-md 0 pxToRem(16px);
+    }
+    @include break-main(lg) {
+      margin: $spacer-lg 0 pxToRem(24px);
+    }
 
-		.bi {
-			color: transparent;
-			font-size: 20px;
-		}
+    .bi {
+      color: transparent;
+      font-size: 20px;
+    }
 
-		&:hover {
-			.bi {
-				color: var(--color-highlight-text);
-				font-size: 20px;
-			}
-		}
-	}
+    &:hover {
+      .bi {
+        color: var(--color-highlight-text);
+        font-size: 20px;
+      }
+    }
+  }
 
-	a {
-		color: var(--color-highlight-text);
-		text-decoration: underline;
-	}
+  a {
+    color: var(--color-highlight-text);
+    text-decoration: underline;
+    transition: all 0.3s ease;
 
-	strong {
-		font-weight: $fw-bold;
-	}
+    &:hover {
+      background-color: var(--color-highlight-text);
+      color: var(--color-bg);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+  }
 
-	em {
-		font-style: italic;
-	}
+  strong {
+    font-weight: $fw-bold;
+  }
 
-	> p,
-	> ul,
-	> ol,
-	> code,
-	> .footnotes,
-	.highlight,
-	figure {
-		hyphens: auto;
+  em {
+    font-style: italic;
+  }
 
-		@include break-main(sm) {
-			margin: pxToRem(16px) 0;
-		}
-		@include break-main(md-xl) {
-			margin: pxToRem(24px) 0;
-		}
-	}
+  > p,
+  > ul,
+  > ol,
+  > code,
+  > .footnotes,
+  .highlight,
+  figure {
+    hyphens: auto;
 
-	ul {
-		list-style: circle;
-	}
+    @include break-main(sm) {
+      margin: pxToRem(16px) 0;
+    }
+    @include break-main(md-xl) {
+      margin: pxToRem(24px) 0;
+    }
+  }
 
-	ol {
-		list-style: decimal;
-	}
+  ul {
+    list-style: circle;
+  }
 
-	ul,
-	ol {
-		margin-left: $spacer-sm;
+  ol {
+    list-style: decimal;
+  }
 
-		li {
-			margin-top: $spacer-xs;
-		}
-	}
+  ul,
+  ol {
+    margin-left: $spacer-sm;
 
-	figure {
-		margin-inline: $spacer-sm;
+    li {
+      margin-top: $spacer-xs;
+    }
+  }
 
-		img {
-			width: 100%;
-			height: auto;
-		}
+  figure {
+    margin-inline: $spacer-sm;
 
-		figcaption {
-			margin: pxToRem(16px) 0 0;
-			color: var(--color-text);
-			text-align: center;
-			@include f-copy-small;
-		}
-	}
+    img {
+      width: 100%;
+      height: auto;
+    }
 
-	.figure--svg {
-		img {
-			filter: var(--image-filter);
-		}
-	}
+    figcaption {
+      margin: pxToRem(16px) 0 0;
+      color: var(--color-text);
+      text-align: center;
+      @include f-copy-small;
+    }
+  }
 
-	pre {
-		@include scrollbar();
-		@include f-code;
-		padding: $spacer-xs;
-		overflow-x: auto;
-	}
+  .figure--svg {
+    img {
+      filter: var(--image-filter);
+    }
+  }
 
-	p code {
-		@include f-code;
-		padding: pxToRem(6px);
-		border-radius: 4px;
-		color: var(--color-text);
-		background-color: var(--color-menu-bg);
-	}
+  pre {
+    @include scrollbar();
+    @include f-code;
+    padding: $spacer-xs;
+    overflow-x: auto;
+  }
 
-	table {
-		margin-top: $spacer-md;
-		padding: $spacer-xs;
-		width: 100%;
-		border-spacing: $spacer-sm;
+  p code {
+    @include f-code;
+    padding: pxToRem(6px);
+    border-radius: 4px;
+    color: var(--color-text);
+    background-color: var(--color-menu-bg);
+  }
 
-		th,
-		td {
-			padding: $spacer-xs / 2;
-			border-bottom: 1px solid;
-		}
+  table {
+    margin-top: $spacer-md;
+    padding: $spacer-xs;
+    width: 100%;
+    border-spacing: $spacer-sm;
 
-		th {
-			border-bottom: 3px double;
-			font-weight: $fw-semibold;
-		}
-	}
+    th,
+    td {
+      padding: $spacer-xs / 2;
+      border-bottom: 1px solid;
+    }
 
-	.footnotes {
-		@include f-copy-small;
+    th {
+      border-bottom: 3px double;
+      font-weight: $fw-semibold;
+    }
+  }
 
-		hr {
-			border: 1px solid var(--color-footer-border);
-		}
+  sup,
+  .footnotes {
+    @include f-copy-small;
 
-		ol {
-			margin-top: $spacer-sm;
-			margin-left: pxToRem(14px);
-			column-gap: $spacer-sm;
+    code {
+      @include f-copy-small;
+      padding: pxToRem(3px);
+      line-height: 1.2;
+    }
 
-			@include break-main(md-xl) {
-				columns: 2;
-			}
+    hr {
+      border: 1px solid var(--color-footer-border);
+    }
 
-			li {
-				margin-top: 0;
-				margin-bottom: $spacer-xs;
-				break-inside: avoid-column;
-			}
-		}
-	}
+    ol {
+      margin-top: $spacer-sm;
+      margin-left: pxToRem(14px);
+      column-gap: $spacer-sm;
 
-	.footnote-backref,
-	.footnote-ref {
-		text-decoration: none;
-	}
+      @include break-main(md-xl) {
+        columns: 2;
+      }
+
+      li {
+        margin-top: 0;
+        margin-bottom: $spacer-xs;
+        break-inside: avoid-column;
+      }
+    }
+  }
+
+  .footnote-backref,
+  .footnote-ref {
+    text-decoration: none;
+  }
 }

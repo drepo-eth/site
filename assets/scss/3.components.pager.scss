@@ -1,16 +1,16 @@
 .pager {
   display: grid;
   width: 100%;
-  
+
   @include breakpoint(sm-md) {
-    grid-template-areas: 'prev counter next';
+    grid-template-areas: "prev counter next";
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin: $spacer-xl auto 0;
     width: column(8, 12);
   }
   @include breakpoint(lg) {
-    grid-template-areas: 'prev . next';
+    grid-template-areas: "prev . next";
     width: 100%;
   }
 }
@@ -23,7 +23,7 @@
     @include f-copy-large;
   }
   @include breakpoint(lg) {
-   visibility: hidden;
+    visibility: hidden;
   }
 }
 
@@ -32,11 +32,11 @@
   justify-self: start;
   padding-left: $spacer-base;
   text-align: left;
-  
+
   &::after {
     left: $s-pager-shadow / -2;
   }
-  
+
   &:hover {
     &::after {
       left: $s-pager-shadow-hover / -2;
@@ -49,11 +49,11 @@
   justify-self: end;
   padding-right: $spacer-base;
   text-align: right;
-  
+
   &::after {
     right: $s-pager-shadow / -2;
   }
-  
+
   &:hover {
     &::after {
       right: $s-pager-shadow-hover / -2;
@@ -72,9 +72,9 @@
     justify-content: center;
     max-width: pxToRem(150px);
     min-width: pxToRem(90px);
-    
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: $s-pager-shadow;
       width: $s-pager-shadow;
@@ -83,23 +83,23 @@
       opacity: 0.2;
       transition: all $d-anim ease-in-out;
     }
-    
+
     &:hover {
       &::after {
         height: $s-pager-shadow-hover;
         width: $s-pager-shadow-hover;
         transition: all $d-anim ease-in-out;
       }
-      
+
       i {
         color: var(--color-pager-hover);
       }
     }
   }
-  
+
   i {
     color: var(--color-pager);
-    font-family: 'Lora', serif;
+    font-family: "Overpass Mono", monospace;
     font-size: pxToRem(44px);
     font-weight: $fw-bold;
     font-style: normal;
