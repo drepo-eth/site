@@ -7,11 +7,11 @@
   bottom: 0;
   overflow: auto;
   background-color: rgba($c-darkgrey, 0.5);
-  
+
   &.is-hidden {
     display: none;
   }
-  
+
   .has-menu-open & {
     left: $s-menu-width-opened;
   }
@@ -43,24 +43,24 @@
   display: grid;
   place-items: center;
   padding: $spacer-lg $spacer-sm $spacer-sm;
-  
+
   img {
     position: relative;
     object-fit: cover;
     width: 100%;
     max-width: $s-max-content-width;
     height: auto;
-    
+
     &.portrait {
       height: 100%;
       width: auto;
     }
   }
-  
+
   .svg {
     filter: var(--image-filter);
   }
-  
+
   figcaption {
     margin-top: $spacer-sm;
     color: var(--color-text);

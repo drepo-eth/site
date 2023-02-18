@@ -7,7 +7,7 @@
 
 .banner__image {
   background-color: var(--color-menu-bg);
-  
+
   @include break-main(sm-md) {
 	width: 100%;
   }
@@ -24,7 +24,7 @@
   word-break: break-word;
   white-space: normal;
   hyphens: auto;
-  
+
   @include break-main(sm) {
     padding: $spacer-sm column(2, 12);
     width: 100%;

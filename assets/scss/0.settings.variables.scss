@@ -6,7 +6,7 @@ $break-tablet: 670px;
 $break-desktop: 1024px;
 $break-desktop-lg: 1444px;
 
-$breakpoints: (
+$bp-default: (
   'sm-min': $break-start,
   'sm-max': $break-tablet - 1px,
   'md-min': $break-tablet,

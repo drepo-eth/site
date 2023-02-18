@@ -2,7 +2,7 @@
  *  Breakpoints for exclusive media queries
  *  @params $media: sm | md | lg | xl | xs-md | md-xl
  */
-@mixin breakpoint($media) {
+@mixin breakpoint($media, $breakpoints: $bp-default) {
   @if $media == sm {
     @media only screen and (max-width: map-get($breakpoints, sm-max)) {
       @content;
@@ -35,7 +35,7 @@
  *  Breakpoints for exclusive container queries based on div.main
  *  @params $media: sm | md | lg | xl | xs-md | md-xl
  */
-@mixin break-main($media) {
+@mixin break-main($media, $breakpoints: $bp-default) {
   @if $media == sm {
     @container main (max-width: #{map-get($breakpoints, sm-max)}) {
       @content;
@@ -91,25 +91,25 @@
 @mixin scrollbar ($margin: 0) {
   scrollbar-width: thin;
   scrollbar-color: var(--color-thumb-bg) var(--color-scrollbar-bg);
-  
+
   &::-webkit-scrollbar {
     width: pxToRem(12px);
   }
-  
+
   &::-webkit-scrollbar-thumb {
     border-radius: pxToRem(6px);
     background-color: var(--color-scrollbar-bg);
     border: 1px solid var(--color-thumb-bg);
   }
-  
+
   &::-webkit-scrollbar-track {
     background: var(--color-thumb-bg);
   }
-  
+
   &::-webkit-scrollbar-track-piece:start {
     margin-top: $margin;
   }
-  
+
   &::-webkit-scrollbar-track-piece:end {
     margin-bottom: $margin;
   }
@@ -121,13 +121,13 @@
  */
 @mixin clearfix() {
   *zoom: 1;
-  
+
   &::before,
   &::after {
 	content: ' ';
 	display: table;
   }
-  
+
   &::after {
 	clear: both;
   }

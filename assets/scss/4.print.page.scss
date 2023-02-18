@@ -16,41 +16,41 @@
 	--color-thumb-bg: #{$c-middlegrey};
 	--image-filter: none;
   }
-  
+
   .header {
 	display: block;
   }
-  
+
   .header__wrapper {
 	padding: 0 column(1, 12);
   }
-  
+
   .header__logo {
 	opacity: 1;
   }
-  
+
   .menu,
   .pager,
   .header__theme-btn,
   .header__actions {
 	display: none;
   }
-  
+
   aside.is-closed + .container,
   aside.is-open + .container {
 	margin-left: 0;
   }
-  
+
   .headline--h1,
   .content,
   .footer {
 	width: column(10, 12);
   }
-  
+
   .footer {
 	grid-template-columns: 1fr;
   }
-  
+
   .content .footnotes ol {
 	columns: 1;
   }

@@ -5,7 +5,7 @@ export const getViewportWidth = function () {
 export const debounce = function (callback){
     let timer;
     return function(event){
-        if(timer) {
+      if(timer) {
             clearTimeout(timer);
         }
         timer = setTimeout(callback, 100, event);

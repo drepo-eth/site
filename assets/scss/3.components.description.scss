@@ -11,7 +11,7 @@
 
 .description__detail {
   @include f-copy;
-  
+
   p {
     @include breakpoint(sm-md) {
       margin-top: $spacer-xs;
@@ -25,7 +25,7 @@
 .cta-container {
   display: grid;
   place-items: center;
-  
+
   @include breakpoint(sm-md) {
     margin-top: $spacer-xl;
   }
@@ -41,14 +41,14 @@
   background: var(--color-highlight-text);
   color: var(--color-bg);
   transition: all $d-anim ease-out;
-  
+
   @include breakpoint(sm-md) {
     @include f-headline-h3;
   }
   @include breakpoint(lg) {
     @include f-headline-h1;
   }
-  
+
   &::before,
   &::after {
     content: '';
@@ -60,7 +60,7 @@
     background: var(--color-highlight-text);
     transition: all $d-anim ease-out;
   }
-  
+
   &::after {
     top: 0;
     right: 0;

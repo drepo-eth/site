@@ -4,7 +4,7 @@
   padding-top: $spacer-md;
   width: column(8, 12);
   @include f-footer-small;
-  
+
   @include breakpoint(sm) {
     hyphens: auto;
     width: column(10, 12);
@@ -18,12 +18,12 @@
     grid-column-gap: $spacer-sm;
     margin: $spacer-xxl auto;
   }
-  
+
   a {
     color: var(--color-highlight-text);
     text-decoration: underline;
   }
-  
+
   ul {
     li {
       display: block;
