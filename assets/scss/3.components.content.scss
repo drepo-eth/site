@@ -43,6 +43,18 @@
 		@include break-main(lg) {
 			margin: $spacer-lg 0 pxToRem(24px);
 		}
+
+		.bi {
+			color: transparent;
+			font-size: 20px;
+		}
+
+		&:hover {
+			.bi {
+				color: var(--color-highlight-text);
+				font-size: 20px;
+			}
+		}
 	}
 
 	a {

@@ -110,6 +110,10 @@
 	}
 }
 
+.menu__nav {
+	padding-bottom: pxToRem(48px);
+}
+
 .menu__nav-list,
 .menu__sub-nav-list {
 	counter-reset: section;
