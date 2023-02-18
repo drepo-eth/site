@@ -61,13 +61,6 @@
     color: var(--color-highlight-text);
     text-decoration: underline;
     transition: all 0.3s ease;
-
-    &:hover {
-      background-color: var(--color-highlight-text);
-      color: var(--color-bg);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
   }
 
   strong {
