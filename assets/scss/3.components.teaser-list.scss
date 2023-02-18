@@ -1,6 +1,12 @@
 .teaser-list {
   margin: $spacer-lg auto;
-  width: column(8, 12);
+
+  @include break-main(sm) {
+		width: column(10, 12);
+	  }
+	@include break-main(md-xl) {
+    width: column(8, 12);
+	}
 }
 
 .teaser-list__headline {

@@ -2,10 +2,10 @@
 .headline--h1 {
   margin-inline: auto;
 
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     width: column(10, 12);
   }
-  @include breakpoint(md-xl) {
+  @include break-main(md-xl) {
     width: column(8, 12);
   }
 }

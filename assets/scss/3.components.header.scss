@@ -2,7 +2,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  display: grid;
   align-items: end;
   border-bottom: none;
   width: 100%;
@@ -11,43 +10,42 @@
   z-index: $z-header;
   
   @include break-main(sm) {
-    grid-template-areas: '. main theme';
-    grid-template-columns: 1fr 10fr 3fr;
     padding: pxToRem(10px) 0 pxToRem(10px);
   }
   @include break-main(md-xl) {
-    grid-template-areas: 'theme main .';
-    grid-template-columns: 2fr 8fr 2fr;
-    padding: pxToRem(33px) 0 pxToRem(27px);
-  }
-  @include break-main(xl) {
-    // grid-template-areas: 'theme main .';
-    grid-template-columns: 2fr 1200px 2fr;
-    // padding: pxToRem(33px) 0 pxToRem(27px);
+    padding: pxToRem(24px) 0 pxToRem(27px);
   }
 }
 
 .header__wrapper {
-  grid-area: main;
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-inline: auto;
+	max-width: $s-max-content-width;
 
-  @include break-main(xl) {
-    max-width: 1200px;
+	@include break-main(sm) {
+		padding: 0 column(1, 12);
+	  }
+	@include break-main(md-xl) {
 	padding: 0 column(2, 12);
-  }
+	}
+
+	@container main (min-width: 1200px) {
+		padding: 0 calc(1200px / 12 * 2);
+	}
 }
 
 .header__actions {
-  display: flex;
-  align-items: flex-end;
+	display: flex;
+	align-items: center;
   
-  @include break-main(sm) {
-    margin-bottom: pxToRem(3px);
-  }
-  @include break-main(md-xl) {
-    margin-bottom: pxToRem(9px);
-  }
+	@include break-main(sm) {
+		margin-bottom: pxToRem(3px);
+	}
+	@include break-main(md-xl) {
+		margin-bottom: pxToRem(9px);
+	}
 }
 
 .header__contact {
@@ -101,6 +99,7 @@
 }
 
 .header__home {
+	grid-area: home;
   background-color: var(--color-logo);
   transition: all 0.3s ease;
 
@@ -141,18 +140,38 @@
 	}
 }
 
+.header__theme {
+	display: flex;
+	align-items: center;
+	margin-right: pxToRem(32px);
+	padding-top: 2px;
+
+	.bi {
+		font-size: pxToRem(15px);
+	}
+}
+
 .header__theme-btn {
-  grid-area: theme;
-  margin-bottom: pxToRem(1px);
-  padding-left: $spacer-sm;
-  color: var(--color-highlight-text);
-  text-align: left;
-  width: pxToRem(32px);
-  height: pxToRem(32px);
-  
-  .dark & {
-    .bi::before {
-      content: '\F5A2';
-    }
-  }
+	position: relative;
+	margin-left: pxToRem(8px);
+	margin-right: pxToRem(10px);
+    width: pxToRem(48px);
+    height: pxToRem(26px);
+    background: var(--color-highlight-text);
+    border-radius: 50px;
+}
+
+.header__theme-circle {
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: pxToRem(18px);
+	height: pxToRem(18px);
+	background: var(--color-bg);
+	border-radius: 100%;
+	transition: 0.5s all ease;
+
+	.dark & {
+		transform: translateX(21px);
+	}
 }
