@@ -3,6 +3,8 @@
         <a class="header__home" href="{{ .Site.BaseURL }}">
             {{ $logoUrl :=  "/images/logo-without-space.svg" | relURL }}
             <img class="header__logo" src="{{ $logoUrl }}" alt="">
+            {{ $logoMobileUrl :=  "/images/logo-without-text.svg" | relURL }}
+            <img class="header__logo--mobile" src="{{ $logoMobileUrl }}" alt="">
         </a>
         <div class="header__actions">
             <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank" title="Visit our github">

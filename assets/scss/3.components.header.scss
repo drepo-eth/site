@@ -7,18 +7,23 @@
   border-bottom: none;
   width: 100%;
   background: var(--color-header-bg);
-  box-shadow: 0 2px 8px -2px rgba(black, 0.3);
+  box-shadow: 0 2px 8px -2px rgba($c-black, 0.3);
   z-index: $z-header;
   
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     grid-template-areas: '. main theme';
     grid-template-columns: 1fr 10fr 3fr;
     padding: pxToRem(10px) 0 pxToRem(10px);
   }
-  @include breakpoint(md-xl) {
+  @include break-main(md-xl) {
     grid-template-areas: 'theme main .';
     grid-template-columns: 2fr 8fr 2fr;
     padding: pxToRem(33px) 0 pxToRem(27px);
+  }
+  @include break-main(xl) {
+    // grid-template-areas: 'theme main .';
+    grid-template-columns: 2fr 1200px 2fr;
+    // padding: pxToRem(33px) 0 pxToRem(27px);
   }
 }
 
@@ -26,16 +31,21 @@
   grid-area: main;
   display: flex;
   justify-content: space-between;
+
+  @include break-main(xl) {
+    max-width: 1200px;
+	padding: 0 column(2, 12);
+  }
 }
 
 .header__actions {
   display: flex;
   align-items: flex-end;
   
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     margin-bottom: pxToRem(3px);
   }
-  @include breakpoint(md-xl) {
+  @include break-main(md-xl) {
     margin-bottom: pxToRem(9px);
   }
 }
@@ -46,32 +56,32 @@
   border-radius: 50%;
   text-decoration: none;
   
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     width: pxToRem(25px);
     height: pxToRem(25px);
   }
-  @include breakpoint(md-xl) {
-    width: pxToRem(45px);
-    height: pxToRem(45px);
+  @include break-main(md-xl) {
+    width: pxToRem(36px);
+    height: pxToRem(36px);
   }
 }
 
 .header__contact--github {
-  @include breakpoint(sm) {
+  @include break-main(sm) {
     margin-right: pxToRem(16px);
   }
-  @include breakpoint(md-xl) {
-    margin-right: pxToRem(24px);
+  @include break-main(md-xl) {
+    margin-right: pxToRem(18px);
   }
   
   .bi-github {
     color: var(--color-text);
   
-    @include breakpoint(sm) {
+    @include break-main(sm) {
       font-size: pxToRem(25px);
     }
-    @include breakpoint(md-xl) {
-      font-size: pxToRem(45px);
+    @include break-main(md-xl) {
+      font-size: pxToRem(36px);
     }
   }
 }
@@ -81,10 +91,10 @@
   background: var(--color-text);
   
   .bi-envelope {
-    @include breakpoint(sm) {
+    @include break-main(sm) {
       font-size: pxToRem(16px);
     }
-    @include breakpoint(md-xl) {
+    @include break-main(md-xl) {
       font-size: pxToRem(25px);
     }
   }
@@ -92,19 +102,43 @@
 
 .header__home {
   background-color: var(--color-logo);
-  mask: url(/images/logo-without-space.svg) no-repeat center;
+  transition: all 0.3s ease;
+
+  @include break-main(sm) {
+	mask: url(/images/logo-without-text.svg) no-repeat center;
+  }
+  @include break-main(md-xl) {
+	mask: url(/images/logo-without-space.svg) no-repeat center;
+  }
+
+  &:hover {
+	background-color: var(--color-logo-hover);
+	transition: all 0.3s ease;
+  }
+}
+
+.header__logo,
+.header__logo--mobile {
+	height: auto;
+	opacity: 0;
 }
 
 .header__logo {
-  height: auto;
-  opacity: 0;
-  
-  @include breakpoint(sm) {
-    width: $spacer-base * 6;
-  }
-  @include breakpoint(md-xl) {
-    width: $spacer-base * 10;
-  }
+	@include break-main(sm) {
+		display: none;
+	}
+	@include break-main(md-xl) {
+		width: $spacer-base * 10;
+	}
+}
+
+.header__logo--mobile {
+	@include break-main(sm) {
+		width: $spacer-base * 2;
+	}
+	@include break-main(md-xl) {
+		display: none;
+	}
 }
 
 .header__theme-btn {

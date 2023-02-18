@@ -1,5 +1,6 @@
 :root {
   --color-logo: #{$c-primary-blue};
+  --color-logo-hover: #{$c-black};
   --color-text: #{$c-darkblue};
   --color-highlight-text: #{$c-primary-blue};
   --color-bg: #{$c-white};
@@ -13,11 +14,13 @@
   --color-footer-border: #{$c-lightgrey};
   --color-scrollbar-bg: #{$c-primary-blue};
   --color-thumb-bg: #{$c-middlegrey};
+  --color-teaser-link: #{$c-black};
   --image-filter: none;
 }
 
 :root.dark {
   --color-logo: #{$c-grey};
+  --color-logo-hover: #{$c-lightgrey};
   --color-text: #{$c-lightgrey};
   --color-highlight-text: #{$c-lightblue};
   --color-bg: #{$c-primary-darkblue};
@@ -31,6 +34,7 @@
   --color-footer-border: #{$c-grey};
   --color-scrollbar-bg: #{$c-lightgrey};
   --color-thumb-bg: #{$c-grey};
+  --color-teaser-link: #{$c-lightblue};
   --image-filter: invert(1);
 }
 
@@ -49,6 +53,8 @@ body {
 }
 
 .container {
+  container-type: inline-size;
+  container-name: main;
   position: relative;
   
   aside + & {
@@ -71,15 +77,15 @@ body {
 }
 
 .main {
-  container-type: inline-size;
-  container-name: main;
   margin-inline: auto;
   max-width: $s-max-content-width;
-  
-  @include breakpoint(sm) {
-    padding-top: $spacer-xxl;
-  }
-  @include breakpoint(md-xl) {
-    padding-top: $spacer-base * 13;
+
+  .headline--h1 {
+    @include breakpoint(sm) {
+      margin-top: $spacer-xxl;
+    }
+    @include breakpoint(md-xl) {
+      margin-top: $spacer-base * 13;
+    }
   }
 }

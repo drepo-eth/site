@@ -41,6 +41,12 @@
 
 .teaser__link {
   @include f-copy;
+  position: relative;
   display: inline-block;
   font-weight: $fw-bold;
+  color: var(--color-teaser-link);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
