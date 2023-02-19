@@ -75,6 +75,7 @@
   > ul,
   > ol,
   > code,
+  > blockquote,
   > .footnotes,
   .highlight,
   figure {
@@ -145,6 +146,11 @@
     border-radius: 4px;
     color: var(--color-text);
     background-color: var(--color-menu-bg);
+  }
+
+  blockquote {
+    padding-left: $spacer-xs;
+    border-left: 3px solid var(--color-highlight-text)
   }
 
   table {

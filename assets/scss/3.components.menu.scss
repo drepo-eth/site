@@ -5,7 +5,6 @@
 	top: 0;
 	left: 0;
 	bottom: 0;
-	padding: pxToRem(55px) $spacer-xs 0 $spacer-md;
 	height: 100%;
 	width: pxToRem($s-menu-width-opened);
 	background: var(--color-menu-bg);
@@ -13,6 +12,13 @@
 	overflow-y: auto;
 	z-index: $z-menu;
 	@include scrollbar;
+
+  @include breakpoint(sm) {
+    padding: pxToRem(8px) $spacer-xs 0 $spacer-md;
+  }
+  @include breakpoint(md-xl) {
+    padding: pxToRem(43px) $spacer-xs 0 $spacer-md;
+  }
 
 	* {
 		color: var(--color-text);
