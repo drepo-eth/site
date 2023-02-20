@@ -30,7 +30,7 @@ To counter recent hacks and ransomware attacks the U.S. President also issued
 an [executive
 order](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
 to improve cybersecurity.
-In combination with the trend to _DevSecOps_ this shows the growing importance
+In combination with the trend to _DevSecOps_ it shows the growing importance
 of this topic as well as the attention it is receiving.
 
 <!-- SLSA -->

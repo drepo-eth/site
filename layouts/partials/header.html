@@ -1,6 +1,7 @@
+{{ $rootUrl := relURL "/" }}
 <header class="header">
     <div class="header__wrapper">
-        <a class="header__home" href="{{ .Site.BaseURL }}">
+        <a class="header__home" href="{{ $rootUrl }}">
             {{ $logoUrl :=  "/images/logo-without-space.svg" | relURL }}
             <img class="header__logo" src="{{ $logoUrl }}" alt="">
             {{ $logoMobileUrl :=  "/images/logo-without-text.svg" | relURL }}

@@ -13,21 +13,25 @@ enableGitInfo = true
   name = 'Introduction'
   weight = 100
 [[menu.main]]
-  identifier = 'repositories'
-  name = 'Existing Repos'
+  identifier = 'decentralization'
+  name = '(De-)centralization'
   weight = 200
 [[menu.main]]
-  identifier = 'decentralization'
-  name = 'Decentralization'
+  identifier = 'repositories'
+  name = 'Existing Repos'
   weight = 300
 [[menu.main]]
   identifier = 'drepo'
   name = 'Decentralized Repository'
   weight = 400
 [[menu.main]]
-  identifier = 'extension'
-  name = 'Repository Extensions'
+  identifier = 'expanded'
+  name = 'Expanded Repository'
   weight = 500
+[[menu.main]]
+  identifier = 'web31'
+  name = 'Next: Web 3.1'
+  weight = 600
 
 [params]
   mainContent = 'drepo'
