@@ -40,8 +40,8 @@ It was her goal to find a minimal set of properties which define a software repo
 <meta itemprop="name" content="Properties">
 <meta itemprop="description" content="Commonalities The original author of the master thesis, Fan Xu, analyzed a wide range of existing software repositories. This included language specific repositories like Java&rsquo;s Maven Central, the NPM Registry, and Python&rsquo;s PyPI as well as the Debian repositories and the Arch User Repository.
 It was her goal to find a minimal set of properties which define a software repository. These feature definitions could be used as building blocks of a new system if they were compatible with the goals of decentralization and enhanced security."><meta itemprop="datePublished" content="2022-09-12T00:31:26+02:00" />
-<meta itemprop="dateModified" content="2023-02-20T21:36:53+01:00" />
-<meta itemprop="wordCount" content="347">
+<meta itemprop="dateModified" content="2023-02-19T01:08:48+01:00" />
+<meta itemprop="wordCount" content="226">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Properties"/>
@@ -82,17 +82,6 @@ It was her goal to find a minimal set of properties which define a software repo
           </li>
         </ol>
         
-      </li><li class="menu__nav-item ">
-        
-        <span class="menu__link">(De-)centralization</span>
-        <ol class="menu__sub-nav-list">
-          <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/decentralization/centralization/">Centralization</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/decentralization/decentralization/">Decentralization</a>
-          </li>
-        </ol>
-        
       </li><li class="menu__nav-item  is-active">
         
         <span class="menu__link">Existing Repos</span>
@@ -100,52 +89,34 @@ It was her goal to find a minimal set of properties which define a software repo
           <li class="menu__sub-nav-item  is-active">
             <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
           </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Type: Centralized</a>
           </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/mirrored/">Mirrored</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/mirrored/">Type: Mirrored</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/warez/">Warez</a>
           </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/verification/">Verification</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/cryptography/">Cryptography</a>
           </li>
         </ol>
         
       </li><li class="menu__nav-item ">
         
-        <span class="menu__link">Decentralized Repository</span>
-        <ol class="menu__sub-nav-list">
-          <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/repository/architecture/">Architecture</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/repository/index/">Index</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/repository/storage/">Storage</a>
-          </li>
-        </ol>
+          
+          
+          <a class="menu__link" href="#">Decentralization</a>
         
       </li><li class="menu__nav-item ">
         
-        <span class="menu__link">Expanded Repository</span>
-        <ol class="menu__sub-nav-list">
-          <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/expanded/build-verification/">Build Verification Network</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/expanded/review/">Review Network</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/expanded/incentives/">Incentives</a>
-          </li>
-        </ol>
+          
+          
+          <a class="menu__link" href="#">Decentralized Repository</a>
         
       </li><li class="menu__nav-item ">
         
-        <span class="menu__link">Next: Web 3.1</span>
+        <span class="menu__link">Repository Extensions</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/web3.1/witnessable-apps/">Witnessable Apps</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/web3.1/going-decentralized/">Going Decentralized</a>
-          </li><li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/web3.1/bring-your-own/">Bring Your Own Software</a>
+            <a class="menu__sub-link" href="/drepo/extensions/incentives/">Incentives</a>
           </li>
         </ol>
         
@@ -158,10 +129,9 @@ It was her goal to find a minimal set of properties which define a software repo
 
         <div class="container">
             
-                
-<header class="header">
+                <header class="header">
     <div class="header__wrapper">
-        <a class="header__home" href="/">
+        <a class="header__home" href="http://drepo.eth/">
             
             <img class="header__logo" src="/images/logo-without-space.svg" alt="">
             
@@ -217,13 +187,13 @@ point of access to the repository for its users.</p>
 </li>
 <li>
 <p><strong>Coordinates</strong>: Software packages within a repository are addressed via a
-coordinate system often comprised of a combination of <em>Group</em> - <em>Package</em> -
+coordinate system often comprised of combination a <em>Group</em> - <em>Package</em> -
 <em>Version</em>.</p>
 </li>
 <li>
 <p><strong>Build Artifacts</strong>: Depending on the type of repository and its ecosystem
-the systems primarily hold built or compiled artifacts which are <em>ready to
-use</em>.</p>
+the systems primarily hold built or compiled artifacts which are ready to
+use.</p>
 </li>
 <li>
 <p><strong>Source Code and Documentation</strong>: If not the primary artifacts, the
@@ -231,32 +201,22 @@ corresponding source code and documentation of a software release package are
 typically published along with built artifacts.</p>
 </li>
 <li>
-<p><strong>Metadata</strong>: Licenses, dependencies, name of the authors, links to the
-project website and development repository are usually added to each release
-package.</p>
+<p><strong>Metadata</strong>:</p>
 </li>
 <li>
-<p><strong>Verification Data</strong>: Checksums and digital signatures can be found next to
-the built artifacts to verify the authenticity of downloaded files.</p>
+<p><strong>Verification Data</strong>:</p>
 </li>
 <li>
-<p><strong>Historization</strong>: Most of the analyzed repositories store artifacts and old
-software versions in perpetuity even if newer versions are available.</p>
+<p><strong>Historization</strong>:</p>
 </li>
 <li>
-<p><strong>Compatibility</strong>: HTTP and other common web technologies, among others, are
-used to access most repositories, making them available even in restrictive
-corporate environments.</p>
+<p><strong>Compatibility</strong>:</p>
 </li>
 <li>
-<p><strong>Content Moderation</strong>: Administrators and platform owners have eventual
-control over all content that is published within a given repository and can
-remove unwanted artifacts.</p>
+<p><strong>Content Moderation</strong>:</p>
 </li>
 <li>
-<p><strong>Reliability</strong>: The analyzed software repositories are highly available by
-leveraging content delivery networks, globally distributed mirrors and
-others.</p>
+<p><strong>Reliability</strong>:</p>
 </li>
 </ul>
 <div class="footnotes" role="doc-endnotes">
@@ -280,7 +240,7 @@ others.</p>
 <div class="pager">
   
   
-  <a href="/drepo/decentralization/decentralization/" class="pager__prev">
+  <a href="/drepo/intro/securing-supply-chain/" class="pager__prev">
     <i aria-hidden="true"> &lt; </i>
   </a>
   
@@ -288,10 +248,6 @@ others.</p>
 
   
 
-
-  
-
-  
 
   
 
@@ -311,27 +267,11 @@ others.</p>
 
   
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 
 
-
-<span class="pager__counter" aria-label="Page 5 of 18">
-  5 / 18
+<span class="pager__counter" aria-label="Page 3 of 8">
+  3 / 8
 </span>
 
 
@@ -353,29 +293,22 @@ others.</p>
     <h4 class="footer__heading">This site is based on </h4>
     <ul>
       <li>
-        <span class="title">
-          <a href="https://github.com/FanXuX/masterthesis">
-            Konzept eines universellen,
-            dezentralen Software Repository's und dessen Adaption im
-            NPM-Frontend-Ökosystem</a>
-        </span>
+        the masterthesis
+        <a href="https://github.com/FanXuX/masterthesis">
+          "Konzept eines universellen,
+          dezentralen Software Repository's und dessen Adaption im
+          NPM-Frontend-Oekosystem"</a>
         (Concept of a univseral, decentralized software
         Repository and its application in the NPM-frontend-ecosystem) by
-        <span class="autor">
-          Fan Xu
-        </span>
+        Fan Xu
         (<a href="https://fanxu.de/">website</a>
         |
         <a href="https://github.com/FanXuX">github</a>)
       </li>
       <li>
-        <span class="title">
-          An Architecture of a Dezentralized Software Repository
-        </span>
-        by
-        <span class="author">Fan Xu</span>
-        and
-        <span class="author">Jan Himmelspach</span>
+        and the paper
+        <span>An Architecture of a Dezentralized Software Repository</span>
+        by Fan Xu and Jan Himmelspach
       </li>
     </ul>
   </div>
@@ -392,10 +325,10 @@ others.</p>
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">18accb259c059be50db836378ba7659becc4f8f2</span>
+    Version: <span class="git-version-hash">59d6dc173393f97deeb5f718dc9cfea72dc04780</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-02-20 20:36:53 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-02-19 00:08:48 &#43;0000 UTC</span>
   </div>
 </div>
 
