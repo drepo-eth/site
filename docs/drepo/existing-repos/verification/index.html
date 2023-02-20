@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="drepo team">
+<meta name="description" content="Why verify? As we all know, downloading random files from the internet is not safe. Files could potentially be harmful when they contain any sort of malware or they are simply not what you expected them to be. Renaming a file from libA to libB is fairly easy, as is creating a software library that provides a function doesCoolThing() but actually it does something completely different.
+When is it safe to download a program from some website and execute it?" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
+<link rel="canonical" href="http://drepo.eth/drepo/existing-repos/verification/" />
+<link rel="icon" type="image/x-icon" href="/images/logo-without-text.svg" />
+
+
+    <title>
+        
+            Verification :: dRepo.eth - decentralized Software Repository 
+        
+        
+            !! DRAFT BUILD !!
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.0ed21ea98633897490128985cf8a2eba48f9ed12237fd5c8c185620c2878639b.css">
+
+
+
+
+
+
+
+<script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
+
+<meta itemprop="name" content="Verification">
+<meta itemprop="description" content="Why verify? As we all know, downloading random files from the internet is not safe. Files could potentially be harmful when they contain any sort of malware or they are simply not what you expected them to be. Renaming a file from libA to libB is fairly easy, as is creating a software library that provides a function doesCoolThing() but actually it does something completely different.
+When is it safe to download a program from some website and execute it?"><meta itemprop="datePublished" content="2022-09-12T00:33:29+02:00" />
+<meta itemprop="dateModified" content="2023-02-20T21:45:45+01:00" />
+<meta itemprop="wordCount" content="2143">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Verification"/>
+<meta name="twitter:description" content="Why verify? As we all know, downloading random files from the internet is not safe. Files could potentially be harmful when they contain any sort of malware or they are simply not what you expected them to be. Renaming a file from libA to libB is fairly easy, as is creating a software library that provides a function doesCoolThing() but actually it does something completely different.
+When is it safe to download a program from some website and execute it?"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-09-12 00:33:29 &#43;0200 &#43;0200" />
+
+
+
+
+    </head>
+
+    <body class="is-loading">
+        <aside class="menu">
+  <button class="menu__btn">
+    <span class="menu__burger"></span>
+  </button>
+  <div class="menu__headline-wrapper">
+    <i class="bi bi-triangle-fill" aria-hidden="true"></i>
+    <h2 class="menu__headline">Index</h2>
+  </div>
+  <nav class="menu__nav">
+    <ol class="menu__nav-list"><li class="menu__nav-item ">
+        
+        <span class="menu__link">Introduction</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/intro/problem/">The Problem</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/intro/securing-supply-chain/">Securing The Supply Chain</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">(De-)centralization</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/decentralization/centralization/">Centralization</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/decentralization/decentralization/">Decentralization</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item  is-active">
+        
+        <span class="menu__link">Existing Repos</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/mirrored/">Mirrored</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/existing-repos/warez/">Warez</a>
+          </li><li class="menu__sub-nav-item  is-active">
+            <a class="menu__sub-link" href="/drepo/existing-repos/verification/">Verification</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">Decentralized Repository</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/repository/architecture/">Architecture</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/repository/index/">Index</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/repository/storage/">Storage</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">Expanded Repository</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/expanded/build-verification/">Build Verification Network</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/expanded/review/">Review Network</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/expanded/incentives/">Incentives</a>
+          </li>
+        </ol>
+        
+      </li><li class="menu__nav-item ">
+        
+        <span class="menu__link">Next: Web 3.1</span>
+        <ol class="menu__sub-nav-list">
+          <li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/web3.1/witnessable-apps/">Witnessable Apps</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/web3.1/going-decentralized/">Going Decentralized</a>
+          </li><li class="menu__sub-nav-item ">
+            <a class="menu__sub-link" href="/drepo/web3.1/bring-your-own/">Bring Your Own Software</a>
+          </li>
+        </ol>
+        
+      </li>
+    </ol>
+  </nav>
+
+</aside>
+
+
+        <div class="container">
+            
+                
+<header class="header">
+    <div class="header__wrapper">
+        <a class="header__home" href="/">
+            
+            <img class="header__logo" src="/images/logo-without-space.svg" alt="">
+            
+            <img class="header__logo--mobile" src="/images/logo-without-text.svg" alt="">
+        </a>
+        <div class="header__actions">
+            <div class="header__theme">
+                <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
+                <button class="header__theme-btn" title="Click here to change theme" aria-label="Click here to change theme">
+                    <span class="header__theme-circle"></span>
+                </button>
+                <i class="bi bi-moon" aria-hidden="true"></i>
+            </div>
+            <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank" title="Visit our github">
+                <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com" title="Wirte us an email">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
+
+</div>
+</header>
+
+            
+
+            <main class="main">
+                
+  <h1 class="headline--h1">Verification</h1>
+
+  <div class="content">
+    <h2 id="why-verify">Why verify? 
+  <a class="anchor" href="#why-verify">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h2><p>As we all know, downloading random files from the internet is not safe. Files
+could potentially be harmful when they contain any sort of malware or they are
+simply not what you expected them to be. Renaming a file from <code>libA</code> to <code>libB</code>
+is fairly easy, as is creating a software library that provides a function
+<code>doesCoolThing()</code> but actually it does something completely different.</p>
+<p>When is it safe to download a program from some website and execute it?</p>
+<ul>
+<li>Does the website look legit?</li>
+<li>Does it have some fancy animations?</li>
+<li>Does the website say it is created by some company in the US?</li>
+<li>Is the website&rsquo;s SSL certificate valid?</li>
+</ul>
+<p>Applying common sense is probably a good idea. But since elaborate (technical)
+schemes might be used to trick you, you are never 100% safe. In the end it is up
+to <strong>you</strong> to define what and when you <strong>trust</strong>, or, in other words, you are
+sufficiently convinced that something is legit.</p>
+<p>In terms of software repositories, downloading an artifact from a popular
+repository is not enough verification for the validity of the artifact. As we
+all know, various factors can change an aftifact without you realizing either by
+accident or on puprose. Some examples:</p>
+<ul>
+<li>Your download can fail midway and you end up with a broken file on you disk.</li>
+<li>Your desired file is actually broken in the repository due to internal
+replication problems.</li>
+<li>The library author uploaded the wrong file by accident.</li>
+<li>Some admin of the repository switched out the file.</li>
+<li>The repository was compromised and all artifacts now contain malware.</li>
+</ul>
+<p>Consequently, using &lsquo;wrong&rsquo; software is not just annoying but might be dangerous
+if you use it to provide services for millions of users. Thus, you need to make
+sure that you actually acquire the artifacts you are looking for. But how do you
+accomplish that?</p>
+<h2 id="checksums">Checksums 
+  <a class="anchor" href="#checksums">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h2><p>Checksums have been around for a fairly long time to validate downloaded
+artifacts. A hash function is applied to the content of a given file. This
+produces a unique<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> hash value, the <strong>checksum</strong>, which is used for
+verification.</p>
+<p>The used hash function should be a pure function that will produce the same hash
+result when presented with the same input values. This means that if applied to
+files with the exactly same content the same hash result is computed. This is
+also known as <strong>Content Hashing</strong>. Even a change of a single bit in the input
+values results in a completely different hash value.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="checksums.excalidraw.svg" target="_blank">
+    <img src="/drepo/existing-repos/verification/checksums.excalidraw.svg" alt="Alice and Bob compare checksums of a given file" />
+  </a>
+  <figcaption>
+    <p>Checksum comparison</p>
+  </figcaption>
+</figure>
+
+<p>If Alice and Bob download the same file from a repository, they hopefully
+compute the same checksum. Software repositories often publish various checksums
+based on multiple hash functions along the desired artifacts for users to verfiy
+the download. If your computed checksum matches the one published by the
+repository your download is verified.</p>
+<p>This suffices as proof of validity presuming you actually trust the source you
+downloaded your file from, as the file and checksum are provided by the same
+entity. A better approach is to acquire the checksum from another source,
+preferably the original author of the file. In terms of software libraries, you
+download the artifacts from a software repository and might get the checksums
+from the project website.</p>
+<p>This is, however, often a manual task and thus extremely cumbersome if you think
+of all the dependencies you include in your typical software project.
+Furthermore, using a secondary source still holds a risk that this one might be
+compromised as well.</p>
+<p>Consequently, the usage of checksums is effectively <strong>limited to the
+verification of correct transmission</strong> from a repository.</p>
+<p>The comparison of checksums with the information acquired from software
+repositories is indeed built into most dependency managing tools.</p>
+<h2 id="digital-signatures">Digital Signatures 
+  <a class="anchor" href="#digital-signatures">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h2><!-- raw HTML omitted -->
+<p>Digital signatures expand the concept of checksums by including the author in
+the mix. Leveraging asymmetric encryption schemes, the author of a software
+library uses their private key to sign the software artifacts. This creates a
+signature which includes information about both the content, similar to
+checksums, and the author. Using the author&rsquo;s public key a user can verify the
+signature and thus verify the content of a file and the fact that it
+originated<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> from the author.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://gnupg.org/" target="_blank">GPG</a> is the defacto standard tool for this purpose. It is
+used in multiple open source software repositories, e.g. the Ubuntu and Arch
+Linux repositories as well as Maven Central, the NPM Registry, and others.</p>
+<p>The digital signature files are typically published along side the files that
+need verification. This is similar to checksums which might be distributed by a
+given software repository. However, the key difference is that the artifacts and
+their signatures are tamperproof as they depend on an external dependency: the
+autor&rsquo;s public and private keys. As long as the signature creation, meaning the
+author&rsquo;s keys, are seperated from the repository, a valid signature of a
+modified file cannot be reproduced.</p>
+<p>However, one question comes to mind:</p>
+<blockquote>
+<p>How do you get the author&rsquo;s public key in a trusted manner?</p>
+</blockquote>
+<p>Generally, when using GPG a user publishes their public keys on known, public
+key servers. These servers contain a multitude of keys which were uploaded by
+users without any further verification. Thus, many keys are outdated, obsolete
+and questionable in origin as anyone could upload a key with any name and email.
+Services like <a href="https://keybase.io" target="_blank">keybase.io</a> try to mitigate these risks by
+creating a profile that is tied to and verified with other online <strong>identities</strong>
+(Twitter, Facebook, etc.).<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> Hosting the keys on the developer&rsquo;s private
+website or the project website is another alternative. And there is also the
+possibility of building a
+<a href="https://www.gnupg.org/gph/en/manual/x547.html" target="_blank">web of trust</a> which we won&rsquo;t
+cover here.</p>
+<p>Each of these methods has their pro&rsquo;s and con&rsquo;s. In the end it is up to the each
+user to decide when they trust the source of a key as there is no <strong>single,
+trusted, globally accepted</strong> way of distribution.</p>
+<p>Hosting the public key along the artifacts in a repository and not verifying the
+key from another source boils this scheme down to a more complex type of
+checksums. In this case, a given software repository could sign artifacts
+themselves and thus distribute modified versions of a software.</p>
+<p>Consequently, the separation of the signing keys and the repository is essential
+for the security of this scheme. However, the uncertainty that is found in
+obtaining a legit public key and the amount of effort that is required makes
+this scheme sometimes impractical.</p>
+<h2 id="reproducible-builds">Reproducible Builds 
+  <a class="anchor" href="#reproducible-builds">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h2><p><a href="https://reproducible-builds.org/" target="_blank">Reproducible Builds</a> can be used to mitigate
+the shortfalls of checksums and digital signatures.</p>
+<p>Most software is distributed in some sort of pre-compiled format, e.g binary
+executables, minified and uglified, or otherwise optimized. This makes the code
+that is executed unreadable to the average human being and thus the perfect
+target for manipulation.</p>
+<p>If a software project incorporates a reproducible build, building or compiling a
+given version of the source code will always produce exaclty the same build
+artifact. The produced files are bitwise identical. The build is independent of
+the machine that it is exceuted on as long as the same configuration and
+environment is applied to the build.</p>
+<p>These properties allow for a software to be <strong>restored</strong> from the source at any
+time in the future.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> Further more, this allows the <strong>independent
+verification</strong> of compiled artifacts.</p>
+<p>Instead of relying on the verification data that is provided by the author or a
+software repository, checksums or signatures, users can themselves verify the
+validity of a build artifact by executing the reproducible build and comparing
+the resulting artifacts.</p>
+<p>This removes the risk that a given artifact was modified by the repository or
+along the chain of distribution. Furthermore, a reproducible build eliminates
+the risk of manipulation by the author when they create the initial artifact. An
+author could change the source code and publish a build artifact without
+publishing the changed source code, effectively hiding the changes. Building the
+software from source would reveal such modifications.</p>
+<p><a href="https://reproducible-builds.org/who/projects/" title="Reproducible Build Projects" target="_blank">Multiple projects</a>
+are commited to reproducible builds. To name one example, Arch Linux is actively
+<a href="https://reproducible.archlinux.org/" title="Reproducible Status" target="_blank">tracking</a> their
+progress in having all software packages in their repositories being
+reproducible.</p>
+<h3 id="problems">Problems 
+  <a class="anchor" href="#problems">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h3><p>Two important questions now arise:</p>
+<ul>
+<li>If you need to build the source code to verify an artifact, why do you want to
+download a pre-compiled artifact from a software repsitory?</li>
+<li>Where and how do you get the source code if the same problems exist for source
+code repositories?</li>
+</ul>
+<p>The depicted decentralized software repository fundamentally requires the usage
+of reproducible builds. Thus, both of these questions are addressed in more
+detail <a href="TODO">here</a>. But in short, the drepo takes advantage of the following
+properties:</p>
+<!-- raw HTML omitted -->
+<h4 id="third-party-verification">Third Party Verification 
+  <a class="anchor" href="#third-party-verification">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h4><p>As the build artifacts are now independently verifyable a large number of third
+parties can build the software and publish their results. These results do not
+have to be the actual build artifacts but should be in the form of checksums or
+signatures. If a sufficiently large number of indedendent results is published
+and a consensus of the <strong>&lsquo;correct&rsquo;</strong> result is found, users can compare these
+findings with the artifacts they obtained from a software repository. Due to
+decentralization and a consensus the third party results can be viewed as an
+external, <strong>&rsquo;trusted&rsquo;</strong> source for verification data.</p>
+<h4 id="source-code-auditing">Source Code Auditing 
+  <a class="anchor" href="#source-code-auditing">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h4><p>The same problems apply to the source code when it has to be obtained from a
+source code repository. However, unlike compiled build artifacts the source code
+is human readable. This allows users in theory to review the code and to decide
+whether or not the code is legit or at least what they are looking for. Of
+course, this is easier said than done especially with large code basis or if a
+user cannot understand the code. Furthermore, reviewing every piece of code
+before using or executing it is in practice impossible for any single person.</p>
+<p>However, decentralization comes to the rescue, yet again. <em>Distributed Version
+Control Systems</em> like <a href="https://git-scm.com/" target="_blank">Git</a> and the sheer amount of
+software developers all over the world make it possible to find malicious code
+changes as said developers update their local code repositories and inspect
+incoming upstream changes. Today, this approach is &lsquo;barely&rsquo; organized,
+especially for smaller open source software projects which makes it fairly easy
+to introduce changes without proper review. Larger, popular projects on the
+other hand are being watched by a fairly large community which increases the
+chance of eventually finding peculiar changes.</p>
+<p>This allows the community as a whole to agree on the &lsquo;correct&rsquo; source code of a
+project.</p>
+<p>A decentralized repository has to make use of this mechanism and incorporate it
+in the daily development process.</p>
+<h3 id="verification-instead-of-auditing-and-certifying">Verification instead of Auditing and Certifying 
+  <a class="anchor" href="#verification-instead-of-auditing-and-certifying">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h3><p>In general, this text tries to avoid the terms &lsquo;auditing&rsquo; and &lsquo;certifying&rsquo; as
+they imply a false sense of truth and finality. Furthermore, in common
+understanding they are based on centralized entities that leverage built up
+trust in their respective reputations as a source of truth and validity.</p>
+<p>For example, one might hire a reputable auditing firm to audit a given source
+code or software system. As a result a report is created which might show flaws
+in the system that need fixing. This process is generally fine. However, most of
+the time only a single audit is conducted. This is especially the case, when the
+auditor is some sort of official institution under state control or is allowed
+to issue well-known certifications like
+<a href="https://www.iso.org/certification.html" title="ISO Certificates" target="_blank">ISO</a>-certificates.</p>
+<p>In truth, a single audit only bears a limited amount of value as audits are
+never a 100% certainty for the correctness, security, and state of a system.
+Even audits performed by experts in their field sometimes miss critical flaws.
+Additionally, as audit companies are established in the real world they are
+subject to various forms of pressure, economic pressure to make profits, social
+pressure, and pressure from governments. Consequently, corruption, blackmail and
+other misconduct are not unheard of.</p>
+<p>We believe that a multitude of concurrent, independent, and repeated audits or
+<strong>verifications</strong> of systems are needed to create a high probability for the
+completeness of the aggregated results. In simple terms, more audits are better
+than one. This allows auditors to find flaws other have missed and to use the
+latest state of the art tools and knowledge to find types of flaws that were
+unknown in pervious audits.</p>
+<p>Therefore, we prefer the term &lsquo;verification&rsquo; as it is not biased in the same way
+and does not result in any kind of &lsquo;official&rsquo; certification.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>TODO problem with unique&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>It actually &lsquo;just&rsquo; proofs that someone with the corresponding private key to
+a known public key signed an identical file.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Users link other online accounts with keybase and post special messages,
+verifying that they are actually in control of these accounts. At the same
+time they can upload public keys to the service and thus proof that they
+control the keys and the accounts creating trust betweens those.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Assuming that in the future the necessary tools and dependencies are still
+available.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+
+
+            </main>
+
+            
+                
+
+
+<div class="pager">
+  
+  
+  <a href="/drepo/existing-repos/warez/" class="pager__prev">
+    <i aria-hidden="true"> &lt; </i>
+  </a>
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<span class="pager__counter" aria-label="Page 9 of 18">
+  9 / 18
+</span>
+
+
+  
+  
+  <a href="/drepo/repository/architecture/" class="pager__next">
+    <i aria-hidden="true"> > </i>
+  </a>
+  
+  
+</div>
+
+
+            
+
+            
+                <footer class="footer">
+  <div class="footer__credit">
+    <h4 class="footer__heading">This site is based on </h4>
+    <ul>
+      <li>
+        <span class="title">
+          <a href="https://github.com/FanXuX/masterthesis">
+            Konzept eines universellen,
+            dezentralen Software Repository's und dessen Adaption im
+            NPM-Frontend-Ökosystem</a>
+        </span>
+        (Concept of a univseral, decentralized software
+        Repository and its application in the NPM-frontend-ecosystem) by
+        <span class="autor">
+          Fan Xu
+        </span>
+        (<a href="https://fanxu.de/">website</a>
+        |
+        <a href="https://github.com/FanXuX">github</a>)
+      </li>
+      <li>
+        <span class="title">
+          An Architecture of a Dezentralized Software Repository
+        </span>
+        by
+        <span class="author">Fan Xu</span>
+        and
+        <span class="author">Jan Himmelspach</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer__resources">
+    <h4 class="footer__heading">Further resources:</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
+      </li>
+    </ul>
+  </div>
+
+  
+<div class="gitinfo">
+  <div class="git-version">
+    Version: <span class="git-version-hash">8cfe454a016cbb7270fe59f1a382516825a1a807</span>
+  </div>
+  <div class="git-lastmod">
+    Last Change: <span class="git-lastmod-date">2023-02-20 20:45:45 &#43;0000 UTC</span>
+  </div>
+</div>
+
+
+</footer>
+
+            
+        </div>
+
+        
+            <div class="modal is-hidden">
+  <div class="modal__content">
+    <button class="modal__close-btn">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+    <figure class="modal__figure"></figure>
+  </div>
+</div>
+
+
+        
+
+        
+
+
+
+<script src="/js/main.js" integrity="sha512-VbG9POd1RGkrQ4lXn4lf5um87a9OVJbVopJVuMLmGe4VdPIi5gx8mG/x31i79uYmq4tKHHbu3Toj8mUyc9rYDw=="></script>
+
+    </body>
+
+
+</html>

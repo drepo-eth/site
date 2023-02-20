@@ -5,18 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="drepo team">
-<meta name="description" content="Differentiating Centralized software repositories are the most common type we encounter as software developers. Popular examples are the NPM Registry, Maven Central, PyPi, Docker Hub, and GitHub. They are typically closed source systems that are owned and operated by single entities. These are often community-funded foundations, which act in the interests of the respective community, or for-profit corporations.
-Today, these kinds of repositories are usually hosted in cloud infrastructure as they have to scale to potentially millions of developers around the world." />
+<meta name="description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
+Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
-<link rel="canonical" href="http://drepo.eth/drepo/existing-repos/centralized/" />
+<link rel="canonical" href="http://drepo.eth/drepo/repository/architecture/" />
 <link rel="icon" type="image/x-icon" href="/images/logo-without-text.svg" />
 
 
     <title>
         
-            Centralized :: dRepo.eth - decentralized Software Repository 
+            Architecture :: dRepo.eth - decentralized Software Repository 
         
         
             !! DRAFT BUILD !!
@@ -37,16 +37,16 @@ Today, these kinds of repositories are usually hosted in cloud infrastructure as
 
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
-<meta itemprop="name" content="Centralized">
-<meta itemprop="description" content="Differentiating Centralized software repositories are the most common type we encounter as software developers. Popular examples are the NPM Registry, Maven Central, PyPi, Docker Hub, and GitHub. They are typically closed source systems that are owned and operated by single entities. These are often community-funded foundations, which act in the interests of the respective community, or for-profit corporations.
-Today, these kinds of repositories are usually hosted in cloud infrastructure as they have to scale to potentially millions of developers around the world."><meta itemprop="datePublished" content="2022-09-12T00:32:15+02:00" />
+<meta itemprop="name" content="Architecture">
+<meta itemprop="description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
+Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application."><meta itemprop="datePublished" content="2023-01-06T17:03:14+01:00" />
 <meta itemprop="dateModified" content="2023-02-20T21:45:45+01:00" />
-<meta itemprop="wordCount" content="635">
+<meta itemprop="wordCount" content="790">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Centralized"/>
-<meta name="twitter:description" content="Differentiating Centralized software repositories are the most common type we encounter as software developers. Popular examples are the NPM Registry, Maven Central, PyPi, Docker Hub, and GitHub. They are typically closed source systems that are owned and operated by single entities. These are often community-funded foundations, which act in the interests of the respective community, or for-profit corporations.
-Today, these kinds of repositories are usually hosted in cloud infrastructure as they have to scale to potentially millions of developers around the world."/>
+<meta name="twitter:title" content="Architecture"/>
+<meta name="twitter:description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
+Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application."/>
 
 
 
@@ -54,7 +54,7 @@ Today, these kinds of repositories are usually hosted in cloud infrastructure as
 
 
 
-    <meta property="article:published_time" content="2022-09-12 00:32:15 &#43;0200 &#43;0200" />
+    <meta property="article:published_time" content="2023-01-06 17:03:14 &#43;0100 &#43;0100" />
 
 
 
@@ -93,13 +93,13 @@ Today, these kinds of repositories are usually hosted in cloud infrastructure as
           </li>
         </ol>
         
-      </li><li class="menu__nav-item  is-active">
+      </li><li class="menu__nav-item ">
         
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
-          </li><li class="menu__sub-nav-item  is-active">
+          </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/mirrored/">Mirrored</a>
@@ -110,11 +110,11 @@ Today, these kinds of repositories are usually hosted in cloud infrastructure as
           </li>
         </ol>
         
-      </li><li class="menu__nav-item ">
+      </li><li class="menu__nav-item  is-active">
         
         <span class="menu__link">Decentralized Repository</span>
         <ol class="menu__sub-nav-list">
-          <li class="menu__sub-nav-item ">
+          <li class="menu__sub-nav-item  is-active">
             <a class="menu__sub-link" href="/drepo/repository/architecture/">Architecture</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/repository/index/">Index</a>
@@ -190,106 +190,111 @@ Today, these kinds of repositories are usually hosted in cloud infrastructure as
 
             <main class="main">
                 
-  <h1 class="headline--h1">Centralized</h1>
+  <h1 class="headline--h1">Architecture</h1>
 
   <div class="content">
-    <h2 id="differentiating">Differentiating 
-  <a class="anchor" href="#differentiating">
+    <h2 id="inspiration">Inspiration 
+  <a class="anchor" href="#inspiration">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>Centralized software repositories are the most common type we encounter as
-software developers. Popular examples are the
-<a href="https://www.npmjs.com/" title="NPM Registry" target="_blank">NPM Registry</a>,
-<a href="https://search.maven.org/" title="Maven Central" target="_blank">Maven Central</a>,
-<a href="https://pypi.org/" title="Python Package Index" target="_blank">PyPi</a>,
-<a href="https://hub.docker.com/" title="Docker Hub" target="_blank">Docker Hub</a>, and
-<a href="https://github.com/" title="GitHub" target="_blank">GitHub</a>. They are typically closed source systems
-that are owned and operated by single entities. These are often community-funded
-foundations, which act in the interests of the respective community, or
-for-profit corporations.</p>
-<p>Today, these kinds of repositories are usually hosted in cloud infrastructure as
-they have to scale to potentially millions of developers around the world.
-Furthermore, they are constantly bombarded by various CI systems downloading the
-same artifacts over and over again.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Global cloud deployments and the
-usage of CDNs provide the storage, bandwidth, and low latency required by these
-systems. This makes them fairly complex applications, which hold and synchronize
-large amounts of data. One might think they are just simple file servers, but
-they are not anymore.</p>
-<h2 id="funding">Funding 
-  <a class="anchor" href="#funding">
+</h2><p>The decentralized repository is heavily inspired by
+<a href="https://www.ethpm.com/" title="ethPM" target="_blank">ethPM</a> and the infrastructure in the <strong>WAREZ</strong>
+community.
+The latter one has been proven resilient and efficient<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> over the past
+decades.</p>
+<p>Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation
+between the actual files and a search index.
+While the files live on the BitTorrent network or in Usenet groups
+respectively, the search index is typically a website or another separate
+application.
+If either the files or the index gets taken down, the other one still exists.
+Given that there is a <a href="http://drepo.eth/drepo/existing-repos/warez/" title="WAREZ">many-to-many relationship</a> between file content and indices the
+system can scale and is resilient at the same time.</p>
+<p>This is particularly true for partially centralized systems like the Usenet and
+the usage of public file hosters.
+Due to DMCA takedowns and similar processes content needs to be reposted
+either in its original or in obfuscated form.</p>
+<p><em>ethPM</em> proposed the creation of <em>federated smart contracts</em> on <em>Ethereum</em>
+which act as on-chain registries.
+Each project is supposed to create and maintain their own registry.
+The registries contain a minimal set of data points, package name, version, and
+a link to more metadata.
+The metadata is stored off-chain and should be stored as a content addressed
+URI.
+It is represented as a <em>JSON</em> file which contains more information on a given
+smart contract software package: link to the source code, verion, deployments,
+etc.</p>
+<p>Users of ethPM need to compile a set of trusted registries themselves.
+There is no single entry point for the system defined.
+Each registry must implement the
+<a href="https://eips.ethereum.org/EIPS/eip-1319" title="ERC-1319" target="_blank">ERC-1319</a> interface but
+concrete implementation is up to the maintainer.
+This means that admins can potentially change the current state of the registry
+and for example remove invalid or flawed releases afterwards.
+However, previous states can be recovered due to the nature of the blockchain.</p>
+<p>As the initial data is stored on-chain the system can become censorship
+resistent as the information cannot be removed.
+Futhermore, if the metadata and the subsequent payloads are stored in a
+decentralized way, they can also not be removed.</p>
+<p>Apart from the <a href="http://drepo.eth/drepo/existing-repos/properties/" title="Repository Features">&amp;lsquo;standard&amp;rsquo; repository features</a> the <em>dRepo</em> makes
+use of the <em>separation</em> that is defined in these two repository systems.
+Additionally, leveraging a permissionless blockchain like ethPM proposes adds
+convenience and security to the system.</p>
+<h2 id="separation">Separation 
+  <a class="anchor" href="#separation">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>While non-profit repositories like Maven Central and PyPI are relying on
-sponsoring to keep the lights on, systems, which are operated by for-profit
-organizations, often use the repository to generate revenue. Paid features are
-the primary drivers. More storage space, private groups and security models
-which integrate with enterprise environments, and security features like code
-scanning are common additional features. While these offers are mostly targeting
-business users, the additional feature set sometimes cuts down on the
-free-of-charge offerings towards free open source software development.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
-They either withhold useful security features or limit the usage of the system
-drastically. The introduction of
-<a href="https://www.docker.com/blog/what-you-need-to-know-about-upcoming-docker-hub-rate-limiting/" title="Rate Limit Introduction" target="_blank">rate limits</a>
-on Docker Hub is one example of such limitations. While such constraints are
-annoying, one can more than survive with the generous free offerings.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+</h2><p>The <em>core</em> of the decentralized repository is separated in an <em>Index</em> and a
+<em>Storage</em> component.
+This separation allows the usage of fitting technologies for each of these
+concerns while also propagating spatial partitioning and thus decentraliation.
+In simple terms, metadata of a software package is stored in a different way
+and on different systems from the actual packages.</p>
+<p>Furthermore, the core is defined as a minimal protocol which is open to
+extension.
+This allows software ecosystems to add their own rules and conventions to fit
+their needs.
+This openness makes it also usable in the future as long as the software
+development fundamentals do not change.</p>
+<p>Generally, the index component is a package registry on a permissionless smart
+contract blockchain which only holds metadata and location information on
+software packages.
+It allows a basic search within a tree structure of entries and gives authors a
+minimal set of functions to manage publications.
+The index is append only, so neither authors nor any other party can remove or
+change information after it is published.</p>
+<p>A unified index allows users to quickly find packages without searching various
+sources and additionally verifying a given source.
+Each ecosystem, e.g. Maven Packages, Docker Images, etc, should host their own
+index with preferred customizations and conventions.
+Besides the unified approach, proxies and federated setups are also possible if
+that fits the needs of an ecosystem or users better.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
+<p>The storage component is not an actual software component like the index.
+Instead, it is a collection of different sources of data spread across various
+networks and systems.
+This might include decentralized storage solutions like <em>BitTorrent</em> or <em>IPFS</em>
+or centralized storage like <em>AWS S3</em>, <em>GitHub</em>, or existing repositories.
+This allows authors and users to pick their favorite or best fitting source.
+Furthermore, distributing files and thus creating redundancy causes higher
+availablility.
+As with the index, not commiting to a single distribution system allows the
+repository to adopt new technologies in the future without fundamentally
+changing the base protocol.</p>
 <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h2 id="centralized-control">Centralized Control 
-  <a class="anchor" href="#centralized-control">
-    <i class="bi bi-link-45deg"></i>
-  </a>
-</h2><p>The actual danger that comes with centralized repositories lies in the absolute
-control their operators possess. The owners and administrators can remove and
-add any content they like. In the worst cases, they are even able to change or
-modify the content. A software release might be removed without any warning. If
-the operator truly acts maliciously, they could create new software packages
-that contain malware or similarly change existing packages. Such actions are
-likely to be discovered by the community and could destroy a repository&rsquo;s
-reputation.</p>
-<p>A more realistic scenario is the removal of content due to external pressure. As
-the institutions behind the repositories are incorporated in the real world,
-they have to abide by local laws. If a software package would be designated as
-illegal in their jurisdiction, the administrators are forced by law to remove
-it. Likewise, access to the entire repository might be blocked from certain
-regions if the country in question is sanctioned or a wartime enemy.</p>
-<p>Besides legal reasons, economic issues are even more likely. Cutting down on the
-global infrastructure might render a repository almost unusable from certain,
-&lsquo;unimportant&rsquo; regions if latency is drastically increased and bandwidth very
-limited.</p>
-<p>All of these scenarios are very real. Even if a repository&rsquo;s operator acts in
-the community&rsquo;s best interest, the determining issues might lie outside their
-control. In the end, any interference with the content and the accessibility of
-a public software repository can have devastating effects on the global
-development of open source software and its distribution. Subsequently, any
-system that is built on top of that might be endangered.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>Separating index and storage into open, almost self-sufficient units creates a
+extremely flexible system.
+Each component could be switched out for another implementation or protocol
+while the other can continue work without major interruption: moving the
+index from a blockchain to a new safe system does not impact stored files
+on IPFS and adding a new storage system does not invalidate existing entries
+within the index.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Even if IT departments and CI platforms like GitLab CI or GitHub Actions use
-caching mechanisms to reduce load and resources on both sides, a large
-amount of download requests hit repositories every day.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>Larger or important open source projects that require paid features like
-additional storage space usually receive these features for free from the
-repository. Thank you, repository owners!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>Supporting software repositories and gaining more features is not a bad
-deal. It also helps keep platforms free for anybody else who is less
-fortunate and cannot afford a subscription.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>File sharing and such brought the music industry almost to its knees.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -306,7 +311,7 @@ fortunate and cannot afford a subscription.&#160;<a href="#fnref:3" class="footn
 <div class="pager">
   
   
-  <a href="/drepo/existing-repos/properties/" class="pager__prev">
+  <a href="/drepo/existing-repos/verification/" class="pager__prev">
     <i aria-hidden="true"> &lt; </i>
   </a>
   
@@ -314,6 +319,14 @@ fortunate and cannot afford a subscription.&#160;<a href="#fnref:3" class="footn
 
   
 
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -345,25 +358,17 @@ fortunate and cannot afford a subscription.&#160;<a href="#fnref:3" class="footn
 
   
 
-  
-
-  
-
-  
-
-  
 
 
 
-
-<span class="pager__counter" aria-label="Page 6 of 18">
-  6 / 18
+<span class="pager__counter" aria-label="Page 10 of 18">
+  10 / 18
 </span>
 
 
   
   
-  <a href="/drepo/existing-repos/mirrored/" class="pager__next">
+  <a href="/drepo/repository/index/" class="pager__next">
     <i aria-hidden="true"> > </i>
   </a>
   
