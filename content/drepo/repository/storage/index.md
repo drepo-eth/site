@@ -1,5 +1,8 @@
 ---
 title: "Storage"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2023-01-06T17:03:28+01:00
 draft: true
 weight: 4030
@@ -138,7 +141,7 @@ server needs to be exposed and known on the internet.
 
 The primary type of references the index contains are links to build artifacts.
 Additionally, links to the source code and to documentation resources should be
-provided as they supply further information on the given software.  
+provided as they supply further information on the given software.
 The source code, however, plays a crucial role. It is needed to verify the
 
 The publication of checksums for build artifacts in the index is not suffcient

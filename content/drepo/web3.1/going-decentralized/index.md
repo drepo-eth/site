@@ -1,5 +1,8 @@
 ---
 title: "Going Decentralized"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2023-01-25T14:13:35+01:00
 draft: false
 weight: 6030

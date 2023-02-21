@@ -1,5 +1,8 @@
 ---
 title: "Securing The Supply Chain"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2022-08-22T19:38:57+02:00
 draft: false
 weight: 1020

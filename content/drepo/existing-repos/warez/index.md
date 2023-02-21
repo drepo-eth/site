@@ -1,5 +1,8 @@
 ---
 title: "Warez"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2022-09-12T00:32:28+02:00
 draft: false
 weight: 3050

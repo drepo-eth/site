@@ -1,5 +1,8 @@
 ---
 title: "Bring Your Own Software"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2023-01-25T17:23:56+01:00
 draft: false
 weight: 6060

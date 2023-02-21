@@ -1,11 +1,16 @@
 baseURL = 'http://drepo.eth/'
 languageCode = 'en-us'
-title = 'dRepo.eth - decentralized Software Repository'
+title = 'dRepo.eth - Decentralized Software Repository'
 
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
 relativeURLs = false
 enableGitInfo = true
+
+[params]
+  keywords = 'decentralized software repository, dRepo, software repository, repository, software, decentralized'
+  homeSubtitle = 'The concept of a decentralized software repository guarantees the free distribution of open-source software and represents an essential building block for a censorship-resistant and user-owned internet'
+  mainContent = 'drepo'
 
 [menu]
 [[menu.main]]
@@ -32,9 +37,6 @@ enableGitInfo = true
   identifier = 'web31'
   name = 'Next: Web 3.1'
   weight = 600
-
-[params]
-  mainContent = 'drepo'
 
 [module]
   [[module.mounts]]

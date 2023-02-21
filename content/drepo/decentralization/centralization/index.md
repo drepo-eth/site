@@ -1,5 +1,8 @@
 ---
 title: "Centralization"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2022-12-30T00:28:07+01:00
 draft: true
 weight: 2010

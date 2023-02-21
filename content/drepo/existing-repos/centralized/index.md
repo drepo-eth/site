@@ -1,5 +1,8 @@
 ---
 title: "Centralized"
+# description: 'TODO'
+# tags:
+#   - 'TODO'
 date: 2022-09-12T00:32:15+02:00
 draft: false
 weight: 3020
