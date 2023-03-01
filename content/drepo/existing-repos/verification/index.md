@@ -285,3 +285,5 @@ unknown in pervious audits.
 
 Therefore, we prefer the term 'verification' as it is not biased in the same way
 and does not result in any kind of 'official' certification.
+
+<!-- TODO: “Never trust, always verify.” At the end of the day, who watches the watchmen? -->

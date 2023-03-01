@@ -7,25 +7,24 @@ titleBanner:
     alt: Some text
     size: 300x
   text: |
-    Decentralization is the strong foundation for Software Repositories to grow
-    with the challenges of an ever changing world.
+    Decentralization is the robust foundation for Software Repositories to grow
+    with the challenges of an ever-changing world.
 
 contentTeasers:
   heading: Why?
   teasers:
     - heading: Security
-      target: "/drepo/intro/problem"
+      target: "/drepo/repository/index/#simple-trustless-immutable"
       text: |
         Artifacts in the repository are public and immutable.
         They can never be changed or manipulated by anyone.
     - heading: Availability
-      target: "/drepo/intro/problem"
+      target: "/drepo/repository/storage/"
       text: |
-        The decentralized repository is hosted by various services and
-        peer-to-peer.
-        There is always an available source.
+        The repository is hosted by independent services and peer-to-peer networks.
+        There is always a source available.
     - heading: Ownership
-      target: "/drepo/intro/problem"
+      target: "/drepo/repository/index/#claim-a-group"
       text: |
         The system is owned by the community.
         No centralized entity can manipulate it.
@@ -34,21 +33,20 @@ contentTeasers:
 cta:
   text: Do you want to know #more
   link:
-    text: more
+    text: more?
     target: "/drepo/intro/problem"
 ---
 
 Software repositories are essential elements of the global software supply
-chain. They are often the central software distribution points within their
-respective ecosystems.
+chain. Moreover, they are often the central hub for software distribution within
+their respective ecosystems.
 
-This centralization makes the repositories and consequently the supply chain as
-a whole vulnerable to various threats. Decentralization can mitigate these
-risks.
+This centralization leaves the repositories and the entire supply chain
+vulnerable to various threats. Decentralization can mitigate these risks.
 
-The decentralized software repository (_dRepo_) as depicted on this site offers
+As depicted on this site, the decentralized software repository (_dRepo_) offers
 software developers and everyday consumers a more secure and reliable system. It
 is owned and operated by the community and cannot be stopped or manipulated by
-anyone. In typical web3 manner, the system is simplistic and extensible allowing
-it to integrate well with current and future infrastructure. Its openness and
-ubiquity changes the way applications are built and delivered.
+anyone. In a typical web3 manner, the design is simplistic and extensible,
+allowing it to integrate well with current and future infrastructure. Its
+openness and ubiquity change the way applications are built and delivered.

@@ -107,6 +107,8 @@ processes of the system if they can have any influence on it.
 
 ### Claim a Group
 
+<!-- TODO: ownership -->
+
 Users can claim any available group by its name.
 The system employs a "first come, first served" approach.
 After a successful claim they become the owners of the respective group.
