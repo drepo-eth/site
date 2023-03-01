@@ -39,10 +39,11 @@
 
 .teaser__text {
   @include f-copy;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+}
+
+.teaser {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .teaser__link {
