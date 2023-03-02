@@ -90,6 +90,8 @@ these changes are accepted, the data is subsequently copied to the read-only
 replicas. Writing changes to the slave instances is not allowed from external
 clients but only from the _primary_ node.
 
+{{< image-svg src="database-replication.excalidraw.svg" alt="Database Replication" caption="Database Replication: Data generally flows from the primary through the replicas to the users. The primary instance is the central control instance governing the content in the database system." >}}
+
 Other large cloud systems like
 [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) clusters are centralized
 despite being _distributed_. The network is controlled by a _control plane_ that
@@ -119,6 +121,8 @@ to a halt; in the worst case, your application misbehaves, creates incorrect
 outputs, or actively inflicts harm. In either case, human lives are in danger if
 the given system is used to provide vital services, like emergency services,
 traffic control, or weapon systems.
+
+{{< image-svg src="single-point-of-failure.excalidraw.svg" alt="Single Point of Failure in a Centralized System" caption="Single Point of Failure in a Centralized System: The worker nodes in a centralized instance are unable to perform work, if the controlling instance is compromised." >}}
 
 Backups, redundancies, and further oversight mitigate these risks to some extent
 but cannot eliminate them entirely. Centralized systems remain centralized and
