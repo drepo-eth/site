@@ -84,6 +84,8 @@ doors?
 These are just some of the questions you should ask when you read such a
 proposal.
 
+{{< image-svg src="chain-of-trust.excalidraw.svg" alt="The chain of trust model" caption="The chain of trust model. But who are these guys? Your browser trusts the root, so they must be good guys." >}}
+
 ## No Trust is Better Trust
 
 ### Trust in Few
@@ -116,6 +118,9 @@ adaptations, however, still centralize power and are, as we all know, flawed.
 Moreover, corruption and manipulation in politics are not just the stuff that
 makes incredible books and movies but is very real and even partially legalized
 through, for example, lobbying.
+
+<!-- TODO remove or revise? -->
+{{< image-svg src="modern-democracy.excalidraw.svg" alt="Modern democracy" caption="In a democracy, the elected officials do not always act in the people's interest but are under constant influence from other parties." >}}
 
 The trust models we commonly use were created when there was no internet.
 However, instant global communication and modern cryptography allow the creation
