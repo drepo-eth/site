@@ -58,7 +58,7 @@ software projects.
 
 But like other security solutions[^secSol], it is built upon trust models that
 do not scale to the global level and our evolving world. SLSA Level 3 addresses
-_source and build platforms_ and defines that they have to _meet specific
+_source and build platforms_ and defines that they must _meet specific
 standards_, guaranteeing the _integrity_ of _provenance_ and other artifacts.
 This is basically a great idea. However, the question is how _compliance_ with
 these standards is achieved.
@@ -120,6 +120,7 @@ makes incredible books and movies but is very real and even partially legalized
 through, for example, lobbying.
 
 <!-- TODO remove or revise? -->
+
 {{< image-svg src="modern-democracy.excalidraw.svg" alt="Modern democracy" caption="In a democracy, the elected officials do not always act in the people's interest but are under constant influence from other parties." >}}
 
 The trust models we commonly use were created when there was no internet.
