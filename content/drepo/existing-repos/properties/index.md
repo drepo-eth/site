@@ -1,8 +1,14 @@
 ---
-title: "Properties"
-# description: 'TODO'
-# tags:
-#   - 'TODO'
+title: "Common Properties"
+description:
+  "Multiple existing repositories were analyzed and their common properties
+  identified. They are the building blocks for a new repository"
+tags:
+  - "source code"
+  - "coordinates"
+  - "common properties"
+  - "metadata"
+  - "compatibility"
 date: 2022-09-12T00:31:26+02:00
 draft: false
 weight: 3010
@@ -12,61 +18,59 @@ menu:
     weight: 10
 ---
 
-## Commonalities
+## The Goal
 
 The original author of the master thesis, Fan Xu, analyzed a wide range of
-existing software repositories.
-This included language specific repositories like Java's Maven Central, the NPM
-Registry, and Python's PyPI as well as the Debian repositories and the Arch
-User Repository.
+existing software repositories. This included language-specific repositories
+like Java's Maven Central, the NPM Registry, Python's PyPI, and the Debian
+repositories and the Arch User Repository. However, only repositories that host
+open-source software were inspected.
 
-It was her goal to find a minimal set of properties which define a software
-repository.
+Her goal was to find a minimal set of properties defining a software repository.
 These feature definitions could be used as building blocks of a new system if
 they were compatible with the goals of decentralization and enhanced security.
 Otherwise, alternatives had to be found to replace or enhance a given function.
 
-<!-- TODO: Open Source -->
+## Identified Properties
 
-Traditional software repositories share a common set of properties.
-The following are the essential traits that make up a software repository:
+Traditional software repositories share a common set of properties. The
+following are the essential traits that make up a software repository:
 
-* __Ease of access__: There is a single, central[^cent], and commonly known
-  point of access to the repository for its users.
+- **Ease of access**: There is a single, central[^cent], and commonly known
+  access point to the repository for its users.
 
-* __Coordinates__: Software packages within a repository are addressed via a
+- **Coordinates**: Software packages within a repository are addressed via a
   coordinate system often comprised of a combination of _Group_ - _Package_ -
   _Version_.
 
-* __Build Artifacts__: Depending on the type of repository and its ecosystem
-  the systems primarily hold built or compiled artifacts which are _ready to
-  use_.
+- **Build Artifacts**: Depending on the type of repository and its ecosystem the
+  systems primarily hold built or compiled artifacts _ready to use_.
 
-* __Source Code and Documentation__: If not the primary artifacts, the
-  corresponding source code and documentation of a software release package are
-  typically published along with built artifacts.
+- **Source Code and Documentation**: If not the primary artifacts, a software
+  release package's corresponding source code and documentation are typically
+  published along with built artifacts.
 
-* __Metadata__: Licenses, dependencies, name of the authors, links to the
+- **Metadata**: Licenses, dependencies, name of the authors, links to the
   project website and development repository are usually added to each release
   package.
 
-* __Verification Data__: Checksums and digital signatures can be found next to
+- **Verification Data**: Checksums and digital signatures can be found next to
   the built artifacts to verify the authenticity of downloaded files.
 
-* __Historization__: Most of the analyzed repositories store artifacts and old
-  software versions in perpetuity even if newer versions are available.
+- **Historization**: Most analyzed repositories store artifacts and old software
+  versions in perpetuity even if newer versions are available.
 
-* __Compatibility__: HTTP and other common web technologies, among others, are
+- **Compatibility**: HTTP and other common web technologies, among others, are
   used to access most repositories, making them available even in restrictive
   corporate environments.
 
-* __Content Moderation__: Administrators and platform owners have eventual
-  control over all content that is published within a given repository and can
-  remove unwanted artifacts.
+- **Content Moderation**: Administrators and platform owners have eventual
+  control over all content published within a given repository and can remove
+  unwanted artifacts.
 
-* __Reliability__: The analyzed software repositories are highly available by
-  leveraging content delivery networks, globally distributed mirrors and
-  others.
+- **Reliability**: The analyzed software repositories are highly available by
+  leveraging content delivery networks, globally distributed mirrors and others.
 
-
-[^cent]: Central does not necessarily mean centralized.
+[^cent]:
+    Central does not necessarily mean centralized but rather points to a
+    well-known entry point.
