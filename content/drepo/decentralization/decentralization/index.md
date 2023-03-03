@@ -56,6 +56,11 @@ their campaign pledges and vote in their interest in parliament. But from all
 the political dramas on TV, fiction or not, we know this trust is often
 misplaced.
 
+{{< image-svg
+  src="modern-democracy.excalidraw.svg"
+  alt="Modern Democracy"
+  caption="Modern Democracy: The people vote for their representatives in parliament. Afterwards, these elected officials vote for bills to pass. But do these representatives vote in the interests of their constituents? The system is centralized as the elected officials retain significant power." >}}
+
 Thus, _democracies are relatively centralized_, as the elected officials are in
 power and can use this power in a centralized way to either make good on their
 promises or solely act in their own interests. The _separation of powers_,
@@ -67,6 +72,11 @@ centralized to very decentralized. For example, a system in which each and every
 decision is put to the vote for everyone to participate holds a higher _degree
 of decentralization_ than electing a ruler who will make the 'right' choices.
 
+{{< image-svg
+  src="levels-of-centralization.excalidraw.svg"
+  alt="Levels of Decentralization"
+  caption="Levels of Decentralization: Most systems are not 100% centralized or decentralized. To accomplish their goals they have to find the right balance." >}}
+
 However, holding a vote on practically everything _does not scale_. If the
 number of participants or decisions grows substantially, it becomes extremely
 cumbersome to conduct polls. This holds especially true in the real world, where
@@ -76,6 +86,11 @@ Centralization, on the other, hand reduces these effects at a _cost_. By
 centralizing to a certain degree, every participant loses part of their
 influence as this power is given to some centralized entity. Nevertheless, this
 entity can make and execute decisions faster as the process is more streamlined.
+
+{{< image-svg
+  src="direct-democracy.excalidraw.svg"
+  alt="Direct Democracy"
+  caption="Direct Democracy: In a direct democracy the people vote directly on all relevant decisions. As we can see, this does not scale well in the real world." >}}
 
 When setting up a new system, one must find an appropriate balance between
 scalability and security:
@@ -124,6 +139,11 @@ participants scales poorly. Moreover, since Blockchains are generally bound by
 the [Blockchain Trilemma](https://vitalik.ca/general/2021/04/07/sharding.html),
 they must sacrifice scalability, security, or decentralization in favor of the
 other two.
+
+{{< image-svg
+  src="blockchain-trilemma.excalidraw.svg"
+  alt="Blockchain Trilemma"
+  caption="Blockchain Trilemma: Current blockchain systems cannot reach the goals of decentralization, security, and scalability at the same time. They have to sacrifice at least one of these on favor of the other two." >}}
 
 Protocols and system rules are defined in a decentralized system, which
 participants must adhere to. Within these given parameters, users can use their
@@ -182,11 +202,16 @@ probably have an interest in controlling systems like Ethereum.[^ethmoney]
 [^CEX]: Centralized Exchange
 [^ethmining]: This is oversimplified but the essential gist.
 [^ethmoney]:
-    Banks, governments, and even companies can create fiat currency at their will
-    without anyone actually holding them back. Imagine a company like Paypal
-    just 'accidentally' creating a lot of USD and buying Ether. People trust
-    Paypal to honor those payments, but they might get screwed over while
+    Banks, governments, and even companies can create fiat currency at their
+    will without anyone actually holding them back. Imagine a company like
+    Paypal just 'accidentally' creating a lot of USD and buying Ether. People
+    trust Paypal to honor those payments, but they might get screwed over while
     Paypal holds actual Ether on the blockchain.
+
+{{< image-svg
+  src="decentralized-majority.excalidraw.svg"
+  alt="Majority Attack"
+  caption="Majority Attack: If an entity controls the majority of participants, it can control the entire network" >}}
 
 BitTorrent is more or less resistant to such attacks as there is no such thing
 as a controlling majority due to the absence of a global state. The network is,
@@ -207,25 +232,28 @@ to apply pressure.
 
 ## Benefits
 
-The core benefit of a decentralized system run and owned by the
-community lies in the capability to resist manipulation. It strictly follows the
-rules defined in its protocol and cannot break these or make
-exceptions if they result in a 'better' outcome. Of course, the community as
-might decide to make corresponding changes, but no sole participant can
-make these alterations. If only a minority
+The core benefit of a decentralized system run and owned by the community lies
+in the capability to resist manipulation. It strictly follows the rules defined
+in its protocol and cannot break these or make exceptions if they result in a
+'better' outcome. Of course, the community as might decide to make corresponding
+changes, but no sole participant can make these alterations. If only a minority
 adopts the modifications, the non-adopting majority will disregard conflicting
 decisions. The system will continue to work in its previously established form.
 Changes that only benefit a minority will not be adopted.
 
-Due to its distributed nature, it can continue to work and serve its purpose even
-if large parts of the system fail. This might be caused by technical problems
-like network failures or attacks on individual nodes. There is no single
-point of failure that can bring the system to a halt. However, degraded service
-or performance might be possible.
+Due to its distributed nature, it can continue to work and serve its purpose
+even if large parts of the system fail. This might be caused by technical
+problems like network failures or attacks on individual nodes. There is no
+single point of failure that can bring the system to a halt. However, degraded
+service or performance might be possible.
 
-Consequently, a truly decentralized system cannot be shut down as long as
-nodes want to continue participating in the network, at least from a
-technical point of view. The effectiveness and efficiency of a system with
-meager participation might come into question leaving the system effectively
-for dead. This emphasizes that such a network lives and flourishes with
-participation.
+{{< image-svg
+  src="decentralized-resilience.excalidraw.svg"
+  alt="Resilience"
+  caption="Resilience: Even if large parts of a decentralized system become unavailable, the given system can continue to work without major interruptions." >}}
+
+Consequently, a truly decentralized system cannot be shut down as long as nodes
+want to continue participating in the network, at least from a technical point
+of view. The effectiveness and efficiency of a system with meager participation
+might come into question leaving the system effectively for dead. This
+emphasizes that such a network lives and flourishes with participation.
