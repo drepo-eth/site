@@ -40,7 +40,7 @@ software is essential and that the software supply chain is fragile. Thus,
 initiatives and programs like the [CVE](https://www.cve.org/) and the
 [GitHub Advisory Database](https://github.com/advisories) were introduced to
 coordinate and communicate security issues in libraries and applications.
-Furthermore, the U.S. President also issued an
+Furthermore, the US President also issued an
 [executive order](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
 to improve cybersecurity to counter recent hacks and ransomware attacks.
 Combined with the trend towards _DevSecOps_, it shows the growing importance of
