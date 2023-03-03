@@ -1,8 +1,16 @@
 ---
 title: "Centralized"
-# description: 'TODO'
-# tags:
-#   - 'TODO'
+description:
+  "Centralized software repositories are owned and operated by centralized
+  entities. Moreover, they are built using centralized architecture and run on
+  traditional cloud platforms."
+tags:
+  - "centralized"
+  - "funding"
+  - "foundation"
+  - "for-profit"
+  - "control"
+  - "cloud"
 date: 2022-09-12T00:32:15+02:00
 draft: false
 weight: 3020
@@ -65,17 +73,6 @@ annoying, one can more than survive with the generous free offerings.[^support]
     deal. It also helps keep platforms free for anybody else who is less
     fortunate and cannot afford a subscription.
 
-<!-- npm, maven, pypi -->
-<!-- central repository system that can be seen as a closed system -->
-<!-- owned and run by a single entity, often community funded foundation or for-profit corporation -->
-<!-- often scaling using cdns and other cloud systems -->
-<!-- examples: -->
-<!-- maven, pypi -> community foundation + sponsoring -->
-<!-- docker, npm -> for profit -->
-
-<!-- especially systems run by companies add additional, paid features to the repository -->
-<!-- mostly around company needs, working in teams, space, 'privacy' etc. -->
-
 ## Centralized Control
 
 The actual danger that comes with centralized repositories lies in the absolute
@@ -105,8 +102,3 @@ control. In the end, any interference with the content and the accessibility of
 a public software repository can have devastating effects on the global
 development of open source software and its distribution. Subsequently, any
 system that is built on top of that might be endangered.
-
-<!-- administrators and owners have total control over the system -->
-<!-- ability to add, remove, change content -->
-<!-- could block access for specific users or by country, etc -->
-<!-- could also shutdown system completely at any time -->
