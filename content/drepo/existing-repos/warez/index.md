@@ -80,6 +80,11 @@ content.[^format]
     A movie might be available as a Blu-ray file or a rip of a digital release.
     They are very different files that represent the same content.
 
+{{< image-svg
+  src="many-to-many-indexer.excalidraw.svg"
+  alt="Many-to-Many Relationship"
+  caption="Many-to-Many Relationship: Multiple independent indexers reference various versions of the same content. If one of the indexers or one of the referenced files becomes unavailable, other versions of the content remain available." >}}
+
 ## Resilience
 
 ### BitTorrent
@@ -119,6 +124,11 @@ restrictions above but also hide the real identity of peers within the open
 network. This makes it impossible to track down all peers sharing a specific
 file.
 
+{{< image-svg
+  src="content-hashed-sharing.excalidraw.svg"
+  alt="Content Addressable Sharing"
+  caption="Content Addressable Sharing: Files within the network are addressed via their content hashes. Different peers can introduce identical files into the system and publish them to other participants. This mechanism allows the unique identification of files in the network and the later reintroduction of content in case all seeds become unavailable." >}}
+
 ### Usenet
 
 Take-downs of copyrighted material are handled differently on the Usenet.
@@ -140,7 +150,7 @@ location. Subsequently, it is necessary to create new references in the form of
 `.nzb` files. They, again, must be shared across indexers, so users can
 eventually find the new content.
 
-The third measure is the obfuscation of uploaded content. This includes using
+The third measure is the _obfuscation_ of uploaded content. This includes using
 random names for files and possibly uploading across various newsgroups. Thus,
 it is harder to identify the content and all of its parts. An indexer or a
 `.nzb` file is necessary to find the desired content without analyzing the data
