@@ -68,8 +68,8 @@ annoying, one can more than survive with the generous free offerings.[^support]
 
 [^support]:
     Supporting software repositories and gaining more features is not a bad
-    deal. It also helps keep platforms free for anyone less
-    fortunate who cannot afford a subscription.
+    deal. It also helps keep platforms free for anyone less fortunate who cannot
+    afford a subscription.
 
 ## Centralized Control
 
@@ -78,8 +78,8 @@ control. The owners and administrators can remove and add any content they like.
 In the worst cases, they can even change or modify the content. For example, a
 software release might be removed without any warning. If the operator acts
 maliciously, they could create new software packages containing malware or
-similarly change existing packages. The community will likely discover such
-actions that could destroy a repository's reputation.
+change existing packages. The community will likely discover such actions that
+could destroy a repository's reputation.
 
 A more realistic scenario is the removal of content due to external pressure. As
 the institutions behind the repositories are incorporated in the real world,
