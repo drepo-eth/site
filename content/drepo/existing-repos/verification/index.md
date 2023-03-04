@@ -1,8 +1,23 @@
 ---
 title: "Verification"
-# description: 'TODO'
-# tags:
-#   - 'TODO'
+description:
+  "The validity and authenticity of artifacts in current software repositories
+  is proven by checksums and digital signatures. This type of verification is,
+  however, insufficient and flawed from a trust perspective. Reproducible builds
+  verify the authenticity of a software artifact. The source code proves the
+  validity of an artifact and is at the same time human readable allowing users
+  to check its correctness."
+tags:
+  - "hashing"
+  - "content hash"
+  - "checksum"
+  - "digital signature"
+  - "asymmetric encryption"
+  - "reproducible builds"
+  - "source code"
+  - "verification"
+  - "audit"
+  - "certification"
 date: 2022-09-12T00:33:29+02:00
 draft: false
 weight: 3080
@@ -28,14 +43,14 @@ When is it safe to download a program from some website and execute it?
 - Is the website's SSL certificate valid?
 
 Applying common sense is probably a good idea. But since elaborate (technical)
-schemes might be used to trick you, you are never 100% safe. In the end it is up
-to **you** to define what and when you **trust**, or, in other words, you are
-sufficiently convinced that something is legit.
+schemes might be used to trick you, you are never 100% safe. In the end, it is
+up to **you** to define what and when you _trust_, or, in other words, you are
+sufficiently convinced that something is legitimate.
 
 In terms of software repositories, downloading an artifact from a popular
 repository is not enough verification for the validity of the artifact. As we
-all know, various factors can change an aftifact without you realizing either by
-accident or on puprose. Some examples:
+all know, various factors can change an artifact without you realizing, either
+by accident or on purpose. Some examples:
 
 - Your download can fail midway and you end up with a broken file on you disk.
 - Your desired file is actually broken in the repository due to internal
@@ -53,15 +68,21 @@ accomplish that?
 
 Checksums have been around for a fairly long time to validate downloaded
 artifacts. A hash function is applied to the content of a given file. This
-produces a unique[^unique] hash value, the **checksum**, which is used for
+produces a unique[^unique] hash value, the _checksum_, which is used for
 verification.
 
-[^unique]: TODO problem with unique
+[^unique]:
+    The computed value is actually not unique as the hash function maps a much
+    larger domain into a smaller codomain. For instance, files of arbitrary size
+    are hashed into a fixed-sized byte array. This means, there is a multitude
+    of input values producing the same output value, a hash collision. Strong
+    hashing functions are necessary to make inverting the computation infeasible
+    and rendering hash collisions extremely improbable.
 
 The used hash function should be a pure function that will produce the same hash
 result when presented with the same input values. This means that if applied to
 files with the exactly same content the same hash result is computed. This is
-also known as **Content Hashing**. Even a change of a single bit in the input
+also known as _Content Hashing_. Even a change of a single bit in the input
 values results in a completely different hash value.
 
 {{< image-svg src="checksums.excalidraw.svg"
@@ -131,7 +152,7 @@ key servers. These servers contain a multitude of keys which were uploaded by
 users without any further verification. Thus, many keys are outdated, obsolete
 and questionable in origin as anyone could upload a key with any name and email.
 Services like [keybase.io](https://keybase.io) try to mitigate these risks by
-creating a profile that is tied to and verified with other online **identities**
+creating a profile that is tied to and verified with other online _identities_
 (Twitter, Facebook, etc.).[^keybase] Hosting the keys on the developer's private
 website or the project website is another alternative. And there is also the
 possibility of building a
@@ -145,7 +166,7 @@ cover here.
     control the keys and the accounts creating trust betweens those.
 
 Each of these methods has their pro's and con's. In the end it is up to the each
-user to decide when they trust the source of a key as there is no **single,
+user to decide when they trust the source of a key as there is **no single,
 trusted, globally accepted** way of distribution.
 
 Hosting the public key along the artifacts in a repository and not verifying the
@@ -174,9 +195,9 @@ artifact. The produced files are bitwise identical. The build is independent of
 the machine that it is exceuted on as long as the same configuration and
 environment is applied to the build.
 
-These properties allow for a software to be **restored** from the source at any
-time in the future.[^future] Further more, this allows the **independent
-verification** of compiled artifacts.
+These properties allow for a software to be restored from the source at any time
+in the future.[^future] Furthermore, this allows the _independent verification_
+of compiled artifacts.
 
 [^future]:
     Assuming that in the future the necessary tools and dependencies are still
@@ -211,7 +232,8 @@ Two important questions now arise:
 
 The depicted decentralized software repository fundamentally requires the usage
 of reproducible builds. Thus, both of these questions are addressed in more
-detail [here](TODO). But in short, the drepo takes advantage of the following
+detail [here]({{< ref "/drepo/expanded/build-verification" >}} "Build
+Verification"). But in short, the dRepo takes advantage of the following
 properties:
 
 <!-- TODO add proper links -->
@@ -222,17 +244,17 @@ As the build artifacts are now independently verifyable a large number of third
 parties can build the software and publish their results. These results do not
 have to be the actual build artifacts but should be in the form of checksums or
 signatures. If a sufficiently large number of indedendent results is published
-and a consensus of the **'correct'** result is found, users can compare these
+and a consensus of the 'correct' result is found, users can compare these
 findings with the artifacts they obtained from a software repository. Due to
 decentralization and a consensus the third party results can be viewed as an
-external, **'trusted'** source for verification data.
+external, _trusted_ source for verification data.
 
 #### Source Code Auditing
 
 The same problems apply to the source code when it has to be obtained from a
 source code repository. However, unlike compiled build artifacts the source code
 is human readable. This allows users in theory to review the code and to decide
-whether or not the code is legit or at least what they are looking for. Of
+whether or not the code is legitimate or at least what they are looking for. Of
 course, this is easier said than done especially with large code basis or if a
 user cannot understand the code. Furthermore, reviewing every piece of code
 before using or executing it is in practice impossible for any single person.
