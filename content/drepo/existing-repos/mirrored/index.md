@@ -89,7 +89,10 @@ artifacts from the mirror repositories. If they want to contribute artifacts,
 they must upload them to the master and await the eventual synchronization to
 all mirrors.
 
-<!-- TODO illustration -->
+{{< image-svg
+  src="mirror-network.excalidraw.svg"
+  alt="Mirror Network"
+  caption="Mirror Network: Mirrors worldwide synchronize the content from the master repository and serve the data to users in their vicinity." >}}
 
 A multitude of these mirrors is hosted by volunteers around the world. These are
 often corporations, ISPs, and universities that possess many unutilized
