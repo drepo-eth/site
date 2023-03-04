@@ -88,6 +88,11 @@ as illegal in their jurisdiction, law forces the administrators to remove it.
 Likewise, access to the entire repository might be blocked from certain regions
 if a country is sanctioned or becomes a wartime enemy.
 
+{{< image-svg
+  src="centralized-not-welcome.excalidraw.svg"
+  alt="Blocking Access"
+  caption="Blocking Access: The owners of a centralized software repository or an influential party could block access to the repository for a specific group of users while others can continue using it freely. The system is the only source for packages in the ecosystem. The blocked users cannot continue with their work. Also, we do not want to offend anyone; we are just messing around." >}}
+
 Besides legal reasons, economic issues are even more likely. For example,
 cutting down on the global infrastructure might render a repository almost
 unusable from certain 'unimportant' regions if latency is drastically increased
