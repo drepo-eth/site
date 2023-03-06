@@ -128,7 +128,6 @@ originated[^signed] from the author.
     It merely proves that someone with the corresponding private key to a known
     public key signed an identical file.
 
-<!-- TODO: diagram -->
 
 [GPG](https://gnupg.org/) is the de facto standard tool for this purpose. It is
 used in multiple open-source software repositories, e.g., the Ubuntu and Arch
@@ -141,6 +140,11 @@ artifacts and their signatures are tamperproof as they depend on an external
 dependency: the author's public and private keys. As long as the signature
 creation, meaning the author's keys, is separated from the repository, a valid
 signature of a modified file cannot be reproduced.
+
+{{< image-svg
+  src="digital-signature.excalidraw.svg"
+  alt="Digital Signatures"
+  caption="Digital Signatures: A software's author signs the application with the private key and publishes the application file and the signature to the software repository. At the same time, they publish the corresponding public key on a key server. Subsequently, a can download the signature and application form the repository and the required public key from the key server. Given these, they can verify the authenticity of the application files without relying on the security of the repository." >}}
 
 ### Public Key Discovery
 
@@ -197,7 +201,7 @@ trusted developers to sign their applications with Apple's root key.
 Consequently, all Apple devices run such signed software without voicing
 security concerns.
 
-However, the internet is, generally not such a closed and trusted ecosystem.
+However, the internet is generally not such a closed and trusted ecosystem.
 
 ## Reproducible Builds
 
@@ -241,6 +245,11 @@ are committed to reproducible builds. For instance, Arch Linux is actively
 progress in updating all software packages in its repositories to be
 reproducible.
 
+{{< image-svg
+  src="reproducible-build.excalidraw.svg"
+  alt="Reproducible Builds"
+  caption="Reproducible Builds: Each build of the source code version will produce the same application artifact. Their checksums match every time. Reproducible builds are independent of the system they are executed on. Two different people will produce the same artifacts given the same source code version." >}}
+
 ### Problems
 
 Two crucial questions now arise:
@@ -272,7 +281,7 @@ external, _trustworthy_ source for verification data.
 The same problems apply to the source code when it has to be obtained from a
 source code repository. However, unlike compiled build artifacts, the source
 code is human-readable. This allows users, in theory, to review the code and
-decide whether the code is legitimate or at least what they are looking for. Of
+decide whether it is legitimate or at least what they are looking for. Of
 course, this is easier said than done, especially with a large code base or if a
 user cannot understand the code. Furthermore, reviewing every piece of code
 before using or executing it is, in practice, impossible for any single person.
