@@ -107,7 +107,10 @@ redundancy offers higher availability. Finally, as with the index, not
 committing to a single distribution system allows the repository to adopt new
 technologies in the future without fundamentally changing the base protocol.
 
-<!-- TODO overview image -->
+{{< image-svg
+  src="architecture.excalidraw.svg"
+  alt="dRepo Architecture"
+  caption="dRepo Architecture: The system is separated into an index and a storage component. The index is a smart contract on a permissionless blockchain holding software package metadata and managing publications. Each package points to multiple resources across various storage solutions." >}}
 
 Separating index and storage into open, almost self-sufficient units creates a
 highly flexible system. For instance, each component could be switched out for another
