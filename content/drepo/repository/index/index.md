@@ -104,7 +104,7 @@ each community member to decide how to interact with the system.
     barriers not all community members agree with. Instead of being locked out
     of the ecosystem, they can still participate directly at the root.
 
-### Upgradability
+### Limited Upgradability
 
 Using an upgradable proxy to allow code changes to the index should be avoided.
 Such a mechanism might be exploited to introduce malicious changes by applying
