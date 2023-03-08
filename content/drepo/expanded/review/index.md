@@ -118,7 +118,10 @@ members varies. At the same time, this attention might diverge from its
 utilization within the community. Therefore, this kind project is especially
 needs more and constant reviews.
 
-<!-- TODO illustration -->
+{{< image-svg
+src="project-attention.excalidraw.svg"
+alt="Project Attention"
+caption="Project Attention: Popular top-level projects are used directly by many developers. They track the latest changes and contribute bug fixes and new features. Smaller projects that are often dependencies of other systems often have a lower number of contributors. The software community as a whole pays less attention to them even though many projects are built on top of them." >}}
 
 One of the missions of the new system is to delegate code reviews towards
 critical software which is not sufficiently verified. This could be achieved by
@@ -145,7 +148,10 @@ re-examined. This creates a layered web of verification and community oversight
 which eventually finds all valid flaws in a given project, reducing the number
 of issues with each iteration.
 
-<!-- TODO illustration -->
+{{< image-svg
+src="layered-reviews.excalidraw.svg"
+alt="Layered Reviews"
+caption="Layered Reviews: Several reviews are conducted in parallel to reduce the amount of cheating. The results must again be reviewed to verify the detected flaws and to find issues that were missed in previous iterations. This process has mutliple iterations and must be regularly repeated to ensure high quality results. All valid results are eventually aggregated and presented to the users for them to decide if a software is safe." >}}
 
 A concrete system must be defined and tested by the community. As such a system
 tries to delegate human work, a 100% certainty can never be achieved. The goal
