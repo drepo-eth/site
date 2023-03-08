@@ -114,8 +114,8 @@ However, in an early introduction phase, such a setup might help to fix bugs in
 the new system, mainly if not enough audits were conducted. Eventually, the
 upgrade feature should be permanently disabled. This removes the human factor as
 a security risk from the system. Additionally, it removes liability concerns, as
-human administrators or DAO members might be held responsible by nation-states
-for the system's content or processes if they can influence it.
+nation-states might hold human administrators or DAO members responsible for the
+system's content or processes if they can influence it.
 
 ## Ownership
 
