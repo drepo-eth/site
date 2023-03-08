@@ -61,6 +61,11 @@ especially for novice users who just want to use downloaded software. A middle
 ground might be a preferential solution offering a high level of security while
 maintaining comfort.
 
+{{< image-svg
+src="dependency-tree.excalidraw.svg"
+alt="Dependency Tree"
+caption="Dependency Tree: An application typically contains numerous dependencies to other software libraries. The application can only be verified if all of its dependencies are verified. This is an especially hard task in polyglot applications which use pre-compiled artifacts." >}}
+
 ## Verifying for the Community
 
 ### The Basics
@@ -81,6 +86,11 @@ Other users of the dRepo can evaluate the results of the verifying participants.
 Subsequently, they have to decide for themselves whether an artifact is valid.
 The community would provide guidelines on specific thresholds as such an
 evaluation might be difficult for novice users.
+
+{{< image-svg
+src="verification-network.excalidraw.svg"
+alt="Verification Network"
+caption="Verification Network: The software author publishes the build artifacts and numerous nodes in the verification network verify the reproducible build. The result is valid if only an insignificant number of nodes reports an invalid build." >}}
 
 ### Nodes
 
