@@ -143,13 +143,20 @@ cyberattacks. P2p systems bring a dynamic that might be harder to handle, as
 clients in such networks communicate directly. This kind of traffic is currently
 prohibited within such networks.
 
-Proxy solutions that translate p2p and centralized traffic might be a solution.
+Proxy systems that bridge p2p and centralized traffic might be a solution.
 For instance, as IPFS clients are still not widely used, gateways offer a way to
 access decentralized resources through a centralized server. The gateway server
 accepts HTTP requests and searches for the resources on the IPFS network. When
-found, the desired files are delivered to the requesting client.
+found, the desired files are delivered to the requesting client. The model is
+similar to proxy repositories offered by products like Nexus and Artifactory.
+This setup was discussed [earlier]({{< ref "/drepo/existing-repos/mirrored">}}
+"Mirror Repositories") and offers institutions more control over resources from
+external repositories.
 
-<!-- TODO: illustration corporate networks -->
+{{< image-svg
+  src="corporate-p2p.excalidraw.svg"
+  alt="P2P Networks"
+  caption="P2P Networks and Corporate Networks: While users on the internet can share files directly via p2p, users within corporate networks are cut off from these networks. Firewalls within these networks usually do not allow such traffic. Gateways could allow users in secured networks to access content from p2p networks without participating directly. They could offer caching services for all employees in a corporation and participate in the p2p network." >}}
 
 ## Types of References
 
@@ -176,18 +183,21 @@ Verification Network]({{< ref "/drepo/expanded/build-verification" >}} "Build
 Verification Network") will address this critical issue.
 
 Even more information might prove helpful depending on the type of software
-being released: links to deployed software instances, demo systems, results
-from professional audits, or donation systems that support the developers.
+being released: links to deployed software instances, demo systems, results from
+professional audits, or donation systems that support the developers.
 
 Each published resource should follow defined patterns that help users and
 client software to determine what kind of resource is referenced.
 
-<!-- TODO illustration -->
+{{< image-svg
+  src="references.excalidraw.svg"
+  alt="References"
+  caption="References: Each release holds a list of references. These point to various resource like build artifacts, source code, and documentation. In addition, checksums, signatures, links to websites, and other resources might be included. There is no limit defined, the community must agree on sensible standards." >}}
 
 The system does not enforce rules or set any limits on the amount and the type
-of references. These are recommendations that we believe to be reasonable
-and that improve the current situation by supplying more data points for
-security and diversity. The prototypes define the release content as bare
-strings not validated for specific patterns. Additionally, this leaves
-the door open for future improvements. Ecosystems in which a dRepo is deployed
-must define their own standards and recommendations to live by.
+of references. These are recommendations that we believe to be reasonable and
+that improve the current situation by supplying more data points for security
+and diversity. The prototypes define the release content as bare strings not
+validated for specific patterns. Additionally, this leaves the door open for
+future improvements. Ecosystems in which a dRepo is deployed must define their
+own standards and recommendations to live by.
