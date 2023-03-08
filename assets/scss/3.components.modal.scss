@@ -31,13 +31,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
+  display: grid;
+  place-items: center;
   border-radius: 4px;
-  width: 80%;
-  max-width: calc(#{$s-max-content-width} + 200px);
-  max-height: 90vh;
+  max-width: 92vw;
+  height: 92vh;
+  aspect-ratio: 4 / 3;
   background-color: var(--color-bg);
   box-shadow: 0 0 $spacer-base rgba($c-black, 0.2);
   animation: zoomIn 150ms 200ms ease-in-out forwards;
+
+  @include breakpoint(xl) {
+    max-width: calc(#{$s-max-content-width} + 200px);
+  }
 }
 
 .modal__close-btn {
@@ -51,8 +57,12 @@
 
 .modal__figure {
   display: grid;
+  grid-template-rows: 1fr auto;
   place-items: center;
-  padding: $spacer-lg $spacer-sm $spacer-sm;
+  margin: 0;
+  padding: $spacer-md $spacer-sm;
+  height: 100%;
+  width: 100%;
 
   img {
     position: relative;
@@ -69,6 +79,9 @@
 
   .svg {
     filter: var(--image-filter);
+    object-fit: contain;
+    max-height: 75vh;
+    width: 90%;
   }
 
   figcaption {

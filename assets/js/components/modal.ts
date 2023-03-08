@@ -1,3 +1,5 @@
+import {getContainerWidth} from '../helper';
+
 export const modal = function () {
     const QUERY = {
         modal: '.modal',
@@ -33,11 +35,14 @@ export const modal = function () {
     }
 
     const onFigureClicked = function ($figure, event) {
+
+      if (getContainerWidth() >= 1024) {
         event.preventDefault();
 
         const $figcaptionClone = $figure.querySelector(QUERY.figcaption).cloneNode(true);
         $modal.querySelector('.modal__figure').replaceChildren(createFigure($figure), $figcaptionClone);
         $modal.classList.remove(QUERY.isHidden);
+      }
     }
 
     const init = function () {

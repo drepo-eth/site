@@ -35,7 +35,7 @@
   --color-scrollbar-bg: #{$c-lightgrey};
   --color-thumb-bg: #{$c-grey};
   --color-teaser-link: #{$c-lightblue};
-  --image-filter: invert(1);
+  --image-filter: hue-rotate(180deg) invert(100%);
 }
 
 
@@ -46,6 +46,7 @@
 body {
   color: var(--color-text);
   background: var(--color-bg);
+  font-family: "Overpass Mono", monospace;
 
   &.is-loading {
     display: none;
