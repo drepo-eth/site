@@ -102,6 +102,11 @@ dRepo's expanded ecosystem does not come for free, as large amounts of work have
 to be done by participants. Thus, they must contribute incentives to the
 networks for workers to verify their published applications from top to bottom.
 
+{{< image-svg
+src="incentives-distribution.excalidraw.svg"
+alt="Incentives Distribution"
+caption="Incentives Distribution: All of an application's dependencies must be reviewed and verified for the top-level application to be verified as well. The application owner must invest in this process. Incentives get distributed to all dependencies for their verification." >}}
+
 As ransomware and phishing attacks become prevalent in mainstream media,
 consumers, companies, and governments become more aware of security issues. As a
 result, consumers demand secure applications, while companies and governments
