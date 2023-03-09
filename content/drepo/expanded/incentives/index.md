@@ -94,7 +94,7 @@ of core projects within the community.
 
 A company that offers its users a critical application, for example, an online
 banking app or a data storage service, has to create 'trust' in said
-application. As we are shifting into a zero-trust or trustless world, this can
+application. As we shift into a zero-trust or trustless world, this can
 only be achieved through public verification. One way to accomplish this is to
 publish a _witnessable app_ within the _dRepo_. Consequently, these companies
 have to invest in the security of their software. The verification in the
@@ -105,7 +105,7 @@ networks for workers to verify their published applications from top to bottom.
 {{< image-svg
 src="incentives-distribution.excalidraw.svg"
 alt="Incentives Distribution"
-caption="Incentives Distribution: All of an application's dependencies must be reviewed and verified for the top-level application to be verified as well. The application owner must invest in this process. Incentives get distributed to all dependencies for their verification." >}}
+caption="Incentives Distribution: All of an application's dependencies must be reviewed and verified for the top-level application to be verified as well. The application owner must invest in this process. Incentives get distributed to all dependencies for their verification. The effects are multiplied if numerous top-level applications use the same dependencies." >}}
 
 As ransomware and phishing attacks become prevalent in mainstream media,
 consumers, companies, and governments become more aware of security issues. As a
