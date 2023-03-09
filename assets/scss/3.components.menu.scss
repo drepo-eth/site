@@ -54,6 +54,13 @@
 	place-items: center;
 	align-self: end;
 	height: pxToRem(40px);
+
+  @include breakpoint(sm) {
+    margin: pxToRem(1px) pxToRem(6px);
+  }
+  @include breakpoint(md-xl) {
+    margin: pxToRem(1px) pxToRem(5px);
+  }
 }
 
 .menu__burger {
