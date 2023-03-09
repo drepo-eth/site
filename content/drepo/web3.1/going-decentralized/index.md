@@ -68,6 +68,11 @@ We should note that an application must not to be fully witnessable to leverage
 the distribution scheme mentioned above. The diverse distribution of an
 application's frontend alone is worthwhile.
 
+{{< image-svg
+  src="drepo-hosting.excalidraw.svg"
+  alt="dRepo Hosting"
+  caption="dRepo Hosting: When developers publish an application in the dRepo, they define multiple sources for the application binary, dependencies, and possible assets. Users look this information up within the index and download the required artifacts from a source of their choice. Ultimately, it does not matter where users obtain the artifacts, as they are secured and verified by the dRepo." >}}
+
 ## Network Effects
 
 Today's web applications use cloud services, edge computing, and CDNs worldwide
@@ -89,7 +94,10 @@ and thus might encounter lower latency. This effect cascades as more people
 share the resource and reduces the number of requests to the original
 centralized source.
 
-<!-- TODO illustration -->
+{{< image-svg
+  src="initial-publication.excalidraw.svg"
+  alt="Initial Publication"
+  caption="Initial Publication: An application developer publishes an application in the dRepo and only hosts the required files on a single server. Users look up the app information in the dRepo index. An initial user opens the app interface in a dRepo-compatible browser. The browser downloads the interface from the developer's server as other sources are not responding fast enough. While downloading, it immediately shares the application in a p2p network. Subsequent users also try to download the necessary files. Finally, they choose to download from the initial user and start sharing as well. The initial user bridges the verified application files from the centralized server to the decentralized network." >}}
 
 A centralized server is only needed at the beginning of an application lifecycle
 for the initial seed of files. Afterward, the application's users continue to
@@ -113,7 +121,10 @@ wants to use an application, they download it and have to share it for as long
 as they are using it. Infrastructure like routers or general caching servers
 could facilitate this effect.
 
-<!-- TODO illustrate routers and caching -->
+{{< image-svg
+  src="router-cache.excalidraw.svg"
+  alt="Router Cache"
+  caption="Caching and Sharing: Always-on appliances like home routers are the perfect caching and sharing solutions for artifacts that must be shared within a p2p network. If a user within the router's network wants to share a resource with the public internet, the router takes ownership of this resource and distributes it for as long as there are internal requests. Other internal users can quickly access these files even if the internal peer goes offline. Such setups are also viable within corporate networks that would allowlist resources published in the dRepo to prevent the leak of internal resources. Such always-on systems keep resources alive and strengthen the network." >}}
 
 The security of such systems would be grounded in the decentralized software
 repository. It guarantees the authenticity and safety of witnessable apps. At
