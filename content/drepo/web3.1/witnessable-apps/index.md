@@ -102,6 +102,11 @@ correct or does not behave maliciously. But due to its _total and provable
 transparency_, the public will scrutinize a witnessable app defying user
 expectations.
 
+{{< image-svg
+  src="witnessable-app.excalidraw.svg"
+  alt="Witnessable App"
+  caption="Witnessable App: The users of a witnessable app can verify every aspect of it. They can review the source code and verify the built application executable, they can verify the correct encryption of data, and how it is stored. Futhermore, they can see what data the application shares with thrid-party services and verify the correctness of the application's computations." >}}
+
 ### Does Every App have to be Witnessable?
 
 No, applications that do not contain or process important information most
@@ -168,6 +173,11 @@ anymore. Current dApps adhere to those rules by leveraging programmable, public
 blockchains, and advanced cryptographic schemes. They often minimize the amount
 of information needed for operations and give users control and ownership of
 data and, to some extent, code.
+
+{{< image-svg
+  src="traditional-app.excalidraw.svg"
+  alt="Traditional App"
+  caption="Traditional App: Users are represented with a fancy interface, but they do not know how an application works. Does it store users' personal data encrypted? Who are they sharing this data with? Who has access to the data? Does the application have any severe bugs? What is the result of a user's input?" >}}
 
 As this kind of visibility is hard to achieve throughout an entire application,
 splitting it into parts with different levels of transparency might reduce the
