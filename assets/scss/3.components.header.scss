@@ -50,13 +50,6 @@
 .header__actions {
   display: flex;
   align-items: center;
-
-  @include breakpoint(sm) {
-    margin-bottom: pxToRem(3px);
-  }
-  @include breakpoint(md-xl) {
-    margin-bottom: pxToRem(9px);
-  }
 }
 
 .header__contact {
@@ -115,6 +108,7 @@
   transition: all 0.3s ease;
 
   @include breakpoint(sm) {
+    margin: auto 0;
     mask: url(/images/logo-without-text.svg) no-repeat center;
   }
   @include breakpoint(md-xl) {
@@ -144,7 +138,7 @@
 
 .header__logo--mobile {
   @include breakpoint(sm) {
-    width: $spacer-base * 2;
+    width: pxToRem(36px);
   }
   @include breakpoint(md-xl) {
     display: none;
