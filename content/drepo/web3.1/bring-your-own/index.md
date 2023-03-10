@@ -75,7 +75,10 @@ the implementation with a dummy library, which does not break the application
 but does not execute any tracking code. In the same way, an older component,
 which contains security issues, could be upgraded on-the-fly in the browser.
 
-<!-- TODO illustration of switching components -->
+{{< image-svg
+  src="user-modification.excalidraw.svg"
+  alt="User Modifications"
+  caption="User Modification: Apart from forking, when downloading a modular web interface, the user's browser can analyze the SBOM linked in the dRepo to receive a list of all components. It is configured to remove any tracking modules, so it replaces the tracking library in the SBOM with a dummy implementation. Furthermore, it switches another library to a more advanced alternative compatible with the requested lib. The application is assembled in the user's browser with fitting, filtered components. It uses the same backend as the original app. However, it is adapted to the user's preferences." >}}
 
 Current web apps and others are often compiled into a single binary or fewer
 compressed files. The code within these is usually optimized. Web applications
@@ -102,7 +105,10 @@ download all dependencies using the dRepo. Some of these libraries might already
 be present, as other applications could have also demanded them. Consequently,
 the amount of additional data to be obtained might be minimal.
 
-<!-- TODO illustration of library sharing -->
+{{< image-svg
+  src="modular-download.excalidraw.svg"
+  alt="Modular Download"
+  caption="Modular Download: When opening a new app, the user's browser compares the components requested in the SBOM to the local cache. The cache contains modules already downloaded as part of other applications. Subsequently, the browser must only download the missing few components unique to the new application." >}}
 
 In such a scenario, developers of an application would only have to distribute
 their own software components while all dependencies could be sourced from
