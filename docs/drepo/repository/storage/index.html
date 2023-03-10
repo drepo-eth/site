@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="All Storage Systems Welcome The decentralized repository does not maintain a dedicated storage system. The creation of a new system which fulfills the requirements of ubiquity and high availability would be enormous, either in building a new protocol or in setting up global infrastructure. However, there are existing and upcoming systems that are well established and provide great services in their respective niches.
-Thus, the repository leverages various existing infrastructure systems to provide data to as many clients in as many environments as possible." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="Resources in the decentralized software repository should be hosted on centralized and decentralized storage solutions. The rule of thumb is: the more, the merrier. This gives users a wide range of choices where to obtain the artifacts safely and securely." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, p2p, http, storage, index, links, IPFS, BitTorrent, checksums, signatures" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/repository/storage/" />
@@ -38,15 +37,13 @@ Thus, the repository leverages various existing infrastructure systems to provid
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Storage">
-<meta itemprop="description" content="All Storage Systems Welcome The decentralized repository does not maintain a dedicated storage system. The creation of a new system which fulfills the requirements of ubiquity and high availability would be enormous, either in building a new protocol or in setting up global infrastructure. However, there are existing and upcoming systems that are well established and provide great services in their respective niches.
-Thus, the repository leverages various existing infrastructure systems to provide data to as many clients in as many environments as possible."><meta itemprop="datePublished" content="2023-01-06T17:03:28+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="1004">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="Resources in the decentralized software repository should be hosted on centralized and decentralized storage solutions. The rule of thumb is: the more, the merrier. This gives users a wide range of choices where to obtain the artifacts safely and securely."><meta itemprop="datePublished" content="2023-01-06T17:03:28+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="1437">
+<meta itemprop="keywords" content="p2p,http,storage,index,links,IPFS,BitTorrent,checksums,signatures," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Storage"/>
-<meta name="twitter:description" content="All Storage Systems Welcome The decentralized repository does not maintain a dedicated storage system. The creation of a new system which fulfills the requirements of ubiquity and high availability would be enormous, either in building a new protocol or in setting up global infrastructure. However, there are existing and upcoming systems that are well established and provide great services in their respective niches.
-Thus, the repository leverages various existing infrastructure systems to provide data to as many clients in as many environments as possible."/>
+<meta name="twitter:description" content="Resources in the decentralized software repository should be hosted on centralized and decentralized storage solutions. The rule of thumb is: the more, the merrier. This gives users a wide range of choices where to obtain the artifacts safely and securely."/>
 
 
 
@@ -97,7 +94,7 @@ Thus, the repository leverages various existing infrastructure systems to provid
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -197,135 +194,183 @@ Thus, the repository leverages various existing infrastructure systems to provid
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p>The decentralized repository <strong>does not maintain a dedicated storage system</strong>.
-The creation of a new system which fulfills the requirements of ubiquity and
-high availability would be enormous, either in building a new protocol or in
-setting up global infrastructure. However, there are existing and upcoming
-systems that are well established and provide great services in their respective
-niches.</p>
+Creating a new system that fulfills ubiquity and high availability requirements
+would be enormous in building a new protocol or setting up global
+infrastructure. However, some existing and upcoming systems are well-established
+and provide outstanding services in their respective niches.</p>
 <p>Thus, the repository leverages various existing infrastructure systems to
-provide data to as many clients in as many environments as possible. Currently,
-we distinguish centralized from decentralized sources.</p>
+provide artifacts to clients in as many environments as possible. Currently, we
+distinguish centralized from decentralized sources.</p>
 <h3 id="centralized">Centralized 
   <a class="anchor" href="#centralized">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h3><p>Centralized sources are hosted on centralized services which are controlled by a
-company or another institution. Your typical
+</h3><p>Centralized sources are hosted on centralized services controlled by a company
+or another institution. For example, centralized services are your typical
 <a href="https://aws.amazon.com/s3/" title="AWS S3" target="_blank">AWS S3 Bucket</a> or
 <a href="https://www.cloudflare.com/cdn/" title="Cloudflare CDN" target="_blank">Cloudflare CDN</a> you access
-via <a href="https://en.wikipedia.org/wiki/HTTPS" title="HTTPS" target="_blank">HTTPS</a> are such centralized
-services. The data might be distributed and replicated to various data centers
-around the world, but there is still an administrator who can delete or change
-the stored files.</p>
+via <a href="https://en.wikipedia.org/wiki/HTTPS" title="HTTPS" target="_blank">HTTPS</a>. The data might be
+distributed and replicated to various data centers worldwide, but an
+administrator can still delete or change the stored files.</p>
 <p><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="HTTP" target="_blank">HTTP</a> is a
-corner stone of the internet and in general usable in almost any
-situation.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Fast internet connections via fibre, 5G, or even better
+cornerstone of the internet and, in general, is usable in almost any
+situation.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Fast internet connections via fiber, 5G, or even better
 technologies in combination with world-spanning
 <a href="https://en.wikipedia.org/wiki/Content_delivery_network" title="Content Delivery
 Network" target="_blank">CDN</a>s
-allow users to download files extremely fast. Consequently websites and most
-other traditional data transfers run on this HTTP-driven stack. In fact, most of
-the current, popular software repositories use HTTP and centralized services to
+allow users to download files extremely fast. Consequently, websites and most
+other traditional data transfers run on this HTTP-driven stack. In fact, most
+current, popular software repositories use HTTP and centralized services to
 distribute artifacts. This makes them available not only on the public internet
-but also in closed company intranets or even in more secure environments. HTTP
-traffic is extremely common and thus there is a lot of security related
+but also in closed company intranets or even in more secure environments.
+Furthermore, as HTTP traffic is ubiquitous, there is a lot of security-related
 technology around it such as
 <a href="https://en.wikipedia.org/wiki/Web_application_firewall" title="Web Application
 Firewall" target="_blank">WAF</a>s
-and other firewalls which reduce risks in handling and using it.</p>
-<p>All of these properties make HTTP versatile and relatively safe and easy to use.
+and other firewalls, which reduce risks in handling and using it.</p>
+<p>These properties make HTTP versatile, relatively safe, and easy to use.
 Furthermore, the existing, broad infrastructure around HTTP-based sources allows
-users to download artifacts with very little effort. This ease of use, which
-evolved over the years, cannot be ignored. Thus centralized source like existing
-repos, websites and such will continue to be the predominant sources for
-artifacts for the near future. However, due to their centralized nature trust
-issues arise which the dRepo addresses.</p>
+users to download artifacts with little effort. This ease of use, which evolved
+over the years, cannot be ignored. Thus, centralized sources like existing
+repos, websites, and such will continue to be the predominant sources for
+artifacts in the foreseeable future. However, due to their centralized nature,
+trust issues arise, which the dRepo addresses.</p>
 <p>References to centralized sources in the dRepo must be accompanied by various
 checksums. They can be used to verify the obtained artifacts. As the references
-and the checksums both are published by the owner of a package, a more trusted
+and checksums are published by the owner of a package, a more trusted
 relationship between artifacts and checksums is created. This is similar to
-using digital signatures in existing repositories as both pieces of data need to
-be cryptographically signed by the owner of the account in order to publish them
-in a blockchain transaction.</p>
+using digital signatures in existing repositories, as both pieces of data need
+to be cryptographically signed by the account owner to publish them in a
+blockchain transaction.</p>
 <h3 id="decentralized">Decentralized 
   <a class="anchor" href="#decentralized">
     <i class="bi bi-link-45deg"></i>
   </a>
 </h3><p>Decentralized systems like
 <a href="https://ipfs.tech/" title="InterPlanetary File System" target="_blank">IPFS</a> and BitTorrent have been
-around for decades. In the early 2000s they played a crucial role in the
-&lsquo;illegal&rsquo; distribution of copyrighted content and consequently threatened
-especially the music and film industry. Even when pressure was applied on ISPs
-and legal pressure on individuals, these kinds of systems proofed <strong>resilient</strong>
-and <strong>scalable</strong> enough to share a large amount data to millions of users. Only
-the introduction of extremely convenient, centralized streaming services could
-reduce their dominance long term. But beside the WAREZ file sharing community,
-p2p systems also found their way in commercial systems due to the unique
-distribution capabilities.</p>
-<p>In recent years their <strong>community based approach</strong> and <strong>censorship resistence</strong>
-were the dominant factors for their usage in web3 Dapps. IPFS has become the de
-facto standard system for hosting web3 frontends and off-chain data, most
-prominently
+around for decades. In the early 2000s, they played a crucial role in the
+&lsquo;illegal&rsquo; distribution of copyrighted content, consequently threatening the
+music and film industry. Even when pressure was applied to ISPs and legal
+pressure on individuals, these systems proved <em>resilient</em> and <em>scalable</em> enough
+to share a large amount of data with millions of users. Only introducing
+extremely convenient, centralized streaming services could reduce their
+long-term dominance. But besides the WAREZ file-sharing community, p2p systems
+also found their way into commercial systems due to their unique distribution
+capabilities.</p>
+<p>In recent years their <em>community-based approach</em> and <em>censorship resistance</em>
+were the dominant factors for their usage in web3 dApps. As a result, IPFS has
+become the de facto standard system for hosting web3 frontends and off-chain
+data, most prominently
 <a href="https://en.wikipedia.org/wiki/Non-fungible_token" title="Non-fungible Token" target="_blank">NFT</a>-Pictures.
 Furthermore, initiatives like
 <a href="https://annas-blog.org/help-seed-zlibrary-on-ipfs.html" title="Z-Library" target="_blank">Z-Library</a>
 try to use the network to store and distribute large amounts of knowledge data
 while fighting censorship.</p>
-<p>Therefore, IPFS is also the preferred storage solution for the drepo due to its
-flexibility and ability to host applications in the file system. Its current,
+<p>Therefore, IPFS is also the preferred storage solution for the dRepo due to its
+flexibility and ability to host applications in the file system. Its current
 rising popularity also brings a lot of integrations in existing systems like
-browsers which makes usage almost as effortless as an HTTP-based stack. The file
-system character streamlines the distribution of data as users can request and
-subsequently share individual files from the file tree without having to
-download it entirely.</p>
-<p>Apart from IPFS, its recommended to publish artifacts on multiple decentralized
-networks like BitTorrent or <a href="https://www.arweave.org/" title="Arweave" target="_blank">Arweave</a>. Users
-can then choose a system that fits their demands in terms of security,
-availability, accessability, etc.</p>
-<p>As most p2p systems encorporate
-<a href="https://en.wikipedia.org/wiki/Content-addressable_storage" title="Content-addressable Storage" target="_blank">content addressing</a>
-the need for accompanying checksums is diminished and the correct transmission
+browsers making usage almost as effortless as an HTTP-based stack. In addition,
+its file-system-like character streamlines the data distribution as users can
+request and subsequently share individual files from the file tree without
+downloading it entirely.</p>
+<p>Apart from IPFS, it is recommended to publish artifacts on multiple
+decentralized networks like BitTorrent or
+<a href="https://www.arweave.org/" title="Arweave" target="_blank">Arweave</a>. Users can then choose a system
+that fits their demands regarding security, availability, accessibility, etc.</p>
+<p>As most p2p systems incorporate
+<a href="https://en.wikipedia.org/wiki/Content-addressable_storage" title="Content-addressable Storage" target="_blank">content addressing</a>,
+the need for accompanying checksums is diminished, and the correct transmission
 of artifacts is guaranteed. Furthermore, users can start sharing or <em>seeding</em>
-files independent from one another. This means that a file does not have to
+files independently from one another. This means a file does not have to
 originate from a single source within the network. Instead, users can acquire
-binary equivalent files from other sources, centralized servers or create them
-themselves leveraging reproducible builds, and seed them to the network. From
-the point of view of the network and other participants, they are sharing the
-same file. This dynamic and the ability to share partial chunks of data allows
-such networks to scale incredibly fast while maintaining security.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+binary-equivalent files from other sources, like centralized servers, or create
+them, leveraging reproducible builds, and seed them to the network. From the
+network and other participants&rsquo; points of view, they share the same file. This
+dynamic and the ability to share partial chunks of data allows such networks to
+scale incredibly fast while maintaining security.</p>
 <p>P2p systems require direct connections between peers. This is a significant
-difference to traditional client-server architectures as in the latter only the
-server needs to be exposed and known on the internet.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+difference from traditional client-server architectures, as in the latter, only
+the server needs to be exposed and known on the internet. This is a problem when
+used in secured environments such as corporate networks. They are typically very
+restrictive, only allowing certain types of traffic, monitoring the
+communication on firewalls, and trying to hide the internals of their networks.
+Their goal is to minimize the risk of malicious traffic and possible
+cyberattacks. P2p systems bring a dynamic that might be harder to handle, as
+clients in such networks communicate directly. This kind of traffic is currently
+prohibited within such networks.</p>
+<p>Proxy systems that bridge p2p and centralized traffic might be a solution.
+For instance, as IPFS clients are still not widely used, gateways offer a way to
+access decentralized resources through a centralized server. The gateway server
+accepts HTTP requests and searches for the resources on the IPFS network. When
+found, the desired files are delivered to the requesting client. The model is
+similar to proxy repositories offered by products like Nexus and Artifactory.
+This setup was discussed <a href="http://drepo.eth/drepo/existing-repos/mirrored/" title="Mirror Repositories">earlier</a> and offers institutions more control over resources from
+external repositories.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="corporate-p2p.excalidraw.svg" target="_blank">
+    <img src="/drepo/repository/storage/corporate-p2p.excalidraw.svg" alt="P2P Networks" />
+  </a>
+  <figcaption>
+    <p>P2P Networks and Corporate Networks: While users on the internet can share files directly via p2p, users within corporate networks are cut off from these networks. Firewalls within these networks usually do not allow such traffic. Gateways could allow users in secured networks to access content from p2p networks without participating directly. They could offer caching services for all employees in a corporation and participate in the p2p network.</p>
+  </figcaption>
+</figure>
+
 <h2 id="types-of-references">Types of References 
   <a class="anchor" href="#types-of-references">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>The primary type of references the index contains are links to build artifacts.
-Additionally, links to the source code and to documentation resources should be
-provided as they supply further information on the given software.
-The source code, however, plays a crucial role. It is needed to verify the</p>
-<p>The publication of checksums for build artifacts in the index is not suffcient
-to provide actual proof on the authenticity of artifacts. However, much like GPG
-signatures this scheme only verifies the relationship between checksums and the
-build artifacts which were published by the author of a software. It does not
-provide any further information about their authenticity in relation to the
-source code as the owner could have manipulated the artifacts before
-publication. The <a href="TODO">Build Verfification Network</a> will address this critical
-issue.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</h2><p>The primary type of reference the index contains is links to build artifacts.
+Here, each release should publish multiple links to centralized and
+decentralized sources. For instance, links to various software repositories, the
+same files hosted on a project&rsquo;s website, and addresses of the artifacts in
+question in numerous p2p networks like IPFS and BitTorrent. Other forms of URIs
+and coordinates are worth considering, anything that helps users find the
+correct files.</p>
+<p>Additionally, links to the source code and documentation resources should be
+provided as they supply further information on the given software. The source
+code, however, plays a crucial role. It is required in the verification of build
+artifacts leveraging reproducible builds.</p>
+<p>The publication of checksums of built artifacts in the index is recommended, but
+it is insufficient as proof of the authenticity of artifacts. However, much like
+GPG signatures, this scheme only verifies the relationship between checksums and
+the build artifacts published by the software author. It does not provide any
+further information about their authenticity in relation to the source code, as
+the owner could have manipulated the artifacts before publication. The <a href="http://drepo.eth/drepo/expanded/build-verification/" title="Build
+Verification Network">Build
+Verification Network</a> will address this critical issue.</p>
+<p>Even more information might prove helpful depending on the type of software
+being released: links to deployed software instances, demo systems, results from
+professional audits, or donation systems that support the developers.</p>
+<p>Each published resource should follow defined patterns that help users and
+client software to determine what kind of resource is referenced.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="references.excalidraw.svg" target="_blank">
+    <img src="/drepo/repository/storage/references.excalidraw.svg" alt="References" />
+  </a>
+  <figcaption>
+    <p>References: Each release holds a list of references. These point to various resource like build artifacts, source code, and documentation. In addition, checksums, signatures, links to websites, and other resources might be included. There is no limit defined, the community must agree on sensible standards.</p>
+  </figcaption>
+</figure>
+
+<p>The system does not enforce rules or set any limits on the amount and the type
+of references. These are recommendations that we believe to be reasonable and
+that improve the current situation by supplying more data points for security
+and diversity. The prototypes define the release content as bare strings not
+validated for specific patterns. Additionally, this leaves the door open for
+future improvements. Ecosystems in which a dRepo is deployed must define their
+own standards and recommendations to live by.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -454,22 +499,24 @@ unstable mobile connections.&#160;<a href="#fnref:1" class="footnote-backref" ro
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

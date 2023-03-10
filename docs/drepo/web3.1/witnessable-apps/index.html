@@ -5,10 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Safe Software What is safe software?
-A safe software is a piece of software that is correct, bug free, and exclusively fulfills its intended purpose. Consequently, an arbitrary user can assume that it is safe to use for a fitting task.1 Its proper execution does not create unexpected results.
-Such a piece of software does not perform tasks that outside of its scope. For example, a simple calculator application does not use your webcam to make photos." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="Witnessable apps are a type of application that is fully transparent and verifiable. This includes its source code, data, and runtime. As a result, its users can determine if it is actually safe to use." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, witnessable, witnessable apps, verifyable, verification, architecture, encryption, trust, trustless" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/web3.1/witnessable-apps/" />
@@ -39,17 +37,13 @@ Such a piece of software does not perform tasks that outside of its scope. For e
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Witnessable Apps">
-<meta itemprop="description" content="Safe Software What is safe software?
-A safe software is a piece of software that is correct, bug free, and exclusively fulfills its intended purpose. Consequently, an arbitrary user can assume that it is safe to use for a fitting task.1 Its proper execution does not create unexpected results.
-Such a piece of software does not perform tasks that outside of its scope. For example, a simple calculator application does not use your webcam to make photos."><meta itemprop="datePublished" content="2023-01-24T11:46:31+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="1467">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="Witnessable apps are a type of application that is fully transparent and verifiable. This includes its source code, data, and runtime. As a result, its users can determine if it is actually safe to use."><meta itemprop="datePublished" content="2023-01-24T11:46:31+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="1541">
+<meta itemprop="keywords" content="witnessable,witnessable apps,verifyable,verification,architecture,encryption,trust,trustless," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Witnessable Apps"/>
-<meta name="twitter:description" content="Safe Software What is safe software?
-A safe software is a piece of software that is correct, bug free, and exclusively fulfills its intended purpose. Consequently, an arbitrary user can assume that it is safe to use for a fitting task.1 Its proper execution does not create unexpected results.
-Such a piece of software does not perform tasks that outside of its scope. For example, a simple calculator application does not use your webcam to make photos."/>
+<meta name="twitter:description" content="Witnessable apps are a type of application that is fully transparent and verifiable. This includes its source code, data, and runtime. As a result, its users can determine if it is actually safe to use."/>
 
 
 
@@ -100,7 +94,7 @@ Such a piece of software does not perform tasks that outside of its scope. For e
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -200,20 +194,19 @@ Such a piece of software does not perform tasks that outside of its scope. For e
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p>What is safe software?</p>
-<p>A <strong>safe software</strong> is a piece of software that is <strong>correct</strong>, <strong>bug free</strong>,
-and exclusively fulfills its intended <strong>purpose</strong>. Consequently, an arbitrary
-user can assume that it is <strong>safe to use</strong> for a fitting task.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Its
-proper execution does not create unexpected results.</p>
-<p>Such a piece of software does not perform tasks that outside of its scope. For
-example, a simple calculator application does not use your webcam to make
+<blockquote>
+<p>Software is <em>safe</em> if it is <strong>correct</strong>, <strong>bug-free</strong>, and exclusively
+fulfills its intended <strong>purpose</strong>. Consequently, an arbitrary user can assume
+it is <strong>safe to use</strong> for a fitting task.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Its proper execution does
+not create unexpected results.</p>
+</blockquote>
+<p>Such a piece of software does not perform tasks that lie outside of its scope.
+For example, a simple calculator application does not use your webcam to take
 photos. Likewise, a website does not track a user&rsquo;s behavior without explicitly
-telling them in detail about the mechanism. In general, it does not act
-maliciously or explicitly contrary to a user&rsquo;s interests. Viruses or spyware are
-examples for such behavior.</p>
+notifying them about the mechanism. It generally does not act maliciously or
+explicitly contrary to a user&rsquo;s interests. Viruses or spyware are examples of
+such behavior from a victim&rsquo;s point of view.</p>
 <p>But how does a user know whether an application is actually safe to use?</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="verification-above-all">Verification Above All 
   <a class="anchor" href="#verification-above-all">
     <i class="bi bi-link-45deg"></i>
@@ -222,176 +215,170 @@ examples for such behavior.</p>
   <a class="anchor" href="#the-current-state">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h3><p>Most software comes either pre-compiled or runs on some servers in the cloud. It
-is invisible to most users how an application actually works aside the presented
-user interface.</p>
-<p>If a user inputs their data into a common social media application, they do not
+</h3><p>Most software comes either pre-compiled or runs on some servers in the cloud.
+Aside from the presented user interface, it is invisible to most users how an
+application works.</p>
+<p>If users input their data into a typical social media application, they do not
 know how the data is transformed, where it is stored, who has access to it, or
-what is going to happen to it in the future. In truth, not even the developers
-know for sure if the application running in &rsquo;the cloud&rsquo; was possibly modified by
-the cloud provider.</p>
+what will happen to it in the future. In truth, not even the developers know for
+sure if the application running in <em>the cloud</em> was possibly modified by the
+cloud provider.</p>
 <p>The developers of an application or an auditor might disclose answers to those
 questions in reports, FAQs, privacy statements, or the terms of use. However,
-this requires that a user <strong>trusts</strong> the word of a &lsquo;random&rsquo; person on the
+this requires that a user <em>trusts</em> the word of a &lsquo;random&rsquo; person on the
 internet. This is generally not a good idea, even if the information is provided
 by a company or a reputable institution. Nothing actually prevents them from
 lying.</p>
-<p>As in the real world, <strong>verification is better than trust</strong>. Thus, if a user
-wants to make sure, that an application does not act maliciously, they have to
-be able to verify that.</p>
+<p>As in the real world, <em>verification is better than trust</em>. Thus, if a user wants
+to ensure that an application does not act maliciously, they have to be able to
+verify that.</p>
 <h3 id="openness-required">Openness Required 
   <a class="anchor" href="#openness-required">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h3><p>The concept of <em>Witnessable Apps</em> is based on the principle of verifiablity. For
-an application to be witnessable, a user must be able to verify it from top to
-bottom. This includes everything from the source code and the stored data to the
-runtime and execution. Therefore, such an application must be <strong>open source</strong>,
-must store all of its <strong>data either publicly or visible</strong> to the respective
-user, and the code must be <strong>executed in public</strong> or on a user&rsquo;s local machine
-in a way for them to inspect the execution.</p>
-<p>These properties give users the opportunity to validate that their inputs will
-have the intended effects by, for example, simulating or dry-running the program
+</h3><p>The concept of <em>Witnessable Apps</em> is based on the principle of verifiability.
+For an application to be witnessable, a user must be able to verify it from top
+to bottom. This includes everything from the source code and the stored data to
+the runtime and execution. Therefore, such an application must be <em>open source</em>,
+must hold all of its <em>data either publicly or visible</em> to the respective user,
+and the code must be <em>executed in public</em> or on a user&rsquo;s local machine in a way
+for them to inspect the execution.</p>
+<p>These properties allow users to validate that their inputs will have the
+intended effects by, for example, simulating or dry-running the program
 execution beforehand using productive data. Furthermore, this requires
 applications to always act predictably and to incorporate <em>reproducible builds</em>.
 Users can then always recreate the application from the verifiable source code
-and its stored state. Given the same input values and application state an app
+and its stored state. Given the same input values and application state, an app
 will always return the same results.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <blockquote>
 <p>Only a <em>Witnessable App</em> has the chance of being a safe application.</p>
 </blockquote>
-<p>It does neither guarantee nor directly demand that an application is correct or
-does not behave maliciously. But due to its <strong>total and provable transparency</strong>,
-a witnessable app that defies user&rsquo;s expectations will come under public
-scrutiny.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>However, it neither guarantees nor directly demands that an application is
+correct or does not behave maliciously. But due to its <em>total and provable
+transparency</em>, the public will scrutinize a witnessable app defying user
+expectations.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="witnessable-app.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/witnessable-apps/witnessable-app.excalidraw.svg" alt="Witnessable App" />
+  </a>
+  <figcaption>
+    <p>Witnessable App: The users of a witnessable app can verify every aspect of it. They can review the source code and verify the built application executable, they can verify the correct encryption of data, and how it is stored. Futhermore, they can see what data the application shares with thrid-party services and verify the correctness of the application&#39;s computations.</p>
+  </figcaption>
+</figure>
+
 <h3 id="does-every-app-have-to-be-witnessable">Does Every App have to be Witnessable? 
   <a class="anchor" href="#does-every-app-have-to-be-witnessable">
     <i class="bi bi-link-45deg"></i>
   </a>
 </h3><p>No, applications that do not contain or process important information most
-likely do not have to be witnessable and consequently safe to use. Examples for
-that are personal websites, marketing websites and apps of companies, games, or
-utility applications like a calculator or a drawing tool. Basically everything
-that probably will not handle any personal information.</p>
-<p>On the other side, applications which process personal information or data which
-is somewhat important to a user should be witnessable. Banking and payment
-applications, apps which work with a user&rsquo;s medical data, dating apps, social
-media and data storage apps, and operating systems most likely fall in this
-category. They hold a user&rsquo;s important information which they do not want to
-lose or leaked to others. Also, the integrity and the correct processing of the
-data a user entrusts them has to be guaranteed. <strong>Trust in the word of others</strong>
-does not suffice anymore in a digital world where invalid or corrupt data might
-be catastrophic.</p>
-<p>As everyday users become more and more aware of the risks in the digital world,
+likely do not have to be witnessable and, consequently, safe to use. Examples
+are personal websites, marketing websites, and companies&rsquo; apps, games, or
+utility applications like calculators or drawing tools. Basically, everything
+that probably will not handle any personal information and does not provide an
+&lsquo;important&rsquo; service.</p>
+<p>Conversely, applications that process personal information or data critical to a
+user should be witnessable. Banking and payment applications, apps that work
+with a user&rsquo;s medical data, dating apps, social media, data storage apps, and
+operating systems fall into this category. They hold a user&rsquo;s valuable
+information, which they do not want to lose or leak to others. Also, the
+integrity and the correct processing of the data a user entrusts them has to be
+guaranteed. <em>Trust in the word of others</em> does not suffice anymore in a digital
+world where invalid or corrupt data might be catastrophic.</p>
+<p>As everyday users become increasingly aware of the risks in the digital world,
 they will demand more safety from the applications and devices they rely on.
-Companies and governments will have to adapt their IT strategies to comply with
-this demand. They themselves are already in the process of strengthening their
-IT security due to imminent dangers. But they mostly do not directly improve
-their users&rsquo; security through provable transparency.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+Companies and governments must adapt their IT strategies to comply with this
+demand. They are already in the process of strengthening their IT security due
+to imminent dangers. But they mostly do not directly improve their users&rsquo;
+security through provable transparency.</p>
 <h3 id="new-system-and-project-architectures">New System and Project Architectures 
   <a class="anchor" href="#new-system-and-project-architectures">
     <i class="bi bi-link-45deg"></i>
   </a>
 </h3><p><em>Witnessable Apps</em> require a change in the way most business applications are
-structured. Today, end-user applications are typically closed source. In the
-case of web applications they are most likely hosted with some cloud service
+structured. Today, end-user applications are typically closed-source. In the
+case of web applications, they are most likely hosted with some cloud services
 provider like <a href="https://aws.amazon.com/" title="AWS" target="_blank">AWS</a> or
-<a href="https://azure.microsoft.com/en-us" title="Microsoft Azure" target="_blank">Azure</a>. And while stored
-data is hopefully encrypted, the encryption keys are either held in the cloud
-provider&rsquo;s key management system like
-<a href="https://aws.amazon.com/kms/" title="AWS KMS" target="_blank">AWS KMS</a> or by the operating company.</p>
+<a href="https://azure.microsoft.com/en-us" title="Microsoft Azure" target="_blank">Azure</a>. While stored data
+is hopefully encrypted, the encryption keys are held in the cloud provider&rsquo;s key
+management system like <a href="https://aws.amazon.com/kms/" title="AWS KMS" target="_blank">AWS KMS</a> or by
+the operating company.</p>
 <p>End-users cannot view the source code, do not know how an application is
-operated and executed, and they cannot directly access their data or the
-information the system collected about them. This makes such systems fairly
-dangerous to use, even if the operating company or institution is reputable or
-promises to be one of the &lsquo;good guys&rsquo;.</p>
+operated and executed, and cannot directly access their data or the information
+the system collected about them. This makes such systems reasonably dangerous to
+use, even if the operating company or institution is reputable or promises to be
+one of the &lsquo;good guys&rsquo;.</p>
 <p>For a system to be trustworthy, the source code must be published open
-source<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, at least the code that corresponds to a released version of
-the application. This is, from a technical point of view, easy to accomplish.
-However, legal questions and the fear of losing the competitive edge might
-arise, if a company&rsquo;s precious source code is available to everybody.</p>
-<p>Verifiable code executions and data storage might require drastic architectural
-changes to applications. Input and output values which change the global state
-of an app must be stored publicly and immutable, so every user can trace the
+source<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, at least the code corresponding to a released version of the
+application. This is, from a technical point of view, easy to accomplish.
+However, legal questions and the fear of losing the competitive edge might arise
+if a company&rsquo;s precious source code is available to everybody.</p>
+<p>Verifiable code executions and data storage require drastic architectural
+changes to applications. Input and output values that change the global state of
+an app must be stored publicly and immutable, so every user can trace the
 changes. If data must be encrypted, it should be in a way that the corresponding
-user is able to decrypt it while other users and third parties cannot. At the
-same time, the integrity of all data, historical, encrypted, from various users,
+user can decrypt it while other users and third parties cannot. At the same
+time, the integrity of all data, historical, encrypted, from various users,
 etc., must be guaranteed.</p>
-<p>Running microservices on traditional cloud infrastructure probably does not
-suffice anymore. Current dApps adhere to those rules by leveraging programmable,
-public blockchains and advanced cryptographic schemes. They often minimize the
-amount of information that is needed for operations and give users control and
-ownership of data and to some extent code.</p>
+<p>Running microservices on traditional cloud infrastructure may not suffice
+anymore. Current dApps adhere to those rules by leveraging programmable, public
+blockchains, and advanced cryptographic schemes. They often minimize the amount
+of information needed for operations and give users control and ownership of
+data and, to some extent, code.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="traditional-app.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/witnessable-apps/traditional-app.excalidraw.svg" alt="Traditional App" />
+  </a>
+  <figcaption>
+    <p>Traditional App: Users are represented with a fancy interface, but they do not know how an application works. Does it store users&#39; personal data encrypted? Who are they sharing this data with? Who has access to the data? Does the application have any severe bugs? What is the result of a user&#39;s input?</p>
+  </figcaption>
+</figure>
+
 <p>As this kind of visibility is hard to achieve throughout an entire application,
 splitting it into parts with different levels of transparency might reduce the
 difficulty. While sensitive parts of, for example, a social media app are
-processed in public, the work intensive conversion of images and videos might be
+processed in public, the work-intensive conversion of images and videos might be
 handled behind closed doors. Only the core service of an application might be
-handled in a witnessable style while convenience features like search are
-managed traditionally. This could reduce costs and affects the safety of an
-application only marginally, possibly a good trade off.</p>
+constructed in a witnessable style, while convenience features like search are
+managed traditionally. This could reduce costs and affect an application&rsquo;s
+safety only marginally, possibly a good trade-off.</p>
 <p>We will see in the future how these new architectures will evolve.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="community-verification">Community verification 
   <a class="anchor" href="#community-verification">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>We know from [previous chapters](TODO verification) that a user can only &rsquo;trust&rsquo;
-an application which they verified themselves. However, reviewing modern,
-complex applications is a tremendous task even for the most capable software
-developers. The average Joe is not experienced enough and does not have the
-resources for such a task, especially when using a multitude of diverse
-applications every day.</p>
-<p>The community can help the cause by working together in a trustless way. Like
-peer reviews in the scientific community multiple skilled software and security
-engineers should publicly, under community oversight, examine applications.</p>
-<p>The proposed decentralized software repository and its accompanying services can
+</h2><p>We know from <a href="http://drepo.eth/drepo/existing-repos/verification/" title="Verification">previous
+chapters</a> that
+user can only &rsquo;trust&rsquo; an application they verified themselves. However,
+reviewing modern, complex applications is a tremendous task, even for the most
+capable software developers. Unfortunately, the average Joe is not experienced
+enough and does not have the resources for such a task, especially when using a
+multitude of diverse applications every day.</p>
+<p>The community can help the cause by working together in a trustless way. For
+example, like peer reviews in the scientific community, multiple skilled
+software and security engineers should publicly, under community oversight,
+examine applications.</p>
+<p>The proposed decentralized software repository and accompanying services can
 provide this work for the community. It publishes the source code, application
-binaries and diverse peer reviews in a provable way. With these tools everyday
-users can decide on the safeness of an application and the risks they might take
+binaries, and diverse peer reviews in a provable way. With these tools, everyday
+users can decide on the safety of an application and the risks they might take
 when using them.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>If a software is used outside its intended purpose it might not output
+<p>If the software is used outside its intended purpose, it might not output
 correct results, if any at all. For example, it might not execute on an
 unsupported operating system or creates inaccurate results when used for too
 complex inputs.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
@@ -399,13 +386,13 @@ complex inputs.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backl
 <li id="fn:2">
 <p>This behavior is similar to
 <a href="https://en.wikipedia.org/wiki/Pure_function" title="Pure Function" target="_blank">pure functions</a>
-in functional programming assuming the application state is also an input
+in functional programming, assuming the application state is also an input
 and output value.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>The code just has to be publicly viewable. It does not have to have an open
-source license which might allow others to re-use or modify the code.
-However, licensed or not this cannot and should not be prevented.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The code just has to be publicly viewable. It does not have to have an
+open-source license which might allow others to re-use or modify the code.
+However, licensed or not, this cannot and honestly should not be prevented.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -528,22 +515,24 @@ However, licensed or not this cannot and should not be prevented.&#160;<a href="
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="From the Source The dRepo promotes the usage of witnessable apps. Among others, they require that an application is open source. Consequently, anyone can read the code of an app and all of its dependencies. Knowing exactly how an application works, users might be able to leverage edge cases or otherwise hidden information to their advantage. More importantly, they can now change the source code of an application in any way they want." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="If an application leverages the dRepo and witnessable apps, users are given the tools to modify every aspect of an application. Besides forking, SBOMs enable on-the-fly modification. Furthermore, using a modular distribution of components and libraries as they are published in the dRepo can improve the user experience as fewer data must be explicitly obtained for a given application." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, modification, sharing, personalization, modularity, source code, distribution" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/web3.1/bring-your-own/" />
@@ -37,13 +37,13 @@
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Bring Your Own Software">
-<meta itemprop="description" content="From the Source The dRepo promotes the usage of witnessable apps. Among others, they require that an application is open source. Consequently, anyone can read the code of an app and all of its dependencies. Knowing exactly how an application works, users might be able to leverage edge cases or otherwise hidden information to their advantage. More importantly, they can now change the source code of an application in any way they want."><meta itemprop="datePublished" content="2023-01-25T17:23:56+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="731">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="If an application leverages the dRepo and witnessable apps, users are given the tools to modify every aspect of an application. Besides forking, SBOMs enable on-the-fly modification. Furthermore, using a modular distribution of components and libraries as they are published in the dRepo can improve the user experience as fewer data must be explicitly obtained for a given application."><meta itemprop="datePublished" content="2023-01-25T17:23:56+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="886">
+<meta itemprop="keywords" content="modification,sharing,personalization,modularity,source code,distribution," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bring Your Own Software"/>
-<meta name="twitter:description" content="From the Source The dRepo promotes the usage of witnessable apps. Among others, they require that an application is open source. Consequently, anyone can read the code of an app and all of its dependencies. Knowing exactly how an application works, users might be able to leverage edge cases or otherwise hidden information to their advantage. More importantly, they can now change the source code of an application in any way they want."/>
+<meta name="twitter:description" content="If an application leverages the dRepo and witnessable apps, users are given the tools to modify every aspect of an application. Besides forking, SBOMs enable on-the-fly modification. Furthermore, using a modular distribution of components and libraries as they are published in the dRepo can improve the user experience as fewer data must be explicitly obtained for a given application."/>
 
 
 
@@ -94,7 +94,7 @@
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -194,86 +194,98 @@
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p>The dRepo promotes the usage of witnessable apps. Among others, they require
-that an application is open source. Consequently, anyone can read the code of an
-app and all of its dependencies. Knowing exactly how an application works, users
-might be able to leverage edge cases or otherwise hidden information to their
-advantage. More importantly, they can now change the source code of an
-application in any way they want.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+that an application is open-source. Consequently, anyone can read an app&rsquo;s code
+and all its dependencies. Knowing exactly how an application works, users can
+leverage edge cases or otherwise hidden information to their advantage. More
+importantly, they can now change the source code of an application in any way
+they want.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>Anyone can fork such an application, change its behavior, remove annoyances, and
-add new features. Within the open source world, such modifications are very
+add new features. Within the open-source world, such modifications are very
 welcome, especially if they are contributed to the upstream project eventually.
-In contrast, commercial applications, like Twitter and Instagram, generate their
-revenue from ads and paid features. Forks without those ads or paywalls would
-jeopardize the livelihood of these developers. However, this type of economy is
-currently not sustainable and will probably collapse in favor of more modern
-schemes in the future.</p>
-<p>Automatic merges and modern CI systems allow forks to instantly, with very
-little human intervention, adopt upstream changes and publish modified
-applications. People will opt to use a version of an application that fits their
-needs. This means the original developers will lose any control over their
-applications if they want them to be witnessable and run on a user&rsquo;s device.</p>
+In contrast, commercial applications like Twitter and Instagram generate revenue
+from ads and paid features. Forks without those ads or paywalls would jeopardize
+the livelihood of these developers. However, this type of economy is currently
+not sustainable and will probably collapse in favor of more modern schemes in
+the future.</p>
+<p>With little human intervention, automatic merges and modern CI systems allow
+forks to instantly adopt upstream changes and publish modified applications.
+People will opt to use a version of an application that fits their needs. This
+means the original developers will lose any control over their applications if
+they want them to be witnessable and run on a user&rsquo;s device.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h2 id="modularity">Modularity 
   <a class="anchor" href="#modularity">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>Looking at current web applications, users are already at least partially in
-control. The code of web frontends, HTML, CSS, and JavaScript, has always been
-somewhat human-readable. AdBlockers and other modification schemes enable users
-to adapt websites automatically and on-the-fly to their needs. Removing ads,
-changing color schemes, adding convenience features, and removing user tracking
-software are just a few examples.</p>
-<p>If such a frontend would be published as a witnessable app in the dRepo, these
+</h2><p>Looking at current web applications, users are already partially in control. The
+code of web frontends, HTML, CSS, and JavaScript, has always been somewhat
+human-readable. In addition, ad blockers and other modification schemes enable
+users to adapt websites automatically and on-the-fly to their needs. Removing
+ads, changing color schemes, adding convenience features, and removing user
+tracking software are just a few examples.</p>
+<p>If such a frontend were published as a witnessable app in the dRepo, these
 automatic tools could be given superpowers. An accompanying <em>SBOM</em> discloses all
-software components of an application in a concise and processable document.
-Combining this data with the information propagated by the dRepo on each
-software library a user can quickly identify unwanted components. Instead of
-downloading a tracking library a user&rsquo;s browser could automatically switch out
+software components of an application in a concise and processable document. A
+user can quickly identify unwanted application parts by combining this data with
+the information propagated by the dRepo on each software library. Instead of
+downloading a tracking library, a user&rsquo;s browser could automatically switch out
 the implementation with a dummy library, which does not break the application
-but also does not execute any tracking code. In the same way, an older
-component, which contains security issues, could be upgraded on-the-fly in the
-browser.</p>
+but does not execute any tracking code. In the same way, an older component,
+which contains security issues, could be upgraded on-the-fly in the browser.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="user-modification.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/bring-your-own/user-modification.excalidraw.svg" alt="User Modifications" />
+  </a>
+  <figcaption>
+    <p>User Modification: Apart from forking, when downloading a modular web interface, the user&#39;s browser can analyze the SBOM linked in the dRepo to receive a list of all components. It is configured to remove any tracking modules, so it replaces the tracking library in the SBOM with a dummy implementation. Furthermore, it switches another library to a more advanced alternative compatible with the requested lib. The application is assembled in the user&#39;s browser with fitting, filtered components. It uses the same backend as the original app. However, it is adapted to the user&#39;s preferences.</p>
+  </figcaption>
+</figure>
+
 <p>Current web apps and others are often compiled into a single binary or fewer
 compressed files. The code within these is usually optimized. Web applications
-often tune their distribution files to be as small as possible in order to
-reduce latency from downloading large files. This makes changing a software on a
-user&rsquo;s device very difficult. If developers instead choose to distribute their
-applications in an open, modular form, users not only gain more access to the
-application but both, users and developers, can leverage the previously
-discussed network effects of the dRepo distribution.</p>
+often tune their distribution files to be as small as possible to reduce latency
+from downloading large files. This makes changing software on a user&rsquo;s device
+very difficult. If developers instead choose to distribute their applications in
+an open, modular form, users not only gain more access to the application, but
+both users and developers can leverage the previously discussed network effects
+of the dRepo distribution.</p>
 <p>Rather than compiling all code into a single binary, dependencies could be left
-as is and be consumed using <em>dynamic linking</em>.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> For most applications,
-the performance gain from treeshaking and other optimizations is minimal, if all
+as is and be consumed using <em>dynamic linking</em>.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> For most applications,
+the performance gain from tree shaking and other optimizations is minimal if all
 code resources are already available on a machine.</p>
 <p>The SBOM of a desired application lists all the dependencies needed for its
 execution. The user, more likely the browser or a package manager, would
-download all dependencies using the dRepo. Some of these library might already
-be present as other applications could have demanded them as well. Consequently,
-the amount of extra data to be obtained might be minimal.</p>
-<p>In such a scenario the developers of an application would only have to
-distribute their own software components while all dependencies could be sourced
-from somewhere else. Likewise, users of said app might only have to obtain these
-application specific components as everything else might already be present.
-This scheme reduces the amount of infrastructure developers have to provide
+download all dependencies using the dRepo. Some of these libraries might already
+be present, as other applications could have also demanded them. Consequently,
+the amount of additional data to be obtained might be minimal.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="modular-download.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/bring-your-own/modular-download.excalidraw.svg" alt="Modular Download" />
+  </a>
+  <figcaption>
+    <p>Modular Download: When opening a new app, the user&#39;s browser compares the components requested in the SBOM to the local cache. The cache contains modules already downloaded as part of other applications. Subsequently, the browser must only download the missing few components unique to the new application.</p>
+  </figcaption>
+</figure>
+
+<p>In such a scenario, developers of an application would only have to distribute
+their own software components while all dependencies could be sourced from
+somewhere else. Likewise, said app users only have to obtain these
+application-specific components as everything else might already exist on a
+user&rsquo;s device. This scheme reduces the infrastructure developers have to provide
 especially when users share the downloaded components. The users are
-consequently on control over all dependencies and can change and switch them out
+consequently in control over all dependencies and can change and switch them out
 as they please.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -282,13 +294,18 @@ as they please.</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>We ignore licensing issues, which prohibit changing and subsequently
-distributing of the code, simply because nobody can actually prevent that.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>We ignore licensing issues, which prohibit changing and distributing the
+code, simply because nobody can truly prevent that.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
+<p>This is essentially the case today. Any code running on a user&rsquo;s device is
+out of the developer&rsquo;s reach. Users can modify it, and the developer can do
+nothing about it.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
 <p>You most likely know the term &lsquo;dynamic linking&rsquo; from C programs. Instead of
-compiling the code of a library into an executable the library is loaded at
-runtime and has to be present on the system beforehand.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+compiling the code of a library into an executable, the library is loaded at
+runtime and has to be present on the system beforehand.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -405,22 +422,24 @@ runtime and has to be present on the system beforehand.&#160;<a href="#fnref:2" 
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

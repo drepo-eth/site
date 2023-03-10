@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Alternative Hosts Mirrors usually describe some &amp;lsquo;place&amp;rsquo; where a copy of some information is stored and accessible. A proper backup, which is intended for longtime archiving and recovery purposes, would not be included in this category as they are typically not accessible in the same way as the &amp;lsquo;master copy&amp;rsquo;.
-Mirrors of software repositories are often found within organizational networks, for example, corporate intranets. Products like Nexus and Artifactory allow the creation of self-hosted repositories." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="Mirrors are copies of software repositories. Local mirrors serve the same content within an organization, providing additional value. Public mirrors offer alternative sources for the same content to users. This creates a more resilient service while delivering higher quality." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, mirrors, copy, master-slave, replication, synchronization, digital signature" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/existing-repos/mirrored/" />
@@ -38,15 +37,13 @@ Mirrors of software repositories are often found within organizational networks,
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Mirrored">
-<meta itemprop="description" content="Alternative Hosts Mirrors usually describe some &lsquo;place&rsquo; where a copy of some information is stored and accessible. A proper backup, which is intended for longtime archiving and recovery purposes, would not be included in this category as they are typically not accessible in the same way as the &lsquo;master copy&rsquo;.
-Mirrors of software repositories are often found within organizational networks, for example, corporate intranets. Products like Nexus and Artifactory allow the creation of self-hosted repositories."><meta itemprop="datePublished" content="2022-09-12T00:32:21+02:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="939">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="Mirrors are copies of software repositories. Local mirrors serve the same content within an organization, providing additional value. Public mirrors offer alternative sources for the same content to users. This creates a more resilient service while delivering higher quality."><meta itemprop="datePublished" content="2022-09-12T00:32:21+02:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="936">
+<meta itemprop="keywords" content="mirrors,copy,master-slave,replication,synchronization,digital signature," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mirrored"/>
-<meta name="twitter:description" content="Alternative Hosts Mirrors usually describe some &lsquo;place&rsquo; where a copy of some information is stored and accessible. A proper backup, which is intended for longtime archiving and recovery purposes, would not be included in this category as they are typically not accessible in the same way as the &lsquo;master copy&rsquo;.
-Mirrors of software repositories are often found within organizational networks, for example, corporate intranets. Products like Nexus and Artifactory allow the creation of self-hosted repositories."/>
+<meta name="twitter:description" content="Mirrors are copies of software repositories. Local mirrors serve the same content within an organization, providing additional value. Public mirrors offer alternative sources for the same content to users. This creates a more resilient service while delivering higher quality."/>
 
 
 
@@ -97,7 +94,7 @@ Mirrors of software repositories are often found within organizational networks,
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item  is-active">
@@ -197,40 +194,40 @@ Mirrors of software repositories are often found within organizational networks,
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p><em>Mirrors</em> usually describe some &lsquo;place&rsquo; where a copy of some information is
-stored and accessible. A proper backup, which is intended for longtime archiving
-and recovery purposes, would not be included in this category as they are
-typically not accessible in the same way as the &lsquo;master copy&rsquo;.</p>
+stored and accessible. In contrast, a proper backup intended for longtime
+archiving and recovery purposes would not be included in this category as they
+are typically not accessible in the same way as the master copy.</p>
 <p>Mirrors of software repositories are often found within organizational networks,
-for example, corporate intranets. Products like
+for example, corporate intranets. For instance, products like
 <a href="https://www.sonatype.com/products/nexus-repository" title="Nexus Repository" target="_blank">Nexus</a>
 and <a href="https://jfrog.com/artifactory/" title="Artifactory" target="_blank">Artifactory</a> allow the
 creation of self-hosted repositories. Besides hosting custom software packages,
-a mirror feature enables the integration of upstream repositories, for example,
-public systems like the NPM Registry. They seamlessly combine custom and
-upstream artifacts into a single repo, which is then used within a given
-organization. One has to mention that the aforementioned mirror feature does not
-initially copy all content from an upstream system, but downloads artifacts on
-demand and stores them for re-distribution. Also, it is possible to make such a
-system publicly available to potential customers rendering the system a
-one-stop-shop for all their software needs.</p>
+a mirror or proxy feature enables the integration of upstream repositories, for
+example, public systems like the NPM Registry. They seamlessly combine custom
+and upstream artifacts into a single repo, typically consumed within a given
+organization. One has to mention that the mirror feature does not initially copy
+all content from an upstream system but downloads artifacts on demand and stores
+them for re-distribution. Also, it is possible to make such a system publicly
+available to potential customers, rendering it a one-stop shop for all their
+software needs.</p>
 <p>Typical use cases for such local mirrors include:</p>
 <ul>
 <li>Reducing network load on the upstream repository and the local internet
 connection. An artifact is downloaded from the internet once and subsequently
 only transferred within the local network.</li>
-<li>Having a central, localized copy of artifacts reduces latency and increases
-transfer speeds as internal networks are usually faster.</li>
+<li>A central, localized copy of artifacts reduces latency and increases transfer
+speeds, as internal networks are usually faster.</li>
 <li>A central copy that is quickly and easily accessible removes the need for
 other sophisticated caching mechanisms.</li>
-<li>A local mirror might have a higher availability or, at least, is not affected
-by an upstream repository&rsquo;s downtime.</li>
-<li>Additional security scans can be performed on the local mirror.</li>
-<li>An organization can detect and prevent upstream manipulation of the content in
-the local copy.</li>
+<li>A local mirror might have a higher availability or, at least, is unaffected by
+an upstream repository&rsquo;s downtime.</li>
+<li>Additional security scans can be performed on the synchronized data.</li>
+<li>An organization can detect and prevent upstream content manipulation in the
+local copy.</li>
 </ul>
-<p>In general, a mirror system does not have to copy all the content from an
-upstream repository. It is the operator&rsquo;s choice to exclude certain artifacts or
-include additional content to fulfill the system&rsquo;s purpose.</p>
+<p>Generally, a mirror system does not have to copy all the content from an
+upstream repository. Instead, the operator actively excludes certain artifacts
+or includes additional content to fulfill the system&rsquo;s purpose.</p>
 <h2 id="mirror-networks">Mirror Networks 
   <a class="anchor" href="#mirror-networks">
     <i class="bi bi-link-45deg"></i>
@@ -242,44 +239,52 @@ include additional content to fulfill the system&rsquo;s purpose.</p>
 </h3><p>Large-scale networks of repository mirrors are an alternative setup to the
 centralized, cloud-based approach discussed in the <a href="http://drepo.eth/drepo/existing-repos/centralized/" title="Centralized
 Repositories">previous
-chapter</a>. Popular examples are the
+chapter</a>. Notable examples are the
 <a href="https://wiki.archlinux.org/title/Official_repositories" title="Arch Linux Repositories" target="_blank">Arch Linux Repositories</a>
 and the
-<a href="https://wiki.debian.org/DebianRepository" title="Debian Repository" target="_blank">Debian Repositories</a></p>
-<!-- raw HTML omitted -->
+<a href="https://wiki.debian.org/DebianRepository" title="Debian Repository" target="_blank">Debian Repositories</a>.</p>
 <p>Such systems are based on a
 <a href="https://en.wikipedia.org/wiki/Master/slave_%28technology%29" title="Master/Slave" target="_blank">Master-Slave-Design</a>
 similar to
 <a href="https://en.wikipedia.org/wiki/Replication_%28computing%29#DATABASE" title="Database Replication" target="_blank">Database Replication</a>.
 Here, a single <em>master</em> repository is owned and operated by the core teams.
-Their members and selected volunteers are allowed to contribute new content to
-the repository. The master generally allows read and write operations.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+Their members and selected volunteers can contribute new content to the
+repository. The master generally allows read-and-write operations.</p>
 <p>Mirror repositories, however, are <em>read-only replicas</em> or slaves. This means
 that the content from the master repository is synchronized to each mirror in
 defined intervals. This is a one-way operation. The mirror operators are
 generally not able to modify the content. Users are only able to obtain
 artifacts from the mirror repositories. If they want to contribute artifacts,
-they have to upload them to the master and await the eventual synchronization to
+they must upload them to the master and await the eventual synchronization to
 all mirrors.</p>
-<!-- raw HTML omitted -->
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="mirror-network.excalidraw.svg" target="_blank">
+    <img src="/drepo/existing-repos/mirrored/mirror-network.excalidraw.svg" alt="Mirror Network" />
+  </a>
+  <figcaption>
+    <p>Mirror Network: Mirrors worldwide synchronize the content from the master repository and serve the data to users in their vicinity.</p>
+  </figcaption>
+</figure>
+
 <p>A multitude of these mirrors is hosted by volunteers around the world. These are
-often corporations, ISPs, and universities that possess a lot of unutilized
-resources in terms of bandwidth and storage space. A regular user should
-generally prefer to use a mirror instead of the master repository to download
-artifacts as the master might be overloaded with a lot of requests. Furthermore,
-a mirror is potentially located at a closer location which enables lower latency
-and possibly higher transfer speeds, especially if the mirror is located within
-the same network segment, e.g. within the ISP&rsquo;s network.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+often corporations, ISPs, and universities that possess many unutilized
+resources like, for instance, bandwidth and storage space. Therefore, a regular
+user should prefer a mirror to the master repository to download artifacts, as
+the master might be overloaded with numerous requests. Furthermore, a mirror is
+most likely located closer, enabling lower latency and possibly higher transfer
+speeds, notably if the mirror is situated within the same network segment, e.g.,
+within the ISP&rsquo;s network.</p>
 <p>The traffic load is spread around the network. This reduces the costs for the
 master as it does not have to scale up to meet the community&rsquo;s needs. As a
-community effort, a highly productive network is created, which induces little
-cost on individual parties. Additionally, the performance and overall experience
-for users are improved.</p>
-<!-- raw HTML omitted -->
+result, a highly productive network is created as a community effort, which
+induces little cost to individual parties. Additionally, the performance and
+overall experience for users are improved.</p>
 <h3 id="a-bit-less-centralized">A Bit Less Centralized 
   <a class="anchor" href="#a-bit-less-centralized">
     <i class="bi bi-link-45deg"></i>
@@ -291,9 +296,9 @@ synchronization.</p>
 <p>However, the master is still in absolute control. They could block users and
 mirrors from downloading artifacts, and they could modify the content at their
 will, which is subsequently synchronized throughout the network. Nevertheless,
-mirror operators are in control of their respective systems. They could likewise
-block users and stop synchronizing with the upstream system if they do not agree
-with the content.</p>
+mirror operators are in control of their respective systems. They could
+similarly block users and stop synchronizing with the upstream system if they
+disagree with the content.</p>
 <p>From a user&rsquo;s perspective, this sounds bad at first. But due to the sheer amount
 of mirror operators, chances are that there are at least a few who will serve
 you up-to-date content even if you are the worst supervillain.</p>
@@ -304,29 +309,19 @@ signatures effectively spanning the entirety of the content<sup id="fnref:2"><a 
 the content without the master&rsquo;s private keys would result in an invalid state.
 Clients check for the validity of the content using these known keys and decline
 packages that fail this verification. The only measures a mirror operator can
-resort to are either to stop synchronizing or to effectively fork the content.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+resort to are stopping synchronizing or effectively forking the content.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>It is actually not much of a permission but the fact that every mirror
-copies the data from the master. This makes it effectively the only writing
-instance in the network.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>In truth, it is actually not much of a permission but the system design that
+every mirror copies the data from the master. This makes it effectively the
+only writing instance in the network.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>Artifacts in the repository are digitally signed by the core teams who
+<p>Artifacts in the repository are digitally signed by the core teams, who
 upload data into the master repository. The indices, basically the file tree
-structure, are signed in the same way. Consequently, the state of the entire
+structure, are signed similarly. Consequently, the state of the entire
 content is digitally signed, which makes manipulating it practically
 impossible.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
@@ -451,22 +446,24 @@ impossible.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink"
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

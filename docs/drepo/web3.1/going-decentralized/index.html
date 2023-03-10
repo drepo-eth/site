@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Hosted in the Decentralized Repository Based on the concept of Witnessable Apps any reputable application should strive to be published and verified in the proposed decentralized software repository. This incorporates that the source code, the compiled code, and possibly any assets needed by a given application are generally available to everybody.
-Furthermore, decentralized storage networks like BitTorrent and IPFS are the preferred distribution channels within the dRepo. Such systems become more robust, faster, and safer when as many people as possible participate in storing and sharing artifacts." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="Hosting a witnessable app using the dRepo and all its ways of distribution can make applications censorship-resistant, highly scalable, and secure. All the while, hosting and operating such an application reduces costs drastically compared to traditional applications." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, sharing, p2p, witnessable apps, censorship-resistant, scalability, cdn, ipfs, bittorrent" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/web3.1/going-decentralized/" />
@@ -38,15 +37,13 @@ Furthermore, decentralized storage networks like BitTorrent and IPFS are the pre
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Going Decentralized">
-<meta itemprop="description" content="Hosted in the Decentralized Repository Based on the concept of Witnessable Apps any reputable application should strive to be published and verified in the proposed decentralized software repository. This incorporates that the source code, the compiled code, and possibly any assets needed by a given application are generally available to everybody.
-Furthermore, decentralized storage networks like BitTorrent and IPFS are the preferred distribution channels within the dRepo. Such systems become more robust, faster, and safer when as many people as possible participate in storing and sharing artifacts."><meta itemprop="datePublished" content="2023-01-25T14:13:35+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="855">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="Hosting a witnessable app using the dRepo and all its ways of distribution can make applications censorship-resistant, highly scalable, and secure. All the while, hosting and operating such an application reduces costs drastically compared to traditional applications."><meta itemprop="datePublished" content="2023-01-25T14:13:35+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="1100">
+<meta itemprop="keywords" content="sharing,p2p,witnessable apps,censorship-resistant,scalability,cdn,ipfs,bittorrent," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Going Decentralized"/>
-<meta name="twitter:description" content="Hosted in the Decentralized Repository Based on the concept of Witnessable Apps any reputable application should strive to be published and verified in the proposed decentralized software repository. This incorporates that the source code, the compiled code, and possibly any assets needed by a given application are generally available to everybody.
-Furthermore, decentralized storage networks like BitTorrent and IPFS are the preferred distribution channels within the dRepo. Such systems become more robust, faster, and safer when as many people as possible participate in storing and sharing artifacts."/>
+<meta name="twitter:description" content="Hosting a witnessable app using the dRepo and all its ways of distribution can make applications censorship-resistant, highly scalable, and secure. All the while, hosting and operating such an application reduces costs drastically compared to traditional applications."/>
 
 
 
@@ -97,7 +94,7 @@ Furthermore, decentralized storage networks like BitTorrent and IPFS are the pre
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -196,7 +193,7 @@ Furthermore, decentralized storage networks like BitTorrent and IPFS are the pre
   <a class="anchor" href="#hosted-in-the-decentralized-repository">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>Based on the concept of <em>Witnessable Apps</em> any reputable application should
+</h2><p>Based on the concept of <em>Witnessable Apps</em>, any reputable application should
 strive to be published and verified in the proposed decentralized software
 repository. This incorporates that the source code, the compiled code, and
 possibly any assets needed by a given application are generally available to
@@ -208,103 +205,123 @@ and sharing artifacts. Current web3 dApps use IPFS to store assets and
 decentralized frontend applications. This makes them censorship resistant.
 Anyone who accesses such an application via IPFS instantly starts to participate
 in its distribution.</p>
-<p>As the vast majority of web traffic is based on HTTP, accessing p2p networks has
-become a rarity. However, modern crypto browsers like
+<p>Most web traffic is based on HTTP, so accessing p2p networks has become a
+rarity. However, modern crypto browsers like
 <a href="https://www.opera.com/" title="Opera Web Browser" target="_blank">Opera</a> and
-<a href="https://brave.com/" title="Brave Browser" target="_blank">Brave</a> as well as the
+<a href="https://brave.com/" title="Brave Browser" target="_blank">Brave</a> and the
 <a href="https://docs.ipfs.tech/install/ipfs-companion/" title="IPFS Companion" target="_blank">IPFS extension</a>
-enable novice users to use such systems with ease. Further integrations in
-popular applications will (re-)increase the adoption of p2p networks.</p>
-<p>If a <em>Witnessable WebApp</em> is published in the dRepo, all the code and assets,
-which are needed to render and execute a given website, are outlined there.
-Users can basically decide if they want to access the webapp in the traditional
-way via HTTP from the developer&rsquo;s servers or if they want to use the entries in
-the dRepo to acquire all the necessary code from somewhere else and execute the
+enable novice users to easily use such systems. Moreover, further integrations
+in popular applications will (re-)increase the adoption of p2p networks.</p>
+<p>If a <em>Witnessable WebApp</em> is published in the dRepo, all the code and assets
+needed to render and execute a given website are outlined there. Users can
+basically decide if they want to access the web app traditionally via HTTP from
+the developer&rsquo;s servers or if they want to use the entries in the dRepo to
+acquire all the necessary code from somewhere else and execute the
 app.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>This &lsquo;somewhere else&rsquo; might be another centralized server or a decentralized
-network like IPFS. The application should work in any case as long as the user
-obtains the correct artifacts which is guaranteed by the dRepo. Consequently,
-any such witnessable app in the dRepo becomes censorship resistant and highly
-available due to the multitude of available sources.</p>
-<p>We should note that an application does not have to be fully witnessable to
-leverage the aforementioned distribution scheme. The diverse distribution of an
-application&rsquo;s frontend alone is probably worthwhile.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+network like IPFS. The application works as long as the user obtains the correct
+artifacts as guaranteed by the dRepo. Consequently, any such witnessable app in
+the dRepo becomes censorship-resistant and highly available due to the multitude
+of available sources.</p>
+<p>We should note that an application must not to be fully witnessable to leverage
+the distribution scheme mentioned above. The diverse distribution of an
+application&rsquo;s frontend alone is worthwhile.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="drepo-hosting.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/going-decentralized/drepo-hosting.excalidraw.svg" alt="dRepo Hosting" />
+  </a>
+  <figcaption>
+    <p>dRepo Hosting: When developers publish an application in the dRepo, they define multiple sources for the application binary, dependencies, and possible assets. Users look this information up within the index and download the required artifacts from a source of their choice. Ultimately, it does not matter where users obtain the artifacts, as they are secured and verified by the dRepo.</p>
+  </figcaption>
+</figure>
+
 <h2 id="network-effects">Network Effects 
   <a class="anchor" href="#network-effects">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>Today&rsquo;s web applications use cloud services, edge computing, and CDNs around the
-world to bring data and execution as close as possible to their users. They
-reduce latency, improve availability, and might reduce costs as resources in
-other regions of the world are cheaper.</p>
-<p>Nonetheless, using the dRepo for the distribution of applications can reduce the
-costs and the complexity of infrastructure setups. Storage and compute power are
-diverted into p2p networks and on user&rsquo;s devices.</p>
-<p>As described before, if a user wants to access a certain application resource,
-for example a JavaScript file, they can choose from a range of sources. If the
-first user (A) obtains the file from the centralized server of the application
+</h2><p>Today&rsquo;s web applications use cloud services, edge computing, and CDNs worldwide
+to bring data and execution as close as possible to their users. As a result,
+they reduce latency, improve availability, and might reduce costs as resources
+in other regions of the world are cheaper.</p>
+<p>Nonetheless, using the dRepo to distribute applications can further reduce
+infrastructure setup costs and complexity. This is because storage and computing
+power are diverted into p2p networks and on users&rsquo; devices.</p>
+<p>As described before, if a user wants to access a specific application resource,
+for example, a JavaScript file, they can choose from various sources. If the
+first user A obtains the file from the centralized server of the application
 developer, they can immediately start sharing this resource on p2p networks.
 This user acts as a bridge for everybody else. Another user might choose to
-download the same file directly from user (A) as they are located in the same
-city, and thus might encounter lower latency. This effect cascades as more
-people share the resource and reduces the amount of requests to the original
+download the same file directly from user A as they are located in the same city
+and thus might encounter lower latency. This effect cascades as more people
+share the resource and reduces the number of requests to the original
 centralized source.</p>
-<p>A centralized server might only be needed in the beginning of an application
-lifecycle for the initial seed of files. Afterwards the application&rsquo;s users
-continue to host the resources until no one wants to use it anymore.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="initial-publication.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/going-decentralized/initial-publication.excalidraw.svg" alt="Initial Publication" />
+  </a>
+  <figcaption>
+    <p>Initial Publication: An application developer publishes an application in the dRepo and only hosts the required files on a single server. Users look up the app information in the dRepo index. An initial user opens the app interface in a dRepo-compatible browser. The browser downloads the interface from the developer&#39;s server as other sources are not responding fast enough. While downloading, it immediately shares the application in a p2p network. Subsequent users also try to download the necessary files. Finally, they choose to download from the initial user and start sharing as well. The initial user bridges the verified application files from the centralized server to the decentralized network.</p>
+  </figcaption>
+</figure>
+
+<p>A centralized server is only needed at the beginning of an application lifecycle
+for the initial seed of files. Afterward, the application&rsquo;s users continue to
+host the resources until no one wants to use them anymore.</p>
 <p>Expanding on this example, edge computing, CDNs, and caching servers within ISP
 networks like they are used by Netflix and YouTube might be rendered obsolete.
-If users constantly share content and application code between each other, their
-capacity could easily surpass the one of dedicated systems. Typically, each
-person in a household owns multiple devices, a smartphone, a computer, a tablet,
-a TV, a router, and with each new generation these devices grow more powerful in
-terms of compute power, storage capacity, and network bandwidth. If people want
-to use an application on their devices, they obtain it from their peers and
-implicitly start to host and share it. They essentially operate the application
-for free, while the original developer might not have to invest in any hosting
-at all. A network of billions of devices is created, which share verified
-applications and data on the selfish bases that they want to use an application
-and view some information.</p>
+If users constantly share content and application code with each other, their
+capacity could easily surpass dedicated systems. Typically, each person in a
+household owns multiple devices, a smartphone, a computer, a tablet, a TV, and a
+router. With each new generation these devices grow more potent in computing
+power, storage capacity, and network bandwidth. People who want to use an
+application on their devices obtain it from their peers and implicitly start to
+host and share it. They operate the application for free, while the original
+developer may not have to invest in any hosting at all. A network of billions of
+devices is created, which share verified applications and data on the selfish
+bases that they want to use an application and view some information.</p>
 <p>One could imagine this effect as a BitTorrent network on steroids. If a user
 wants to use an application, they download it and have to share it for as long
 as they are using it. Infrastructure like routers or general caching servers
-could be used to facilitate this effect.</p>
+could facilitate this effect.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="router-cache.excalidraw.svg" target="_blank">
+    <img src="/drepo/web3.1/going-decentralized/router-cache.excalidraw.svg" alt="Router Cache" />
+  </a>
+  <figcaption>
+    <p>Caching and Sharing: Always-on appliances like home routers are the perfect caching and sharing solutions for artifacts that must be shared within a p2p network. If a user within the router&#39;s network wants to share a resource with the public internet, the router takes ownership of this resource and distributes it for as long as there are internal requests. Other internal users can quickly access these files even if the internal peer goes offline. Such setups are also viable within corporate networks that would allowlist resources published in the dRepo to prevent the leak of internal resources. Such always-on systems keep resources alive and strengthen the network.</p>
+  </figcaption>
+</figure>
+
 <p>The security of such systems would be grounded in the decentralized software
 repository. It guarantees the authenticity and safety of witnessable apps. At
-the same time the repository grows stronger as the amount of users would rapidly
-grow. Combined with anonymity, obfuscation, and strong encryption the dRepo and
-such applications would become censorship resistant and essentially unstoppable
-as programs and data could be shared safely in various ways directly between
-users.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+the same time, the repository grows stronger as the number of users multiplies.
+Combined with anonymity, obfuscation, and strong encryption, the dRepo and such
+applications would become censorship-resistant and essentially unstoppable as
+programs and data could be shared safely in various ways directly between users.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
 <p>We simplify by ignoring issues with DNS, CORS, etc. However, running valid
-code within different environments is a typical case during development.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+code within different environments is a typical use case during development.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -427,22 +444,24 @@ code within different environments is a typical case during development.&#160;<a
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

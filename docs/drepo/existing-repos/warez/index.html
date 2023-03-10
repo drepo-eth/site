@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Lose Systems This section does not actually address software repositories but rather content repositories that are mostly known for distributing copyrighted content. However, due to their resilience a decentralized repository should adopt some of their features. We also ignore group sites and the release system in this description.
-BitTorrent has been around for almost two decades and is still widely used, even in corporate settings. It is a peer-to-peer file-sharing network, which allows users to share arbitrary files that are identified using Content Addressing." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="File-sharing systems from the WAREZ scene have proven their resilience in spreading copyrighted content for decades. A censorship-resistant repository has to note the properties that make those networks so successful." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, BitTorrent, Usenet, torrent, nzb, indexer, tracker, p2p, content addressing, resilience, obfuscation, newsgroups" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/existing-repos/warez/" />
@@ -38,15 +37,13 @@ BitTorrent has been around for almost two decades and is still widely used, even
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Warez">
-<meta itemprop="description" content="Lose Systems This section does not actually address software repositories but rather content repositories that are mostly known for distributing copyrighted content. However, due to their resilience a decentralized repository should adopt some of their features. We also ignore group sites and the release system in this description.
-BitTorrent has been around for almost two decades and is still widely used, even in corporate settings. It is a peer-to-peer file-sharing network, which allows users to share arbitrary files that are identified using Content Addressing."><meta itemprop="datePublished" content="2022-09-12T00:32:28+02:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="962">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="File-sharing systems from the WAREZ scene have proven their resilience in spreading copyrighted content for decades. A censorship-resistant repository has to note the properties that make those networks so successful."><meta itemprop="datePublished" content="2022-09-12T00:32:28+02:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="1045">
+<meta itemprop="keywords" content="BitTorrent,Usenet,torrent,nzb,indexer,tracker,p2p,content addressing,resilience,obfuscation,newsgroups," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Warez"/>
-<meta name="twitter:description" content="Lose Systems This section does not actually address software repositories but rather content repositories that are mostly known for distributing copyrighted content. However, due to their resilience a decentralized repository should adopt some of their features. We also ignore group sites and the release system in this description.
-BitTorrent has been around for almost two decades and is still widely used, even in corporate settings. It is a peer-to-peer file-sharing network, which allows users to share arbitrary files that are identified using Content Addressing."/>
+<meta name="twitter:description" content="File-sharing systems from the WAREZ scene have proven their resilience in spreading copyrighted content for decades. A censorship-resistant repository has to note the properties that make those networks so successful."/>
 
 
 
@@ -97,7 +94,7 @@ BitTorrent has been around for almost two decades and is still widely used, even
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -198,69 +195,75 @@ BitTorrent has been around for almost two decades and is still widely used, even
   </a>
 </h2><p>This section does not actually address software repositories but rather content
 repositories that are mostly known for distributing copyrighted content.
-However, due to their resilience a decentralized repository should adopt some of
-their features. We also ignore group sites and the release system in this
-description.</p>
-<!-- raw HTML omitted -->
-<p><a href="https://en.wikipedia.org/wiki/BitTorrent" title="BitTorrent" target="_blank">BitTorrent</a> has been
-around for almost two decades and is still widely used, even in corporate
-settings. It is a peer-to-peer file-sharing network, which allows users to share
-arbitrary files that are identified using
+However, due to their proven resilience, a decentralized repository should adopt
+some of their features. We also ignore group sites and the release system in
+this description.</p>
+<p><a href="https://en.wikipedia.org/wiki/BitTorrent" title="BitTorrent" target="_blank">BitTorrent</a> has existed
+for almost two decades and is still widely used, even in corporate settings. It
+is a peer-to-peer file-sharing network that allows users to share arbitrary
+files identified using
 <a href="https://en.wikipedia.org/wiki/Content-addressable_storage" title="Content Addressing" target="_blank">Content Addressing</a>.
 Applying a hashing function to the content of a file creates a rather unique
-value that is used to identify files. This <em>content address</em> is subsequently
-used in <code>.torrent</code> files and
+value used to identify files. This <em>content address</em> is subsequently used in
+<code>.torrent</code> files and
 <a href="https://en.wikipedia.org/wiki/Magnet_URI_scheme" title="Magnet URI Scheme" target="_blank">magnet links</a>
 to share pointers to files.</p>
 <p>Another popular distribution system is the
 <a href="https://en.wikipedia.org/wiki/Usenet" title="Usenet" target="_blank">Usenet</a>, which holds various
-newsgroups. It was originally used to post text content and is the spiritual
+newsgroups. It was initially used to post text content and is the spiritual
 predecessor of online forums or, for example,
-<a href="https://www.reddit.com/" title="Reddit" target="_blank">Reddit</a>. Arbitrary files are posted in the
+<a href="https://www.reddit.com/" title="Reddit" target="_blank">Reddit</a>. Arbitrary files are published in the
 form of encoded text, which is similar to the mechanism used for email file
-attachments. A file is usually split into multiple text messages which are
-identified by server-generated ids. Similar to <code>.torrent</code> files, <code>.nzb</code> files
-are used to address these individual messages.</p>
-<p>The Usenet itself is hosted using various service providers that each hold a
-copy of the entire system and synchronize the data among each other.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-While the BitTorrent network is publicly and free-of-charge accessible,
-accessing the Usenet usually requires a paid account with an Usenet provider.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+attachments. A file is usually split into multiple text messages identified by
+server-generated ids. Then, similar to <code>.torrent</code> files, <code>.nzb</code> files address
+these individual messages and describe the reconstruction of the original files.</p>
+<p>The Usenet itself is hosted using various service providers holding a copy of
+the entire system and synchronizing the data among each other.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> While
+the BitTorrent network is publicly and free-of-charge accessible, accessing the
+Usenet usually requires a paid account with an Usenet provider.</p>
 <p>Trackers and indexers are used to find and share content stored in these
-unstructured systems. They are separate, centralized systems that are often
-represented as websites. They allow users to search for content and obtain the
-respective magnet links, <code>.torrent</code>, or <code>.nzb</code> files.</p>
-<p>Even though the community is somewhat organized, there is no central authority
-that declares an indexer as the standard or a piece of content as the valid one.
-This means that there exist multiple indexers and trackers and also multiple
-versions of the same content in, for example, different formats or qualities.
-Consequently, there is a many-to-many relationship between indexers and content.
-Indexers might reference the same files or different ones, still representing
-the same content.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+unstructured systems. They are separate, usually centralized systems that are
+often represented as websites. They allow users to search for content and obtain
+the respective magnet links, <code>.torrent</code>, or <code>.nzb</code> files.</p>
+<p>Even though the community is somewhat organized, no central authority declares
+an indexer as the standard or a piece of content as the valid one. This means
+that multiple indexers and trackers trace and reference several versions of the
+same content in, for example, different formats or qualities. Consequently,
+there is a many-to-many relationship between indexers and content. Indexers
+might reference the same files or different ones, still representing the same
+content.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="many-to-many-indexer.excalidraw.svg" target="_blank">
+    <img src="/drepo/existing-repos/warez/many-to-many-indexer.excalidraw.svg" alt="Many-to-Many Relationship" />
+  </a>
+  <figcaption>
+    <p>Many-to-Many Relationship: Multiple independent indexers reference various versions of the same content. If one of the indexers or one of the referenced files becomes unavailable, other versions of the content remain available.</p>
+  </figcaption>
+</figure>
+
 <h2 id="resilience">Resilience 
   <a class="anchor" href="#resilience">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>Due to copyright laws, law enforcement is interested in taking down both the
+</h2><h3 id="bittorrent">BitTorrent 
+  <a class="anchor" href="#bittorrent">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h3><p>Due to copyright laws, law enforcement is interested in taking down both the
 content and the indexers, even though the latter does not hold any copyrighted
 content.</p>
-<p>As trackers and indexers are for the most part centralized services, they are
-fairly easy to identify. Consequently, taking them down, as long as legal
-grounds and measures exist, is also straightforward. However, this measure only
-removes a single tracker instance. Its data is mostly publicly available and
-more importantly, separated from the actual content. Another instance can easily
-replace it without any actual disturbance to the overall system.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>As trackers and indexers are, for the most part, centralized services, they are
+reasonably easy to identify. Consequently, as long as legal grounds and measures
+exist, taking them down is straightforward. However, this measure only removes a
+single tracker instance. Its data is mostly publicly available and, more
+importantly, separated from the actual content. Another instance can easily
+replace it without disturbing the overall system.</p>
 <p>Files in the BitTorrent network can essentially never be removed as there is no
 central, addressable point of failure to exploit.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> Thus, peers that
 share files containing copyrighted material are being targeted and taken down in
@@ -269,60 +272,71 @@ communicates openly, one can identify the IP addresses of peers sharing specific
 data. From here, law enforcement can find the real identities of participating
 peers.</p>
 <p>Another possibility is to block the BitTorrent network traffic altogether
-through ISPs. Such a measure, however, is fairly broad and would prevent using
-the system for other legal purposes. Additionally, circumventing this blockade
-is rather trivial.</p>
-<p>The usage of VPNs and other privacy-preserving technologies can not only evade
-the aforementioned network blockage but also hide the real identity of peers
-within the open network. This makes it impossible to track down all peers
-sharing a specific file.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Takedowns of copyrighted material are handled differently on the Usenet.
-Take-down notices are issued to the Usenet providers that are legally bound to
-comply. They consequently delete the messages in question from their servers.</p>
+through ISPs. Such a measure, however, is extensive and would prevent using the
+system for other legal purposes. Additionally, circumventing this blockade is
+relatively trivial.</p>
+<p>VPNs and other privacy-preserving technologies can not only evade the
+restrictions above but also hide the real identity of peers within the open
+network. This makes it impossible to track down all peers sharing a specific
+file.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="content-hashed-sharing.excalidraw.svg" target="_blank">
+    <img src="/drepo/existing-repos/warez/content-hashed-sharing.excalidraw.svg" alt="Content Addressable Sharing" />
+  </a>
+  <figcaption>
+    <p>Content Addressable Sharing: Files within the network are addressed via their content hashes. Different peers can introduce identical files into the system and publish them to other participants. This mechanism allows the unique identification of files in the network and the later reintroduction of content in case all seeds become unavailable.</p>
+  </figcaption>
+</figure>
+
+<h3 id="usenet">Usenet 
+  <a class="anchor" href="#usenet">
+    <i class="bi bi-link-45deg"></i>
+  </a>
+</h3><p>Take-downs of copyrighted material are handled differently on the Usenet.
+Take-down notices are issued to the Usenet providers legally bound to comply.
+They consequently delete the messages in question from their servers.</p>
 <p>To fight this removal, the community takes multiple measures to keep content
 available. As the files or messages in question are often not completely removed
 from all the existing providers but only in part, chances are that a large chunk
 of the files is still available. Combining the files from different providers
 might result in a complete file. Additionally, since the synchronization between
-providers is sometimes not perfect or the upload process partially fails, it is
-common to provide parity data for files. This allows the recovery of partially
+providers is sometimes imperfect or the upload process partially fails,
+providing parity data for files is common. This allows the recovery of
 incomplete files, which might also do the trick in this case.</p>
 <p>If a file is unrecoverable, it is often simply re-uploaded, making the content
-available yet again. Nevertheless, this entails that the content is actually new
-and references must be shared across indexers.</p>
-<p>The third measure is the obfuscation of uploaded content. This might include
-using random names for files and possibly uploading across various newsgroups.
-Thus, it is harder to identify the content and all of its parts. An indexer or a
-<code>.nzb</code> file is necessary to find the desired content without having to analyze
-the data on the Usenet. As this scheme requires indexers to find content, still
-valid content might get &rsquo;lost&rsquo; if an indexer becomes unavailable and the content
-is not referenced anywhere else.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+available again. Nevertheless, the content is actually uploaded to a new
+location. Subsequently, it is necessary to create new references in the form of
+<code>.nzb</code> files. They, again, must be shared across indexers, so users can
+eventually find the new content.</p>
+<p>The third measure is the <em>obfuscation</em> of uploaded content. This includes using
+random names for files and possibly uploading across various newsgroups. Thus,
+it is harder to identify the content and all of its parts. An indexer or a
+<code>.nzb</code> file is necessary to find the desired content without analyzing the data
+on the Usenet. As this scheme requires indexers to find content, still valid
+content might get &rsquo;lost&rsquo; if an indexer becomes unavailable and the content is
+not referenced elsewhere.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Not every provider holds the entire Usenet. Depending on their service only
+<p>Not every provider holds the entire Usenet. Depending on their service, only
 specific parts are synchronized and served.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
 <p>A movie might be available as a Blu-ray file or a rip of a digital release.
-They are very different files that contain the same content.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+They are very different files that represent the same content.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>The only way to remove a file from a content addressable p2p network forever
-is to delete all instances of the file globally and permanently. This would
-entail that the file is deleted on any computer that ever shared the file
-and that the file cannot be reproduced, an almost impossible task.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The only way to permanently remove a file from a content addressable p2p
+network is to delete all instances of the file globally and permanently.
+This would entail that the file is deleted on any computer that ever shared
+the file and that the file cannot be reproduced, an almost impossible task.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -445,22 +459,24 @@ and that the file cannot be reproduced, an almost impossible task.&#160;<a href=
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
-Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="The decentralized repository is separated into an index and a storage component. Both exist independently from each other, allowing flexibility in the future. The index stores metadata about software releases and points to various storage solutions holding the actual artifacts." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, index, storage, ethPM, warez, separation, resilience, scalability" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/repository/architecture/" />
@@ -38,15 +37,13 @@ Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation bet
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Architecture">
-<meta itemprop="description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
-Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application."><meta itemprop="datePublished" content="2023-01-06T17:03:14+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="790">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="The decentralized repository is separated into an index and a storage component. Both exist independently from each other, allowing flexibility in the future. The index stores metadata about software releases and points to various storage solutions holding the actual artifacts."><meta itemprop="datePublished" content="2023-01-06T17:03:14+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="800">
+<meta itemprop="keywords" content="index,storage,ethPM,warez,separation,resilience,scalability," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Architecture"/>
-<meta name="twitter:description" content="Inspiration The decentralized repository is heavily inspired by ethPM and the infrastructure in the WAREZ community. The latter one has been proven resilient and efficient1 over the past decades.
-Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation between the actual files and a search index. While the files live on the BitTorrent network or in Usenet groups respectively, the search index is typically a website or another separate application."/>
+<meta name="twitter:description" content="The decentralized repository is separated into an index and a storage component. Both exist independently from each other, allowing flexibility in the future. The index stores metadata about software releases and points to various storage solutions holding the actual artifacts."/>
 
 
 
@@ -97,7 +94,7 @@ Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation bet
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -197,98 +194,94 @@ Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation bet
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p>The decentralized repository is heavily inspired by
-<a href="https://www.ethpm.com/" title="ethPM" target="_blank">ethPM</a> and the infrastructure in the <strong>WAREZ</strong>
-community.
-The latter one has been proven resilient and efficient<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> over the past
-decades.</p>
-<p>Looking at WAREZ Scene on BitTorrent or Usenet, there is always a separation
-between the actual files and a search index.
-While the files live on the BitTorrent network or in Usenet groups
-respectively, the search index is typically a website or another separate
-application.
-If either the files or the index gets taken down, the other one still exists.
-Given that there is a <a href="http://drepo.eth/drepo/existing-repos/warez/" title="WAREZ">many-to-many relationship</a> between file content and indices the
-system can scale and is resilient at the same time.</p>
+<a href="https://www.ethpm.com/" title="ethPM" target="_blank">ethPM</a> and the infrastructure in the <em>WAREZ</em>
+community. The latter has been proven resilient and efficient<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> over the
+past decades.</p>
+<p>Looking at the WAREZ Scene on BitTorrent or Usenet, there is always a separation
+between the actual files and a search index. While the files live on the
+BitTorrent network or in newsgroups, respectively, the search index is typically
+a website or another separate application. The other one still exists if the
+files or the index becomes unavailable. Given the <a href="http://drepo.eth/drepo/existing-repos/warez/" title="WAREZ">many-to-many relationship</a> between content and indices, the system
+can scale and is resilient at the same time.</p>
 <p>This is particularly true for partially centralized systems like the Usenet and
-the usage of public file hosters.
-Due to DMCA takedowns and similar processes content needs to be reposted
-either in its original or in obfuscated form.</p>
-<p><em>ethPM</em> proposed the creation of <em>federated smart contracts</em> on <em>Ethereum</em>
-which act as on-chain registries.
-Each project is supposed to create and maintain their own registry.
-The registries contain a minimal set of data points, package name, version, and
-a link to more metadata.
-The metadata is stored off-chain and should be stored as a content addressed
-URI.
-It is represented as a <em>JSON</em> file which contains more information on a given
-smart contract software package: link to the source code, verion, deployments,
-etc.</p>
-<p>Users of ethPM need to compile a set of trusted registries themselves.
-There is no single entry point for the system defined.
-Each registry must implement the
-<a href="https://eips.ethereum.org/EIPS/eip-1319" title="ERC-1319" target="_blank">ERC-1319</a> interface but
-concrete implementation is up to the maintainer.
-This means that admins can potentially change the current state of the registry
-and for example remove invalid or flawed releases afterwards.
-However, previous states can be recovered due to the nature of the blockchain.</p>
-<p>As the initial data is stored on-chain the system can become censorship
-resistent as the information cannot be removed.
-Futhermore, if the metadata and the subsequent payloads are stored in a
-decentralized way, they can also not be removed.</p>
-<p>Apart from the <a href="http://drepo.eth/drepo/existing-repos/properties/" title="Repository Features">&amp;lsquo;standard&amp;rsquo; repository features</a> the <em>dRepo</em> makes
-use of the <em>separation</em> that is defined in these two repository systems.
-Additionally, leveraging a permissionless blockchain like ethPM proposes adds
-convenience and security to the system.</p>
+the usage of public file hosters. Due to DMCA take-downs and similar processes,
+content must be reposted either in original or obfuscated form.</p>
+<p><em>ethPM</em> proposed the creation of <em>federated smart contracts</em> on <em>Ethereum</em>,
+which act as on-chain registries. Each project is supposed to create and
+maintain its own registry. They contain a minimal amount of data points: package
+name, version, and a link to more metadata. The metadata is stored off-chain and
+should be referenced via a content-addressed URI. It points to a <em>JSON</em> file
+that contains more information on a given smart contract software package: Link
+to the source code, version, deployments, etc.</p>
+<p>Users of ethPM need to compile a set of trusted registries themselves. There is
+no single entry point for the system defined. Each registry must implement the
+<a href="https://eips.ethereum.org/EIPS/eip-1319" title="ERC-1319" target="_blank">ERC-1319</a> interface, but
+the concrete implementation is up to the maintainer. This means that admins
+could potentially change the current state of the registry and, for example,
+remove invalid or flawed releases after publication. However, previous states
+can be recovered due to the nature of the blockchain.</p>
+<p>As the initial metadata is stored on-chain, the system can become
+censorship-resistant as the information cannot be removed. Furthermore, if the
+metadata and subsequent payloads are stored decentralized, they cannot be
+deleted as well.</p>
+<p>Apart from the <a href="http://drepo.eth/drepo/existing-repos/properties/" title="Repository Features">standard repository features</a>, the <em>dRepo</em> uses <em>separation</em>
+defined in these two repository systems. Additionally, leveraging a permissionless
+blockchain, like ethPM proposes, adds convenience and security to the system.</p>
 <h2 id="separation">Separation 
   <a class="anchor" href="#separation">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>The <em>core</em> of the decentralized repository is separated in an <em>Index</em> and a
-<em>Storage</em> component.
-This separation allows the usage of fitting technologies for each of these
-concerns while also propagating spatial partitioning and thus decentraliation.
-In simple terms, metadata of a software package is stored in a different way
-and on different systems from the actual packages.</p>
-<p>Furthermore, the core is defined as a minimal protocol which is open to
-extension.
-This allows software ecosystems to add their own rules and conventions to fit
-their needs.
-This openness makes it also usable in the future as long as the software
-development fundamentals do not change.</p>
+</h2><p>The decentralized repository&rsquo;s core is separated in an <em>Index</em> and a <em>Storage</em>
+component. This separation allows the usage of fitting technologies for each of
+these concerns while also propagating spatial partitioning and, thus,
+decentralization. Simply, a software package&rsquo;s metadata is stored
+differently and on other systems from the actual packages.</p>
+<p>Furthermore, the core is defined as a minimal protocol open to extension. This
+allows software ecosystems to add rules and conventions to fit their needs. This
+openness makes it also usable in the future as long as the software development
+fundamentals do not change.</p>
 <p>Generally, the index component is a package registry on a permissionless smart
-contract blockchain which only holds metadata and location information on
-software packages.
-It allows a basic search within a tree structure of entries and gives authors a
-minimal set of functions to manage publications.
-The index is append only, so neither authors nor any other party can remove or
-change information after it is published.</p>
+contract blockchain that only holds metadata and location information on
+software packages. It allows a basic search within a tree structure of entries
+and gives authors a minimal set of functions to manage publications. In
+addition, the index is append-only, so neither authors nor any other party can
+remove or overwrite information after it is published.</p>
 <p>A unified index allows users to quickly find packages without searching various
-sources and additionally verifying a given source.
-Each ecosystem, e.g. Maven Packages, Docker Images, etc, should host their own
-index with preferred customizations and conventions.
-Besides the unified approach, proxies and federated setups are also possible if
-that fits the needs of an ecosystem or users better.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+sources, which entails verifying each given source. Each ecosystem, e.g., Maven
+Packages, Docker Images, etc., should host their own index with preferred
+customizations and conventions. Besides the unified approach, proxies and
+federated setups are also possible if they fit the needs of an ecosystem or
+users better.</p>
 <p>The storage component is not an actual software component like the index.
-Instead, it is a collection of different sources of data spread across various
-networks and systems.
-This might include decentralized storage solutions like <em>BitTorrent</em> or <em>IPFS</em>
-or centralized storage like <em>AWS S3</em>, <em>GitHub</em>, or existing repositories.
-This allows authors and users to pick their favorite or best fitting source.
-Furthermore, distributing files and thus creating redundancy causes higher
-availablility.
-As with the index, not commiting to a single distribution system allows the
-repository to adopt new technologies in the future without fundamentally
-changing the base protocol.</p>
-<!-- raw HTML omitted -->
+Instead, it is a collection of various data sources spread across multiple
+networks and systems. This might include decentralized storage solutions like
+<em>BitTorrent</em> or <em>IPFS</em> or centralized storage like <em>AWS S3</em>, <em>GitHub</em>, or
+existing repositories. This allows authors and users to pick their favorite or
+best-fitting source. Furthermore, distributing files and thus creating
+redundancy offers higher availability. Finally, as with the index, not
+committing to a single distribution system allows the repository to adopt new
+technologies in the future without fundamentally changing the base protocol.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="architecture.excalidraw.svg" target="_blank">
+    <img src="/drepo/repository/architecture/architecture.excalidraw.svg" alt="dRepo Architecture" />
+  </a>
+  <figcaption>
+    <p>dRepo Architecture: The system is separated into an index and a storage component. The index is a smart contract on a permissionless blockchain holding software package metadata and managing publications. Each package points to multiple resources across various storage solutions.</p>
+  </figcaption>
+</figure>
+
 <p>Separating index and storage into open, almost self-sufficient units creates a
-extremely flexible system.
-Each component could be switched out for another implementation or protocol
-while the other can continue work without major interruption: moving the
-index from a blockchain to a new safe system does not impact stored files
-on IPFS and adding a new storage system does not invalidate existing entries
-within the index.</p>
+highly flexible system. For instance, each component could be switched out for another
+implementation or protocol while the other can continue to work without significant
+interruption: moving the index from a blockchain to a new safe system does not
+impact stored files on, IPFS and adding a new storage system does not invalidate
+existing entries within the index.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -416,22 +409,24 @@ within the index.</p>
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 

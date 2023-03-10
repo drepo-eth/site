@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="dRepo team">
-<meta name="description" content="Source Code is the Single Point of Truth The source code of a project is the single point of truth. It describes the software as whole, what it does, how it works, how to build it, and its flaws. It is the description of the piece of software users are looking for.
-The drepo requires projects to implement Reproducible Builds. Thus, if someone holds a specific version of the source code, they are able to create the same build artifact over and over again." />
-<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized" />
+<meta name="description" content="Reproducible builds are a requirement in the decentralized repository to enable users to verify software artifacts. But building every dependency in a software project is work-intensive and, in most cases, unreasonable. A decentralized, anonymous network could provide this verification work for the community." />
+<meta name="keywords" content="decentralized software repository, dRepo, software repository, repository, software, decentralized, build, reproducible build, verification, automation, work, incentives, anonymous, third-party" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="http://drepo.eth/drepo/expanded/build-verification/" />
@@ -38,15 +37,13 @@ The drepo requires projects to implement Reproducible Builds. Thus, if someone h
 <script src="/js/before.js" integrity="sha512-&#43;L0Ms6CBZV5hb6kqDqnmpDLRU7Q/hrxVXDPEj26gRfTkD9&#43;SvuMoIzLzgyH5trJ5mnguYbonJK9fhAy0TzDkiQ=="></script>
 
 <meta itemprop="name" content="Build Verification Network">
-<meta itemprop="description" content="Source Code is the Single Point of Truth The source code of a project is the single point of truth. It describes the software as whole, what it does, how it works, how to build it, and its flaws. It is the description of the piece of software users are looking for.
-The drepo requires projects to implement Reproducible Builds. Thus, if someone holds a specific version of the source code, they are able to create the same build artifact over and over again."><meta itemprop="datePublished" content="2023-01-23T13:12:50+01:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:14:09+01:00" />
-<meta itemprop="wordCount" content="1619">
-<meta itemprop="keywords" content="" />
+<meta itemprop="description" content="Reproducible builds are a requirement in the decentralized repository to enable users to verify software artifacts. But building every dependency in a software project is work-intensive and, in most cases, unreasonable. A decentralized, anonymous network could provide this verification work for the community."><meta itemprop="datePublished" content="2023-01-23T13:12:50+01:00" />
+<meta itemprop="dateModified" content="2023-03-10T17:12:18+01:00" />
+<meta itemprop="wordCount" content="1649">
+<meta itemprop="keywords" content="build,reproducible build,verification,automation,work,incentives,anonymous,third-party," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Build Verification Network"/>
-<meta name="twitter:description" content="Source Code is the Single Point of Truth The source code of a project is the single point of truth. It describes the software as whole, what it does, how it works, how to build it, and its flaws. It is the description of the piece of software users are looking for.
-The drepo requires projects to implement Reproducible Builds. Thus, if someone holds a specific version of the source code, they are able to create the same build artifact over and over again."/>
+<meta name="twitter:description" content="Reproducible builds are a requirement in the decentralized repository to enable users to verify software artifacts. But building every dependency in a software project is work-intensive and, in most cases, unreasonable. A decentralized, anonymous network could provide this verification work for the community."/>
 
 
 
@@ -97,7 +94,7 @@ The drepo requires projects to implement Reproducible Builds. Thus, if someone h
         <span class="menu__link">Existing Repos</span>
         <ol class="menu__sub-nav-list">
           <li class="menu__sub-nav-item ">
-            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Properties</a>
+            <a class="menu__sub-link" href="/drepo/existing-repos/properties/">Common Properties</a>
           </li><li class="menu__sub-nav-item ">
             <a class="menu__sub-link" href="/drepo/existing-repos/centralized/">Centralized</a>
           </li><li class="menu__sub-nav-item ">
@@ -196,41 +193,50 @@ The drepo requires projects to implement Reproducible Builds. Thus, if someone h
   <a class="anchor" href="#source-code-is-the-single-point-of-truth">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h2><p>The source code of a project is the <strong>single point of truth</strong>. It describes the
-software as whole, what it does, how it works, how to build it, and its flaws.
-It is the description of the piece of software users are looking for.</p>
-<p>The drepo requires projects to implement
+</h2><p>The source code of a project is the <em>single point of truth</em>. It describes the
+software as a whole, what it does, how it works, how to build it, and its flaws.
+Finally, it describes the piece of software its users are looking for.</p>
+<p>The dRepo requires projects to implement
 <a href="https://reproducible-builds.org/" title="Reproducible Builds" target="_blank">Reproducible Builds</a>.
-Thus, if someone holds a specific version of the source code, they are able to
-create the same build artifact over and over again. This also applies to other
-people. Anyone with this specific version of the source code will build exactly
-the same artifact.</p>
+Thus, if someone holds a specific source code version, they can create the same
+build artifact repeatedly. This also applies to other people. Anyone with this
+particular source code version will build exactly the same artifact.</p>
 <p>This property makes builds of such projects comparable. If the author publishes
-the version of the source code and the compiled artifact to the drepo, anyone
-can verify whether or not the artifact is derived from the given source. Hence,
-the source code and the resulting artifacts are <strong>verifiably connected</strong> to each
-other. This connection removes the component of <em>trust in the author</em> from
-equation. Users do not have to blindly trust that build artifacts originate from
-the source code and do not have to rely on the author&rsquo;s word when they digitally
+the version of the source code and the compiled artifact to the dRepo, anyone
+can verify whether the artifact is derived from the given source. Hence, the
+source code and the resulting artifacts are <em>verifiably connected</em>. This
+connection removes the component of <em>trust in the author</em> from the equation.
+Users do not have to blindly trust that build artifacts originate from the
+source code and do not have to rely on the author&rsquo;s word when they digitally
 sign an artifact. Hence, a <em>trustless</em> relationship is formed.</p>
 <p>Any change in the source code would result in a different artifact.
 Consequently, any manipulation would stand out immediately. This, however,
-implies that a user compiles or builds the software in order to compare it with
-the published artifacts to eliminate any suspision of tampering.</p>
+implies that a user compiles or builds the software to compare it with the
+published artifacts to eliminate any suspicion of tampering.</p>
 <p>For every user to build each software dependency from source defeats the purpose
-of precompiled artifacts in repositories. Furthermore, these compilation
-processes might take a huge amount of time. Such an investment might be
-justified when building software systems that have extremely high demands on
-security, leaving no room for error or blind trust.</p>
-<p>In day-to-day use cases and especially for novice users, who just want to use a
-downloaded software, this amount preliminary work might be less than ideal. A
-middle ground might be a preferential solution offering both a high level of
-security while maintaining comfortability.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+of pre-compiled artifacts in repositories. Furthermore, these compilation
+processes might take a considerable amount of time. On the other hand, such an
+investment might be justified when building software systems with extremely high
+demands on security, leaving no room for error or blind trust.</p>
+<p>This preliminary work might be less than ideal in day-to-day use cases,
+especially for novice users who just want to use downloaded software. A middle
+ground might be a preferential solution offering a high level of security while
+maintaining comfort.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="dependency-tree.excalidraw.svg" target="_blank">
+    <img src="/drepo/expanded/build-verification/dependency-tree.excalidraw.svg" alt="Dependency Tree" />
+  </a>
+  <figcaption>
+    <p>Dependency Tree: An application typically contains numerous dependencies to other software libraries. The application can only be verified if all of its dependencies are verified. This is an especially hard task in polyglot applications which use pre-compiled artifacts.</p>
+  </figcaption>
+</figure>
+
 <h2 id="verifying-for-the-community">Verifying for the Community 
   <a class="anchor" href="#verifying-for-the-community">
     <i class="bi bi-link-45deg"></i>
@@ -240,65 +246,81 @@ security while maintaining comfortability.</p>
     <i class="bi bi-link-45deg"></i>
   </a>
 </h3><p>Instead of every user verifying each piece of software they want to use by
-themselves this work could be outsourced to a trustless <em>Build Verification
+themselves, this work could be outsourced to a trustless <em>Build Verification
 Network</em>.</p>
-<p>Such a system consists of a large number of nodes which will do the gruntwork of
+<p>Such a system consists of numerous nodes which will do the gruntwork of
 verifying each software artifact and subsequently publish their findings.
-Generally, if a large number of the nodes, which verified a software release,
-arrives at the same results as the original author, the provided information is
-most likely valid. However, if a significant protion of said verifiers reaches
-diverging results, the software package might be invalid. This might only point
-to a bug in the build but could also uncover malicious behaviour.</p>
-<p>Other users of the drepo can evaluate these results of the verifying
-participants. Subequently, they have to decide for themselves whether or not an
-artifact is valid. We imagine the community would provide guidelines on specific
-thresholds as such an evaluation might be difficult for novice users.</p>
+Generally, if many nodes verifying a software release arrive at the same results
+as the original author, the provided information is most likely valid. However,
+the software package might be invalid if a significant portion of said verifiers
+reach diverging results. This might only point to a bug in the build but could
+also uncover malicious behavior.</p>
+<p>Other users of the dRepo can evaluate the results of the verifying participants.
+Subsequently, they have to decide for themselves whether an artifact is valid.
+The community would provide guidelines on specific thresholds as such an
+evaluation might be difficult for novice users.</p>
+
+
+
+
+
+
+<figure class="figure figure--svg">
+  <a href="verification-network.excalidraw.svg" target="_blank">
+    <img src="/drepo/expanded/build-verification/verification-network.excalidraw.svg" alt="Verification Network" />
+  </a>
+  <figcaption>
+    <p>Verification Network: The software author publishes the build artifacts and numerous nodes in the verification network verify the reproducible build. The result is valid if only an insignificant number of nodes reports an invalid build.</p>
+  </figcaption>
+</figure>
+
 <h3 id="nodes">Nodes 
   <a class="anchor" href="#nodes">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h3><p>These aforementioned nodes should be owned and operated by independent,
-anonymous parties. The entry barrier for participation should be kept at a
-minimum in order to facilitate voluntary contribution to the system. For
-example, hardware requirements should remain low so practically anybody could
-offer their compute power. But as energy prices are rising and build tasks being
-quite energy intensive, not everybody want to give away their money to a good
-cause. Hence, completing verification tasks must be incentivized in order to
-encourage participation besides people volunteering. We will discuss this topic
-in a <a href="TODO">later chapter</a>.</p>
+</h3><p>These nodes mentioned above should be owned and operated by independent,
+anonymous parties. Furthermore, the entry barrier for participation should be
+kept at a minimum to facilitate a voluntary contribution to the system. For
+example, hardware requirements should remain low so that practically anybody can
+offer computing power. But since energy prices are rising and build tasks are
+pretty energy-intensive, not everybody wants to give away their money to a good
+cause Hence, completing verification tasks must be incentivized to encourage
+participation besides people volunteering. We will discuss this topic in a
+<a href="http://drepo.eth/drepo/expanded/incentives/" title="Incentives">later chapter</a>.</p>
 <p>Furthermore, the system should not require a cumbersome registration process for
-nodes to participate, which might involve manual screening of applications. Such
-whitelisting does not fit into the concept of a trustless system as this kind of
-process would create a trust relationship to these nodes. Instead, statistical
-improbabilities should reduce risks due to malicious nodes to a minimum or
-identify potential manipulation publicly. Meaning, if an automated probable
+nodes to participate, which might involve the manual screening of applications.
+Such whitelisting does not fit into the concept of a trustless system as this
+kind of process would create a trust relationship with these nodes. Instead,
+statistical improbabilities should reduce risks due to malicious nodes to a
+minimum or identify potential manipulation publicly. If a probable automated
 solution to the verification task could not be found, it should be marked as
-such.</p>
+such. Additionally, a proof-of-stake-like mechanism could reduce the amount of
+spam typically created from anonymous systems.</p>
 <h3 id="unified-build-configuration">Unified Build Configuration 
   <a class="anchor" href="#unified-build-configuration">
     <i class="bi bi-link-45deg"></i>
   </a>
-</h3><p>Another problem are the build processes themselves. Even though many projects
-employ automated build systems or CI to test and build their software, these
-systems are very different.
+</h3><p>Another area of improvement is the build processes themselves. Even though many
+projects employ automated build systems or CI to test and build their software,
+these systems are very different.
 <a href="https://github.com/features/actions" title="GitHub Actions" target="_blank">GitHub Actions</a>,
 <a href="https://docs.gitlab.com/ee/ci/" title="GitLab CI/CD" target="_blank">GitLab CI/CD</a>, or
-<a href="https://www.travis-ci.com/" title="Tracis CI" target="_blank">Travis CI</a> are similar in terms of
+<a href="https://www.travis-ci.com/" title="Tracis CI" target="_blank">Travis CI</a> are similar in the
 configuration of build steps in <em>yaml</em> files within a project. But how they are
-executed and how the build environments behave is vastly diverse. Participants
-in the build network would have to execute build tasks in these respective,
-proprietary systems in order to re-use these build configurations. This would
-defeat the demand for independence when verifying a piece of software.</p>
-<p>There are tools like <a href="https://github.com/nektos/act" title="act" target="_blank">act</a> which allow
-executing pipelines outside the cloud based environment, for example locally.
-But they are still bound to the given platform and certain features might not be
-portable.</p>
-<p>To guarantee independence from proprietary platforms a <strong>Unified Build
-Configuration</strong> is needed. As with current systems, it should express the
-necessary steps to build a software and the minimal environment this build task
-has to run in. It should be portable so it can be used in existing systems as
-well. Containerizing the build process itself in Dockerfiles or the usage of
-abstractions like <a href="https://nixos.org/" title="Nix" target="_blank">Nix</a> or
+executed and how the build environments behave are vastly diverse. Participants
+in the build network would have to perform build tasks in these respective
+proprietary systems to re-use these configurations. This would defeat the demand
+for independence when verifying a piece of software.</p>
+<p>Some tools like <a href="https://github.com/nektos/act" title="act" target="_blank">act</a> allow executing
+pipelines outside their native cloud-based environment, for example, locally.
+But they are still bound to the given platform, and certain features might not
+be portable.</p>
+<p>To guarantee independence from proprietary platforms, a <em>Unified Build
+Configuration</em> is needed. As with current systems, it should express the
+necessary steps to build software and the minimal environment in which this
+build task has to run. In addition, it should be portable so it can be used in
+existing systems as well. Containerizing the build process in Dockerfiles or
+using abstractions like <a href="https://nixos.org/" title="Nix" target="_blank">Nix</a> or
 <a href="https://webassembly.org/" title="WASM" target="_blank">WASM</a> might be good starting points for this
 endeavor.</p>
 <h3 id="sbom-and-provenance">SBOM and Provenance 
@@ -306,85 +328,72 @@ endeavor.</p>
     <i class="bi bi-link-45deg"></i>
   </a>
 </h3><p>A <em>Software Bill of Materials</em> and build provenance information<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-should be published by the author of a software. They provide easily consumable
-information outside of the source code and more data on the actual build process
-which lead to published build artifacts.</p>
+should be published by a software author. They provide easily consumable
+information outside the source code and more data on the actual build process
+leading to published build artifacts.</p>
 <p>Especially the SBOM provides critical insights into a piece of software. For
 example, it is possible to list and check all used software licenses or detect
-problematic software dependencies without analyzing the source code itself.</p>
+problematic software dependencies without analyzing the source code.</p>
 <p>Both reports should also be produced by participants when they verify a build.
-This allows users to check the validity of the provided additional information
-as well.</p>
-<p>Futhermore, this information from a set of diverse nodes might prove useful if
-inconsistencies in specific environments are detected. Builds might not work on
+This also allows users to check the validity of the provided additional
+information.</p>
+<p>Furthermore, this information from various nodes might be helpful if specific
+environment inconsistencies are detected. For instance, Builds might not work on
 Windows or produce different artifacts on newer hard- or software. However, this
-kind of diverging behaviour needs to be accounted for when verifying a piece of
-software. A tool might only be targeted for specific environments, thus
-unsupported ones need to be excluded in the verification process.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+kind of diverging behavior needs to be accounted for when verifying a piece of
+software. A tool might only target specific environments; thus, unsupported ones
+need to be excluded from the verification process.</p>
 <h2 id="manipulation">Manipulation 
   <a class="anchor" href="#manipulation">
     <i class="bi bi-link-45deg"></i>
   </a>
 </h2><p>A problem that needs to be solved is cheating or any other manipulation of
-results. Much like on a test in school, the goal is for all verifying
-participants to reach the same results if a build is legitimate. As the
-potential result is known beforehand due to the author publishing it, verifiers
-could easily copy the exisitng result and republish it as their own verification
-solution.</p>
-<p>If a software release is broken, tampered with or otherwise invalid, reenforcing
-the authors malicious data by simply republishing the existing result might
-change the overall probabilistic verification. Chances are that a large number
-of nodes would just try to farm potential incentives putting in a minimal amount
-of work, if any. Another risk are targeted attacks to forcibly portait an
-invalid release as valid if a single malicious party submits a large amount of
-false claims. This kind of attack could also be inverted by presenting a lot of
-diverging verifications for a viable release and thus painting it invalid.</p>
-<p>In school the teacher would monitor the students to behave and separate them so
-they cannot communicate and use any material to cheat. However, this is
-unfeasable in an anonymous system with an unknown, varying number of independent
+results. Much like on a school test, the goal is for all verifying participants
+to reach the same results if a build is legitimate. As the potential outcome is
+known beforehand due to the author publishing it, verifiers could easily copy
+the existing result and republish it as their own verification solution.</p>
+<p>If a software release is broken, tampered with, or otherwise invalid,
+reinforcing the author&rsquo;s malicious data by republishing the existing result
+might change the overall probabilistic verification. Chances are that many nodes
+would just try to farm potential incentives putting in a minimal amount of work
+if any. Another risk is targeted attacks to forcibly portray an invalid release
+as valid if a single malicious party submits a large number of false claims.
+This type of attack could also be inverted by presenting a lot of diverging
+verifications for a viable release, thus painting it invalid.</p>
+<p>In school, the teacher would monitor the students&rsquo; behavior and separate them,
+so they cannot communicate and use any material to cheat. However, this is
+unfeasible in an anonymous system with an unknown, varying number of independent
 participants.</p>
-<p>Such a system would have to rely on strong statistical models backed by
-cryptography. To contain the amount and the impact of misbehaving participants
-various additional efforts could be applied.</p>
-<p>Instead of the system being completely voluntary, e.g. participants could
-themselves pick a project to contribute to and submit results at their leisure,
-the network should select a certain amount of random nodes for a verification
-task. This measure reduces the ability to mount coordinated spamming attacks.
-Futhermore, a collateral mechanism for participation like it is often found in
-Proof-of-Stake systems can encourage users to behave. In case a node is found to
-have acted maliciously their security deposit might be liquidated.</p>
-<p>Additionally, a Proof-of-Work could be introduced which must be calculated
-during the verification process. This would force nodes to actually do the
-computational work. Such a mechanism could be based on intermediate build
-results and the existence of all needed dependencies. Unique variables like a
-node&rsquo;s private key or a random additional task provided by the network could act
-as salt values as all created data from the build process should be identical
-among all nodes due to the usage of reproducible builds. Furthermore,
-intermediate work results should explicitly not be published to reduce the
-potential of copying. Instead,
+<p>Such a system would have to rely on solid statistical models backed by
+cryptography. Then, additional efforts could be applied to contain misbehaving
+participants&rsquo; amount and impact.</p>
+<p>Instead of the system being entirely voluntary, e.g., participants can pick a
+project to contribute to and submit results at their leisure, the network should
+select a certain amount of random nodes for a verification task. This measure
+reduces the ability to mount coordinated spamming attacks. Furthermore, a
+collateral mechanism for participation, like it is often found in Proof-of-Stake
+systems, can encourage users to behave. For example, if a node is found to have
+acted maliciously, its security deposit might be liquidated.</p>
+<p>A Proof-of-Work could be introduced, which must be calculated during
+verification. This would force nodes to actually do the computational work. Such
+a mechanism could be based on intermediate build results and the presence of all
+required dependencies. For instance, unique variables like a node&rsquo;s private key
+or a random additional task provided by the network could act as salt values,
+even though all data created from the build process should be identical among
+all nodes due to the usage of reproducible builds. Furthermore, intermediate
+work results should explicitly not be published to reduce the potential of
+copying. Instead,
 <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof" title="Zero-Knowledge Proofs" target="_blank">Zero-Knowledge Proofs</a>
-might be used to provide evidence for the work being done honestly.</p>
-<p>From a statistics point of view methods like
+can provide evidence for the work being done honestly.</p>
+<p>From a statistics point of view, methods like
 <a href="https://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29" title="Bootstrapping" target="_blank">Bootstrapping</a>
 might reduce the significance of bad actors by adding further randomization. By
-including more variables into the statistical model it is possible to highlight
-correlations that might be important. These could include information about past
-verifications a participant executed, data on the execution runtime a node uses
-for builds or other data on the node and its potential owner. A user can view
-the data as a whole or pick out information they deem relevant to come to a
-conclusion on the validity of a build.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+including more variables in the statistical model, it is possible to highlight
+correlations that might be important. These could consist of information about
+past verifications a participant executed, data on the execution runtime a node
+uses for builds, or other data on the node and its potential owner. A user can
+view the data as a whole or pick out the information they deem relevant to come
+to conclude the validity of a build.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -512,22 +521,24 @@ conclusion on the validity of a build.</p>
       <li>
         <a href="https://github.com/FanXuX/drepo-contracts">Index Prototype v0</a>
       </li>
+      <li>
+        <a href="https://github.com/drepo-eth/drepo-index-prototype-v1">Index Prototype v1</a>
+      </li>
     </ul>
   </div>
 
   
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">724e6ba6b4763cc83afce63e8647eec7a3718cb4</span>
+    Version: <span class="git-version-hash">24d0e91b36ef906686e56195e8736120a734d7fe</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-03-10 16:14:09 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-03-10 16:12:18 &#43;0000 UTC</span>
   </div>
 </div>
 
 
 </footer>
-
             
         </div>
 
