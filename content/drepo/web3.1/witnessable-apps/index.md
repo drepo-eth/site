@@ -1,12 +1,15 @@
 ---
 title: "Witnessable Apps"
 description:
-  "Witnessable apps are a type of application that is fully transparent and
-  verifiable. This includes its source code, data, and runtime. As a result, its
-  users can determine if it is actually safe to use."
+  "Witnessable applications are a type of application that is fully transparent
+  and verifiable. This includes its source code, data, and runtime. As a result,
+  its users can determine if it is actually safe to use."
 tags:
   - "witnessable"
   - "witnessable apps"
+  - "witnessable app"
+  - "witnessable applications"
+  - "witnessable application"
   - "verifyable"
   - "verification"
   - "architecture"
@@ -73,13 +76,13 @@ verify that.
 
 ### Openness Required
 
-The concept of _Witnessable Apps_ is based on the principle of verifiability.
-For an application to be witnessable, a user must be able to verify it from top
-to bottom. This includes everything from the source code and the stored data to
-the runtime and execution. Therefore, such an application must be _open source_,
-must hold all of its _data either publicly or visible_ to the respective user,
-and the code must be _executed in public_ or on a user's local machine in a way
-for them to inspect the execution.
+The concept of _Witnessable Applications_ is based on the principle of
+verifiability. For an application to be witnessable, a user must be able to
+verify it from top to bottom. This includes everything from the source code and
+the stored data to the runtime and execution. Therefore, such an application
+must be _open source_, must hold all of its _data either publicly or visible_ to
+the respective user, and the code must be _executed in public_ or on a user's
+local machine in a way for them to inspect the execution.
 
 These properties allow users to validate that their inputs will have the
 intended effects by, for example, simulating or dry-running the program
@@ -104,8 +107,8 @@ expectations.
 
 {{< image-svg
   src="witnessable-app.excalidraw.svg"
-  alt="Witnessable App"
-  caption="Witnessable App: The users of a witnessable app can verify every aspect of it. They can review the source code and verify the built application executable, they can verify the correct encryption of data, and how it is stored. Futhermore, they can see what data the application shares with thrid-party services and verify the correctness of the application's computations." >}}
+  alt="Witnessable Application"
+  caption="Witnessable Application: The users of a witnessable app can verify every aspect of it. They can review the source code and verify the built application executable, they can verify the correct encryption of data, and how it is stored. Futhermore, they can see what data the application shares with thrid-party services and verify the correctness of the application's computations." >}}
 
 ### Does Every App have to be Witnessable?
 
