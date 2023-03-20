@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "hugo",
-		"build-draft": "hugo --buildDrafts",
+		"build-draft": "hugo --buildDrafts --baseURL 'https://drepo.dev/'",
 		"create": "hugo new",
 		"server": "hugo server --buildDrafts --buildExpired",
 		"test": "echo \"Error: no test specified\" && exit 1"
