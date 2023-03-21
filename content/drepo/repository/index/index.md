@@ -26,160 +26,139 @@ menu:
     weight: 20
 ---
 
-## A permissionless Tree
+## The Basics
 
-<!-- A trustless source of verifyable information -->
+The _Index Component_ of the decentralized software repository is a registry for
+software releases on a _Permissionless Smart Contract Blockchain_. Its goal is
+to manage _Groups_, _Packages_, and individual _Releases_ and to store and
+provide the information safely, censorship-resistantly, and permanently to the
+public. The data stored only contains metadata and references pointing to the
+actual payloads of releases, e.g., build artifacts, source code, documentation,
+etc.
 
-The index is a _smart contract_ on a _permissionless blockchain_. It manages the
-relationships between _authors_, _groups_, _packages_, and _releases_.
+The system saves data in an _append-only_ fashion. As a result, users can only
+add new data to the index but cannot change or remove existing information.
+Furthermore, the platform logs all changing interactions indefinitely to provide
+traceability.
 
-The repository manages groups as top-level entries. Each group contains
-packages, and each software package holds releases identified by a version
-string. This is the content structure that is typical for software repositories.
+Software authors who want to publish their work are not required to supply any
+information about their identity. The system does not restrict access in any
+way. The only requirement is registering a group handle as a namespace for
+software packages. Then, within this namespace, authors can post any information
+they desire.
 
-A group, and thus, all packages within it are owned by a single owner.
-Therefore, they are the only ones who can create new packages and releases
-within their own group. Furthermore, a release contains a list of _content
-strings_, which point to files and other information belonging to the release.
+Similarly, users are not limited when reading the index data; neither rate
+limits nor private packages exist. All information is public and does not
+require creating a user account; such a feature does not exist.
 
 {{< image-svg
   src="owner-packages.excalidraw.svg"
   alt="Tree Structure"
   caption="Tree Structure: The index follows the typical tree structure. A user can own multiple groups. However, each group can have only one owner. Each group contains various packages and they contain many versions that mark a release." >}}
 
-The package name and version strings should follow general naming patterns,
-e.g., [SemVer](https://semver.org/ "SemVer"). The index should implement basic
-rules to enforce proper names but should avoid complex patterns as this might
-conflict with future changes. Likewise, the content strings in each release
-should be unrestricted, as upcoming link or data formats might incorporate
-peculiar standards. Using raw bytes might be worth considering.
+## Why Blockchain?
 
-## Simple, Trustless, Immutable
+A public permissionless smart contract blockchain offers the perfect platform
+for the registry index. Data and contract code are _immutable_, _transparent_,
+and _public_. Anyone can contribute to the network. Participants host, share,
+and validate the data, creating a resilient and scalable system.
 
-### Trustless
+It minimizes the dependency on cloud providers and the influence of third
+parties on the system's integrity. A deployed index component purely exists on
+the blockchain and is not explicitly hosted in a dedicated system. As a result,
+there are no ongoing costs for hosting that would require funding. Instead,
+authors finance the index's operation by paying transaction fees on the
+blockchain.
 
-The index must be _public_ and _immutable_ for the system to be truly
-_trustless_. Published data cannot be changed or removed, and the actual
-repository code cannot be modified after deployment. In addition, no third party
-or overseeing institution can be involved in publishing or retrieving release
-information.
+Furthermore, the underlying blockchain guarantees the correct computation and
+data storage in a _trustless environment_ secured by _verifiable cryptographic_
+schemes. Manipulation attempts require substantial influence on the
+decentralized network, lowering such attacks' feasibility.
 
-Permissionless blockchains are currently the only type of large-scale system
-that can fulfill these requirements. Due to their pseudo-anonymous nature,
-anyone can interact with public blockchains like
-[Ethereum](https://ethereum.org/ "Ethereum") without disclosing further
-information and without censorship. All writing changes are logged in the
-chain's history and can be recovered anytime. In addition, the smart contract
-code is by nature immutable and public.
+In addition, prominent public blockchains like
+[Ethereum](https://ethereum.org/ "Ethereum") reliably facilitate the exchange of
+digital assets worth billions of dollars daily. Therefore, a decentralized
+repository would benefit and contribute to the security of the chain's entire
+ecosystem. Stakeholders (Miners) ensure the correct execution of transactions
+for all applications hosted on a given blockchain. Consequently, compromising
+one app would affect all, including the dRepo index. This dependency creates an
+interconnected system that grows stronger and more valuable with each
+application as the number of stakeholders increases.
 
-Users can view, verify, and run the code of the index smart contract. This
-allows them to evaluate the security of the source code for themselves. The
-contract code will forever[^forever] execute in the same, predictable way. It is
-a trustworthy source of information in a trustless manner built upon
-_cryptographic truth_.
+## Simplicity
 
-[^forever]:
-    As long as the blockchain and software development exists and the blockchain
-    does not fundamentally changes how code works within their execution layer.
+Code on a _Smart Contract Blockchain_ is _immutable_; changes after deployment
+are impossible. That includes bug fixes and the introduction of new features.
+Therefore, the index's feature set requires careful planning, and the code must
+be free of bugs or errors. In a nutshell, the system must be safe and
+future-proof. An overly complex system trying to handle all possibilities poses
+a risk to these requirements. Hence, simplicity and moving logic out of the
+index contract into connecting systems aids in creating a system that is less
+prone to errors and is open to future use cases. For example, the index does not
+include a feature of an elaborate role and permissions system. Instead, there is
+only a single owner of a group who possesses the right to add data and software
+releases. Separate contracts or applications should handle roles and user
+recovery.
 
-### Simplicity
+Proxy patterns allow the creation of upgradable Smart Contracts. By switching
+the implementation contract fixing bugs and adding new features is possible.
+However, upgrades are risky from a technical point of view as they might
+introduce security issues and could destroy stored data. More importantly, they
+open the door for liability issues, censorship, and possible extortion. For
+instance, potential admins may add features that prevent users from adding
+certain information or block them from participating. Introducing a
+decentralized autonomous organization
+([DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization "Decentralized Autonomous Organization"))
+might decrease the number of attack vectors. But a majority attack could even
+compromise the DAO. Consequently, a trustless environment based on immutable
+code must be preserved to eliminate such risks.
 
-Smart contract code is generally immutable.[^selfdestruct] The implementation of
-the index smart contract must thus stay _simple_, only offering a _minimal
-feature_ set to prevent bugs and other possible exploits. At the same time, it
-must be future-proof, compatible with new technologies, and allow integration
-with external, existing tooling.
+## Witnessable
 
-[^selfdestruct]: We ignore `selfdestruct` here for simplicity.
+The index is a _[Witnessable
+Application]({{< ref "/drepo/web3.1/witnessable-apps">}} "Witnessable
+Applications")_, offering _full transparency_ and _traceability_ while
+preserving _pseudo-anonymity_. All data is stored publicly and thus viewable by
+anyone. For instance, users can run their own blockchain node to help secure the
+system or fork the chain to test transactions before submitting them to the live
+system. Hence, they can verify the system in its entirety.
 
-Non-basic features like advanced data validation or user and role management
-should be externalized from the base implementation. On-chain proxy contract
-setups could provide more elaborate functionalities while leaving the original
-implementation untouched. Furthermore, this allows users to opt out of these
-features and interact with the original index directly.[^optout] It is up to
-each community member to decide how to interact with the system.
+Furthermore, the system relies on the anonymous accounts of the underlying
+blockchain. There is no verification process for software authors defined.
+Despite their anonymity, they are responsible for inspiring users' confidence in
+their work by proving their identity or, preferably, the authenticity of their
+published software releases. As a _Witnessable Application_, the decentralized
+repository index represents a verifiable source of information on software
+artifacts.
 
-[^optout]:
-    A proxy implementation might be controlled by a centralized entity or put up
-    barriers not all community members agree with. Instead of being locked out
-    of the ecosystem, they can still participate directly at the root.
+## Interactions
 
-### Limited Upgradability
+As described before, to reduce the risk of introducing bugs and errors into the
+immutable system, features are kept simple and to a necessary minimum. A
+first-come-first-served principle applies to group management. Anonymous users
+can register any group they desire. Within this group, they can create software
+packages and consequently publish software releases. A single user account owns
+a group, and ownership is transferable. However, there are no elaborate role and
+user management schemes. Also, ownership recovery does explicitly not exist, as
+losing access and thus making a group effectively immutable is a feature.
 
-Using an upgradable proxy to allow code changes to the index should be avoided.
-Such a mechanism might be exploited to introduce malicious changes by applying
-pressure to admins or overtaking a potential
-[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization "Decentralized Autonomous Organization").
-However, in an early introduction phase, such a setup might help to fix bugs in
-the new system, mainly if not enough audits were conducted. Eventually, the
-upgrade feature should be permanently disabled. This removes the human factor as
-a security risk from the system. Additionally, it removes liability concerns, as
-nation-states might hold human administrators or DAO members responsible for the
-system's content or processes if they can influence it.
+Furthermore, the index does not enforce restrictive naming schemes or patterns
+when creating groups, packages, and releases. For example, the prototype
+implementation only allows using
+[ASCII](https://en.wikipedia.org/wiki/ASCII "ASCII") and numeric characters to
+prevent encoding problems in identifiers. However, content strings are
+explicitly exempted from this requirement as future payloads might employ more
+complex encodings.
 
-## Ownership
-
-### Groups
-
-While the data in the index is readable by anyone, users retain ownership and
-thus control over their submitted content.
-
-Users can claim any available group by its name. The system employs a "first
-come, first served" approach. After a successful claim, they become the owners
-of the respective group. However, only one user account can be the owner, and
-there are no other roles besides the owner role. This is due to the simplicity
-concerns mentioned earlier. More elaborate schemes can be employed through
-external components.
-
-The ownership and all writing permissions are bound to the single owner account.
-However, the ownership is transferable to other accounts. If access to the owner
-account is lost or the ownership is transferred to an inaccessible account, the
-group becomes effectively locked and thus immutable. The core system does
-explicitly not include any sort of recovery mechanism.
-
-As the claiming process is public and trustless, users may register group names
-to flip them on secondary markets. Thus, introducing of a registration fee might
-be worth considering to prevent spamming.
-
-### Release Creation
-
-The owner of a group can create new releases of a given package. The package is
-not created explicitly but implicitly by creating a first-release version. Each
-release contains a version string and a set of content references. These
-references point to artifacts belonging to the release: build artifacts, source
-code, documentation, website, etc. Furthermore, each artifact must have at least
-one checksum or digital signature to verify the validity of a downloaded
-artifact.
-
-Once a content string is added to a release, it cannot be removed or changed.
-However, the owner can add additional content references at any time. This
-allows them to invalidate previous references if such a convention is
-established in connected clients. It is the client's responsibility to filter
-the information in the index for data they can process or prefer: trying to
-download artifacts from decentralized sources before using a centralized one or
-downloading only from centralized sources and comparing checksums.
-
-### Release Nuking
-
-As release information is immutable, but software and releases are still made by
-humans, there has to be a way to flag invalid or broken releases. In the WAREZ
-scene, there is a mechanism called _Nuking_; in Python's PyPi and Rust's Cargo,
-a similar concept is called _Yank_. They all describe a feature which flags a
-release as invalid. However, the original data is not deleted from the
-repository. Thus, the artifacts are still available if someone wants to download
-these files explicitly. Clients like Cargo will not propose a flagged release
-when adding a new dependency to your project and most likely warn you if you are
-already using one.
-
-The decentralized repository uses the name _nuke_ due to its affiliation with
-the WAREZ scene. The owner can flag each release as nuked at any time after its
-publication. Further references can be added to the content to describe the
-reasoning for pulling a given release. Once a release is marked as nuked, this
-state **cannot be reverted**. The index does not provide any further information
-or features besides the flag. From an API point of view, there is no filtering
-of nuked releases. Release information stays available independent of its state.
-It is up to clients to provide filtering and further processing of invalidated
-release packages.
+Release information in the index is generally _append-only_. An owner can add
+further content information to a release at any time. For instance, they might
+add download links to a new p2p network. However, as releases cannot be removed,
+it is necessary to mark them as invalid. Similar features exist in repositories
+like PyPI and Rust's Crates.io. Inspired by the WAREZ community, the dRepo uses
+the term _Nuke_ to describe a withdrawn release that should not be used. The
+group owner can flag an existing release as nuked and add additional content to
+provide further information. This process is irreversible; once a release is
+_nuked_, it stays this way.
 
 ## Migration
 
@@ -193,7 +172,3 @@ a DAO would be suited for this transitional phase.
 Apart from the runtime code safety, proper data migration from existing
 repositories is most important. Errors could lead to security issues throughout
 the ecosystem if groups and packages are not mapped to the correct owners.
-
-<!-- TODO: Why Blockchain? -->
-<!-- TODO: secured by the blockchains ecosystem, mutual destruction -->
-<!-- TODO: illustration -->
