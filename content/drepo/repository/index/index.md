@@ -90,17 +90,17 @@ application as the number of stakeholders increases.
 Code on a _Smart Contract Blockchain_ is _immutable_; changes after deployment
 are impossible. That includes bug fixes and the introduction of new features.
 Therefore, the index's feature set requires careful planning, and the code must
-be free of bugs or errors. In a nutshell, the system must be safe and
+be free of bugs and errors. In a nutshell, the system must be safe and
 future-proof. An overly complex system trying to handle all possibilities poses
-a risk to these requirements. Hence, simplicity and moving logic out of the
-index contract into connecting systems aids in creating a system that is less
-prone to errors and is open to future use cases. For example, the index does not
-include a feature of an elaborate role and permissions system. Instead, there is
-only a single owner of a group who possesses the right to add data and software
-releases. Separate contracts or applications should handle roles and user
-recovery.
+a risk to these requirements. Hence, simplicity and moving advanced logic out of
+the index contract into connecting systems aids in creating a system that is
+less prone to errors and is open to future use cases. For example, the index
+does not include a feature of an elaborate role and permissions system. Instead,
+there is only a single owner of a group who possesses the right to add data and
+software releases. Separate contracts or applications should handle roles and
+user recovery.
 
-Proxy patterns allow the creation of upgradable Smart Contracts. By switching
+Proxy patterns allow the creation of _Upgradable Smart Contracts_. By switching
 the implementation contract fixing bugs and adding new features is possible.
 However, upgrades are risky from a technical point of view as they might
 introduce security issues and could destroy stored data. More importantly, they
@@ -126,10 +126,10 @@ system. Hence, they can verify the system in its entirety.
 Furthermore, the system relies on the anonymous accounts of the underlying
 blockchain. There is no verification process for software authors defined.
 Despite their anonymity, they are responsible for inspiring users' confidence in
-their work by proving their identity or, preferably, the authenticity of their
-published software releases. As a _Witnessable Application_, the decentralized
-repository index represents a verifiable source of information on software
-artifacts.
+their work by proving their identity or, preferably, the authenticity and
+validity of their published software releases. As a _Witnessable Application_,
+the decentralized repository index represents a verifiable source of information
+on software artifacts.
 
 ## Interactions
 
@@ -143,12 +143,17 @@ user management schemes. Also, ownership recovery does explicitly not exist, as
 losing access and thus making a group effectively immutable is a feature.
 
 Furthermore, the index does not enforce restrictive naming schemes or patterns
-when creating groups, packages, and releases. For example, the prototype
-implementation only allows using
+when creating groups, packages, and releases.[^restrictive] For example, the
+prototype implementation only allows using
 [ASCII](https://en.wikipedia.org/wiki/ASCII "ASCII") and numeric characters to
 prevent encoding problems in identifiers. However, content strings are
 explicitly exempted from this requirement as future payloads might employ more
-complex encodings.
+complex encodings. Using raw byte arrays is worth considering.
+
+[^restrictive]:
+    However, the community should establishes standards for naming and
+    versioning, for example, [SemVer](https://semver.org/ "SemVer"), and enforce
+    these in client applications.
 
 Release information in the index is generally _append-only_. An owner can add
 further content information to a release at any time. For instance, they might
@@ -159,6 +164,21 @@ the term _Nuke_ to describe a withdrawn release that should not be used. The
 group owner can flag an existing release as nuked and add additional content to
 provide further information. This process is irreversible; once a release is
 _nuked_, it stays this way.
+
+Logic and features surpassing the index's basic needs are outsourced to clients
+and intermediary services. For instance, third-party services could provide
+pretty user interfaces, advanced search functions, statistics, and more, based
+on the information stored in the decentralized repository. However, great
+responsibility lies with client applications developers and users directly
+employ. Ultimately, it is their duty to evaluate and validate the data retrieved
+from the index and potential third-party services and act in the user's best
+interest. They must filter nuked releases, check data integrity, and obtain the
+information needed in the user's preferred and trusted way by leveraging strong
+encryption, obfuscation, and trusted intermediaries[^intermediaries].
+
+[^intermediaries]:
+    For example, trusted blockchain RPC providers or centralized storage
+    systems.
 
 ## Migration
 
