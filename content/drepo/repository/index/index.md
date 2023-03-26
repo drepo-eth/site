@@ -1,7 +1,7 @@
 ---
-title: "Index"
+title: "The Index"
 description:
-  "The index is an immutable smart contract on a permissionless public
+  "The Index is an immutable smart contract on a permissionless public
   blockchain. Users own groups and can publish new software releases without
   prior approval."
 tags:
