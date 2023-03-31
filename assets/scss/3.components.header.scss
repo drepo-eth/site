@@ -140,8 +140,14 @@
 .header__theme {
   display: flex;
   align-items: center;
-  margin-right: pxToRem(32px);
   padding-top: 2px;
+
+  @include breakpoint(sm) {
+    margin-right: pxToRem(20px);
+  }
+  @include breakpoint(md-xl) {
+    margin-right: pxToRem(32px);
+  }
 
   .bi {
     @include breakpoint(sm) {
