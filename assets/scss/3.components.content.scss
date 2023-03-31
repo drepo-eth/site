@@ -31,7 +31,18 @@
     @include f-headline-h4;
   }
 
-  h2,
+  h2 {
+    @include break-main(sm) {
+      margin: $spacer-md 0 pxToRem(16px);
+    }
+    @include break-main(md) {
+      margin: $spacer-xl 0 pxToRem(16px);
+    }
+    @include break-main(lg) {
+      margin: $spacer-xl 0 pxToRem(24px);
+    }
+  }
+
   h3,
   h4 {
     @include break-main(sm) {
@@ -43,7 +54,11 @@
     @include break-main(lg) {
       margin: $spacer-lg 0 pxToRem(24px);
     }
+  }
 
+  h2,
+  h3,
+  h4 {
     .bi {
       color: transparent;
       font-size: 20px;
@@ -59,8 +74,11 @@
 
   a {
     color: var(--color-highlight-text);
-    text-decoration: underline;
     transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   strong {

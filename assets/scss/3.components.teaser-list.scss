@@ -17,16 +17,16 @@
   display: grid;
   grid-column-gap: $spacer-md;
   grid-row-gap: $spacer-sm;
-  margin-top: $spacer-md;
+  margin-top: $spacer-sm;
 
-  @include break-main(sm) {
-    grid-template-columns: 1fr;
-  }
-  @include break-main(md) {
+  @include break-main(sm-md) {
     grid-template-columns: repeat(2, 1fr);
   }
   @include break-main(lg) {
     grid-template-columns: repeat(3, 1fr);
+  }
+  @include break-main(xs) { // Add this at the end to override the sm query
+    grid-template-columns: 1fr;
   }
 }
 

@@ -104,7 +104,7 @@ $fw-bold: 700;
 @mixin f-copy {
 	font-family: "IBM Plex Serif", serif;
 	font-weight: $fw-regular;
-	line-height: 1.8;
+	line-height: 1.65;
 
 	@include breakpoint(sm-md) {
 		font-size: pxToRem(16px);

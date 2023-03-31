@@ -36,7 +36,11 @@
  *  @params $media: sm | md | lg | xl | xs-md | md-xl
  */
 @mixin break-main($media, $container: main, $breakpoints: $bp-default) {
-  @if $media == sm {
+  @if $media == xs {
+    @container #{$container} (max-width: 370px) {
+      @content;
+    }
+  } @else if $media == sm {
     @container #{$container} (max-width: #{map-get($breakpoints, sm-max)}) {
       @content;
     }

@@ -144,7 +144,12 @@
   padding-top: 2px;
 
   .bi {
-    font-size: pxToRem(15px);
+    @include breakpoint(sm) {
+      font-size: pxToRem(12px);
+    }
+    @include breakpoint(md-xl) {
+      font-size: pxToRem(15px);
+    }
   }
 }
 
@@ -152,21 +157,37 @@
   position: relative;
   margin-left: pxToRem(8px);
   margin-right: pxToRem(10px);
-  width: pxToRem(48px);
-  height: pxToRem(26px);
   background: var(--color-highlight-text);
   border-radius: 50px;
+
+  @include breakpoint(sm) {
+    width: pxToRem(40px);
+    height: pxToRem(20px);
+  }
+  @include breakpoint(md-xl) {
+    width: pxToRem(48px);
+    height: pxToRem(26px);
+  }
 }
 
 .header__theme-circle {
   position: absolute;
-  top: 4px;
-  left: 5px;
-  width: pxToRem(18px);
-  height: pxToRem(18px);
   background: var(--color-bg);
   border-radius: 100%;
   transition: 0.5s all ease;
+
+  @include breakpoint(sm) {
+    top: 3px;
+    left: 3px;
+    width: pxToRem(14px);
+    height: pxToRem(14px);
+  }
+  @include breakpoint(md-xl) {
+    top: 4px;
+    left: 5px;
+    width: pxToRem(18px);
+    height: pxToRem(18px);
+  }
 
   .dark & {
     transform: translateX(21px);
