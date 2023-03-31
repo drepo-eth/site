@@ -17,6 +17,13 @@
   }
 }
 
+.header__content {
+  container-type: inline-size;
+  container-name: header;
+  margin-inline: auto;
+  max-width: $s-max-content-width;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -24,26 +31,11 @@
   margin-inline: auto;
   max-width: $s-max-content-width;
 
-  @include breakpoint(sm) {
+  @include break-main(sm, header) {
     padding: 0 column(1, 12);
   }
-  @include breakpoint(md-xl) {
+  @include break-main(md-xl, header) {
     padding: 0 column(2, 12);
-  }
-  @media (min-width: ($s-max-content-width + $s-menu-width-opened)) {
-    padding: 0 calc(#{$s-max-content-width} / 12 * 2);
-  }
-
-  .has-menu-open & {
-    @media (max-width: ($break-tablet + $s-menu-width-opened)) {
-      padding: 0 column(1, 12);
-    }
-    @media (min-width: ($break-desktop + $s-menu-width-opened)) {
-      padding: 0 column(2, 12);
-    }
-    @media (min-width: ($s-max-content-width + $s-menu-width-opened)) {
-      padding: 0 calc(#{$s-max-content-width} / 12 * 2);
-    }
   }
 }
 

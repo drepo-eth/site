@@ -1,27 +1,41 @@
 {{ $rootUrl := relURL "/" }}
 <header class="header">
+  <div class="header__content">
     <div class="header__wrapper">
-        <a class="header__home" href="{{ $rootUrl }}">
-            {{ $logoUrl :=  "/images/logo-without-space.svg" | relURL }}
-            <img class="header__logo" src="{{ $logoUrl }}" alt="">
-            {{ $logoMobileUrl :=  "/images/logo-without-text.svg" | relURL }}
-            <img class="header__logo--mobile" src="{{ $logoMobileUrl }}" alt="">
-        </a>
-        <div class="header__actions">
-            <div class="header__theme">
-                <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
-                <button class="header__theme-btn" title="Click here to change theme" aria-label="Click here to change theme">
-                    <span class="header__theme-circle"></span>
-                </button>
-                <i class="bi bi-moon" aria-hidden="true"></i>
-            </div>
-            <a class="header__contact header__contact--github" href="https://github.com/drepo-eth" target="_blank" title="Visit our github">
-                <i class="bi bi-github" aria-hidden="true"></i>
-            </a>
-            <a class="header__contact header__contact--mail" href="mailto:drepo.eth@protonmail.com" title="Wirte us an email">
-                <i class="bi bi-envelope" aria-hidden="true"></i>
-            </a>
+      <a class="header__home" href="{{ $rootUrl }}">
+        {{ $logoUrl := "/images/logo-without-space.svg" | relURL }}
+        <img class="header__logo" src="{{ $logoUrl }}" alt="" />
+        {{ $logoMobileUrl := "/images/logo-without-text.svg" | relURL }}
+        <img class="header__logo--mobile" src="{{ $logoMobileUrl }}" alt="" />
+      </a>
+      <div class="header__actions">
+        <div class="header__theme">
+          <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
+          <button
+            class="header__theme-btn"
+            title="Click here to change theme"
+            aria-label="Click here to change theme"
+          >
+            <span class="header__theme-circle"></span>
+          </button>
+          <i class="bi bi-moon" aria-hidden="true"></i>
         </div>
-
-</div>
+        <a
+          class="header__contact header__contact--github"
+          href="https://github.com/drepo-eth"
+          target="_blank"
+          title="Visit our github"
+        >
+          <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+        <a
+          class="header__contact header__contact--mail"
+          href="mailto:drepo.eth@protonmail.com"
+          title="Wirte us an email"
+        >
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
