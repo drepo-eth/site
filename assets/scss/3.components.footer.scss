@@ -1,19 +1,26 @@
 .footer {
+  container-type: inline-size;
+  container-name: footer;
+  margin-inline: auto;
+  max-width: $s-max-content-width;
+}
+
+.footer__content {
   display: grid;
   border-top: 2px solid var(--color-footer-border);
   padding-top: $spacer-md;
   width: column(8, 12);
   @include f-footer-small;
 
-  @include breakpoint(sm) {
+  @include break-main(sm, footer) {
     hyphens: auto;
     width: column(10, 12);
   }
-  @include breakpoint(sm-md) {
+  @include break-main(sm-md, footer) {
     grid-template-columns: 1fr;
     margin: $spacer-xl auto;
   }
-  @include breakpoint(lg) {
+  @include break-main(lg, footer) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $spacer-sm;
     margin: $spacer-xxl auto;
