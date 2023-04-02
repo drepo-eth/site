@@ -1,3 +1,8 @@
+$headlines:
+  2 $spacer-md $spacer-xl $spacer-xl,
+  3 $spacer-sm $spacer-md $spacer-lg,
+  4 $spacer-sm $spacer-md $spacer-lg;
+
 .content,
 .headline--h1 {
   margin-inline: auto;
@@ -31,28 +36,32 @@
     @include f-headline-h4;
   }
 
-  h2 {
-    @include break-main(sm) {
-      margin: $spacer-md 0 pxToRem(16px);
-    }
-    @include break-main(md) {
-      margin: $spacer-xl 0 pxToRem(16px);
-    }
-    @include break-main(lg) {
-      margin: $spacer-xl 0 pxToRem(24px);
+  @each $headline, $sm, $md, $lg in $headlines {
+    h#{$headline} {
+      @include break-main(sm) {
+        margin: #{$sm} 0 pxToRem(16px);
+      }
+      @include break-main(md) {
+        margin: #{$md} 0 pxToRem(16px);
+      }
+      @include break-main(lg) {
+        margin: #{$lg} 0 pxToRem(24px);
+      }
     }
   }
 
-  h3,
-  h4 {
-    @include break-main(sm) {
-      margin: $spacer-sm 0 pxToRem(16px);
-    }
-    @include break-main(md) {
-      margin: $spacer-md 0 pxToRem(16px);
-    }
-    @include break-main(lg) {
-      margin: $spacer-lg 0 pxToRem(24px);
+  @each $headline, $sm, $md, $lg in $headlines {
+    h#{$headline}:first-child,
+    h#{$headline - 1} + h#{$headline} {
+      @include break-main(sm) {
+        margin: #{$sm/2} 0 pxToRem(16px);
+      }
+      @include break-main(md) {
+        margin: #{$md/2} 0 pxToRem(16px);
+      }
+      @include break-main(lg) {
+        margin: #{$lg/2} 0 pxToRem(24px);
+      }
     }
   }
 
