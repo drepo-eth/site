@@ -38,8 +38,8 @@
 
 <meta itemprop="name" content="Witnessable Apps">
 <meta itemprop="description" content="Witnessable applications are a type of application that is fully transparent and verifiable. This includes its source code, data, and runtime. As a result, its users can determine if it is actually safe to use."><meta itemprop="datePublished" content="2023-01-24T11:46:31+01:00" />
-<meta itemprop="dateModified" content="2023-04-03T22:41:47+02:00" />
-<meta itemprop="wordCount" content="1541">
+<meta itemprop="dateModified" content="2023-04-03T23:04:56+02:00" />
+<meta itemprop="wordCount" content="1560">
 <meta itemprop="keywords" content="witnessable,witnessable apps,witnessable app,witnessable applications,witnessable application,verifyable,verification,architecture,encryption,trust,trustless," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Witnessable Apps"/>
@@ -239,9 +239,9 @@ sure if the application running in <em>the cloud</em> was possibly modified by t
 cloud provider.</p>
 <p>The developers of an application or an auditor might disclose answers to those
 questions in reports, FAQs, privacy statements, or the terms of use. However,
-this requires that a user <em>trusts</em> the word of a &lsquo;random&rsquo; person on the
+this requires that a user <em>trusts</em> the word of a <em>&lsquo;random&rsquo;</em> person on the
 internet. This is generally not a good idea, even if the information is provided
-by a company or a reputable institution. Nothing actually prevents them from
+by a reputable company or institution. Nothing actually prevents them from
 lying.</p>
 <p>As in the real world, <em>verification is better than trust</em>. Thus, if a user wants
 to ensure that an application does not act maliciously, they have to be able to
@@ -324,9 +324,9 @@ management system like <a href="https://aws.amazon.com/kms/" title="AWS KMS" tar
 the operating company.</p>
 <p>End-users cannot view the source code, do not know how an application is
 operated and executed, and cannot directly access their data or the information
-the system collected about them. This makes such systems reasonably dangerous to
-use, even if the operating company or institution is reputable or promises to be
-one of the &lsquo;good guys&rsquo;.</p>
+the system collected about them. This makes such systems reasonably <em>dangerous</em>
+to use, even if the operating company or institution is respected or promises to
+be one of the &lsquo;good guys&rsquo;.</p>
 <p>For a system to be trustworthy, the source code must be published open
 source<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, at least the code corresponding to a released version of the
 application. This is, from a technical point of view, easy to accomplish.
@@ -336,8 +336,8 @@ if a company&rsquo;s precious source code is available to everybody.</p>
 changes to applications. Input and output values that change the global state of
 an app must be stored publicly and immutable, so every user can trace the
 changes. If data must be encrypted, it should be in a way that the corresponding
-user can decrypt it while other users and third parties cannot. At the same
-time, the integrity of all data, historical, encrypted, from various users,
+user can decrypt it while other users and third parties cannot.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> At the
+same time, the integrity of all data, historical, encrypted, from various users,
 etc., must be guaranteed.</p>
 <p>Running microservices on traditional cloud infrastructure may not suffice
 anymore. Current dApps adhere to those rules by leveraging programmable, public
@@ -407,6 +407,13 @@ and output value.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-bac
 <p>The code just has to be publicly viewable. It does not have to have an
 open-source license which might allow others to re-use or modify the code.
 However, licensed or not, this cannot and honestly should not be prevented.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof" title="Zero-Knowledge Proof" target="_blank">Zero-Knowledge Proofs</a>
+and
+<a href="https://en.wikipedia.org/wiki/Homomorphic_encryption" title="Homomorphic Encryption" target="_blank">Homomorphic Encryption</a>
+are exciting technologies that can help keeping users&rsquo; personal information
+safe by not exposing it.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -542,10 +549,10 @@ However, licensed or not, this cannot and honestly should not be prevented.&#160
           
 <div class="gitinfo">
   <div class="git-version">
-    Version: <span class="git-version-hash">d49d7a1facf0db62e98534bff4b2da44d5900a67</span>
+    Version: <span class="git-version-hash">f8b3fe467c492702d0ee2d4a72111eb693f56d5f</span>
   </div>
   <div class="git-lastmod">
-    Last Change: <span class="git-lastmod-date">2023-04-03 20:41:47 &#43;0000 UTC</span>
+    Last Change: <span class="git-lastmod-date">2023-04-03 21:04:56 &#43;0000 UTC</span>
   </div>
 </div>
 
