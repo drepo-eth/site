@@ -83,6 +83,7 @@ $headlines:
 
   a {
     color: var(--color-highlight-text);
+    font-weight: $fw-regular-400;
     transition: all 0.3s ease;
 
     &:hover {
@@ -90,7 +91,8 @@ $headlines:
     }
   }
 
-  strong {
+  strong,
+  strong * {
     font-weight: $fw-semibold;
   }
 
