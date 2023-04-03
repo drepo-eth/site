@@ -65,9 +65,9 @@ cloud provider.
 
 The developers of an application or an auditor might disclose answers to those
 questions in reports, FAQs, privacy statements, or the terms of use. However,
-this requires that a user _trusts_ the word of a 'random' person on the
+this requires that a user _trusts_ the word of a _'random'_ person on the
 internet. This is generally not a good idea, even if the information is provided
-by a company or a reputable institution. Nothing actually prevents them from
+by a reputable company or institution. Nothing actually prevents them from
 lying.
 
 As in the real world, _verification is better than trust_. Thus, if a user wants
@@ -148,9 +148,9 @@ the operating company.
 
 End-users cannot view the source code, do not know how an application is
 operated and executed, and cannot directly access their data or the information
-the system collected about them. This makes such systems reasonably dangerous to
-use, even if the operating company or institution is reputable or promises to be
-one of the 'good guys'.
+the system collected about them. This makes such systems reasonably _dangerous_
+to use, even if the operating company or institution is respected or promises to
+be one of the 'good guys'.
 
 For a system to be trustworthy, the source code must be published open
 source[^license], at least the code corresponding to a released version of the
@@ -167,9 +167,16 @@ Verifiable code executions and data storage require drastic architectural
 changes to applications. Input and output values that change the global state of
 an app must be stored publicly and immutable, so every user can trace the
 changes. If data must be encrypted, it should be in a way that the corresponding
-user can decrypt it while other users and third parties cannot. At the same
-time, the integrity of all data, historical, encrypted, from various users,
+user can decrypt it while other users and third parties cannot.[^crypto] At the
+same time, the integrity of all data, historical, encrypted, from various users,
 etc., must be guaranteed.
+
+[^crypto]:
+    [Zero-Knowledge Proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof "Zero-Knowledge Proof")
+    and
+    [Homomorphic Encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption "Homomorphic Encryption")
+    are exciting technologies that can help keeping users' personal information
+    safe by not exposing it.
 
 Running microservices on traditional cloud infrastructure may not suffice
 anymore. Current dApps adhere to those rules by leveraging programmable, public
