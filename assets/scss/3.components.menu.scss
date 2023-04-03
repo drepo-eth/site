@@ -163,6 +163,7 @@
 	&::before,
 	.menu__sub-link {
 		color: var(--color-highlight-text);
+    font-weight: $fw-bold;
 	}
 }
 

@@ -1,5 +1,14 @@
-@import "@fontsource/overpass-mono";
-@import "@fontsource/ibm-plex-serif";
+@import "@fontsource/overpass-mono/300";
+@import "@fontsource/overpass-mono/400";
+@import "@fontsource/overpass-mono/600";
+@import "@fontsource/overpass-mono/700";
+
+@import "@fontsource/ibm-plex-serif/300";
+@import "@fontsource/ibm-plex-serif/300-italic";
+@import "@fontsource/ibm-plex-serif/400";
+@import "@fontsource/ibm-plex-serif/600";
+@import "@fontsource/ibm-plex-serif/600-italic";
+@import "@fontsource/ibm-plex-serif/700";
 
 $bootstrap-icons-font-file: "/files/bootstrap-icons";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
@@ -97,8 +106,9 @@ $fw-bold: 700;
 
 @mixin f-index {
 	font-family: "Overpass Mono", monospace;
+  font-weight: $fw-regular;
 	font-size: pxToRem(14px);
-	line-height: 1.5;
+	line-height: 1.65;
 }
 
 @mixin f-copy {
