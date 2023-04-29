@@ -21,12 +21,12 @@ contentTeasers:
     - heading: Availability
       target: "/drepo/repository/storage/"
       text: |
-        The repository is hosted by independent services and peer-to-peer networks.
+        Independent services and peer-to-peer networks host the repository.
         There is always a source available.
     - heading: Ownership
       target: "/drepo/repository/index/#claim-a-group"
       text: |
-        The system is owned by the community.
+        The community owns the system.
         No centralized entity can manipulate it.
         Only you control your data.
 
@@ -41,8 +41,8 @@ Software repositories are essential elements of the global software supply
 chain. Moreover, they are often the central hub for software distribution within
 their respective ecosystems.
 
-This centralization leaves the repositories and the entire supply chain
-vulnerable to various threats. Decentralization can mitigate these risks.
+This centralization leaves the repositories and supply chain vulnerable to
+various threats. Decentralization can mitigate these risks.
 
 As depicted on this site, the decentralized software repository (_dRepo_) offers
 software developers and everyday consumers a more secure and reliable system. It
