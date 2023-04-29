@@ -116,5 +116,5 @@ Separating index and storage into open, almost self-sufficient units creates a
 highly flexible system. For instance, each component could be switched out for another
 implementation or protocol while the other can continue to work without significant
 interruption: moving the index from a blockchain to a new safe system does not
-impact stored files on, IPFS and adding a new storage system does not invalidate
+impact stored files on IPFS and adding a new storage system does not invalidate
 existing entries within the index.

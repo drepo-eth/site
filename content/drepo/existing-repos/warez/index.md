@@ -57,7 +57,7 @@ these individual messages and describe the reconstruction of the original files.
 The Usenet itself is hosted using various service providers holding a copy of
 the entire system and synchronizing the data among each other.[^entire] While
 the BitTorrent network is publicly and free-of-charge accessible, accessing the
-Usenet usually requires a paid account with an Usenet provider.
+Usenet usually requires a paid account with a Usenet provider.
 
 [^entire]:
     Not every provider holds the entire Usenet. Depending on their service, only

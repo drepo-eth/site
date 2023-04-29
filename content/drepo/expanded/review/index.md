@@ -62,7 +62,7 @@ contributor do not enjoy this kind of community oversight. Thus, the chance of
 rolling out flawed or even malicious changes increases. This problem becomes
 significant if many users and other software depend on this given project.
 History has shown that some of the most used software packages are maintained by
-one a single person.[^heartbleed]
+a single person.[^heartbleed]
 
 [^heartbleed]:
     The OpenSSL library was a good example;
@@ -99,7 +99,7 @@ extensive set of the ecosystem.
 
 ### Encouragement
 
-Generally, reviews of or issue reports concerning a piece of software are either
+Generally, reviews or issue reports concerning a piece of software are either
 provided by volunteers who encounter a problem by chance or by reviewers and
 auditors who were instructed or encouraged to analyze the code. The latter ones
 are most likely specifically paid or otherwise incentivized to do this work.
@@ -165,19 +165,19 @@ Initiatives like the
 the
 [GitHub Advisory Database](https://github.com/advisories "GitHub Advisory Database")
 are great systems that should be incorporated into a new _Review Network_. Even
-though they are public databases, tracked, viewed, and mirrored by
-millions of users, they are still centralized-hosted and managed.
-Especially the CVE might be under pressure in certain circumstances as the
-non-profit behind it is at least partially state-sponsored by the US government.
-Automating and decentralizing this information in a trustless way is an
-integral part of the new system.
+though they are public databases, tracked, viewed, and mirrored by millions of
+users, they are still centralized-hosted and managed. Especially the CVE might
+be under pressure in certain circumstances as the non-profit behind it is at
+least partially state-sponsored by the US government. Automating and
+decentralizing this information in a trustless way is an integral part of the
+new system.
 
-Furthermore, the abovementioned initiatives concentrate on propagating
-security issues within software packages. The new _Review Network_, however, has
-an expanded focus. Besides pressing security issues, potential non-code
-issues, malicious and non-community-friendly behavior, and general correctness
-are in the spotlight of reviews. For example, storing more personal information
-than absolutely necessary for an application, storing data that is insufficiently
+Furthermore, the abovementioned initiatives concentrate on propagating security
+issues within software packages. The new _Review Network_, however, has an
+expanded focus. Besides pressing security issues, potential non-code issues,
+malicious and non-community-friendly behavior, and general correctness are in
+the spotlight of reviews. For example, storing more personal information than
+absolutely necessary for an application, storing data that is insufficiently
 encrypted or viewable by third parties, gathering additional data without
 consent or an opt-out feature, or prohibiting interoperability are issues that
 should be flagged.

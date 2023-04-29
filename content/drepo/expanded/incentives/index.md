@@ -87,7 +87,7 @@ adhere to this principle must verify their software and their dependencies.
 The _Build Verification Network_ and the _Review Network_ offer exactly the
 infrastructure and services needed to prove and publish the validity and
 security of a given software. They consider transitive dependencies and verify a
-software package as a whole. Funding verifying a top-level application is
+software package as a whole. Funding to verify a top-level application is
 automatically and partially distributed to its dependencies. As a result,
 underfunded, essential projects receive more attention to emphasize the security
 of core projects within the community.

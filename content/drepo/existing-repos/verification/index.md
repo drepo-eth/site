@@ -106,8 +106,8 @@ of all the dependencies you include in your typical software project.
 Furthermore, using a secondary source still holds a risk that this one might
 also be compromised.
 
-Consequently, the usage of checksums is effectively **limited to the
-verification of correct transmission** from a repository.
+Consequently, the usage of checksums is effectively limited to the verification
+of correct transmission from a repository.
 
 Comparing checksums with the information acquired from software repositories is
 currently built into most dependency-managing tools.
@@ -128,7 +128,6 @@ originated[^signed] from the author.
     It merely proves that someone with the corresponding private key to a known
     public key signed an identical file.
 
-
 [GPG](https://gnupg.org/) is the de facto standard tool for this purpose. It is
 used in multiple open-source software repositories, e.g., the Ubuntu and Arch
 Linux repositories, Maven Central, and the NPM Registry.
@@ -144,7 +143,7 @@ signature of a modified file cannot be reproduced.
 {{< image-svg
   src="digital-signature.excalidraw.svg"
   alt="Digital Signatures"
-  caption="Digital Signatures: A software's author signs the application with the private key and publishes the application file and the signature to the software repository. At the same time, they publish the corresponding public key on a key server. Subsequently, a can download the signature and application form the repository and the required public key from the key server. Given these, they can verify the authenticity of the application files without relying on the security of the repository." >}}
+  caption="Digital Signatures: A software's author signs the application with the private key and publishes the application file and the signature to the software repository. At the same time, they publish the corresponding public key on a key server. Subsequently, a user can download the signature and application from the repository and the required public key from the key server. Given these, they can verify the authenticity of the application files without relying on the security of the repository." >}}
 
 ### Public Key Discovery
 
@@ -195,20 +194,27 @@ certificates that allow you to verify the validity of SSL certificates for
 websites. For those who remember it, these are the green locks in your address
 bar. Without these root certificates, one would have to add each website's
 certificate to one's set of trusted resources. Essentially, the same problem was
-discussed above. Furthermore,
+discussed above. Additionally,
+[S/MIME](https://en.wikipedia.org/wiki/S%2FMIME "S/MIME") is an email encryption
+standard based on the same principle. It is an alternative to GPG mostly used
+within corporate environments.
+
+Furthermore,
 [Apple](https://developer.apple.com/support/code-signing/ "Code Signing") allows
 trusted developers to sign their applications with Apple's root key.
 Consequently, all Apple devices run such signed software without voicing
 security concerns.
 
 However, the internet is generally not such a closed and trusted ecosystem.
+Thus, building large systems on trusting a few key players is highly
+questionable.
 
 ## Reproducible Builds
 
 [Reproducible Builds](https://reproducible-builds.org/) can be used to mitigate
 the shortfalls of checksums and digital signatures.
 
-Most software is distributed of pre-compiled format, e.g., binary executables,
+Most software is distributed in pre-compiled format, e.g., binary executables,
 minified and uglified, or otherwise optimized. This makes the code executed
 unreadable to the average human being and, thus, the perfect target for
 manipulation.

@@ -104,8 +104,8 @@ speeds, notably if the mirror is situated within the same network segment, e.g.,
 within the ISP's network.
 
 The traffic load is spread around the network. This reduces the costs for the
-master as it does not have to scale up to meet the community's needs. As a
-result, a highly productive network is created as a community effort, which
+master as it does not have to scale up to meet the entire community's needs. As
+a result, a highly productive network is created as a community effort, which
 induces little cost to individual parties. Additionally, the performance and
 overall experience for users are improved.
 

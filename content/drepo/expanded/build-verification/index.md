@@ -160,7 +160,7 @@ This also allows users to check the validity of the provided additional
 information.
 
 Furthermore, this information from various nodes might be helpful if specific
-environment inconsistencies are detected. For instance, Builds might not work on
+environment inconsistencies are detected. For instance, builds might not work on
 Windows or produce different artifacts on newer hard- or software. However, this
 kind of diverging behavior needs to be accounted for when verifying a piece of
 software. A tool might only target specific environments; thus, unsupported ones
@@ -175,13 +175,13 @@ known beforehand due to the author publishing it, verifiers could easily copy
 the existing result and republish it as their own verification solution.
 
 If a software release is broken, tampered with, or otherwise invalid,
-reinforcing the author's malicious data by republishing the existing result
-might change the overall probabilistic verification. Chances are that many nodes
-would just try to farm potential incentives putting in a minimal amount of work
-if any. Another risk is targeted attacks to forcibly portray an invalid release
-as valid if a single malicious party submits a large number of false claims.
-This type of attack could also be inverted by presenting a lot of diverging
-verifications for a viable release, thus painting it invalid.
+reinforcing the author's malicious data by republishing the existing reference
+result might change the overall probabilistic verification. Chances are that
+many nodes would just try to farm potential incentives putting in a minimal
+amount of work if any. Another risk is targeted attacks to forcibly portray an
+invalid release as valid if a single malicious party submits a large number of
+false claims. This type of attack could also be inverted by presenting a lot of
+diverging verifications for a viable release, thus painting it invalid.
 
 In school, the teacher would monitor the students' behavior and separate them,
 so they cannot communicate and use any material to cheat. However, this is

@@ -179,7 +179,7 @@ PoW networks like [Bitcoin](https://bitcoin.org/) are secured by _computing
 power_. The more computing power someone holds, the more influence they have on
 the system. As numerous _Bitcoin miners_ who contribute their computing power, a
 potential attacker must invest heavily in specialized computer hardware to have
-a significant impact. At the same, time anyone can start contributing their
+a significant impact. At the same time, anyone can start contributing their
 computer power to the network without permission or any other significant
 obstacles. And with growing interest in the system, more entities are willing to
 join the network not solely to earn from mining but to secure the system. This
@@ -214,15 +214,15 @@ probably have an interest in controlling systems like Ethereum.[^ethmoney]
   caption="Majority Attack: If an entity controls the majority of participants, it can control the entire network" >}}
 
 BitTorrent is more or less resistant to such attacks as there is no such thing
-as a controlling majority due to the absence of a global state. The network is,
-however, known for the distribution of _pirated content_. Technically there is
-no way to prevent the sharing of such content on the protocol level. However, it
-is up to each node in the network to decide which content they want to share.
-This might reduce the scaling abilities for that given content, but it cannot be
-stopped as long as there are participants left wishing to share that content.
+as a controlling majority due to the absence of a global state. The network is
+known for the distribution of _pirated content_. Technically there is no way to
+prevent the sharing of such content on the protocol level. However, it is up to
+each node in the network to decide which content they want to share. This might
+reduce the scaling abilities for that given content, but it cannot be stopped as
+long as there are participants left wishing to share that content.
 
 Likewise, data written to a public permissionless blockchain can never be
-removed. There are no administrators. Nobody holds with such powers within the
+removed. There are no administrators. Nobody holds such powers within the
 system. Even court orders or other measures that would work in the real world
 cannot be applied without fatally disrupting the system.
 
@@ -235,11 +235,12 @@ to apply pressure.
 The core benefit of a decentralized system run and owned by the community lies
 in the capability to resist manipulation. It strictly follows the rules defined
 in its protocol and cannot break these or make exceptions if they result in a
-'better' outcome. Of course, the community as might decide to make corresponding
-changes, but no sole participant can make these alterations. If only a minority
-adopts the modifications, the non-adopting majority will disregard conflicting
-decisions. The system will continue to work in its previously established form.
-Changes that only benefit a minority will not be adopted.
+'better' outcome. Of course, the community as a whole might decide to make
+corresponding changes, but no sole participant can make these alterations. If
+only a minority adopts the modifications, the non-adopting majority will
+disregard conflicting decisions. The system will continue to work in its
+previously established form. Changes that only benefit a minority will not be
+adopted.
 
 Due to its distributed nature, it can continue to work and serve its purpose
 even if large parts of the system fail. This might be caused by technical

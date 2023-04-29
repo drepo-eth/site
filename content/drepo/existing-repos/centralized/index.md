@@ -51,12 +51,12 @@ anymore.
 While non-profit repositories like Maven Central and PyPI rely on sponsors to
 keep the lights on, systems, which are operated by for-profit organizations,
 often use the repository to generate revenue. Paid features are the primary
-drivers. More storage space, private groups models which integrate with
-enterprise environments, and security features like code scanning are typical
-additional features. While these offers mainly target business users, the extra
-feature set sometimes cuts down on the free-of-charge offerings towards free
-open-source software development.[^foss] They either retain useful security
-features or limit the usage of the system drastically. Introducing
+drivers. More storage space, private groups, security models which integrate
+with enterprise environments, and security features like code scanning are
+typical additional features. While these offers mainly target business users,
+the extra feature set sometimes cuts down on the free-of-charge offerings
+towards free open-source software development.[^foss] They either retain useful
+security features or limit the usage of the system drastically. Introducing
 [rate limits](https://www.docker.com/blog/what-you-need-to-know-about-upcoming-docker-hub-rate-limiting/ "Rate Limit Introduction")
 on Docker Hub is one example of such limitations. While such constraints are
 annoying, one can more than survive with the generous free offerings.[^support]
@@ -79,7 +79,7 @@ In the worst cases, they can even change or modify the content. For example, a
 software release might be removed without any warning. If the operator acts
 maliciously, they could create new software packages containing malware or
 change existing packages. The community will likely discover such actions that
-could destroy a repository's reputation.
+could consequently destroy a repository's reputation.
 
 A more realistic scenario is the removal of content due to external pressure. As
 the institutions behind the repositories are incorporated in the real world,

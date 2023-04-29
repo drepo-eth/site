@@ -65,9 +65,9 @@ nothing about this. If they choose to shut down their service from one day to
 the next, their service just does not exist anymore, and all the data you stored
 with them for free is also just gone.
 
-You are out of luck long as they are not forced by laws or contracts to provide
-their service to you. However, even if they are obliged to serve you, there are
-still ways to deny you, as they often act as black boxes.
+You are out of luck as long as they are not forced by laws or contracts to
+provide their service to you. However, even if they are obliged to serve you,
+there are still ways to deny you, as they often act as black boxes.
 
 ### Architecture
 
