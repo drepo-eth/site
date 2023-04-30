@@ -5,14 +5,27 @@
   width: 100%;
 }
 
+#particles {
+  position: relative;
+  width: 100%;
+
+  @include break-main(sm-md) {
+    height: 50vh;
+  }
+  @include break-main(lg) {
+    height: 80vh;
+    max-height: 1000px;
+  }
+}
+
 .banner__image {
   background-color: var(--color-menu-bg);
 
   @include break-main(sm-md) {
-	width: 100%;
+    width: 100%;
   }
   @include break-main(lg) {
-	width: column(9, 12);
+    width: column(9, 12);
   }
 }
 
@@ -34,8 +47,8 @@
     bottom: $spacer-lg;
     padding: $spacer-sm;
     right: 20%;
-    box-shadow: $spacer-md $spacer-sm var(--color-bg);
     width: 50%;
+    box-shadow: 10px 10px 25px 5px $c-black;
   }
 }
 

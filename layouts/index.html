@@ -3,8 +3,6 @@
     {{ $image := $.Page.Resources.GetMatch .Params.titleBanner.image.src }}
     {{ $resized := $image.Resize .Params.titleBanner.image.size }}
     <div id="particles"></div>
-    <img src="{{ $resized.RelPermalink }}" class="banner__image"
-      alt="{{ .Params.titleBanner.image.alt }}"/>
     <div class="banner__content">
       <div class="banner__headline">
         Decentralization
