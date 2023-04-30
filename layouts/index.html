@@ -2,6 +2,7 @@
   <div class="banner">
     {{ $image := $.Page.Resources.GetMatch .Params.titleBanner.image.src }}
     {{ $resized := $image.Resize .Params.titleBanner.image.size }}
+    <div id="particles"></div>
     <img src="{{ $resized.RelPermalink }}" class="banner__image"
       alt="{{ .Params.titleBanner.image.alt }}"/>
     <div class="banner__content">
@@ -42,4 +43,12 @@
   </div>
 </div>
 
+{{ end }}
+
+{{ define "startpagescript" }}
+<!-- JS -->
+{{ $opts := (dict "minify" true "sourceMap" "external") }}
+{{ $js := resources.Get "js/startpage.ts" | js.Build $opts }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 {{ end }}
