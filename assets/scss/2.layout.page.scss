@@ -15,6 +15,7 @@
   --color-scrollbar-bg: #{$c-primary-blue};
   --color-thumb-bg: #{$c-middlegrey};
   --color-teaser-link: #{$c-black};
+  --color-banner-bg: #{$c-white-shade};
   --image-filter: none;
 }
 
@@ -35,6 +36,7 @@
   --color-scrollbar-bg: #{$c-lightgrey};
   --color-thumb-bg: #{$c-grey};
   --color-teaser-link: #{$c-lightblue};
+  --color-banner-bg: #{$c-black-shade};
   --image-filter: hue-rotate(180deg) invert(100%);
 }
 

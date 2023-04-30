@@ -9,38 +9,32 @@
   position: relative;
   width: 100%;
 
-  @include break-main(sm-md) {
+  @include break-main(sm) {
     height: 50vh;
+    max-height: 450px;
   }
-  @include break-main(lg) {
+  @include break-main(md-xl) {
     height: 80vh;
     max-height: 1000px;
-  }
-}
-
-.banner__image {
-  background-color: var(--color-menu-bg);
-
-  @include break-main(sm-md) {
-    width: 100%;
-  }
-  @include break-main(lg) {
-    width: column(9, 12);
   }
 }
 
 .banner__content {
   display: grid;
   grid-row-gap: $spacer-xs;
-  background-color: var(--color-highlight-text);
-  color: var(--color-bg);
+  position: absolute;
+  padding: $spacer-sm;
+  box-shadow: 10px 10px 25px 5px $c-black;
+  background-color: var(--color-banner-bg);
+  color: var(--color-text);
   word-break: break-word;
   white-space: normal;
   hyphens: auto;
 
   @include break-main(sm) {
-    padding: $spacer-sm column(2, 12);
-    width: 100%;
+    top: $spacer-xl;
+    left: 10%;
+    right: 10%;
   }
   @include break-main(md-xl) {
     position: absolute;
@@ -54,6 +48,7 @@
 
 .banner__headline {
   @include f-headline-h1;
+  color: var(--color-highlight-text);
 }
 
 .banner__text {
