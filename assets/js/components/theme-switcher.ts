@@ -7,13 +7,13 @@ export const themeSwitcher = function () {
         themeCookie: 'theme-state',
         prefersDark: '(prefers-color-scheme: dark)'
     }
-    
+
     const $root = document.querySelector(QUERY.html);
     const $themeSwitcher = document.querySelector(QUERY.themeBtn);
 
     const systemInitiatedDark = window.matchMedia(QUERY.prefersDark);
     const themeState = sessionStorage.getItem(QUERY.themeCookie);
-    
+
     const activateDarkTheme = function () {
         $root.classList.add(QUERY.darkTheme);
         $root.classList.remove(QUERY.lightTheme);
@@ -26,7 +26,7 @@ export const themeSwitcher = function () {
         sessionStorage.setItem(QUERY.themeCookie, QUERY.lightTheme);
     }
 
-    const changeMode = function (isDarkModeActivated) {
+    const changeMode = function (isDarkModeActivated: boolean) {
         if (isDarkModeActivated) {
             activateDarkTheme();
         } else {
