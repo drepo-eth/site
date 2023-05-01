@@ -12,7 +12,7 @@ window.addEventListener("load", async () => {
         options: {
           particles: {
             color: {
-              value: ["#ffffff"],
+              value: ["#ffffff", "#008cd7", "#14141e"],
             },
             line_linked: {
               color: "#ffffff",
@@ -25,7 +25,7 @@ window.addEventListener("load", async () => {
         options: {
           particles: {
             color: {
-              value: ["#000000"],
+              value: ["#000000", "#0000ff", "#808080"],
             },
             line_linked: {
               color: "#000000",
@@ -38,12 +38,52 @@ window.addEventListener("load", async () => {
       opacity: 0,
     },
     particles: {
+      line_linked: {
+        opacity: 0.7,
+        width: 1,
+      },
       number: {
         value: 80,
         density: {
           enable: true,
           height: 1000,
           width: 1000,
+        },
+      },
+      move: {
+        attract: {
+          enable: false,
+          rotate: {
+            x: 600,
+            y: 1200,
+          },
+        },
+        direction: "none",
+        enable: true,
+        outModes: "out",
+        random: false,
+        speed: 2,
+        straight: false,
+      },
+      opacity: {
+        value: 0.8,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 2,
+          opacity_min: 0.4,
+          sync: false,
+        },
+      },
+      size: {
+        animation: {
+          enable: true,
+          speed: 2,
+          sync: false,
+        },
+        value: {
+          min: 1,
+          max: 4,
         },
       },
     },
@@ -59,7 +99,7 @@ window.addEventListener("load", async () => {
   const themeChange = (mutationList: Array<MutationRecord>) => {
     mutationList
       .filter((r) => r.type === "attributes" && r.attributeName === "class")
-      .map(r => r.target as HTMLElement)
+      .map((r) => r.target as HTMLElement)
       .forEach(setTheme);
   };
   const observer = new MutationObserver(themeChange);
