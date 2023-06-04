@@ -1,6 +1,5 @@
 .description {
   margin: $spacer-lg auto;
-  text-align: justify;
 
   @include break-main(sm) {
     width: column(10, 12);
@@ -24,6 +23,7 @@
     }
     @include breakpoint(lg) {
       margin-top: $spacer-sm;
+      text-align: justify;
     }
   }
 }

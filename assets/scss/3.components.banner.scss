@@ -10,10 +10,14 @@
   width: 100%;
 
   @include break-main(sm) {
-    height: 50vh;
-    max-height: 450px;
+    height: 65vh;
+    max-height: 480px;
   }
-  @include break-main(md-xl) {
+  @include break-main(md) {
+    height: 50vh;
+    max-height: 800px;
+  }
+  @include break-main(lg) {
     height: 80vh;
     max-height: 800px;
   }
@@ -33,7 +37,7 @@
   backdrop-filter: blur(3px);
 
   @include break-main(sm) {
-    top: $spacer-xl;
+    top: $spacer-xxl;
     left: 10%;
     right: 10%;
   }
@@ -43,7 +47,7 @@
     padding: $spacer-sm;
     right: 20%;
     width: 50%;
-    box-shadow: 10px 10px 25px 5px $c-black;
+    box-shadow: 10px 10px 25px 5px rgba($color: $c-black, $alpha: 0.3);
   }
 }
 

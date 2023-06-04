@@ -62,7 +62,7 @@ window.addEventListener("load", async () => {
         enable: true,
         outModes: "out",
         random: false,
-        speed: 2,
+        speed: 1,
         straight: false,
       },
       opacity: {
@@ -96,6 +96,7 @@ window.addEventListener("load", async () => {
       particles.loadTheme("light");
     }
   };
+
   const themeChange = (mutationList: Array<MutationRecord>) => {
     mutationList
       .filter((r) => r.type === "attributes" && r.attributeName === "class")

@@ -119,7 +119,9 @@ $headlines:
   }
 
   p {
-    text-align: justify;
+    @include break-main(md-xl) {
+      text-align: justify;
+    }
   }
 
 
