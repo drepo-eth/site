@@ -26,6 +26,6 @@
 		"bootstrap-icons": "^1.10.5",
 		"normalize.css": "^8.0.1",
 		"tsparticles-engine": "^2.10.1",
-		"tsparticles-preset-links": "^2.10.1"
+		"tsparticles-preset-links": "^2.11.0"
 	}
 }
