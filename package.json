@@ -21,7 +21,7 @@
 		"postcss-cli": "^10.1.0"
 	},
 	"dependencies": {
-		"@fontsource/ibm-plex-serif": "^5.0.4",
+		"@fontsource/ibm-plex-serif": "^5.0.5",
 		"@fontsource/overpass-mono": "^5.0.5",
 		"bootstrap-icons": "^1.10.5",
 		"normalize.css": "^8.0.1",
