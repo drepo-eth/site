@@ -87,10 +87,10 @@ local machine in a way for them to inspect the execution.
 These properties allow users to validate that their inputs will have the
 intended effects by, for example, simulating or dry-running the program
 execution beforehand using productive data. Furthermore, this requires
-applications to always act predictably and to incorporate _reproducible builds_.
-Users can then always recreate the application from the verifiable source code
-and its stored state. Given the same input values and application state, an app
-will always return the same results.[^predictably]
+applications to always act predictably and to incorporate general
+_reproducibility_. Users can then always recreate the application from the
+verifiable source code and its stored state. Given the same input values and
+application state, an app will always return the same results.[^predictably]
 
 [^predictably]:
     This behavior is similar to
