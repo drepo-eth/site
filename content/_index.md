@@ -14,7 +14,7 @@ contentTeasers:
   heading: Why?
   teasers:
     - heading: Security
-      target: "/drepo/repository/index/#simple-trustless-immutable"
+      target: "/drepo/repository/the-index/#simple-trustless-immutable"
       text: |
         Artifacts in the repository are public and immutable.
         They can never be changed or manipulated by anyone.
@@ -24,7 +24,7 @@ contentTeasers:
         Independent services and peer-to-peer networks host the repository.
         There is always a source available.
     - heading: Ownership
-      target: "/drepo/repository/index/#claim-a-group"
+      target: "/drepo/repository/the-index/#claim-a-group"
       text: |
         The community owns the system.
         No centralized entity can manipulate it.
