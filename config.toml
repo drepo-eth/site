@@ -4,7 +4,7 @@ title = 'dRepo.eth - Decentralized Software Repository'
 
 disableKinds = ['section', 'taxonomy', 'term', 'RSS']
 uglyurls = false
-relativeURLs = false
+relativeURLs = true
 enableGitInfo = true
 
 [params]
