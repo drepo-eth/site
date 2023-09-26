@@ -12,7 +12,7 @@ tags:
   - "architecture"
   - "trust"
 date: 2022-12-30T00:28:07+01:00
-draft: true
+draft: false
 weight: 2010
 menu:
   main:
