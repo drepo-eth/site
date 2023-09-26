@@ -116,7 +116,7 @@ code must be preserved to eliminate such risks.
 ## Witnessable
 
 The index is a _[Witnessable
-Application]({{< ref "/drepo/web3.1/witnessable-apps">}} "Witnessable
+Application]({{< relref "/drepo/web3.1/witnessable-apps">}} "Witnessable
 Applications")_, offering _full transparency_ and _traceability_ while
 preserving _pseudo-anonymity_. All data is stored publicly and thus viewable by
 anyone. For instance, users can run their own blockchain node to help secure the

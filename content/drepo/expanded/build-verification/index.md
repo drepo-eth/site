@@ -107,7 +107,7 @@ offer computing power. But since energy prices are rising and build tasks are
 pretty energy-intensive, not everybody wants to give away their money to a good
 cause Hence, completing verification tasks must be incentivized to encourage
 participation besides people volunteering. We will discuss this topic in a
-[later chapter]({{< ref "/drepo/expanded/incentives" >}} "Incentives").
+[later chapter]({{< relref "/drepo/expanded/incentives" >}} "Incentives").
 
 Furthermore, the system should not require a cumbersome registration process for
 nodes to participate, which might involve the manual screening of applications.

@@ -67,7 +67,7 @@ or includes additional content to fulfill the system's purpose.
 
 Large-scale networks of repository mirrors are an alternative setup to the
 centralized, cloud-based approach discussed in the [previous
-chapter]({{< ref "/drepo/existing-repos/centralized" >}} "Centralized
+chapter]({{< relref "/drepo/existing-repos/centralized" >}} "Centralized
 Repositories"). Notable examples are the
 [Arch Linux Repositories](https://wiki.archlinux.org/title/Official_repositories "Arch Linux Repositories")
 and the

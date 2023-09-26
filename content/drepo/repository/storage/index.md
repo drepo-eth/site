@@ -143,15 +143,15 @@ cyberattacks. P2p systems bring a dynamic that might be harder to handle, as
 clients in such networks communicate directly. This kind of traffic is currently
 prohibited within such networks.
 
-Proxy systems that bridge p2p and centralized traffic might be a solution.
-For instance, as IPFS clients are still not widely used, gateways offer a way to
+Proxy systems that bridge p2p and centralized traffic might be a solution. For
+instance, as IPFS clients are still not widely used, gateways offer a way to
 access decentralized resources through a centralized server. The gateway server
 accepts HTTP requests and searches for the resources on the IPFS network. When
 found, the desired files are delivered to the requesting client. The model is
 similar to proxy repositories offered by products like Nexus and Artifactory.
-This setup was discussed [earlier]({{< ref "/drepo/existing-repos/mirrored">}}
-"Mirror Repositories") and offers institutions more control over resources from
-external repositories.
+This setup was discussed
+[earlier]({{< relref "/drepo/existing-repos/mirrored">}} "Mirror Repositories")
+and offers institutions more control over resources from external repositories.
 
 {{< image-svg
   src="corporate-p2p.excalidraw.svg"
@@ -179,7 +179,7 @@ GPG signatures, this scheme only verifies the relationship between checksums and
 the build artifacts published by the software author. It does not provide any
 further information about their authenticity in relation to the source code, as
 the owner could have manipulated the artifacts before publication. The [Build
-Verification Network]({{< ref "/drepo/expanded/build-verification" >}} "Build
+Verification Network]({{< relref "/drepo/expanded/build-verification" >}} "Build
 Verification Network") will address this critical issue.
 
 Even more information might prove helpful depending on the type of software

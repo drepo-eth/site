@@ -36,7 +36,7 @@ between the actual files and a search index. While the files live on the
 BitTorrent network or in newsgroups, respectively, the search index is typically
 a website or another separate application. The other one still exists if the
 files or the index becomes unavailable. Given the [many-to-many relationship](
-{{< ref
+{{< relref
 "/drepo/existing-repos/warez" >}} "WAREZ") between content and indices, the system
 can scale and is resilient at the same time.
 
@@ -65,7 +65,7 @@ censorship-resistant as the information cannot be removed. Furthermore, if the
 metadata and subsequent payloads are stored decentralized, they cannot be
 deleted as well.
 
-Apart from the [standard repository features]({{< ref
+Apart from the [standard repository features]({{< relref
 "/drepo/existing-repos/properties" >}} "Repository Features"), the _dRepo_ uses _separation_
 defined in these two repository systems. Additionally, leveraging a permissionless
 blockchain, like ethPM proposes, adds convenience and security to the system.
@@ -75,8 +75,8 @@ blockchain, like ethPM proposes, adds convenience and security to the system.
 The decentralized repository's core is separated in an _Index_ and a _Storage_
 component. This separation allows the usage of fitting technologies for each of
 these concerns while also propagating spatial partitioning and, thus,
-decentralization. Simply, a software package's metadata is stored
-differently and on other systems from the actual packages.
+decentralization. Simply, a software package's metadata is stored differently
+and on other systems from the actual packages.
 
 Furthermore, the core is defined as a minimal protocol open to extension. This
 allows software ecosystems to add rules and conventions to fit their needs. This
@@ -113,8 +113,8 @@ technologies in the future without fundamentally changing the base protocol.
   caption="dRepo Architecture: The system is separated into an index and a storage component. The index is a smart contract on a permissionless blockchain holding software package metadata and managing publications. Each package points to multiple resources across various storage solutions." >}}
 
 Separating index and storage into open, almost self-sufficient units creates a
-highly flexible system. For instance, each component could be switched out for another
-implementation or protocol while the other can continue to work without significant
-interruption: moving the index from a blockchain to a new safe system does not
-impact stored files on IPFS and adding a new storage system does not invalidate
-existing entries within the index.
+highly flexible system. For instance, each component could be switched out for
+another implementation or protocol while the other can continue to work without
+significant interruption: moving the index from a blockchain to a new safe
+system does not impact stored files on IPFS and adding a new storage system does
+not invalidate existing entries within the index.

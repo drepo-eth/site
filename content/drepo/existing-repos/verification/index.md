@@ -267,7 +267,7 @@ Two crucial questions now arise:
 
 The depicted decentralized software repository fundamentally requires the usage
 of reproducible builds. Thus, both of these questions are addressed in more
-detail [here]({{< ref "/drepo/expanded/build-verification" >}} "Build
+detail [here]({{< relref "/drepo/expanded/build-verification" >}} "Build
 Verification"). But in short, the dRepo takes advantage of the following
 properties:
 

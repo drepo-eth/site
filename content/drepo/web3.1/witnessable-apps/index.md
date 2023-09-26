@@ -203,7 +203,7 @@ We will see in the future how these new architectures will evolve.
 ## Community verification
 
 We know from [previous
-chapters]({{< ref "/drepo/existing-repos/verification" >}} "Verification") that
+chapters]({{< relref "/drepo/existing-repos/verification" >}} "Verification") that
 user can only 'trust' an application they verified themselves. However,
 reviewing modern, complex applications is a tremendous task, even for the most
 capable software developers. Unfortunately, the average Joe is not experienced

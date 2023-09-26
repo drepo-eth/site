@@ -79,7 +79,7 @@ their dependencies. A business application using open-source software should
 help maintain, secure, and develop the given projects.
 
 Furthermore, we believe [Witnessable
-Apps]({{< ref "/drepo/web3.1/witnessable-apps" >}} "Witnessable Apps"), which
+Apps]({{< relref "/drepo/web3.1/witnessable-apps" >}} "Witnessable Apps"), which
 require continuous review and verification throughout their life cycle, will
 become ever more important. This means that projects and businesses that want to
 adhere to this principle must verify their software and their dependencies.

@@ -28,12 +28,13 @@ menu:
 <!-- TODO what is a review in the current context?-->
 
 As discussed in the [previous
-chapter]({{< ref "/drepo/expanded/build-verification" >}} "Build Verification"),
-the source code of a project is the _single point of truth_. _Reproducible
-Builds_ definitively connect the source code to a build artifact. This allows
-users to verify and review the code of a given artifact. This information lets
-users determine whether a software package is safe to use. The author's and the
-project's reputation consequently becomes less significant in this decision.
+chapter]({{< relref "/drepo/expanded/build-verification" >}} "Build
+Verification"), the source code of a project is the _single point of truth_.
+_Reproducible Builds_ definitively connect the source code to a build artifact.
+This allows users to verify and review the code of a given artifact. This
+information lets users determine whether a software package is safe to use. The
+author's and the project's reputation consequently becomes less significant in
+this decision.
 
 However, reviewing each piece of software is even more tedious and
 resource-intensive than verifying each build. While builds can be automatically
@@ -110,8 +111,8 @@ Within a new _Review Network_, both of these types of reviews essentially need
 to be incentivized to encourage people to examine projects. This increases the
 chances of finding all valid issues. Specifically, the concept of bug bounties
 should be a driving factor. The [next
-chapter]({{< ref "/drepo/expanded/incentives" >}} "Incentives") will address the
-question of where these incentives should come from.
+chapter]({{< relref "/drepo/expanded/incentives" >}} "Incentives") will address
+the question of where these incentives should come from.
 
 As stated before, the amount of attention a project receives from community
 members varies. At the same time, this attention might diverge from its
