@@ -72,6 +72,7 @@
     justify-content: center;
     max-width: pxToRem(150px);
     min-width: pxToRem(90px);
+    z-index: $z-pager;
 
     &::after {
       content: "";
