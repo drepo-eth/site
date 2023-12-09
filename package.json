@@ -17,7 +17,7 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.16",
-		"hugo-bin": "^0.116.4",
+		"hugo-bin": "^0.117.1",
 		"postcss-cli": "^10.1.0"
 	},
 	"dependencies": {
