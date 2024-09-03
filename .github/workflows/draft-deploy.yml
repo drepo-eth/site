@@ -41,7 +41,7 @@ jobs:
       with:
         ref: deployed
     - name: Unpack artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: artifacts
         path: public
