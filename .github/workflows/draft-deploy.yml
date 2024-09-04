@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: npm run build-draft
     - name: Package artifacts for deployment
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: artifacts
         path: |
@@ -41,7 +41,7 @@ jobs:
       with:
         ref: deployed
     - name: Unpack artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: artifacts
         path: public
