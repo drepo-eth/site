@@ -18,7 +18,7 @@
 	"devDependencies": {
 		"autoprefixer": "^10.4.20",
 		"hugo-bin": "^0.142.0",
-		"postcss-cli": "^11.0.0"
+		"postcss-cli": "^11.0.1"
 	},
 	"dependencies": {
 		"@fontsource/ibm-plex-serif": "^5.2.5",
