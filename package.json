@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"@fontsource/ibm-plex-serif": "^5.2.5",
-		"@fontsource/overpass-mono": "^5.2.5",
+		"@fontsource/overpass-mono": "^5.2.6",
 		"bootstrap-icons": "^1.13.1",
 		"normalize.css": "^8.0.1",
 		"tsparticles-engine": "^2.12.0",
